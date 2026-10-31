@@ -17,6 +17,6 @@
 - [x] Scaffold Tauri v2 and add Rust-owned backend startup, readiness, and shutdown.
 - [x] Keep ZeroTTS as a separate process and add Windows paths plus a PyInstaller build step; native worker execution remains unverified.
 - [x] Preserve the admin, OBS Browser Source, TikTok event flow, and local state; a local RPC event reached `/ws` and state persisted.
-- [ ] Verify the desktop shell and the same local RPC/WebSocket flow. blocked: this WSL distro lacks `cc` and WebKitGTK, and the Windows MSVC Tauri and PyInstaller build needs native Windows.
+- [ ] Verify the native Windows desktop shell, WebView2 launch, installer, and packaged ZeroTTS worker. blocked: this WSL distro lacks the Windows MSVC linker/SDK and WebKitGTK; the WSL backend RPC/WebSocket flow passed separately (see `.audit/tauri-port-smoke.md`).
 - [x] Document Windows build prerequisites and sidecar packaging limits.
 - [x] Opening a PR: skip: the user requested a local implementation, not a PR.
