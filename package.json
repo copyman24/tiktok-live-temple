@@ -5,12 +5,20 @@
   "main": "server.js",
   "scripts": {
     "start": "bun run server.js",
-    "dev": "bun --watch server.js"
+    "dev": "bun --watch server.js",
+    "build:backend": "bun scripts/build-backend.js",
+    "build:sidecars:windows": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows-sidecars.ps1",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "tiktok-live-connector": "^2.1.0",
     "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4"
   }
 }

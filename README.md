@@ -73,6 +73,42 @@ Mặc định server chạy tại cổng `3000`:
 
 ---
 
+## Windows Tauri app
+
+The desktop app does not ask for an account or TikTok login. Start TikTok Live in TikTok Live Studio, then enter the public handle or Live URL in the admin panel. The app starts the local backend and ZeroTTS worker. OBS keeps using `http://localhost:3000/?obs=1`.
+
+### Build the Windows app
+
+Build the Windows installer from a native Windows terminal. WSL can cross-compile the Bun backend, but it cannot build the MSVC desktop app or the Windows ZeroTTS executable. The packaging script stops if run outside Windows. Tauri's Windows setup needs the Microsoft C++ Build Tools and WebView2. See the [Tauri Windows prerequisites](https://v2.tauri.app/start/prerequisites/) for the current installer options.
+
+Install Bun, `uv`, and Python 3.11 on the build machine, then run:
+
+```powershell
+bun install
+bun run tauri:dev
+```
+
+For development, create the ZeroTTS environment before starting the app:
+
+```powershell
+uv venv .venv --python 3.11
+uv pip install --python .venv/Scripts/python.exe zerotts pillow
+```
+
+Build the installer with:
+
+```powershell
+bun run tauri:build
+```
+
+The build compiles the Bun backend, packages the ZeroTTS worker with PyInstaller, and runs the Tauri Windows build. Find the NSIS installer under `src-tauri/target/release/bundle/nsis/`. The installed app does not require Bun or Python. ZeroTTS downloads its model into the app's local data folder the first time it starts.
+
+Open the app before OBS. Add `http://localhost:3000/?obs=1` as a Browser Source with a size of `1080 × 1920`. The Tauri window and OBS share the same local server, so TikTok events continue through the existing `/ws` connection.
+
+The backend listens on loopback port `3000` without account authentication. The app reports a startup error if another process already uses that port. Closing the app asks the backend to disconnect TikTok and stop the ZeroTTS worker.
+
+---
+
 ## 🎮 Bảng Quy Tắc Tương Tác TikTok Live
 
 | Sự kiện TikTok Live | Điều kiện / Từ khóa | Nghi thức trên Chánh Điện | Điểm Công Đức |

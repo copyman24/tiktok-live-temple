@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-capability",
+  "description": "The main window uses the local HTTP server and does not call Tauri APIs.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

@@ -1,0 +1,11 @@
+{
+  "build": {
+    "beforeBuildCommand": "bun run build:sidecars:windows"
+  },
+  "bundle": {
+    "resources": {
+      "../public/": "public/",
+      "binaries/zerotts-worker.exe": "zerotts-worker.exe"
+    }
+  }
+}

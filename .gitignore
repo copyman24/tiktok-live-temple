@@ -2,6 +2,10 @@ node_modules/
 .venv/
 data/
 dist/
+.cache/
+src-tauri/target/
+src-tauri/gen/
+src-tauri/binaries/*
 embedded-assets.js
 .DS_Store
 *.log

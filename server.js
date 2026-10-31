@@ -2,15 +2,21 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
+const crypto = require('crypto');
 const { spawn } = require('child_process');
 const cors = require('cors');
 const { WebSocketServer } = require('ws');
 const { TikTokLiveConnection, WebcastEvent, ControlEvent } = require('tiktok-live-connector');
 
-const PORT = process.env.PORT || 3000;
-const DATA_DIR = path.join(__dirname, 'data');
+const PORT = Number(process.env.PORT || 3000);
+const HOST = process.env.HOST || 'localhost';
+const RESOURCE_DIR = process.env.APP_RESOURCE_DIR || __dirname;
+const DATA_DIR = process.env.APP_DATA_DIR || path.join(__dirname, 'data');
 const TTS_CACHE_DIR = path.join(DATA_DIR, 'tts-cache');
 const STATE_FILE = path.join(DATA_DIR, 'merit-state.json');
+const TTS_WORKER_PATH = path.join(RESOURCE_DIR, 'tts_worker.py');
+const ZERO_TTS_BIN = process.env.ZERO_TTS_BIN || null;
+const SHUTDOWN_TOKEN = process.env.TEMPLE_SHUTDOWN_TOKEN || null;
 
 fs.mkdirSync(TTS_CACHE_DIR, { recursive: true });
 
@@ -115,27 +121,45 @@ class ZeroTTSManager {
     this.inflight = new Map();
     this.reqCounter = 0;
     this.buffer = '';
+    this.stopPromise = null;
     this.startWorker();
   }
 
-  resolvePythonBin() {
-    const venvPy = path.join(__dirname, '.venv', 'bin', 'python');
-    if (fs.existsSync(venvPy)) return venvPy;
-    return 'python3';
+  resolveWorkerCommand() {
+    if (ZERO_TTS_BIN) {
+      return { command: ZERO_TTS_BIN, args: [] };
+    }
+
+    const venvPy = process.platform === 'win32'
+      ? path.join(RESOURCE_DIR, '.venv', 'Scripts', 'python.exe')
+      : path.join(RESOURCE_DIR, '.venv', 'bin', 'python');
+    if (fs.existsSync(venvPy)) {
+      return { command: venvPy, args: [TTS_WORKER_PATH] };
+    }
+
+    return {
+      command: process.platform === 'win32' ? 'python' : 'python3',
+      args: [TTS_WORKER_PATH]
+    };
   }
 
   startWorker() {
-    const pyBin = this.resolvePythonBin();
-    const scriptPath = path.join(__dirname, 'tts_worker.py');
-    console.log(`[ZeroTTS] Khởi chạy worker với ${pyBin} (Giọng mặc định: Mai Chi)...`);
+    const worker = this.resolveWorkerCommand();
+    console.log(`[ZeroTTS] Khởi chạy worker với ${worker.command} (Giọng mặc định: Mai Chi)...`);
 
     this.status = 'loading';
-    this.proc = spawn(pyBin, [scriptPath], {
-      cwd: __dirname,
-      stdio: ['pipe', 'pipe', 'pipe']
+    this.proc = spawn(worker.command, worker.args, {
+      cwd: RESOURCE_DIR,
+      stdio: ['pipe', 'pipe', 'pipe'],
+      env: {
+        ...process.env,
+        APP_DATA_DIR: DATA_DIR,
+        HF_HOME: process.env.HF_HOME || path.join(DATA_DIR, 'models')
+      }
     });
+    const proc = this.proc;
 
-    this.proc.stdout.on('data', (chunk) => {
+    proc.stdout.on('data', (chunk) => {
       this.buffer += chunk.toString('utf8');
       let lines = this.buffer.split('\n');
       this.buffer = lines.pop() || '';
@@ -145,21 +169,66 @@ class ZeroTTSManager {
       }
     });
 
-    this.proc.stderr.on('data', (chunk) => {
+    proc.stderr.on('data', (chunk) => {
       const msg = chunk.toString('utf8').trim();
       if (msg) console.log(`[ZeroTTS stderr] ${msg}`);
     });
 
-    this.proc.on('exit', (code) => {
+    proc.on('error', (err) => {
+      console.error('[ZeroTTS] Worker failed to start:', err.message);
+      this.ready = false;
+      this.status = 'error';
+      if (this.proc === proc) this.proc = null;
+      for (const [, item] of this.pending) {
+        clearTimeout(item.timer);
+        item.resolve({ ok: false, error: 'ZeroTTS worker failed to start' });
+      }
+      this.pending.clear();
+      broadcastNotification('tts.status', this.getStatus());
+    });
+
+    proc.on('exit', (code) => {
       console.warn(`[ZeroTTS] Worker thoát với mã ${code}`);
       this.ready = false;
       this.status = 'stopped';
+      if (this.proc === proc) this.proc = null;
       for (const [, item] of this.pending) {
         clearTimeout(item.timer);
         item.resolve({ ok: false, error: 'ZeroTTS worker exited' });
       }
       this.pending.clear();
     });
+  }
+
+  stop() {
+    if (this.stopPromise) return this.stopPromise;
+    const proc = this.proc;
+    if (!proc || proc.exitCode !== null || proc.signalCode !== null) {
+      this.proc = null;
+      return Promise.resolve();
+    }
+
+    this.ready = false;
+    this.status = 'stopping';
+    this.stopPromise = new Promise((resolve) => {
+      const timer = setTimeout(() => {
+        if (this.proc === proc) proc.kill();
+      }, 5000);
+      timer.unref?.();
+
+      const finish = () => {
+        clearTimeout(timer);
+        if (this.proc === proc) this.proc = null;
+        resolve();
+      };
+      proc.once('exit', () => {
+        finish();
+      });
+      proc.once('error', finish);
+
+      proc.stdin.end();
+    });
+    return this.stopPromise;
   }
 
   handleWorkerLine(line) {
@@ -269,7 +338,7 @@ const DEFAULT_STATE = {
   tiktok: {
     connected: false,
     connecting: false,
-    username: 'zenfacts_vn',
+    username: '',
     roomId: null,
     viewerCount: 0,
     lastError: null
@@ -298,22 +367,32 @@ function loadState() {
 let state = loadState();
 
 let saveTimer = null;
+function getPersistedState() {
+  return {
+    totalIncense: state.totalIncense,
+    totalMerit: state.totalMerit,
+    woodenFishHits: state.woodenFishHits,
+    bellRings: state.bellRings,
+    lanternCount: state.lanternCount,
+    fortuneCount: state.fortuneCount,
+    activeIncenseSticks: state.activeIncenseSticks,
+    offerings: state.offerings,
+    devotees: state.devotees,
+    settings: state.settings
+  };
+}
+
+async function flushState() {
+  clearTimeout(saveTimer);
+  saveTimer = null;
+  await fs.promises.writeFile(STATE_FILE, JSON.stringify(getPersistedState(), null, 2), 'utf8');
+}
+
 function saveState() {
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
-    const toSave = {
-      totalIncense: state.totalIncense,
-      totalMerit: state.totalMerit,
-      woodenFishHits: state.woodenFishHits,
-      bellRings: state.bellRings,
-      lanternCount: state.lanternCount,
-      fortuneCount: state.fortuneCount,
-      activeIncenseSticks: state.activeIncenseSticks,
-      offerings: state.offerings,
-      devotees: state.devotees,
-      settings: state.settings
-    };
-    fs.promises.writeFile(STATE_FILE, JSON.stringify(toSave, null, 2), 'utf8').catch((e) => {
+    saveTimer = null;
+    flushState().catch((e) => {
       console.error('[State] Lỗi lưu file:', e.message);
     });
   }, 1200);
@@ -981,10 +1060,10 @@ async function connectTikTokLive(usernameOrUrl) {
   }
 }
 
-function disconnectTikTokLive() {
+async function disconnectTikTokLive() {
   if (tiktokConn) {
     try {
-      tiktokConn.disconnect();
+      await tiktokConn.disconnect();
     } catch (_) {}
     tiktokConn = null;
   }
@@ -1094,13 +1173,44 @@ async function handleRpcCall(method, params = {}) {
 // 8. EXPRESS + WEBSOCKET SERVER
 // ============================================================================
 const app = express();
-app.use(cors());
+const allowedOrigins = new Set([
+  `http://localhost:${PORT}`,
+  `http://127.0.0.1:${PORT}`
+]);
+app.use(cors({
+  origin(origin, callback) {
+    callback(null, !origin || allowedOrigins.has(origin));
+  }
+}));
 app.use(express.json({ limit: '2mb' }));
 app.use('/tts-cache', express.static(TTS_CACHE_DIR, { maxAge: '7d' }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(RESOURCE_DIR, 'public')));
+
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true, pid: process.pid });
+});
+
+app.post('/api/shutdown', (req, res) => {
+  const provided = Buffer.from(req.get('x-temple-shutdown-token') || '');
+  const expected = Buffer.from(SHUTDOWN_TOKEN || '');
+  const tokenMatches = expected.length > 0
+    && provided.length === expected.length
+    && crypto.timingSafeEqual(provided, expected);
+  if (!tokenMatches) {
+    return res.status(403).json({ ok: false, error: 'Invalid shutdown token' });
+  }
+
+  res.once('finish', () => {
+    gracefulShutdown().catch((err) => {
+      console.error('[Shutdown] Cleanup failed:', err.message);
+      process.exitCode = 1;
+    });
+  });
+  res.status(202).json({ ok: true });
+});
 
 app.get('/admin', (_req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'admin.html'));
+  res.sendFile(path.join(RESOURCE_DIR, 'public', 'admin.html'));
 });
 
 // HTTP JSON-RPC 2.0 Endpoint
@@ -1146,6 +1256,35 @@ app.get('/api/state', (_req, res) => {
 
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server, path: '/ws' });
+const zeroTts = new ZeroTTSManager();
+let shutdownPromise = null;
+
+function gracefulShutdown() {
+  if (shutdownPromise) return shutdownPromise;
+
+  shutdownPromise = (async () => {
+    if (autoSimTimer) {
+      clearInterval(autoSimTimer);
+      autoSimTimer = null;
+    }
+
+    await disconnectTikTokLive();
+    await zeroTts.stop();
+    try {
+      await flushState();
+    } catch (err) {
+      console.error('[Shutdown] State save failed:', err.message);
+    }
+
+    for (const client of wss.clients) {
+      client.terminate();
+    }
+    await new Promise((resolve) => wss.close(resolve));
+    await new Promise((resolve) => server.close(resolve));
+  })();
+
+  return shutdownPromise;
+}
 
 function broadcastNotification(method, params) {
   const payload = JSON.stringify({
@@ -1202,9 +1341,7 @@ wss.on('connection', (ws) => {
   });
 });
 
-const zeroTts = new ZeroTTSManager();
-
-server.listen(PORT, () => {
+server.listen(PORT, HOST, () => {
   console.log(`============================================================`);
   console.log(`🪷 CHÙA ONLINE TIKTOK LIVE RPC ĐÃ KHỞI ĐỘNG`);
   console.log(`📺 Màn hình Live (9:16 OBS): http://localhost:${PORT}`);
@@ -1212,8 +1349,7 @@ server.listen(PORT, () => {
   console.log(`🔌 JSON-RPC 2.0 Endpoint   : http://localhost:${PORT}/rpc (ws://localhost:${PORT}/ws)`);
   console.log(`============================================================`);
 
-  // Tự động kết nối tới @zenfacts_vn ngay khi khởi động server
-  const defaultChannel = process.env.TIKTOK_USER || state.tiktok?.username || 'zenfacts_vn';
+  const defaultChannel = process.env.TIKTOK_USER;
   if (defaultChannel) {
     connectTikTokLive(defaultChannel).catch((err) => {
       console.warn(`[Auto-Connect @${defaultChannel}] Chưa kết nối được ngay:`, err.message);

@@ -22,16 +22,19 @@ os.environ.setdefault("MKL_NUM_THREADS", "3")
 os.environ.setdefault("OPENBLAS_NUM_THREADS", "3")
 os.environ.setdefault("VECLIB_MAXIMUM_THREADS", "3")
 
+APP_DATA_DIR = Path(os.environ.get("APP_DATA_DIR", Path(__file__).resolve().parent / "data"))
+CACHE_DIR = APP_DATA_DIR / "tts-cache"
+MODEL_CACHE_DIR = APP_DATA_DIR / "models"
+os.environ.setdefault("HF_HOME", str(MODEL_CACHE_DIR))
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
+MODEL_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
 import numpy as np
 from zerotts import ZeroTTS, normalize_vi_text
 from zerotts.chunking import normalize_punctuation
 
-CACHE_DIR = Path(__file__).resolve().parent / "data" / "tts-cache"
-CACHE_DIR.mkdir(parents=True, exist_ok=True)
-
 LOCAL_MODEL_CANDIDATES = [
     os.environ.get("ZEROTTS_MODEL_PATH", ""),
-    "/Users/zens/Work/UIT/Projects/f1-metrics-explainer/models/zerotts",
 ]
 
 # Chỉ giữ lại chữ cái tiếng Việt (Latin + dấu tiếng Việt), chữ số và dấu câu cơ bản
