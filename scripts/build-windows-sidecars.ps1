@@ -18,7 +18,7 @@ try {
         & uv venv .venv --python 3.11
         if ($LASTEXITCODE -ne 0) { throw 'uv could not create the Python 3.11 environment.' }
     }
-    $pythonVersion = & $venvPython -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")'
+    $pythonVersion = & $venvPython -c 'import sys; print(sys.version_info.major, sys.version_info.minor, sep=chr(46))'
     if ($LASTEXITCODE -ne 0 -or $pythonVersion -ne '3.11') {
         throw "The ZeroTTS build requires Python 3.11; found $pythonVersion. Recreate .venv with 'uv venv .venv --python 3.11'."
     }

@@ -187,7 +187,7 @@ fn fail_and_kill(app: &App, message: &str) {
             let _ = child.kill();
         }
         runtime.changed.notify_all();
-    }
+    };
 }
 
 fn set_exited(app: &AppHandle, code: Option<i32>) {
@@ -196,7 +196,7 @@ fn set_exited(app: &AppHandle, code: Option<i32>) {
         process.state = BackendState::Exited(code);
         process.child.take();
         runtime.changed.notify_all();
-    }
+    };
 }
 
 fn wait_for_backend(app: &AppHandle, expected_pid: u32) -> Result<(), String> {
