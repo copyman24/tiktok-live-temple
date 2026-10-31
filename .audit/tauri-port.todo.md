@@ -1,0 +1,22 @@
+# Tauri desktop port checklist
+
+- [x] Ground the existing backend, frontend, OBS URL, and Python TTS lifecycle.
+- [x] Sketch at least two complete Tauri and sidecar designs through the arena.
+- [x] Agree: skip: the user did not request a design checkpoint.
+- [x] Implement the selected design in small, verified units.
+- [x] Scrap: skip: implementation followed the selected architecture without repeated structural friction.
+- [x] Blocking first steps: finish design selection and check Tauri build requirements.
+- [x] Independent workstreams: keep candidate sketches in separate `/tmp` directories; assign any code-writing work a separate worktree.
+- [x] Shared mutable state: keep all candidate output isolated and serialize any integration against the main checkout.
+- [x] Smallest safe decomposition: use one implementation owner because backend startup, server paths, and sidecar cleanup share lifecycle state.
+- [x] Frame the arena rubric and candidate prompt.
+- [x] Fan out independent candidates and read each full sketch.
+- [x] Cross-judge: skip: the configured cross-judge pool inherits the parent model.
+- [x] Pick the candidate against the rubric, then graft only compatible improvements.
+- [x] Verify the synthesized sketch against the repository contracts.
+- [x] Scaffold Tauri v2 and add Rust-owned backend startup, readiness, and shutdown.
+- [x] Keep ZeroTTS as a separate process and add Windows paths plus a PyInstaller build step; native worker execution remains unverified.
+- [x] Preserve the admin, OBS Browser Source, TikTok event flow, and local state; a local RPC event reached `/ws` and state persisted.
+- [ ] Verify the desktop shell and the same local RPC/WebSocket flow. blocked: this WSL distro lacks `cc` and WebKitGTK, and the Windows MSVC Tauri and PyInstaller build needs native Windows.
+- [x] Document Windows build prerequisites and sidecar packaging limits.
+- [x] Opening a PR: skip: the user requested a local implementation, not a PR.
