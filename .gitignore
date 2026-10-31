@@ -3,6 +3,8 @@ node_modules/
 data/
 dist/
 .cache/
+zerotts-worker.spec
+bun.lock
 src-tauri/target/
 src-tauri/gen/
 src-tauri/binaries/*
