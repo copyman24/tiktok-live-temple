@@ -100,6 +100,7 @@ pub fn setup(app: &mut App) -> Result<(), Box<dyn Error>> {
     let command = app
         .shell()
         .sidecar("temple-backend")?
+        .set_process_group(true)
         .env("APP_RESOURCE_DIR", &paths.resources)
         .env("APP_DATA_DIR", &paths.data)
         .env("HOST", HOST)

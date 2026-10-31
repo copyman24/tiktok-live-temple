@@ -1299,7 +1299,13 @@ function broadcastNotification(method, params) {
   }
 }
 
-wss.on('connection', (ws) => {
+wss.on('connection', (ws, req) => {
+  const origin = req.headers.origin;
+  if (origin && !allowedOrigins.has(origin)) {
+    ws.close(1008, 'Origin not allowed');
+    return;
+  }
+
   ws.send(
     JSON.stringify({
       jsonrpc: '2.0',
