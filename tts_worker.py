@@ -16,6 +16,9 @@ import traceback
 import unicodedata
 from pathlib import Path
 
+sys.stdin.reconfigure(encoding="utf-8", errors="strict")
+sys.stdout.reconfigure(encoding="utf-8", errors="strict")
+
 os.environ.setdefault("OMP_NUM_THREADS", "3")
 os.environ.setdefault("OMP_WAIT_POLICY", "PASSIVE")
 os.environ.setdefault("MKL_NUM_THREADS", "3")
@@ -155,12 +158,12 @@ def main() -> None:
             if voice not in voices:
                 voice = "maichi"
 
-            norm_text = clean_and_normalize_text(text)
-            if not norm_text:
+            text_to_synthesize = text
+            if not text_to_synthesize:
                 emit({"type": "result", "id": req_id, "ok": False, "error": "Filtered empty/spam text"})
                 continue
 
-            cache_key = hashlib.sha1(f"v3::{voice}::{norm_text}".encode("utf-8")).hexdigest()[:20]
+            cache_key = hashlib.sha1(f"direct-v1::{voice}::{text_to_synthesize}".encode("utf-8")).hexdigest()[:20]
             out_name = f"{voice}_{cache_key}.wav"
             out_path = CACHE_DIR / out_name
 
@@ -178,7 +181,7 @@ def main() -> None:
                 continue
 
             t_synth = time.time()
-            raw_wav = tts.synthesize(norm_text, voice=voice, eoa_extra_frames=2)
+            raw_wav = tts.synthesize(text_to_synthesize, voice=voice, eoa_extra_frames=2)
             if raw_wav is None or raw_wav.size == 0:
                 emit({"type": "result", "id": req_id, "ok": False, "error": "No audio generated"})
                 continue
