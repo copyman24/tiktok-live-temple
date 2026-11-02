@@ -1,42 +1,44 @@
 :root {
-  --bg-deep: #0b0302;
-  --gold-bright: #ffe89e;
-  --gold-main: #f4c150;
-  --gold-deep: #b87e14;
-  --ivory: #fff8eb;
-  --muted-gold: #d8be92;
+  --bg-deep: var(--jade-dark);
+  --gold-bright: var(--paper-light);
+  --gold-main: var(--brass);
+  --gold-deep: var(--cinnabar-dark);
+  --ivory: var(--paper-light);
+  --muted-gold: var(--ink-soft);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  user-select: none;
 }
 
 html, body {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #120403;
-  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--ivory);
+  min-height: 100%;
+  overflow-x: hidden;
+  background: var(--ground);
+  font-family: var(--font-ui);
+  color: var(--ink);
 }
 
 .app-workspace {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   gap: 24px;
-  padding: 12px;
+  padding: 16px;
 }
 
 body.obs-mode {
   background: transparent;
+  overflow: hidden;
 }
 body.obs-mode .app-workspace {
+  height: 100vh;
+  min-height: 0;
   padding: 0;
   gap: 0;
 }
@@ -49,19 +51,24 @@ body.obs-mode .quick-dock {
    ========================================================================== */
 .stage-wrapper {
   position: relative;
-  height: 96vh;
+  height: min(96vh, 960px);
   aspect-ratio: 9 / 16;
-  border-radius: 22px;
+  flex: 0 0 auto;
+  border-radius: 10px;
   overflow: hidden;
-  border: 2px solid rgba(244, 193, 80, 0.55);
-  background: #120403;
+  border: 1px solid rgba(31, 43, 38, 0.32);
+  background: var(--jade-dark);
+  box-shadow: var(--shadow-soft);
   contain: layout paint style;
 }
 
 body.obs-mode .stage-wrapper {
-  height: 100vh;
+  width: min(100vw, 56.25vh);
+  height: auto;
+  aspect-ratio: 9 / 16;
   border-radius: 0;
   border: none;
+  box-shadow: none;
 }
 
 .stage-9x16 {
@@ -72,7 +79,8 @@ body.obs-mode .stage-wrapper {
   height: 1920px;
   transform-origin: top left;
   overflow: hidden;
-  background: #120403;
+  background: var(--jade-dark);
+  user-select: none;
   contain: strict;
 }
 
@@ -217,9 +225,9 @@ body.obs-mode .stage-wrapper {
 /* 2. THANH TRẠNG THÁI MỎNG TRÊN ĐỈNH (KHÔNG DÙNG BACKDROP-FILTER) */
 .minimal-top-bar {
   position: absolute;
-  top: 18px;
-  left: 24px;
-  right: 24px;
+  top: 24px;
+  left: 28px;
+  right: 28px;
   z-index: 20;
   display: flex;
   align-items: center;
@@ -236,32 +244,48 @@ body.obs-mode .stage-wrapper {
 .live-pill, .mini-stat-pill, .tts-voice-pill {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 7px 16px;
-  border-radius: 999px;
-  background: rgba(16, 4, 3, 0.92);
-  border: 1.5px solid rgba(244, 193, 80, 0.6);
-  font-size: 17px;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 4px;
+  background: var(--paper-light);
+  border: 1px solid rgba(31, 43, 38, 0.7);
+  color: var(--ink);
+  font-size: 22px;
   font-weight: 600;
-  color: var(--ivory);
+  line-height: 1.2;
+}
+
+.mini-stat-pill {
+  gap: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.mini-stat-pill strong {
+  color: var(--jade-dark);
+}
+
+.stat-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(31, 43, 38, 0.34);
 }
 
 .live-dot {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: #ff3b30;
+  background: var(--cinnabar);
 }
 .live-dot.connected {
-  background: #2ecc71;
+  background: var(--success);
 }
 
 .tts-voice-pill {
-  color: var(--gold-bright);
+  color: var(--ink);
 }
 .tts-voice-pill.speaking {
-  border-color: #fff3b0;
-  background: rgba(58, 14, 9, 0.95);
+  border-color: var(--cinnabar);
+  background: #f4df8b;
 }
 
 .voice-wave {
@@ -274,7 +298,7 @@ body.obs-mode .stage-wrapper {
   display: block;
   width: 3px;
   height: 6px;
-  background: var(--gold-bright);
+  background: var(--cinnabar);
   border-radius: 2px;
 }
 .tts-voice-pill.speaking .voice-wave i {
@@ -357,13 +381,28 @@ body.obs-mode .stage-wrapper {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 13px;
-  border-radius: 999px;
-  background: rgba(20, 5, 3, 0.88);
-  border: 1.5px solid rgba(244, 193, 80, 0.65);
-  color: var(--gold-bright);
-  font-size: 14px;
+  padding: 9px 14px;
+  border-radius: 4px;
+  background: var(--paper-light);
+  border: 1px solid var(--jade-dark);
+  color: var(--ink);
+  font: inherit;
+  font-size: 24px;
   font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(20, 40, 33, 0.2);
+}
+
+.ritual-hotspot:hover {
+  background: #fffbe9;
+}
+
+.incense-burner-zone {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }
 .bell-hotspot {
   top: 955px;
@@ -443,13 +482,13 @@ body.obs-mode .stage-wrapper {
 
 .worshipper-wish-bubble {
   max-width: 340px;
-  padding: 6px 14px;
-  margin-bottom: 4px;
-  border-radius: 14px;
-  background: rgba(18, 4, 3, 0.92);
-  border: 1.5px solid var(--gold-main);
-  color: var(--gold-bright);
-  font-size: 14.5px;
+  padding: 8px 14px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  background: var(--paper-light);
+  border: 1px solid var(--jade-dark);
+  color: var(--ink);
+  font-size: 21px;
   font-weight: 600;
   text-align: center;
   white-space: nowrap;
@@ -462,33 +501,32 @@ body.obs-mode .stage-wrapper {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 12px 4px 5px;
-  border-radius: 999px;
-  background: rgba(16, 6, 4, 0.94);
-  border: 1.5px solid var(--gold-main);
+  padding: 7px 14px;
+  border-radius: 4px;
+  background: var(--paper-light);
+  border: 1px solid var(--jade-dark);
   margin-top: -12px;
   position: relative;
   z-index: 2;
 }
 
 .central-name-tag {
-  padding: 5px 15px 5px 6px;
-  border-width: 2px;
-  border-color: var(--gold-bright);
+  padding: 8px 16px;
+  border-color: var(--cinnabar);
 }
 
 .tag-avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1.5px solid var(--gold-bright);
-  background: #4f100a;
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  border: 1px solid var(--cinnabar);
+  background: var(--cinnabar);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 800;
-  color: var(--gold-bright);
+  color: white;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -504,18 +542,18 @@ body.obs-mode .stage-wrapper {
   line-height: 1.15;
 }
 .tag-name {
-  font-size: 14.5px;
+  font-size: 23px;
   font-weight: 800;
-  color: #ffffff;
-  max-width: 135px;
+  color: var(--ink);
+  max-width: 260px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .tag-sub {
-  font-size: 11.5px;
+  font-size: 18px;
   font-weight: 700;
-  color: var(--gold-bright);
+  color: var(--jade-dark);
 }
 
 /* 5. HÀNG 6 ĐỆM QUỲ VIP TRÊN BỤC GỖ (STATIC LAYER, 0% CPU KHI ĐỨNG YÊN) */
@@ -703,7 +741,7 @@ body.obs-mode .stage-wrapper {
   animation: floatLanternUp 9.5s linear forwards;
 }
 .sky-lantern::before {
-  content: '🏮 SỚ CẦU AN';
+  content: 'SỚ CẦU AN';
   display: block;
   font-size: 13px;
   font-weight: 800;
@@ -712,14 +750,14 @@ body.obs-mode .stage-wrapper {
   margin-bottom: 3px;
 }
 .sky-lantern-user {
-  font-size: 17px;
+  font-size: 24px;
   font-weight: 800;
-  color: #fff;
+  color: var(--ink);
 }
 .sky-lantern-wish {
-  font-size: 15px;
+  font-size: 21px;
   line-height: 1.3;
-  color: #ffe8a3;
+  color: var(--ink-soft);
   margin-top: 2px;
 }
 
@@ -747,7 +785,7 @@ body.obs-mode .stage-wrapper {
   bottom: 20px;
   left: 24px;
   right: 24px;
-  height: 192px;
+  height: 248px;
   z-index: 20;
   display: grid;
   grid-template-columns: 1.65fr 1fr;
@@ -762,20 +800,38 @@ body.obs-mode .stage-wrapper {
 }
 
 .hud-active-notice {
-  height: 52px;
-  padding: 0 18px;
-  border-radius: 14px;
-  background: rgba(34, 10, 6, 0.94);
-  border: 1.5px solid rgba(244, 193, 80, 0.65);
+  min-height: 58px;
+  padding: 8px 18px;
+  border-radius: 4px;
+  background: var(--paper-light);
+  border: 1px solid var(--jade-dark);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 19px;
-  color: var(--gold-bright);
+  gap: 12px;
+  font-size: 23px;
+  color: var(--ink);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.hud-active-notice::before {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  background: var(--cinnabar);
+  content: '';
+}
+
+.hud-active-notice strong {
+  color: var(--cinnabar-dark);
+}
+
+.notice-divider {
+  width: 1px;
+  height: 22px;
+  flex: 0 0 1px;
+  background: rgba(31, 43, 38, 0.35);
 }
 
 .hud-gift-cards {
@@ -786,58 +842,57 @@ body.obs-mode .stage-wrapper {
 }
 
 .hud-gift-card {
+  appearance: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
   cursor: pointer;
-  background: rgba(24, 8, 5, 0.94);
-  border: 1.5px solid rgba(244, 193, 80, 0.55);
-  border-radius: 14px;
+  background: var(--paper);
+  border: 1px solid var(--jade);
+  border-radius: 4px;
   padding: 10px 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .hud-gift-card:hover {
-  border-color: var(--gold-bright);
+  background: #fff5d2;
 }
 .gift-coin-tag {
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 800;
-  color: var(--muted-gold);
-  letter-spacing: 0.5px;
+  color: var(--jade-dark);
 }
 .gift-card-body {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-.gift-emoji {
-  font-size: 34px;
+  gap: 8px;
 }
 .gift-title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 800;
-  color: var(--gold-bright);
+  color: var(--ink);
 }
 
 /* Bảng TẤM LÒNG THÀNH bên phải đáy */
 .hud-right-leaderboard {
-  background: rgba(22, 7, 4, 0.94);
-  border: 1.5px solid rgba(244, 193, 80, 0.65);
-  border-radius: 16px;
-  padding: 12px 16px;
+  background: var(--jade-dark);
+  border: 1px solid var(--jade-dark);
+  border-radius: 4px;
+  padding: 14px 18px;
   display: flex;
   flex-direction: column;
 }
 
 .hud-lb-header {
-  text-align: center;
-  font-family: 'Noto Serif', serif;
-  font-size: 19px;
+  text-align: left;
+  font-family: var(--font-ritual);
+  font-size: 22px;
   font-weight: 900;
-  color: var(--gold-bright);
-  letter-spacing: 1.5px;
-  padding-bottom: 6px;
-  margin-bottom: 6px;
-  border-bottom: 1px solid rgba(244, 193, 80, 0.3);
+  color: var(--paper-light);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(248, 240, 205, 0.34);
 }
 
 .hud-lb-list {
@@ -852,16 +907,17 @@ body.obs-mode .stage-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 19px;
+  font-variant-numeric: tabular-nums;
 }
 .leader-rank {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: rgba(244, 193, 80, 0.25);
-  border: 1px solid var(--gold-main);
-  color: var(--gold-bright);
-  font-size: 13px;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  background: rgba(248, 240, 205, 0.14);
+  border: 1px solid rgba(248, 240, 205, 0.55);
+  color: var(--paper-light);
+  font-size: 15px;
   font-weight: 800;
   display: inline-flex;
   align-items: center;
@@ -871,15 +927,25 @@ body.obs-mode .stage-wrapper {
 .leader-name {
   flex: 1;
   font-weight: 700;
-  color: var(--ivory);
+  color: var(--paper-light);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .leader-merit {
   font-weight: 800;
-  color: var(--gold-bright);
+  color: #f4d778;
   margin-left: 8px;
+}
+.leader-empty {
+  color: rgba(250, 246, 231, 0.78);
+  font-size: 17px;
+  line-height: 1.4;
+}
+.event-feed-empty {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -903,23 +969,25 @@ body.obs-mode .stage-wrapper {
 }
 
 .fortune-scroll-card {
-  width: 780px;
-  background: linear-gradient(180deg, #fff5dc 0%, #f5deb3 100%);
-  color: #3b0d09;
-  border: 6px solid #8c1812;
-  outline: 3px solid var(--gold-main);
-  border-radius: 24px;
+  width: min(780px, calc(100% - 80px));
+  max-height: calc(100% - 80px);
+  overflow-y: auto;
+  background: var(--paper-light);
+  color: var(--ink);
+  border: 4px solid var(--cinnabar);
+  outline: 1px solid var(--brass);
+  border-radius: 6px;
   padding: 34px 42px;
   text-align: center;
 }
 .fortune-badge {
   display: inline-block;
-  background: #8c1812;
+  background: var(--cinnabar);
   color: var(--gold-bright);
   font-weight: 800;
   font-size: 22px;
   padding: 6px 24px;
-  border-radius: 999px;
+  border-radius: 3px;
   letter-spacing: 2px;
   margin-bottom: 12px;
 }
@@ -927,13 +995,13 @@ body.obs-mode .stage-wrapper {
   font-family: 'Noto Serif', serif;
   font-size: 35px;
   font-weight: 900;
-  color: #6b0f0a;
+  color: var(--cinnabar-dark);
   margin-bottom: 8px;
 }
 .fortune-devotee {
   font-size: 22px;
   font-weight: 700;
-  color: #8c2d19;
+  color: var(--ink-soft);
   margin-bottom: 18px;
 }
 .fortune-poem {
@@ -941,10 +1009,10 @@ body.obs-mode .stage-wrapper {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.55;
-  color: #2b0705;
-  background: rgba(140, 24, 18, 0.08);
-  border-top: 2px dashed rgba(140, 24, 18, 0.35);
-  border-bottom: 2px dashed rgba(140, 24, 18, 0.35);
+  color: var(--ink);
+  background: rgba(168, 59, 45, 0.06);
+  border-top: 1px solid var(--muted-line);
+  border-bottom: 1px solid var(--muted-line);
   padding: 18px 20px;
   white-space: pre-line;
   margin-bottom: 18px;
@@ -952,7 +1020,7 @@ body.obs-mode .stage-wrapper {
 .fortune-meaning {
   font-size: 21px;
   line-height: 1.45;
-  color: #3d120d;
+  color: var(--ink-soft);
   font-weight: 600;
 }
 
@@ -985,9 +1053,9 @@ body.obs-mode .stage-wrapper {
   transform: translate3d(-50%, 0, 0) scale(0.9);
   width: 860px;
   padding: 22px 30px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #6e0f0a 0%, #a31c14 50%, #520906 100%);
-  border: 4px solid #fff099;
+  border-radius: 5px;
+  background: var(--cinnabar-dark);
+  border: 3px solid var(--paper-light);
   text-align: center;
   z-index: 48;
   opacity: 0;
@@ -1002,7 +1070,7 @@ body.obs-mode .stage-wrapper {
   font-family: 'Noto Serif', serif;
   font-size: 36px;
   font-weight: 900;
-  color: #fff3b0;
+  color: var(--paper-light);
 }
 .grand-sub {
   font-size: 24px;
@@ -1011,112 +1079,368 @@ body.obs-mode .stage-wrapper {
   margin-top: 6px;
 }
 
-/* ==========================================================================
-   BẢNG ĐIỀU KHIỂN NHANH BÊN CẠNH MÀN HÌNH LIVE (QUICK RPC DOCK)
-   ========================================================================== */
+/* Operator dock: one working sheet, grouped by task. */
 .quick-dock {
   width: 390px;
   max-height: 96vh;
   overflow-y: auto;
-  background: #1a0705;
-  border: 1.5px solid rgba(244, 193, 80, 0.45);
-  border-radius: 20px;
-  padding: 20px;
+  padding: 20px 22px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--cinnabar);
+  border-radius: 0;
+  box-shadow: var(--shadow-soft);
+  scrollbar-color: var(--jade) transparent;
 }
 .dock-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(244, 193, 80, 0.25);
-  padding-bottom: 12px;
+  gap: 12px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid var(--line);
 }
 .dock-title {
+  font-family: var(--font-ritual);
   font-size: 19px;
-  font-weight: 800;
-  color: var(--gold-bright);
+  font-weight: 700;
+  color: var(--ink);
 }
 .dock-link {
-  font-size: 13px;
-  color: var(--gold-main);
+  flex: 0 0 auto;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 7px 10px;
+  border: 1px solid var(--jade);
+  border-radius: 3px;
+  color: var(--jade-dark);
+  font-size: 12px;
+  font-weight: 700;
   text-decoration: none;
-  border: 1px solid rgba(244, 193, 80, 0.4);
-  padding: 5px 10px;
-  border-radius: 8px;
+}
+.dock-link:hover {
+  color: white;
+  background: var(--jade);
 }
 .dock-section {
-  background: rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(244, 193, 80, 0.2);
-  border-radius: 14px;
-  padding: 13px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.dock-section:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 .dock-section-title {
-  font-size: 13px;
-  font-weight: 700;
+  color: var(--jade-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--muted-gold);
+}
+.dock-label {
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 600;
 }
 .dock-input-row {
   display: flex;
   gap: 8px;
 }
+#btnConnectTikTok {
+  min-width: 88px;
+  white-space: nowrap;
+}
 .dock-input {
-  flex: 1;
-  background: #0f0403;
-  border: 1px solid rgba(244, 193, 80, 0.38);
-  border-radius: 9px;
-  padding: 9px 12px;
-  color: var(--ivory);
-  font-size: 14px;
-  outline: none;
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 9px 11px;
+  border: 1px solid rgba(31, 43, 38, 0.36);
+  border-radius: 3px;
+  color: var(--ink);
+  background: var(--paper-light);
+  font: inherit;
+  font-size: 13px;
+}
+.dock-input::placeholder {
+  color: #6a6b5d;
+  opacity: 1;
 }
 .dock-btn {
-  cursor: pointer;
-  border: 1px solid rgba(244, 193, 80, 0.5);
-  border-radius: 10px;
-  padding: 9px 13px;
-  background: linear-gradient(180deg, #6e140e 0%, #420a07 100%);
-  color: var(--gold-bright);
-  font-weight: 700;
-  font-size: 13.5px;
   display: inline-flex;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
   gap: 6px;
+  padding: 9px 12px;
+  border: 1px solid var(--jade);
+  border-radius: 3px;
+  color: var(--jade-dark);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+.dock-btn:hover {
+  color: white;
+  background: var(--jade);
 }
 .dock-btn.gold {
-  background: linear-gradient(180deg, #f4c150 0%, #c48312 100%);
-  color: #1f0604;
-  border-color: #fff3b0;
+  border-color: var(--cinnabar);
+  color: white;
+  background: var(--cinnabar);
+}
+.dock-btn.gold:hover {
+  border-color: var(--cinnabar-dark);
+  background: var(--cinnabar-dark);
 }
 .dock-btn.active-toggle {
-  background: linear-gradient(180deg, #1b7a46 0%, #104f2d 100%);
-  border-color: #58e698;
-  color: #eafff3;
+  border-color: var(--success);
+  color: white;
+  background: var(--success);
+}
+.dock-btn.active-toggle:hover {
+  border-color: var(--jade-dark);
+  background: var(--jade-dark);
 }
 .dock-grid-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
+.dock-grid-2 > * {
+  min-width: 0;
+}
+.volume-control-row {
+  gap: 7px;
+}
+.volume-label-line {
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+.volume-label-line strong {
+  color: var(--jade-dark);
+}
+.volume-slider {
+  height: 20px;
+  accent-color: var(--jade);
+}
 .event-feed {
-  max-height: 150px;
+  max-height: 176px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 12.5px;
+  gap: 0;
+  font-size: 12px;
 }
 .event-feed-item {
-  padding: 6px 9px;
-  border-radius: 7px;
-  background: rgba(255, 255, 255, 0.04);
-  border-left: 3px solid var(--gold-main);
-  color: #f3e5cf;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--muted-line);
+  color: var(--ink);
+  line-height: 1.45;
+}
+.event-feed-item:last-child {
+  border-bottom: 0;
+}
+.event-feed-item strong {
+  color: var(--cinnabar-dark);
+}
+
+/* The stage remains a fixed 9:16 source; phones place its controls below it. */
+@media (max-width: 1023px) {
+  .app-workspace {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    min-height: 100vh;
+    padding: 12px;
+  }
+  .stage-wrapper {
+    width: min(100%, 540px);
+    height: auto;
+    aspect-ratio: 9 / 16;
+  }
+  .quick-dock {
+    width: min(100%, 540px);
+    max-height: none;
+    overflow: visible;
+  }
+  .volume-slider {
+    height: 44px;
+  }
+  body.obs-mode .app-workspace {
+    height: 100vh;
+    min-height: 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .minimal-top-bar {
+    top: 22px;
+    left: 22px;
+    right: 22px;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .live-pill,
+  .mini-stat-pill {
+    min-width: 0;
+    padding: 8px 10px;
+    gap: 8px;
+    font-size: 33px;
+  }
+  .live-pill {
+    max-width: 58%;
+    overflow: hidden;
+  }
+  .live-pill > span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .top-Right-badges {
+    max-width: 42%;
+  }
+  .mini-stat-pill {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    font-size: 27px;
+  }
+  .mini-stat-pill .stat-divider {
+    display: none;
+  }
+  .ritual-hotspot {
+    min-width: 132px;
+    min-height: 132px;
+    justify-content: center;
+    padding: 8px;
+    font-size: 34px;
+  }
+  .fortune-hotspot {
+    top: 790px;
+  }
+  .worshipper-wish-bubble {
+    max-width: 460px;
+    font-size: 31px;
+    white-space: normal;
+  }
+  .tag-name {
+    font-size: 34px;
+  }
+  .tag-sub {
+    font-size: 28px;
+  }
+  .bottom-hud-bar {
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+    height: 300px;
+    gap: 12px;
+  }
+  .hud-active-notice {
+    min-height: 70px;
+    gap: 9px;
+    padding: 8px 12px;
+    font-size: 30px;
+  }
+  .hud-gift-cards {
+    gap: 7px;
+  }
+  .hud-gift-card {
+    padding: 9px;
+  }
+  .gift-coin-tag {
+    font-size: 24px;
+  }
+  .gift-title {
+    font-size: 30px;
+  }
+  .hud-right-leaderboard {
+    padding: 12px;
+  }
+  .hud-lb-header {
+    font-size: 30px;
+  }
+  .leader-item {
+    font-size: 27px;
+  }
+  .leader-rank {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+  }
+  .leader-merit {
+    font-size: 24px;
+  }
+  .fortune-scroll-card {
+    width: calc(100% - 64px);
+    max-height: calc(100% - 64px);
+    overflow-y: auto;
+    padding: 28px;
+    border-width: 4px;
+    border-radius: 8px;
+  }
+  .fortune-heading {
+    font-size: 37px;
+  }
+  .fortune-poem {
+    padding: 16px;
+    font-size: 31px;
+  }
+  .fortune-meaning {
+    font-size: 28px;
+  }
+  .grand-ceremony-banner {
+    width: calc(100% - 100px);
+    padding: 22px;
+    border-width: 4px;
+    border-radius: 5px;
+  }
+  .grand-title {
+    font-size: 38px;
+  }
+  .grand-sub {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 380px) {
+  .quick-dock {
+    padding: 16px;
+  }
+  .dock-input-row {
+    flex-wrap: wrap;
+  }
+  #btnConnectTikTok {
+    flex: 1 0 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

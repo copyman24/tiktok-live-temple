@@ -1,0 +1,7 @@
+# Investigation checklist
+
+- [x] Route through the **how** skill. For motivation questions, also route through the **why** skill.
+- [x] Throughput checkpoint stays one line: `throughput checkpoint: n/a, read-only investigation`.
+- [x] Produce the `how`-shaped output (Overview / Key Concepts / How It Works / Where Things Live / Gotchas), or a recommendation with a tradeoffs table if the request is a decision between alternatives.
+- [x] Apply the **unslop** skill to the reply.
+- [x] Trace how this app receives TikTok live events, and assess what a Cloudflare hosted multi-tenant SaaS would need to replace or preserve.

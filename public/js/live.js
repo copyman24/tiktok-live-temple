@@ -33,7 +33,7 @@
     audio.ensureContext();
     const btnUnlock = document.getElementById('btnUnlockAudio');
     if (btnUnlock) {
-      btnUnlock.textContent = '✅ Âm Thanh Chùa Đã Sẵn Sàng';
+      btnUnlock.textContent = 'Âm thanh đã sẵn sàng';
       btnUnlock.classList.remove('gold');
       btnUnlock.classList.add('active-toggle');
     }
@@ -305,14 +305,14 @@
     const beam = document.getElementById('sacredLightBeam');
 
     if (nameEl) nameEl.textContent = user || 'Thí Chủ Hữu Duyên';
-    if (actEl) actEl.textContent = actionLabel || '✨ Dâng hương cầu an';
+    if (actEl) actEl.textContent = actionLabel || 'Dâng hương cầu an';
     if (wishEl) wishEl.textContent = `“${wish || 'Nam Mô A Di Đà Phật, cầu bình an cát tường'}”`;
 
     if (avatarEl) {
       if (avatar) {
         avatarEl.innerHTML = `<img src="${escapeHtml(avatar)}" alt="" />`;
       } else {
-        avatarEl.textContent = String(user || '🙏').trim().charAt(0).toUpperCase();
+        avatarEl.textContent = String(user || 'T').trim().charAt(0).toUpperCase();
       }
     }
 
@@ -369,7 +369,7 @@
       updateCentralWorshipper(
         topDev.name,
         topDev.avatar,
-        `✨ Công đức: ${Number(topDev.merit).toLocaleString('vi-VN')} CĐ`,
+        `Công đức: ${Number(topDev.merit).toLocaleString('vi-VN')} CĐ`,
         topDev.lastWish || 'Nam Mô A Di Đà Phật, cầu bình an cát tường',
         false
       );
@@ -378,18 +378,20 @@
     // Cập nhật Bảng TẤM LÒNG THÀNH ở góc dưới phải (Top 4)
     const lbList = document.getElementById('leaderboardList');
     if (lbList) {
-      lbList.innerHTML = lb
-        .slice(0, 4)
-        .map(
-          (item) => `
+      const topLeaders = lb.slice(0, 4);
+      lbList.innerHTML = topLeaders.length
+        ? topLeaders
+            .map(
+              (item) => `
           <div class="leader-item">
             <span class="leader-rank">${item.rank}</span>
             <span class="leader-name">${escapeHtml(shortenName(item.name, 14))}</span>
             <span class="leader-merit">${Number(item.merit).toLocaleString('vi-VN')}</span>
           </div>
         `
-        )
-        .join('');
+            )
+            .join('')
+        : '<p class="leader-empty">Chưa có người đóng góp</p>';
     }
 
     // Trạng thái kết nối TikTok Live
@@ -397,22 +399,22 @@
     const liveText = document.getElementById('liveStatusText');
     if (st.tiktok?.connected) {
       liveDot.classList.add('connected');
-      liveText.textContent = `LIVE @${st.tiktok.username} • ${st.tiktok.viewerCount || 0} mắt`;
+      liveText.textContent = `LIVE @${st.tiktok.username} · ${st.tiktok.viewerCount || 0} người xem`;
     } else if (st.tiktok?.connecting) {
       liveDot.classList.remove('connected');
       liveText.textContent = `Đang kết nối @${st.tiktok.username}...`;
     } else {
       liveDot.classList.remove('connected');
       liveText.textContent = st.settings?.autoSim
-        ? 'CHÙA LINH ỨNG • TỰ ĐỘNG GIẢ LẬP ĐÔNG NGƯỜI'
-        : 'CHÙA LINH ỨNG • ĐỨC PHẬT A DI ĐÀ';
+        ? 'Đang giả lập người xem'
+        : 'Chưa kết nối · Chùa Linh Ứng';
     }
 
     const btnAutoSim = document.getElementById('btnToggleAutoSim');
     if (btnAutoSim && st.settings) {
       btnAutoSim.textContent = st.settings.autoSim
-        ? '🤖 Tự động Giả lập Người Xem: ĐANG BẬT'
-        : '🤖 Tự động Giả lập Người Xem: TẮT';
+        ? 'Giả lập người xem: Đang bật'
+        : 'Giả lập người xem: Tắt';
       btnAutoSim.classList.toggle('active-toggle', Boolean(st.settings.autoSim));
     }
     if (st.settings) {
@@ -437,30 +439,30 @@
 
     const feed = document.getElementById('eventFeed');
     if (feed && Array.isArray(st.recentEvents)) {
-      feed.innerHTML = st.recentEvents
-        .slice(0, 8)
-        .map((ev) => `<div class="event-feed-item">${formatEventSummary(ev)}</div>`)
-        .join('');
+      const recentEvents = st.recentEvents.slice(0, 8);
+      feed.innerHTML = recentEvents.length
+        ? recentEvents.map((ev) => `<div class="event-feed-item">${formatEventSummary(ev)}</div>`).join('')
+        : '<p class="event-feed-empty">Chưa có hoạt động mới.</p>';
     }
   }
 
   function formatEventSummary(ev) {
     switch (ev.type) {
       case 'burnIncense':
-        return `🔥 <strong>${escapeHtml(ev.user)}</strong> dâng ${ev.count} nén nhang (+${ev.merit} CĐ)`;
+        return `<strong>${escapeHtml(ev.user)}</strong> dâng ${ev.count} nén nhang (+${ev.merit} CĐ)`;
       case 'strikeWoodenFish':
-        return `🪵 <strong>${escapeHtml(ev.user)}</strong> gõ mõ ${ev.count} nhịp (+${ev.merit} CĐ)`;
+        return `<strong>${escapeHtml(ev.user)}</strong> gõ mõ ${ev.count} nhịp (+${ev.merit} CĐ)`;
       case 'ringBell':
-        return `🔔 <strong>${escapeHtml(ev.user)}</strong> thỉnh Đại Hồng Chung (+${ev.merit} CĐ)`;
+        return `<strong>${escapeHtml(ev.user)}</strong> thỉnh Đại Hồng Chung (+${ev.merit} CĐ)`;
       case 'sendPrayer':
-        return `🏮 <strong>${escapeHtml(ev.user)}</strong> cầu phúc: “${escapeHtml(ev.wish)}”`;
+        return `<strong>${escapeHtml(ev.user)}</strong> cầu phúc: “${escapeHtml(ev.wish)}”`;
       case 'offerGift':
       case 'grandCeremony':
-        return `🪷 <strong>${escapeHtml(ev.user)}</strong> dâng <em>${escapeHtml(ev.giftName)}</em> (+${ev.merit} CĐ)`;
+        return `<strong>${escapeHtml(ev.user)}</strong> dâng <em>${escapeHtml(ev.giftName)}</em> (+${ev.merit} CĐ)`;
       case 'drawFortune':
-        return `🎋 <strong>${escapeHtml(ev.user)}</strong> gieo được Quẻ số ${ev.fortune?.number} (${ev.fortune?.rank})`;
+        return `<strong>${escapeHtml(ev.user)}</strong> gieo được quẻ số ${ev.fortune?.number} (${ev.fortune?.rank})`;
       default:
-        return `✨ <strong>${escapeHtml(ev.user || 'Thí chủ')}</strong> tương tác`;
+        return `<strong>${escapeHtml(ev.user || 'Thí chủ')}</strong> tương tác`;
     }
   }
 
@@ -480,7 +482,7 @@
         audio.playIncenseChime();
         particles.spawnIncenseBurst(540, 895);
         particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 540, 860, '#ffe082');
-        animateWalkerOnCarpet(ev.user, ev.avatar, `🔥 Dâng ${ev.count} nén hương (+${ev.merit} CĐ)`, ev.wish);
+        animateWalkerOnCarpet(ev.user, ev.avatar, `Dâng ${ev.count} nén hương (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
@@ -496,7 +498,7 @@
         pulseHallBowing();
         particles.spawnBellWave(540, 510, 4);
         particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 190, 935, '#fff3b0');
-        updateCentralWorshipper(ev.user, ev.avatar, `🔔 Thỉnh Đại Hồng Chung (+${ev.merit} CĐ)`, ev.wish);
+        updateCentralWorshipper(ev.user, ev.avatar, `Thỉnh đại hồng chung (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
@@ -504,7 +506,7 @@
         audio.playIncenseChime();
         spawnSkyLantern(ev.user, ev.wish);
         particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 540, 920, '#ffb74d');
-        animateWalkerOnCarpet(ev.user, ev.avatar, `🏮 Cầu phúc (+${ev.merit} CĐ)`, ev.wish);
+        animateWalkerOnCarpet(ev.user, ev.avatar, `Cầu phúc (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
@@ -513,7 +515,7 @@
         audio.playTempleBell(0.85);
         particles.spawnIncenseBurst(540, 895);
         particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 540, 840, '#fff3b0');
-        animateWalkerOnCarpet(ev.user, ev.avatar, `🪷 Dâng ${ev.giftName} (+${ev.merit} CĐ)`, ev.wish);
+        animateWalkerOnCarpet(ev.user, ev.avatar, `Dâng ${ev.giftName} (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
@@ -523,7 +525,7 @@
         particles.spawnGrandCeremonyRain();
         pulseHallBowing();
         showGrandCeremonyBanner(ev.user, ev.giftName, ev.merit);
-        animateWalkerOnCarpet(ev.user, ev.avatar, `🐉 ${ev.giftName} (+${ev.merit} CĐ)`, ev.wish);
+        animateWalkerOnCarpet(ev.user, ev.avatar, `${ev.giftName} (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
@@ -532,7 +534,7 @@
         updateCentralWorshipper(
           ev.user,
           ev.avatar,
-          `🎋 Đang xin xăm...`,
+          'Đang xin xăm…',
           `Thí chủ ${ev.user} đang thành tâm xin quẻ...`,
           false
         );
@@ -545,7 +547,7 @@
             updateCentralWorshipper(
               ev.user,
               ev.avatar,
-              `🎋 Quẻ số ${ev.fortune?.number} (${ev.fortune?.rank})`,
+              `Quẻ số ${ev.fortune?.number} (${ev.fortune?.rank})`,
               ev.fortune?.meaning || '',
               true
             );
@@ -570,7 +572,7 @@
     const leftPos = 80 + Math.floor(Math.random() * 640);
     lantern.style.left = `${leftPos}px`;
     lantern.innerHTML = `
-      <div class="sky-lantern-user">🙏 ${escapeHtml(user)}</div>
+      <div class="sky-lantern-user">${escapeHtml(user)}</div>
       <div class="sky-lantern-wish">“${escapeHtml(wish)}”</div>
     `;
     layer.appendChild(lantern);
@@ -601,7 +603,7 @@
 
   function showGrandCeremonyBanner(user, giftName, merit) {
     const banner = document.getElementById('grandCeremonyBanner');
-    document.getElementById('grandTitle').textContent = `🐉 ${giftName.toUpperCase()} 🐉`;
+    document.getElementById('grandTitle').textContent = giftName.toUpperCase();
     document.getElementById('grandSub').textContent = `Đại Thí Chủ ${user} • Công Đức Vô Lượng (+${merit} CĐ)`;
     banner.classList.add('visible');
     clearTimeout(grandTimer);
@@ -778,7 +780,7 @@
   document.getElementById('btnToggleTts')?.addEventListener('click', (e) => {
     audio.ttsEnabled = !audio.ttsEnabled;
     const btn = e.currentTarget;
-    btn.textContent = `🎙️ Giọng Đọc: ${audio.ttsEnabled ? 'BẬT' : 'TẮT'}`;
+    btn.textContent = `Giọng đọc: ${audio.ttsEnabled ? 'Bật' : 'Tắt'}`;
     btn.classList.toggle('active-toggle', audio.ttsEnabled);
   });
 
@@ -790,7 +792,7 @@
       audio.stopZenAmbience();
     }
     const btn = e.currentTarget;
-    btn.textContent = `🎵 Nhạc Nền: ${audio.bgMusicEnabled ? 'BẬT' : 'TẮT'}`;
+    btn.textContent = `Nhạc nền: ${audio.bgMusicEnabled ? 'Bật' : 'Tắt'}`;
     btn.classList.toggle('active-toggle', audio.bgMusicEnabled);
   });
 

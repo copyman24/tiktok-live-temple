@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light;
+  --ink: #1f2b26;
+  --ink-soft: #43564c;
+  --paper: #ede1b5;
+  --paper-light: #faf6e7;
+  --ground: #dbe7d8;
+  --jade: #245447;
+  --jade-dark: #183f36;
+  --cinnabar: #a83b2d;
+  --cinnabar-dark: #7e2c24;
+  --brass: #c39634;
+  --line: rgba(31, 43, 38, 0.2);
+  --muted-line: rgba(31, 43, 38, 0.12);
+  --success: #28624e;
+  --focus: #164c76;
+  --font-ui: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-ritual: 'Noto Serif', Georgia, serif;
+  --shadow-soft: 0 12px 30px rgba(20, 40, 33, 0.16);
+}
+
+::selection {
+  color: var(--paper-light);
+  background: var(--jade);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

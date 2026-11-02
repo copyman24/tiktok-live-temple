@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T00:21:48+07:00",
+  "title": "Design System: Chùa Linh Ứng Online",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Charcoal Ink", "canonical": "#1f2b26", "tonalRamp": ["oklch(15% 0.007 167.6)", "oklch(25% 0.016 167.6)", "oklch(35% 0.019 167.6)", "oklch(45% 0.019 167.6)", "oklch(55% 0.019 167.6)", "oklch(65% 0.019 167.6)", "oklch(80% 0.018 167.6)", "oklch(95% 0.004 167.6)"] },
+      "ink-soft": { "role": "neutral", "displayName": "Soft Ink", "canonical": "#43564c", "tonalRamp": ["oklch(15% 0.010 162.0)", "oklch(25% 0.024 162.0)", "oklch(35% 0.029 162.0)", "oklch(45% 0.029 162.0)", "oklch(55% 0.029 162.0)", "oklch(65% 0.029 162.0)", "oklch(80% 0.027 162.0)", "oklch(95% 0.006 162.0)"] },
+      "paper": { "role": "neutral", "displayName": "Prayer Paper", "canonical": "#ede1b5", "tonalRamp": ["oklch(15% 0.021 94.6)", "oklch(25% 0.050 94.6)", "oklch(35% 0.059 94.6)", "oklch(45% 0.059 94.6)", "oklch(55% 0.059 94.6)", "oklch(65% 0.059 94.6)", "oklch(80% 0.056 94.6)", "oklch(95% 0.012 94.6)"] },
+      "paper-light": { "role": "neutral", "displayName": "Light Paper", "canonical": "#faf6e7", "tonalRamp": ["oklch(15% 0.007 94.5)", "oklch(25% 0.017 94.5)", "oklch(35% 0.020 94.5)", "oklch(45% 0.020 94.5)", "oklch(55% 0.020 94.5)", "oklch(65% 0.020 94.5)", "oklch(80% 0.019 94.5)", "oklch(95% 0.004 94.5)"] },
+      "ground": { "role": "neutral", "displayName": "Temple Ground", "canonical": "#dbe7d8", "tonalRamp": ["oklch(15% 0.008 139.4)", "oklch(25% 0.020 139.4)", "oklch(35% 0.024 139.4)", "oklch(45% 0.024 139.4)", "oklch(55% 0.024 139.4)", "oklch(65% 0.024 139.4)", "oklch(80% 0.023 139.4)", "oklch(95% 0.005 139.4)"] },
+      "jade": { "role": "secondary", "displayName": "Jade", "canonical": "#245447", "tonalRamp": ["oklch(15% 0.020 173.2)", "oklch(25% 0.049 173.2)", "oklch(35% 0.057 173.2)", "oklch(45% 0.057 173.2)", "oklch(55% 0.057 173.2)", "oklch(65% 0.057 173.2)", "oklch(80% 0.054 173.2)", "oklch(95% 0.011 173.2)"] },
+      "jade-dark": { "role": "secondary", "displayName": "Deep Jade", "canonical": "#183f36", "tonalRamp": ["oklch(15% 0.017 175.9)", "oklch(25% 0.040 175.9)", "oklch(35% 0.047 175.9)", "oklch(45% 0.047 175.9)", "oklch(55% 0.047 175.9)", "oklch(65% 0.047 175.9)", "oklch(80% 0.045 175.9)", "oklch(95% 0.009 175.9)"] },
+      "cinnabar": { "role": "primary", "displayName": "Cinnabar", "canonical": "#a83b2d", "tonalRamp": ["oklch(15% 0.051 30.2)", "oklch(25% 0.124 30.2)", "oklch(35% 0.146 30.2)", "oklch(45% 0.146 30.2)", "oklch(55% 0.146 30.2)", "oklch(65% 0.146 30.2)", "oklch(80% 0.139 30.2)", "oklch(95% 0.029 30.2)"] },
+      "cinnabar-dark": { "role": "primary", "displayName": "Deep Cinnabar", "canonical": "#7e2c24", "tonalRamp": ["oklch(15% 0.040 28.6)", "oklch(25% 0.098 28.6)", "oklch(35% 0.116 28.6)", "oklch(45% 0.116 28.6)", "oklch(55% 0.116 28.6)", "oklch(65% 0.116 28.6)", "oklch(80% 0.110 28.6)", "oklch(95% 0.023 28.6)"] },
+      "brass": { "role": "tertiary", "displayName": "Brass", "canonical": "#c39634", "tonalRamp": ["oklch(15% 0.043 83.1)", "oklch(25% 0.105 83.1)", "oklch(35% 0.124 83.1)", "oklch(45% 0.124 83.1)", "oklch(55% 0.124 83.1)", "oklch(65% 0.124 83.1)", "oklch(80% 0.118 83.1)", "oklch(95% 0.025 83.1)"] },
+      "line": { "role": "neutral", "displayName": "Ink Rule", "canonical": "rgba(31, 43, 38, 0.2)", "tonalRamp": ["oklch(15% 0.007 167.6)", "oklch(25% 0.016 167.6)", "oklch(35% 0.019 167.6)", "oklch(45% 0.019 167.6)", "oklch(55% 0.019 167.6)", "oklch(65% 0.019 167.6)", "oklch(80% 0.018 167.6)", "oklch(95% 0.004 167.6)"] },
+      "muted-line": { "role": "neutral", "displayName": "Muted Ink Rule", "canonical": "rgba(31, 43, 38, 0.12)", "tonalRamp": ["oklch(15% 0.007 167.6)", "oklch(25% 0.016 167.6)", "oklch(35% 0.019 167.6)", "oklch(45% 0.019 167.6)", "oklch(55% 0.019 167.6)", "oklch(65% 0.019 167.6)", "oklch(80% 0.018 167.6)", "oklch(95% 0.004 167.6)"] },
+      "success": { "role": "secondary", "displayName": "Success Green", "canonical": "#28624e", "tonalRamp": ["oklch(15% 0.024 167.8)", "oklch(25% 0.059 167.8)", "oklch(35% 0.070 167.8)", "oklch(45% 0.070 167.8)", "oklch(55% 0.070 167.8)", "oklch(65% 0.070 167.8)", "oklch(80% 0.066 167.8)", "oklch(95% 0.014 167.8)"] },
+      "focus": { "role": "tertiary", "displayName": "Focus Blue", "canonical": "#164c76", "tonalRamp": ["oklch(15% 0.031 246.4)", "oklch(25% 0.076 246.4)", "oklch(35% 0.090 246.4)", "oklch(45% 0.090 246.4)", "oklch(55% 0.090 246.4)", "oklch(65% 0.090 246.4)", "oklch(80% 0.085 246.4)", "oklch(95% 0.018 246.4)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Page Display", "purpose": "The admin page title." },
+      "ritual": { "displayName": "Ritual Serif", "purpose": "Fortune titles and prominent ritual names." },
+      "body": { "displayName": "Operational Body", "purpose": "Default Vietnamese interface copy." },
+      "label": { "displayName": "Field Label", "purpose": "Labels and secondary operational text." },
+      "action": { "displayName": "Action Label", "purpose": "Compact button labels." },
+      "field": { "displayName": "Field Text", "purpose": "Text entered into inputs and textareas." },
+      "live-status": { "displayName": "Live Status", "purpose": "Connection and count plaques over the temple scene." },
+      "code": { "displayName": "RPC Code", "purpose": "JSON-RPC response output." }
+    },
+    "shadows": [
+      { "name": "soft-outer-lift", "value": "0 12px 30px rgba(20, 40, 33, 0.16)", "purpose": "Broad lift under the live stage, dock, admin header, and outer workbench sheets." }
+    ],
+    "motion": [
+      { "name": "control-hover", "value": "140ms ease", "purpose": "Button and link color/border state transitions." },
+      { "name": "control-press", "value": "120ms ease", "purpose": "Small downward response on pressed admin buttons." },
+      { "name": "ritual-arrival", "value": "2.1s linear", "purpose": "Moves the active devotee up the carpet into the prayer scene." },
+      { "name": "halo-flare", "value": "350ms ease", "purpose": "Soft opacity and scale transition for the halo state." }
+    ],
+    "breakpoints": [
+      { "name": "live-stack", "value": "1023px" },
+      { "name": "live-overlays", "value": "600px" },
+      { "name": "admin-stack", "value": "900px" },
+      { "name": "admin-narrow", "value": "700px" },
+      { "name": "compact", "value": "380px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The cinnabar-filled command for the primary action in the workbench or quick dock.",
+      "html": "<button class=\"ds-button-primary\" type=\"button\">Kết nối</button>",
+      "css": ".ds-button-primary { min-height: 44px; padding: 10px 15px; border: 1px solid var(--cinnabar); border-radius: 3px; background: var(--cinnabar); color: #fff; font: 700 14px/1.3 var(--font-ui); cursor: pointer; transition: transform 120ms ease, background-color 140ms ease, border-color 140ms ease; } .ds-button-primary:hover { border-color: var(--cinnabar-dark); background: var(--cinnabar-dark); } .ds-button-primary:active { transform: translateY(1px); } .ds-button-primary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "An outlined jade command for secondary actions such as disconnect or navigation.",
+      "html": "<button class=\"ds-button-secondary\" type=\"button\">Ngắt</button>",
+      "css": ".ds-button-secondary { min-height: 44px; padding: 10px 15px; border: 1px solid var(--jade); border-radius: 3px; background: transparent; color: var(--jade-dark); font: 700 14px/1.3 var(--font-ui); cursor: pointer; transition: transform 120ms ease, background-color 140ms ease, border-color 140ms ease; } .ds-button-secondary:hover { background: #e7dfbd; } .ds-button-secondary:active { transform: translateY(1px); } .ds-button-secondary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "A paper-filled standard field for room identity, prayer text, and simulation input.",
+      "html": "<label class=\"ds-field-label\">Username hoặc liên kết Live<input class=\"ds-input-text\" type=\"text\" placeholder=\"@username hoặc liên kết TikTok Live\"></label>",
+      "css": ".ds-field-label { display: flex; flex-direction: column; gap: 6px; color: var(--ink-soft); font: 600 13px/1.5 var(--font-ui); } .ds-input-text { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #a9a184; border-radius: 3px; background: var(--paper-light); color: var(--ink); font: 400 14px/1.45 var(--font-ui); } .ds-input-text::placeholder { color: #625e4e; opacity: 1; } .ds-input-text:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }"
+    },
+    {
+      "name": "Ritual Action Tile",
+      "kind": "button",
+      "refersTo": "ritual-action",
+      "description": "A two-line workbench action with a clear command name and small ritual detail.",
+      "html": "<button class=\"ds-ritual-tile\" type=\"button\"><span class=\"ds-ritual-name\">Thắp hương</span><span class=\"ds-ritual-detail\">3 nén</span></button>",
+      "css": ".ds-ritual-tile { display: flex; min-width: 0; min-height: 62px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 3px; padding: 10px 12px; border: 1px solid #aaa183; border-radius: 3px; background: var(--paper-light); color: var(--ink); text-align: left; cursor: pointer; transition: border-color 140ms ease, background-color 140ms ease; } .ds-ritual-tile:hover { border-color: var(--jade); background: #e8e0bd; } .ds-ritual-tile:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; } .ds-ritual-name { font: 700 14px/1.3 var(--font-ui); } .ds-ritual-detail { color: var(--ink-soft); font: 400 12px/1.5 var(--font-ui); }"
+    },
+    {
+      "name": "Live Status Plaque",
+      "kind": "custom",
+      "refersTo": "live-status",
+      "description": "A light-paper connection plaque with a distinct green connected indicator.",
+      "html": "<div class=\"ds-live-status\" role=\"status\"><span class=\"ds-live-dot ds-live-dot-connected\"></span><span>LIVE @username · 120 người xem</span></div>",
+      "css": ".ds-live-status { display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid rgba(31, 43, 38, 0.7); border-radius: 4px; background: var(--paper-light); color: var(--ink); font: 600 22px/1.2 var(--font-ui); } .ds-live-dot { width: 12px; height: 12px; flex: 0 0 12px; border-radius: 50%; background: var(--cinnabar); } .ds-live-dot-connected { background: var(--success); }"
+    },
+    {
+      "name": "Workbench Sheet",
+      "kind": "card",
+      "refersTo": "workbench-sheet",
+      "description": "An outer paper work area that groups related tasks with a single broad shadow.",
+      "html": "<section class=\"ds-workbench-sheet\"><h2>Kết nối TikTok Live</h2><p>Dùng username hoặc liên kết phòng đang phát.</p></section>",
+      "css": ".ds-workbench-sheet { padding: 22px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); box-shadow: var(--shadow-soft); } .ds-workbench-sheet h2 { margin: 0; color: var(--ink); font: 700 21px/1.25 var(--font-ui); } .ds-workbench-sheet p { margin: 5px 0 0; color: var(--ink-soft); font: 400 13px/1.5 var(--font-ui); }"
+    },
+    {
+      "name": "Viewer Gift Tile",
+      "kind": "card",
+      "refersTo": "viewer-gift-card",
+      "description": "A large viewer-facing contribution card in the live stage footer.",
+      "html": "<button class=\"ds-viewer-gift\" type=\"button\"><span class=\"ds-gift-cost\">1 xu · bình luận</span><span class=\"ds-gift-title\">Dâng hương</span></button>",
+      "css": ".ds-viewer-gift { display: flex; flex-direction: column; justify-content: space-between; padding: 10px 12px; border: 1px solid var(--jade); border-radius: 4px; background: var(--paper); color: var(--ink); font: inherit; text-align: left; cursor: pointer; } .ds-viewer-gift:hover { background: #fff5d2; } .ds-viewer-gift:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; } .ds-gift-cost { color: var(--jade-dark); font: 800 17px/1.3 var(--font-ui); } .ds-gift-title { color: var(--ink); font: 800 25px/1.3 var(--font-ui); }"
+    },
+    {
+      "name": "Header Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "An outlined link in the deep-jade admin header for opening the live and OBS views.",
+      "html": "<a class=\"ds-header-link\" href=\"/\">Mở màn hình live</a>",
+      "css": ".ds-header-link { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; padding: 8px 12px; border: 1px solid rgba(255, 248, 223, 0.48); border-radius: 6px; color: var(--paper-light); font: 400 13px/1.5 var(--font-ui); text-decoration: none; transition: background-color 140ms ease, color 140ms ease; } .ds-header-link:hover { color: var(--jade-dark); background: var(--paper-light); } .ds-header-link:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Living Prayer Petition",
+    "overview": "The Living Prayer Petition treats the live interface as a working sớ: paper that records each prayer as it happens. Warm stock, charcoal ink, and fine rules keep information orderly; the supplied temple scene provides the ornament and remains the visual anchor. Cinnabar marks primary action and active prayer, jade anchors connection and enabled controls, a related success green marks affirmative state, and brass stays a fine detail.\n\nThe viewer scene and operator workbench carry equal weight. The live page keeps its portrait temple artwork in front, with compact state and count plaques above the active devotee, viewer actions, and merit list. The admin page turns connection, voice testing, ritual commands, simulation, and JSON-RPC feedback into an event-focused workbench. Be Vietnam Pro carries operational text and admin section headings; Noto Serif gives page titles and ritual names a quieter ceremonial voice.",
+    "keyCharacteristics": [
+      "A working paper petition layered over the existing temple scene.",
+      "Clear role separation across ink, paper, jade, cinnabar, and brass.",
+      "A live portrait composition paired with a practical operator workbench."
+    ],
+    "rules": [
+      { "name": "The Seal Rule", "body": "Reserve cinnabar for primary commands and active prayer marks; use jade for connection and enabled states, and keep brass to fine detail.", "section": "colors" },
+      { "name": "The Two Voice Rule", "body": "Keep operational headings and control text in Be Vietnam Pro; use Noto Serif for page titles and ritual names, not for admin section headings.", "section": "typography" },
+      { "name": "The Portrait Stage Rule", "body": "Keep the live scene at 9:16, center it on desktop, move controls below it on phones, and hide them in OBS mode.", "section": "layout" },
+      { "name": "The Single Sheet Rule", "body": "Keep the work surface flat inside the shadowed outer sheet; thin separators group tasks without stacking nested cards.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the supplied temple artwork as the scene's main ornament and use paper plaques for readable live information.",
+      "Do set operational copy and admin section headings in Be Vietnam Pro; reserve Noto Serif for page titles and ritual names.",
+      "Do keep primary actions and active prayer marks in cinnabar, and connected or enabled states in jade.",
+      "Do keep controls and fields at the established 44px minimum height where that rule is implemented."
+    ],
+    "donts": [
+      "Don't use emoji as control iconography.",
+      "Don't stack decorative cards inside the workbench sheets.",
+      "Don't add decorative gradients to the admin workbench; the supplied temple artwork carries the visual ornament."
+    ]
+  }
+}
