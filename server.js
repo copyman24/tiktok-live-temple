@@ -868,6 +868,25 @@ function parseViewerComment(commentText, user, uniqueId, avatar) {
   return Rituals.burnIncense({ user: cleanUser, uniqueId, avatar, count: 1, wish: cleanWish });
 }
 
+function handleViewerComment(commentText, user, uniqueId, avatar) {
+  const result = parseViewerComment(commentText, user, uniqueId, avatar);
+  if (!result?.event) return result;
+
+  const comment = sanitizeWishText(commentText);
+  if (!comment) return result;
+
+  const handle = String(uniqueId || '')
+    .normalize('NFKC')
+    .trim()
+    .replace(/^@+/, '')
+    .replace(/[^A-Za-z0-9._]/g, '')
+    .slice(0, 24);
+  const usableHandle = handle && /[A-Za-z0-9]/.test(handle) && !BAD_WORDS_RE.test(handle);
+  const username = `@${usableHandle ? handle : sanitizeUserName(user)}`;
+  broadcastNotification('temple.prayerComment', { username, comment });
+  return result;
+}
+
 const giftComboTracker = new Map();
 
 async function resolveTikTokUsername(rawInput) {
@@ -978,7 +997,7 @@ async function connectTikTokLive(usernameOrUrl) {
     const { user, uniqueId, avatar } = extractUserFromEvent(data);
     const commentText = data?.content || data?.comment || '';
     console.log(`[TikTok Chat] ${user}: ${commentText}`);
-    parseViewerComment(commentText, user, uniqueId, avatar);
+    handleViewerComment(commentText, user, uniqueId, avatar);
   });
 
   tiktokConn.on(WebcastEvent.LIKE, (data) => {
@@ -1141,7 +1160,7 @@ async function handleRpcCall(method, params = {}) {
     case 'temple.resetMerit':
       return Rituals.resetMerit();
     case 'temple.comment':
-      return parseViewerComment(params.comment, params.user, params.uniqueId, params.avatar);
+      return handleViewerComment(params.comment, params.user, params.uniqueId, params.avatar);
     case 'temple.speak': {
       const res = await zeroTts.synthesize(params.text, params.voice || 'maichi');
       if (res.ok && params.broadcast !== false) {

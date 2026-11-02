@@ -65,8 +65,8 @@
       stick.style.transform = `rotate(${angleDeg}deg)`;
 
       const ember = document.createElement('div');
-      ember.className = 'incense-ember';
-      ember.style.animationDelay = `${(i * 0.15) % 1.1}s`;
+      ember.className = 'incense-ember ember-flicker';
+      ember.style.animationDelay = `${i * 0.045}s`;
       stick.appendChild(ember);
       incenseHolder.appendChild(stick);
 
@@ -352,6 +352,8 @@
   function updateUIState(st) {
     if (!st) return;
 
+    syncPrayerRoomState(st);
+
     document.getElementById('statIncense').textContent = Number(st.totalIncense || 0).toLocaleString('vi-VN');
     document.getElementById('statMerit').textContent = Number(st.totalMerit || 0).toLocaleString('vi-VN');
     document.getElementById('statWoodenFish').textContent = Number(st.woodenFishHits || 0).toLocaleString('vi-VN');
@@ -615,6 +617,113 @@
   // 8. Kết nối JSON-RPC 2.0 WebSocket & Gửi Lệnh RPC
   let ws = null;
   let rpcId = 1;
+  const prayerSlip = document.getElementById('prayerSlip');
+  const prayerSlipHandle = document.getElementById('prayerSlipHandle');
+  const prayerSlipComment = document.getElementById('prayerSlipComment');
+  const pendingPrayerComments = [];
+  const PRAYER_QUEUE_LIMIT = 12;
+  const PRAYER_FRESHNESS_MS = 60000;
+  const PRAYER_GATHER_MS = 650;
+  const PRAYER_HOLD_MS = 4600;
+  const PRAYER_EXIT_MS = 360;
+  const PRAYER_GAP_MS = 420;
+  let activePrayerRoom = null;
+  let prayerVisible = false;
+  let prayerGatherTimer = null;
+  let prayerHoldTimer = null;
+  let prayerExitTimer = null;
+  let prayerGapTimer = null;
+
+  function expirePendingPrayerComments(now = Date.now()) {
+    for (let index = pendingPrayerComments.length - 1; index >= 0; index--) {
+      if (now - pendingPrayerComments[index].receivedAt > PRAYER_FRESHNESS_MS) {
+        pendingPrayerComments.splice(index, 1);
+      }
+    }
+  }
+
+  function clearPrayerTimers() {
+    clearTimeout(prayerGatherTimer);
+    clearTimeout(prayerHoldTimer);
+    clearTimeout(prayerExitTimer);
+    clearTimeout(prayerGapTimer);
+    prayerGatherTimer = null;
+    prayerHoldTimer = null;
+    prayerExitTimer = null;
+    prayerGapTimer = null;
+  }
+
+  function clearPrayerComments() {
+    clearPrayerTimers();
+    pendingPrayerComments.length = 0;
+    prayerVisible = false;
+    prayerSlip?.classList.remove('is-visible', 'is-leaving');
+    prayerSlip?.setAttribute('aria-hidden', 'true');
+  }
+
+  function syncPrayerRoomState(st) {
+    const tiktok = st?.tiktok;
+    if (!tiktok?.connected) {
+      activePrayerRoom = null;
+      clearPrayerComments();
+      return;
+    }
+
+    const room = String(tiktok.roomId || tiktok.username || '');
+    if (activePrayerRoom && room && activePrayerRoom !== room) {
+      clearPrayerComments();
+    }
+    if (room) activePrayerRoom = room;
+  }
+
+  function schedulePrayerSelection() {
+    expirePendingPrayerComments();
+    if (!pendingPrayerComments.length || prayerVisible || prayerGatherTimer || prayerGapTimer) return;
+    prayerGatherTimer = setTimeout(showNextPrayerComment, PRAYER_GATHER_MS);
+  }
+
+  function showNextPrayerComment() {
+    prayerGatherTimer = null;
+    prayerGapTimer = null;
+    expirePendingPrayerComments();
+    if (!pendingPrayerComments.length || prayerVisible || !prayerSlip) return;
+
+    const index = Math.floor(Math.random() * pendingPrayerComments.length);
+    const [item] = pendingPrayerComments.splice(index, 1);
+    prayerSlipHandle.textContent = item.username;
+    prayerSlipComment.textContent = item.comment;
+    prayerSlip.classList.remove('is-leaving');
+    prayerSlip.classList.add('is-visible');
+    prayerSlip.setAttribute('aria-hidden', 'false');
+    prayerVisible = true;
+
+    prayerHoldTimer = setTimeout(() => {
+      prayerHoldTimer = null;
+      prayerSlip.classList.remove('is-visible');
+      prayerSlip.classList.add('is-leaving');
+      prayerExitTimer = setTimeout(() => {
+        prayerExitTimer = null;
+        prayerSlip.classList.remove('is-leaving');
+        prayerSlip.setAttribute('aria-hidden', 'true');
+        prayerVisible = false;
+        prayerGapTimer = setTimeout(() => {
+          prayerGapTimer = null;
+          showNextPrayerComment();
+        }, PRAYER_GAP_MS);
+      }, PRAYER_EXIT_MS);
+    }, PRAYER_HOLD_MS);
+  }
+
+  function queuePrayerComment(params) {
+    const username = typeof params?.username === 'string' ? params.username.trim() : '';
+    const comment = typeof params?.comment === 'string' ? params.comment.trim() : '';
+    if (!username || !comment) return;
+    if (pendingPrayerComments.some((item) => item.username === username && item.comment === comment)) return;
+
+    if (pendingPrayerComments.length >= PRAYER_QUEUE_LIMIT) pendingPrayerComments.shift();
+    pendingPrayerComments.push({ username, comment, receivedAt: Date.now() });
+    schedulePrayerSelection();
+  }
 
   function connectWebSocket() {
     const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
@@ -628,6 +737,8 @@
         } else if (msg.method === 'temple.event') {
           if (msg.params?.state) updateUIState(msg.params.state);
           if (msg.params?.event) triggerRitualVisuals(msg.params.event);
+        } else if (msg.method === 'temple.prayerComment') {
+          queuePrayerComment(msg.params);
         } else if (msg.method === 'tts.play') {
           if (msg.params?.url) {
             audio.enqueueTts(msg.params.text || 'Nam mô A Di Đà Phật', {
@@ -639,7 +750,13 @@
       } catch (_) {}
     };
 
+    ws.onopen = () => {
+      expirePendingPrayerComments();
+      schedulePrayerSelection();
+    };
+
     ws.onclose = () => {
+      expirePendingPrayerComments();
       setTimeout(connectWebSocket, 2000);
     };
   }
