@@ -1,0 +1,3979 @@
+{
+  "tool": "comp-spec inspect-map",
+  "version": 1,
+  "referenceOnly": true,
+  "stateChanged": false,
+  "comp": ".impeccable/mocks/wedding-stage-1.png",
+  "compSize": {
+    "width": 941,
+    "height": 1672
+  },
+  "inputRegionCount": 51,
+  "regions": [
+    {
+      "id": "hall-photo",
+      "kind": "image",
+      "note": "Photographic Vietnamese wedding hall with the bride and groom, floral stage, crowd, and red aisle; the clean background plate sits under separate live interface overlays.",
+      "grid": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "px": {
+        "x": 0,
+        "y": 0,
+        "w": 941,
+        "h": 1672
+      },
+      "aspect": 0.5628,
+      "palette": [
+        {
+          "hex": "#1e1516",
+          "coverage": 0.2538
+        },
+        {
+          "hex": "#ebbf94",
+          "coverage": 0.2528
+        },
+        {
+          "hex": "#860c0f",
+          "coverage": 0.2187
+        },
+        {
+          "hex": "#b91e1e",
+          "coverage": 0.1612
+        },
+        {
+          "hex": "#442e20",
+          "coverage": 0.1135
+        }
+      ],
+      "detail": {
+        "energy": 57.4861
+      },
+      "medium": "raster",
+      "plate": "assets/plates/hall-photo.png",
+      "text": null,
+      "number": 1,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 187886,
+        "totalPixels": 1573352,
+        "remainingPixels": 1385466,
+        "excludedFraction": 0.11941765097702231,
+        "fullyExcluded": false,
+        "regions": [
+          {
+            "id": "live-pill-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 86,
+              "y": 56,
+              "w": 143,
+              "h": 30
+            },
+            "pixels": 4290
+          },
+          {
+            "id": "viewer-count",
+            "kind": "text",
+            "cropPx": {
+              "x": 300,
+              "y": 57,
+              "w": 185,
+              "h": 32
+            },
+            "pixels": 5920
+          },
+          {
+            "id": "like-count",
+            "kind": "text",
+            "cropPx": {
+              "x": 795,
+              "y": 55,
+              "w": 83,
+              "h": 34
+            },
+            "pixels": 2822
+          },
+          {
+            "id": "floating-hearts",
+            "kind": "control",
+            "cropPx": {
+              "x": 807,
+              "y": 96,
+              "w": 110,
+              "h": 97
+            },
+            "pixels": 10670
+          },
+          {
+            "id": "wedding-title",
+            "kind": "text",
+            "cropPx": {
+              "x": 394,
+              "y": 185,
+              "w": 157,
+              "h": 31
+            },
+            "pixels": 4867
+          },
+          {
+            "id": "couple-names",
+            "kind": "text",
+            "cropPx": {
+              "x": 300,
+              "y": 218,
+              "w": 342,
+              "h": 84
+            },
+            "pixels": 28728
+          },
+          {
+            "id": "wedding-date",
+            "kind": "text",
+            "cropPx": {
+              "x": 411,
+              "y": 307,
+              "w": 121,
+              "h": 24
+            },
+            "pixels": 2904
+          },
+          {
+            "id": "groom-claim-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 248,
+              "y": 532,
+              "w": 109,
+              "h": 37
+            },
+            "pixels": 4033
+          },
+          {
+            "id": "bride-claim-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 607,
+              "y": 532,
+              "w": 116,
+              "h": 38
+            },
+            "pixels": 4408
+          },
+          {
+            "id": "wish-left-one-text",
+            "kind": "text",
+            "cropPx": {
+              "x": 91,
+              "y": 789,
+              "w": 215,
+              "h": 61
+            },
+            "pixels": 13115
+          },
+          {
+            "id": "wish-right-one-text",
+            "kind": "text",
+            "cropPx": {
+              "x": 713,
+              "y": 831,
+              "w": 196,
+              "h": 62
+            },
+            "pixels": 12152
+          },
+          {
+            "id": "wish-left-two-text",
+            "kind": "text",
+            "cropPx": {
+              "x": 96,
+              "y": 896,
+              "w": 203,
+              "h": 58
+            },
+            "pixels": 11774
+          },
+          {
+            "id": "wish-right-two-text",
+            "kind": "text",
+            "cropPx": {
+              "x": 755,
+              "y": 932,
+              "w": 161,
+              "h": 57
+            },
+            "pixels": 9177
+          },
+          {
+            "id": "wish-left-three-text",
+            "kind": "text",
+            "cropPx": {
+              "x": 91,
+              "y": 1136,
+              "w": 204,
+              "h": 51
+            },
+            "pixels": 10404
+          },
+          {
+            "id": "wish-right-three-text",
+            "kind": "text",
+            "cropPx": {
+              "x": 753,
+              "y": 1146,
+              "w": 162,
+              "h": 49
+            },
+            "pixels": 7938
+          },
+          {
+            "id": "wish-left-four-text",
+            "kind": "text",
+            "cropPx": {
+              "x": 91,
+              "y": 1218,
+              "w": 210,
+              "h": 60
+            },
+            "pixels": 12600
+          },
+          {
+            "id": "wish-right-four-text",
+            "kind": "text",
+            "cropPx": {
+              "x": 753,
+              "y": 1222,
+              "w": 165,
+              "h": 61
+            },
+            "pixels": 10065
+          },
+          {
+            "id": "bride-action-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 65,
+              "y": 1538,
+              "w": 153,
+              "h": 47
+            },
+            "pixels": 7191
+          },
+          {
+            "id": "groom-action-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 294,
+              "y": 1538,
+              "w": 147,
+              "h": 47
+            },
+            "pixels": 6909
+          },
+          {
+            "id": "wish-action-icon",
+            "kind": "control",
+            "cropPx": {
+              "x": 536,
+              "y": 1481,
+              "w": 94,
+              "h": 72
+            },
+            "pixels": 6768
+          },
+          {
+            "id": "wish-action-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 520,
+              "y": 1540,
+              "w": 124,
+              "h": 38
+            },
+            "pixels": 4712
+          },
+          {
+            "id": "celebrate-action-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 738,
+              "y": 1537,
+              "w": 163,
+              "h": 47
+            },
+            "pixels": 7661
+          }
+        ],
+        "ignoredContainers": [
+          "live-pill",
+          "viewer-pill",
+          "like-pill",
+          "groom-claim-control",
+          "bride-claim-control",
+          "wish-left-one",
+          "wish-right-one",
+          "wish-left-two",
+          "wish-right-two",
+          "wish-left-three",
+          "wish-right-three",
+          "wish-left-four",
+          "wish-right-four",
+          "bride-action",
+          "groom-action",
+          "wish-action",
+          "celebrate-action"
+        ]
+      },
+      "cropPath": "region-1.png",
+      "referencePath": "reference-1.png"
+    },
+    {
+      "id": "live-pill",
+      "kind": "control",
+      "note": "Red live-room status pill at the upper left.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.0361,
+        "y": 0.0245,
+        "w": 0.2242,
+        "h": 0.0353
+      },
+      "px": {
+        "x": 34,
+        "y": 41,
+        "w": 211,
+        "h": 59
+      },
+      "aspect": 3.5763,
+      "palette": [
+        {
+          "hex": "#e71737",
+          "coverage": 0.7893
+        },
+        {
+          "hex": "#f8f5f7",
+          "coverage": 0.0916
+        },
+        {
+          "hex": "#f6a9b4",
+          "coverage": 0.0403
+        },
+        {
+          "hex": "#d9a47a",
+          "coverage": 0.0395
+        },
+        {
+          "hex": "#dc9785",
+          "coverage": 0.0395
+        }
+      ],
+      "detail": {
+        "energy": 26.6958
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 2,
+      "cropPath": "region-2.png"
+    },
+    {
+      "id": "live-pill-label",
+      "kind": "text",
+      "note": "White Vietnamese live status label.",
+      "grid": null,
+      "parentId": "live-pill",
+      "box": {
+        "x": 0.0914,
+        "y": 0.0335,
+        "w": 0.152,
+        "h": 0.0179
+      },
+      "px": {
+        "x": 86,
+        "y": 56,
+        "w": 143,
+        "h": 30
+      },
+      "aspect": 4.7667,
+      "palette": [
+        {
+          "hex": "#e61938",
+          "coverage": 0.6074
+        },
+        {
+          "hex": "#f8f5f5",
+          "coverage": 0.1844
+        },
+        {
+          "hex": "#f6adb7",
+          "coverage": 0.0824
+        },
+        {
+          "hex": "#f8cfd4",
+          "coverage": 0.0738
+        },
+        {
+          "hex": "#e53f5a",
+          "coverage": 0.0521
+        }
+      ],
+      "detail": {
+        "energy": 38.5898
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 3,
+      "cropPath": "region-3.png"
+    },
+    {
+      "id": "viewer-pill",
+      "kind": "control",
+      "note": "Dark translucent viewer-count pill beside the live status.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.2667,
+        "y": 0.0263,
+        "w": 0.2604,
+        "h": 0.0335
+      },
+      "px": {
+        "x": 251,
+        "y": 44,
+        "w": 245,
+        "h": 56
+      },
+      "aspect": 4.375,
+      "palette": [
+        {
+          "hex": "#564432",
+          "coverage": 0.7852
+        },
+        {
+          "hex": "#d8aa86",
+          "coverage": 0.0915
+        },
+        {
+          "hex": "#f6f6f5",
+          "coverage": 0.0623
+        },
+        {
+          "hex": "#c9c6c1",
+          "coverage": 0.0373
+        },
+        {
+          "hex": "#948c7e",
+          "coverage": 0.0237
+        }
+      ],
+      "detail": {
+        "energy": 38.0067
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 4,
+      "cropPath": "region-4.png"
+    },
+    {
+      "id": "viewer-count",
+      "kind": "text",
+      "note": "White live-room viewer count.",
+      "grid": null,
+      "parentId": "viewer-pill",
+      "box": {
+        "x": 0.3188,
+        "y": 0.0341,
+        "w": 0.1966,
+        "h": 0.0191
+      },
+      "px": {
+        "x": 300,
+        "y": 57,
+        "w": 185,
+        "h": 32
+      },
+      "aspect": 5.7813,
+      "palette": [
+        {
+          "hex": "#544230",
+          "coverage": 0.8195
+        },
+        {
+          "hex": "#f2f2f2",
+          "coverage": 0.0842
+        },
+        {
+          "hex": "#948c7e",
+          "coverage": 0.0376
+        },
+        {
+          "hex": "#c7c4bd",
+          "coverage": 0.0346
+        },
+        {
+          "hex": "#351b0d",
+          "coverage": 0.0241
+        }
+      ],
+      "detail": {
+        "energy": 46.9386
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 5,
+      "cropPath": "region-5.png"
+    },
+    {
+      "id": "like-pill",
+      "kind": "control",
+      "note": "Dark translucent like-count pill at the upper right.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.7545,
+        "y": 0.0257,
+        "w": 0.2094,
+        "h": 0.0335
+      },
+      "px": {
+        "x": 710,
+        "y": 43,
+        "w": 197,
+        "h": 56
+      },
+      "aspect": 3.5179,
+      "palette": [
+        {
+          "hex": "#3e2f22",
+          "coverage": 0.7525
+        },
+        {
+          "hex": "#b8845b",
+          "coverage": 0.1074
+        },
+        {
+          "hex": "#f5f3f2",
+          "coverage": 0.0591
+        },
+        {
+          "hex": "#f85964",
+          "coverage": 0.0591
+        },
+        {
+          "hex": "#796a5e",
+          "coverage": 0.0218
+        }
+      ],
+      "detail": {
+        "energy": 24.2443
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 6,
+      "cropPath": "region-6.png"
+    },
+    {
+      "id": "like-count",
+      "kind": "text",
+      "note": "Large white like total beside the heart mark.",
+      "grid": null,
+      "parentId": "like-pill",
+      "box": {
+        "x": 0.8448,
+        "y": 0.0329,
+        "w": 0.0882,
+        "h": 0.0203
+      },
+      "px": {
+        "x": 795,
+        "y": 55,
+        "w": 83,
+        "h": 34
+      },
+      "aspect": 2.4412,
+      "palette": [
+        {
+          "hex": "#413326",
+          "coverage": 0.7493
+        },
+        {
+          "hex": "#f1efef",
+          "coverage": 0.1851
+        },
+        {
+          "hex": "#70635d",
+          "coverage": 0.0358
+        },
+        {
+          "hex": "#cac8be",
+          "coverage": 0.0239
+        },
+        {
+          "hex": "#989888",
+          "coverage": 0.006
+        }
+      ],
+      "detail": {
+        "energy": 17.8295
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 7,
+      "cropPath": "region-7.png"
+    },
+    {
+      "id": "floating-hearts",
+      "kind": "control",
+      "note": "Small pink hearts floating below the like counter.",
+      "grid": null,
+      "box": {
+        "x": 0.8576,
+        "y": 0.0574,
+        "w": 0.1169,
+        "h": 0.058
+      },
+      "px": {
+        "x": 807,
+        "y": 96,
+        "w": 110,
+        "h": 97
+      },
+      "aspect": 1.134,
+      "palette": [
+        {
+          "hex": "#e3b99a",
+          "coverage": 0.7549
+        },
+        {
+          "hex": "#f85b62",
+          "coverage": 0.1568
+        },
+        {
+          "hex": "#e0a17d",
+          "coverage": 0.0506
+        },
+        {
+          "hex": "#4c3827",
+          "coverage": 0.0189
+        },
+        {
+          "hex": "#f78784",
+          "coverage": 0.0189
+        }
+      ],
+      "detail": {
+        "energy": 7.7112
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 18 colours beyond its two main tones and soft shading across 45% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 8,
+      "cropPath": "region-8.png"
+    },
+    {
+      "id": "wedding-title",
+      "kind": "text",
+      "note": "Small uppercase wedding ceremony heading on the stage sign.",
+      "grid": null,
+      "box": {
+        "x": 0.4187,
+        "y": 0.1106,
+        "w": 0.1668,
+        "h": 0.0185
+      },
+      "px": {
+        "x": 394,
+        "y": 185,
+        "w": 157,
+        "h": 31
+      },
+      "aspect": 5.0645,
+      "palette": [
+        {
+          "hex": "#f8f5e3",
+          "coverage": 0.658
+        },
+        {
+          "hex": "#f0cda5",
+          "coverage": 0.2292
+        },
+        {
+          "hex": "#ebb36b",
+          "coverage": 0.0816
+        },
+        {
+          "hex": "#d0853b",
+          "coverage": 0.0208
+        },
+        {
+          "hex": "#d59b8d",
+          "coverage": 0.0104
+        }
+      ],
+      "detail": {
+        "energy": 15.5777
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 9,
+      "cropPath": "region-9.png"
+    },
+    {
+      "id": "couple-names",
+      "kind": "text",
+      "note": "Large script bride and groom names with a joining ring mark.",
+      "grid": null,
+      "box": {
+        "x": 0.3188,
+        "y": 0.1304,
+        "w": 0.3634,
+        "h": 0.0502
+      },
+      "px": {
+        "x": 300,
+        "y": 218,
+        "w": 342,
+        "h": 84
+      },
+      "aspect": 4.0714,
+      "palette": [
+        {
+          "hex": "#f8f3e3",
+          "coverage": 0.599
+        },
+        {
+          "hex": "#f7d59c",
+          "coverage": 0.2015
+        },
+        {
+          "hex": "#f1b96c",
+          "coverage": 0.087
+        },
+        {
+          "hex": "#920f0f",
+          "coverage": 0.0819
+        },
+        {
+          "hex": "#b85a55",
+          "coverage": 0.0307
+        }
+      ],
+      "detail": {
+        "energy": 50.8658
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 80 colours beyond its two main tones and soft shading across 45% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 10,
+      "cropPath": "region-10.png"
+    },
+    {
+      "id": "wedding-date",
+      "kind": "text",
+      "note": "Small date centered below the couple names.",
+      "grid": null,
+      "box": {
+        "x": 0.4368,
+        "y": 0.1836,
+        "w": 0.1286,
+        "h": 0.0144
+      },
+      "px": {
+        "x": 411,
+        "y": 307,
+        "w": 121,
+        "h": 24
+      },
+      "aspect": 5.0417,
+      "palette": [
+        {
+          "hex": "#f8f4e4",
+          "coverage": 0.7239
+        },
+        {
+          "hex": "#8a100f",
+          "coverage": 0.1963
+        },
+        {
+          "hex": "#cb8883",
+          "coverage": 0.0368
+        },
+        {
+          "hex": "#f3d6d4",
+          "coverage": 0.0276
+        },
+        {
+          "hex": "#e2b5a5",
+          "coverage": 0.0153
+        }
+      ],
+      "detail": {
+        "energy": 24.9533
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 11,
+      "cropPath": "region-11.png"
+    },
+    {
+      "id": "groom-claim-control",
+      "kind": "control",
+      "note": "Blue groom-role claim label beside the stage.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.2338,
+        "y": 0.3056,
+        "w": 0.1711,
+        "h": 0.0413
+      },
+      "px": {
+        "x": 220,
+        "y": 511,
+        "w": 161,
+        "h": 69
+      },
+      "aspect": 2.3333,
+      "palette": [
+        {
+          "hex": "#0a40d5",
+          "coverage": 0.433
+        },
+        {
+          "hex": "#1752d4",
+          "coverage": 0.3235
+        },
+        {
+          "hex": "#ebf2f8",
+          "coverage": 0.1186
+        },
+        {
+          "hex": "#0839ee",
+          "coverage": 0.0773
+        },
+        {
+          "hex": "#9db8f0",
+          "coverage": 0.0477
+        }
+      ],
+      "detail": {
+        "energy": 42.3958
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 12,
+      "cropPath": "region-12.png"
+    },
+    {
+      "id": "groom-claim-label",
+      "kind": "text",
+      "note": "White groom-role prompt and participant name.",
+      "grid": null,
+      "parentId": "groom-claim-control",
+      "box": {
+        "x": 0.2635,
+        "y": 0.3182,
+        "w": 0.1158,
+        "h": 0.0221
+      },
+      "px": {
+        "x": 248,
+        "y": 532,
+        "w": 109,
+        "h": 37
+      },
+      "aspect": 2.9459,
+      "palette": [
+        {
+          "hex": "#093dd0",
+          "coverage": 0.6093
+        },
+        {
+          "hex": "#ecf3f8",
+          "coverage": 0.1581
+        },
+        {
+          "hex": "#2455d7",
+          "coverage": 0.1186
+        },
+        {
+          "hex": "#4c73da",
+          "coverage": 0.0628
+        },
+        {
+          "hex": "#809ae4",
+          "coverage": 0.0512
+        }
+      ],
+      "detail": {
+        "energy": 30.6195
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 13,
+      "cropPath": "region-13.png"
+    },
+    {
+      "id": "bride-claim-control",
+      "kind": "control",
+      "note": "Pink bride-role claim label beside the stage.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.6089,
+        "y": 0.3062,
+        "w": 0.187,
+        "h": 0.0419
+      },
+      "px": {
+        "x": 573,
+        "y": 512,
+        "w": 176,
+        "h": 70
+      },
+      "aspect": 2.5143,
+      "palette": [
+        {
+          "hex": "#da1b50",
+          "coverage": 0.6164
+        },
+        {
+          "hex": "#f7ccd8",
+          "coverage": 0.1187
+        },
+        {
+          "hex": "#a6231f",
+          "coverage": 0.1178
+        },
+        {
+          "hex": "#f8efec",
+          "coverage": 0.0822
+        },
+        {
+          "hex": "#7d2615",
+          "coverage": 0.0648
+        }
+      ],
+      "detail": {
+        "energy": 41.3588
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 14,
+      "cropPath": "region-14.png"
+    },
+    {
+      "id": "bride-claim-label",
+      "kind": "text",
+      "note": "White bride-role prompt and participant name.",
+      "grid": null,
+      "parentId": "bride-claim-control",
+      "box": {
+        "x": 0.6451,
+        "y": 0.3182,
+        "w": 0.1233,
+        "h": 0.0227
+      },
+      "px": {
+        "x": 607,
+        "y": 532,
+        "w": 116,
+        "h": 38
+      },
+      "aspect": 3.0526,
+      "palette": [
+        {
+          "hex": "#d61b4d",
+          "coverage": 0.6789
+        },
+        {
+          "hex": "#f8d0d5",
+          "coverage": 0.0935
+        },
+        {
+          "hex": "#d93d6c",
+          "coverage": 0.0915
+        },
+        {
+          "hex": "#f8f2f4",
+          "coverage": 0.0894
+        },
+        {
+          "hex": "#e990a2",
+          "coverage": 0.0467
+        }
+      ],
+      "detail": {
+        "energy": 32.568
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 15,
+      "cropPath": "region-15.png"
+    },
+    {
+      "id": "wish-left-one",
+      "kind": "control",
+      "note": "First translucent viewer-wish ribbon at the left edge of the aisle.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.0223,
+        "y": 0.4659,
+        "w": 0.3177,
+        "h": 0.0496
+      },
+      "px": {
+        "x": 21,
+        "y": 779,
+        "w": 299,
+        "h": 83
+      },
+      "aspect": 3.6024,
+      "palette": [
+        {
+          "hex": "#201818",
+          "coverage": 0.5514
+        },
+        {
+          "hex": "#3f2b1f",
+          "coverage": 0.1815
+        },
+        {
+          "hex": "#554645",
+          "coverage": 0.1295
+        },
+        {
+          "hex": "#725343",
+          "coverage": 0.0937
+        },
+        {
+          "hex": "#eeeded",
+          "coverage": 0.0439
+        }
+      ],
+      "detail": {
+        "energy": 46.352
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 74 colours beyond its two main tones and soft shading across 39% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 16,
+      "cropPath": "region-16.png"
+    },
+    {
+      "id": "wish-left-one-avatar",
+      "kind": "image",
+      "note": "Circular TikTok viewer profile photo on the wish ribbon.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "wish-left-one",
+      "box": {
+        "x": 0.0351,
+        "y": 0.4743,
+        "w": 0.0531,
+        "h": 0.0299
+      },
+      "px": {
+        "x": 33,
+        "y": 793,
+        "w": 50,
+        "h": 50
+      },
+      "aspect": 1,
+      "palette": [
+        {
+          "hex": "#201917",
+          "coverage": 0.398
+        },
+        {
+          "hex": "#4e3229",
+          "coverage": 0.2296
+        },
+        {
+          "hex": "#a9897c",
+          "coverage": 0.148
+        },
+        {
+          "hex": "#cfcdac",
+          "coverage": 0.1122
+        },
+        {
+          "hex": "#878c51",
+          "coverage": 0.1122
+        }
+      ],
+      "detail": {
+        "energy": 13.0023
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wish-left-one-avatar.png",
+      "text": null,
+      "number": 17,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 2500,
+        "remainingPixels": 2500,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": [
+          "wish-left-one"
+        ]
+      },
+      "cropPath": "region-17.png",
+      "referencePath": "reference-17.png"
+    },
+    {
+      "id": "wish-left-one-text",
+      "kind": "text",
+      "note": "Viewer name and two-line wedding wish.",
+      "grid": null,
+      "parentId": "wish-left-one",
+      "box": {
+        "x": 0.0967,
+        "y": 0.4719,
+        "w": 0.2285,
+        "h": 0.0365
+      },
+      "px": {
+        "x": 91,
+        "y": 789,
+        "w": 215,
+        "h": 61
+      },
+      "aspect": 3.5246,
+      "palette": [
+        {
+          "hex": "#201a19",
+          "coverage": 0.5323
+        },
+        {
+          "hex": "#564645",
+          "coverage": 0.1759
+        },
+        {
+          "hex": "#482f23",
+          "coverage": 0.1605
+        },
+        {
+          "hex": "#ebebea",
+          "coverage": 0.0753
+        },
+        {
+          "hex": "#7c7673",
+          "coverage": 0.0561
+        }
+      ],
+      "detail": {
+        "energy": 45.7944
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 18,
+      "cropPath": "region-18.png"
+    },
+    {
+      "id": "wish-right-one",
+      "kind": "control",
+      "note": "First translucent viewer-wish ribbon at the right edge of the aisle.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.6823,
+        "y": 0.4916,
+        "w": 0.3029,
+        "h": 0.0484
+      },
+      "px": {
+        "x": 642,
+        "y": 822,
+        "w": 285,
+        "h": 81
+      },
+      "aspect": 3.5185,
+      "palette": [
+        {
+          "hex": "#1e1b1d",
+          "coverage": 0.6371
+        },
+        {
+          "hex": "#6f463d",
+          "coverage": 0.1455
+        },
+        {
+          "hex": "#aca7a5",
+          "coverage": 0.0764
+        },
+        {
+          "hex": "#f2f1f0",
+          "coverage": 0.0741
+        },
+        {
+          "hex": "#41271d",
+          "coverage": 0.0669
+        }
+      ],
+      "detail": {
+        "energy": 55.6234
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 89 colours beyond its two main tones and soft shading across 40% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 19,
+      "cropPath": "region-19.png"
+    },
+    {
+      "id": "wish-right-one-avatar",
+      "kind": "image",
+      "note": "Circular TikTok viewer profile photo on the wish ribbon.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "wish-right-one",
+      "box": {
+        "x": 0.695,
+        "y": 0.5006,
+        "w": 0.0521,
+        "h": 0.0287
+      },
+      "px": {
+        "x": 654,
+        "y": 837,
+        "w": 49,
+        "h": 48
+      },
+      "aspect": 1.0208,
+      "palette": [
+        {
+          "hex": "#77584e",
+          "coverage": 0.345
+        },
+        {
+          "hex": "#372625",
+          "coverage": 0.2105
+        },
+        {
+          "hex": "#dd9267",
+          "coverage": 0.1813
+        },
+        {
+          "hex": "#472a1a",
+          "coverage": 0.1345
+        },
+        {
+          "hex": "#693c18",
+          "coverage": 0.1287
+        }
+      ],
+      "detail": {
+        "energy": 10.5188
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wish-right-one-avatar.png",
+      "text": null,
+      "number": 20,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 2352,
+        "remainingPixels": 2352,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": [
+          "wish-right-one"
+        ]
+      },
+      "cropPath": "region-20.png",
+      "referencePath": "reference-20.png"
+    },
+    {
+      "id": "wish-right-one-text",
+      "kind": "text",
+      "note": "Viewer name and two-line wedding wish.",
+      "grid": null,
+      "parentId": "wish-right-one",
+      "box": {
+        "x": 0.7577,
+        "y": 0.497,
+        "w": 0.2083,
+        "h": 0.0371
+      },
+      "px": {
+        "x": 713,
+        "y": 831,
+        "w": 196,
+        "h": 62
+      },
+      "aspect": 3.1613,
+      "palette": [
+        {
+          "hex": "#1a181a",
+          "coverage": 0.6233
+        },
+        {
+          "hex": "#b6b0ad",
+          "coverage": 0.1068
+        },
+        {
+          "hex": "#734540",
+          "coverage": 0.0946
+        },
+        {
+          "hex": "#ececeb",
+          "coverage": 0.092
+        },
+        {
+          "hex": "#3d3535",
+          "coverage": 0.0833
+        }
+      ],
+      "detail": {
+        "energy": 49.9198
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 21,
+      "cropPath": "region-21.png"
+    },
+    {
+      "id": "wish-left-two",
+      "kind": "control",
+      "note": "Second translucent viewer-wish ribbon at the left edge of the aisle.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.0255,
+        "y": 0.5299,
+        "w": 0.3039,
+        "h": 0.0478
+      },
+      "px": {
+        "x": 24,
+        "y": 886,
+        "w": 286,
+        "h": 80
+      },
+      "aspect": 3.575,
+      "palette": [
+        {
+          "hex": "#1c181a",
+          "coverage": 0.5003
+        },
+        {
+          "hex": "#755149",
+          "coverage": 0.2158
+        },
+        {
+          "hex": "#493e3c",
+          "coverage": 0.1228
+        },
+        {
+          "hex": "#efb29c",
+          "coverage": 0.1055
+        },
+        {
+          "hex": "#da8f7b",
+          "coverage": 0.0557
+        }
+      ],
+      "detail": {
+        "energy": 42.2248
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 71 colours beyond its two main tones and soft shading across 38% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 22,
+      "cropPath": "region-22.png"
+    },
+    {
+      "id": "wish-left-two-avatar",
+      "kind": "image",
+      "note": "Circular TikTok viewer profile photo on the wish ribbon.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "wish-left-two",
+      "box": {
+        "x": 0.0383,
+        "y": 0.5377,
+        "w": 0.0531,
+        "h": 0.0305
+      },
+      "px": {
+        "x": 36,
+        "y": 899,
+        "w": 50,
+        "h": 51
+      },
+      "aspect": 0.9804,
+      "palette": [
+        {
+          "hex": "#221e1f",
+          "coverage": 0.4317
+        },
+        {
+          "hex": "#d3d7dc",
+          "coverage": 0.2291
+        },
+        {
+          "hex": "#b9aa9c",
+          "coverage": 0.2115
+        },
+        {
+          "hex": "#83786f",
+          "coverage": 0.0661
+        },
+        {
+          "hex": "#a1896f",
+          "coverage": 0.0617
+        }
+      ],
+      "detail": {
+        "energy": 12.9409
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wish-left-two-avatar.png",
+      "text": null,
+      "number": 23,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 2550,
+        "remainingPixels": 2550,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": [
+          "wish-left-two"
+        ]
+      },
+      "cropPath": "region-23.png",
+      "referencePath": "reference-23.png"
+    },
+    {
+      "id": "wish-left-two-text",
+      "kind": "text",
+      "note": "Viewer name and two-line wedding wish.",
+      "grid": null,
+      "parentId": "wish-left-two",
+      "box": {
+        "x": 0.102,
+        "y": 0.5359,
+        "w": 0.2157,
+        "h": 0.0347
+      },
+      "px": {
+        "x": 96,
+        "y": 896,
+        "w": 203,
+        "h": 58
+      },
+      "aspect": 3.5,
+      "palette": [
+        {
+          "hex": "#1a1919",
+          "coverage": 0.4415
+        },
+        {
+          "hex": "#78544b",
+          "coverage": 0.2538
+        },
+        {
+          "hex": "#efb19c",
+          "coverage": 0.143
+        },
+        {
+          "hex": "#473c3a",
+          "coverage": 0.0858
+        },
+        {
+          "hex": "#f83a3b",
+          "coverage": 0.076
+        }
+      ],
+      "detail": {
+        "energy": 31.1973
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 24,
+      "cropPath": "region-24.png"
+    },
+    {
+      "id": "wish-right-two",
+      "kind": "control",
+      "note": "Second translucent viewer-wish ribbon at the right edge of the aisle.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.7269,
+        "y": 0.5526,
+        "w": 0.2593,
+        "h": 0.0449
+      },
+      "px": {
+        "x": 684,
+        "y": 924,
+        "w": 244,
+        "h": 75
+      },
+      "aspect": 3.2533,
+      "palette": [
+        {
+          "hex": "#534944",
+          "coverage": 0.36
+        },
+        {
+          "hex": "#241f1f",
+          "coverage": 0.3262
+        },
+        {
+          "hex": "#e58e77",
+          "coverage": 0.1904
+        },
+        {
+          "hex": "#876359",
+          "coverage": 0.0721
+        },
+        {
+          "hex": "#777473",
+          "coverage": 0.0513
+        }
+      ],
+      "detail": {
+        "energy": 37.2992
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 68 colours beyond its two main tones and soft shading across 47% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 25,
+      "cropPath": "region-25.png"
+    },
+    {
+      "id": "wish-right-two-avatar",
+      "kind": "image",
+      "note": "Circular TikTok viewer profile photo on the wish ribbon.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "wish-right-two",
+      "box": {
+        "x": 0.7396,
+        "y": 0.5604,
+        "w": 0.051,
+        "h": 0.0287
+      },
+      "px": {
+        "x": 696,
+        "y": 937,
+        "w": 48,
+        "h": 48
+      },
+      "aspect": 1,
+      "palette": [
+        {
+          "hex": "#e68e76",
+          "coverage": 0.6721
+        },
+        {
+          "hex": "#7e5d52",
+          "coverage": 0.2131
+        },
+        {
+          "hex": "#6b6464",
+          "coverage": 0.0451
+        },
+        {
+          "hex": "#b5aea8",
+          "coverage": 0.0451
+        },
+        {
+          "hex": "#f8c5a3",
+          "coverage": 0.0246
+        }
+      ],
+      "detail": {
+        "energy": 5.4058
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wish-right-two-avatar.png",
+      "text": null,
+      "number": 26,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 2304,
+        "remainingPixels": 2304,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": [
+          "wish-right-two"
+        ]
+      },
+      "cropPath": "region-26.png",
+      "referencePath": "reference-26.png"
+    },
+    {
+      "id": "wish-right-two-text",
+      "kind": "text",
+      "note": "Viewer name and short wedding wish.",
+      "grid": null,
+      "parentId": "wish-right-two",
+      "box": {
+        "x": 0.8023,
+        "y": 0.5574,
+        "w": 0.1711,
+        "h": 0.0341
+      },
+      "px": {
+        "x": 755,
+        "y": 932,
+        "w": 161,
+        "h": 57
+      },
+      "aspect": 2.8246,
+      "palette": [
+        {
+          "hex": "#554844",
+          "coverage": 0.4391
+        },
+        {
+          "hex": "#262323",
+          "coverage": 0.3641
+        },
+        {
+          "hex": "#827e7c",
+          "coverage": 0.0924
+        },
+        {
+          "hex": "#c9c7c6",
+          "coverage": 0.0652
+        },
+        {
+          "hex": "#f1f0ef",
+          "coverage": 0.0391
+        }
+      ],
+      "detail": {
+        "energy": 34.1734
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 45 colours beyond its two main tones and soft shading across 38% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 27,
+      "cropPath": "region-27.png"
+    },
+    {
+      "id": "wish-left-three",
+      "kind": "control",
+      "note": "Third translucent viewer-wish ribbon at the left edge of the aisle.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.0255,
+        "y": 0.6746,
+        "w": 0.3007,
+        "h": 0.0407
+      },
+      "px": {
+        "x": 24,
+        "y": 1128,
+        "w": 283,
+        "h": 68
+      },
+      "aspect": 4.1618,
+      "palette": [
+        {
+          "hex": "#1f1b1c",
+          "coverage": 0.5039
+        },
+        {
+          "hex": "#573c35",
+          "coverage": 0.1955
+        },
+        {
+          "hex": "#3e2d1c",
+          "coverage": 0.1273
+        },
+        {
+          "hex": "#6c4e31",
+          "coverage": 0.0958
+        },
+        {
+          "hex": "#a2a0a2",
+          "coverage": 0.0774
+        }
+      ],
+      "detail": {
+        "energy": 48.1554
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 75 colours beyond its two main tones and soft shading across 37% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 28,
+      "cropPath": "region-28.png"
+    },
+    {
+      "id": "wish-left-three-avatar",
+      "kind": "image",
+      "note": "Circular TikTok viewer profile photo on the wish ribbon.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "wish-left-three",
+      "box": {
+        "x": 0.0372,
+        "y": 0.6806,
+        "w": 0.051,
+        "h": 0.0281
+      },
+      "px": {
+        "x": 35,
+        "y": 1138,
+        "w": 48,
+        "h": 47
+      },
+      "aspect": 1.0213,
+      "palette": [
+        {
+          "hex": "#a3a3a6",
+          "coverage": 0.3934
+        },
+        {
+          "hex": "#1c1816",
+          "coverage": 0.3033
+        },
+        {
+          "hex": "#d9d9db",
+          "coverage": 0.1185
+        },
+        {
+          "hex": "#4a3323",
+          "coverage": 0.0995
+        },
+        {
+          "hex": "#2e313c",
+          "coverage": 0.0853
+        }
+      ],
+      "detail": {
+        "energy": 13.2912
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wish-left-three-avatar.png",
+      "text": null,
+      "number": 29,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 2256,
+        "remainingPixels": 2256,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": [
+          "wish-left-three"
+        ]
+      },
+      "cropPath": "region-29.png",
+      "referencePath": "reference-29.png"
+    },
+    {
+      "id": "wish-left-three-text",
+      "kind": "text",
+      "note": "Viewer name and short wedding compliment.",
+      "grid": null,
+      "parentId": "wish-left-three",
+      "box": {
+        "x": 0.0967,
+        "y": 0.6794,
+        "w": 0.2168,
+        "h": 0.0305
+      },
+      "px": {
+        "x": 91,
+        "y": 1136,
+        "w": 204,
+        "h": 51
+      },
+      "aspect": 4,
+      "palette": [
+        {
+          "hex": "#211d1d",
+          "coverage": 0.4763
+        },
+        {
+          "hex": "#50382d",
+          "coverage": 0.2816
+        },
+        {
+          "hex": "#6d533b",
+          "coverage": 0.1419
+        },
+        {
+          "hex": "#ebeae8",
+          "coverage": 0.0561
+        },
+        {
+          "hex": "#b7b3b0",
+          "coverage": 0.044
+        }
+      ],
+      "detail": {
+        "energy": 40.9675
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 87 colours beyond its two main tones and soft shading across 34% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 30,
+      "cropPath": "region-30.png"
+    },
+    {
+      "id": "wish-right-three",
+      "kind": "control",
+      "note": "Third translucent viewer-wish ribbon at the right edge of the aisle.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.7269,
+        "y": 0.6806,
+        "w": 0.2582,
+        "h": 0.0395
+      },
+      "px": {
+        "x": 684,
+        "y": 1138,
+        "w": 243,
+        "h": 66
+      },
+      "aspect": 3.6818,
+      "palette": [
+        {
+          "hex": "#523932",
+          "coverage": 0.4119
+        },
+        {
+          "hex": "#221919",
+          "coverage": 0.3822
+        },
+        {
+          "hex": "#c2bfbf",
+          "coverage": 0.1037
+        },
+        {
+          "hex": "#f0efed",
+          "coverage": 0.0519
+        },
+        {
+          "hex": "#8a7c79",
+          "coverage": 0.0503
+        }
+      ],
+      "detail": {
+        "energy": 44.914
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 74 colours beyond its two main tones and soft shading across 32% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 31,
+      "cropPath": "region-31.png"
+    },
+    {
+      "id": "wish-right-three-avatar",
+      "kind": "image",
+      "note": "Circular TikTok viewer profile photo on the wish ribbon.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "wish-right-three",
+      "box": {
+        "x": 0.7396,
+        "y": 0.686,
+        "w": 0.051,
+        "h": 0.0281
+      },
+      "px": {
+        "x": 696,
+        "y": 1147,
+        "w": 48,
+        "h": 47
+      },
+      "aspect": 1.0213,
+      "palette": [
+        {
+          "hex": "#603f2b",
+          "coverage": 0.4615
+        },
+        {
+          "hex": "#bfbebe",
+          "coverage": 0.2308
+        },
+        {
+          "hex": "#b28471",
+          "coverage": 0.1065
+        },
+        {
+          "hex": "#dfb39e",
+          "coverage": 0.1065
+        },
+        {
+          "hex": "#1e191b",
+          "coverage": 0.0947
+        }
+      ],
+      "detail": {
+        "energy": 11.3565
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wish-right-three-avatar.png",
+      "text": null,
+      "number": 32,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 2256,
+        "remainingPixels": 2256,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": [
+          "wish-right-three"
+        ]
+      },
+      "cropPath": "region-32.png",
+      "referencePath": "reference-32.png"
+    },
+    {
+      "id": "wish-right-three-text",
+      "kind": "text",
+      "note": "Viewer name and short celebration message.",
+      "grid": null,
+      "parentId": "wish-right-three",
+      "box": {
+        "x": 0.8002,
+        "y": 0.6854,
+        "w": 0.1722,
+        "h": 0.0293
+      },
+      "px": {
+        "x": 753,
+        "y": 1146,
+        "w": 162,
+        "h": 49
+      },
+      "aspect": 3.3061,
+      "palette": [
+        {
+          "hex": "#261b1b",
+          "coverage": 0.3711
+        },
+        {
+          "hex": "#533838",
+          "coverage": 0.2861
+        },
+        {
+          "hex": "#533f2f",
+          "coverage": 0.1862
+        },
+        {
+          "hex": "#e6e5e4",
+          "coverage": 0.1147
+        },
+        {
+          "hex": "#b0a9a9",
+          "coverage": 0.0419
+        }
+      ],
+      "detail": {
+        "energy": 35.9326
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 33,
+      "cropPath": "region-33.png"
+    },
+    {
+      "id": "wish-left-four",
+      "kind": "control",
+      "note": "Fourth translucent viewer-wish ribbon at the left edge of the aisle.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.0223,
+        "y": 0.7237,
+        "w": 0.3082,
+        "h": 0.0467
+      },
+      "px": {
+        "x": 21,
+        "y": 1210,
+        "w": 290,
+        "h": 78
+      },
+      "aspect": 3.7179,
+      "palette": [
+        {
+          "hex": "#402722",
+          "coverage": 0.2934
+        },
+        {
+          "hex": "#211f25",
+          "coverage": 0.2934
+        },
+        {
+          "hex": "#684f34",
+          "coverage": 0.2534
+        },
+        {
+          "hex": "#6c5d5b",
+          "coverage": 0.0835
+        },
+        {
+          "hex": "#d99a6d",
+          "coverage": 0.0764
+        }
+      ],
+      "detail": {
+        "energy": 43.5166
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 55 colours beyond its two main tones and soft shading across 42% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 34,
+      "cropPath": "region-34.png"
+    },
+    {
+      "id": "wish-left-four-avatar",
+      "kind": "image",
+      "note": "Circular TikTok viewer profile photo on the wish ribbon.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "wish-left-four",
+      "box": {
+        "x": 0.0361,
+        "y": 0.7321,
+        "w": 0.051,
+        "h": 0.0281
+      },
+      "px": {
+        "x": 34,
+        "y": 1224,
+        "w": 48,
+        "h": 47
+      },
+      "aspect": 1.0213,
+      "palette": [
+        {
+          "hex": "#38241b",
+          "coverage": 0.3652
+        },
+        {
+          "hex": "#c9c9c8",
+          "coverage": 0.3565
+        },
+        {
+          "hex": "#674932",
+          "coverage": 0.113
+        },
+        {
+          "hex": "#cba492",
+          "coverage": 0.113
+        },
+        {
+          "hex": "#a19893",
+          "coverage": 0.0522
+        }
+      ],
+      "detail": {
+        "energy": 15.0083
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wish-left-four-avatar.png",
+      "text": null,
+      "number": 35,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 2256,
+        "remainingPixels": 2256,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": [
+          "wish-left-four"
+        ]
+      },
+      "cropPath": "region-35.png",
+      "referencePath": "reference-35.png"
+    },
+    {
+      "id": "wish-left-four-text",
+      "kind": "text",
+      "note": "Viewer name and two-line wedding wish.",
+      "grid": null,
+      "parentId": "wish-left-four",
+      "box": {
+        "x": 0.0967,
+        "y": 0.7285,
+        "w": 0.2232,
+        "h": 0.0359
+      },
+      "px": {
+        "x": 91,
+        "y": 1218,
+        "w": 210,
+        "h": 60
+      },
+      "aspect": 3.5,
+      "palette": [
+        {
+          "hex": "#222127",
+          "coverage": 0.3256
+        },
+        {
+          "hex": "#432625",
+          "coverage": 0.2413
+        },
+        {
+          "hex": "#6e5533",
+          "coverage": 0.2032
+        },
+        {
+          "hex": "#564436",
+          "coverage": 0.1553
+        },
+        {
+          "hex": "#e8e6e6",
+          "coverage": 0.0745
+        }
+      ],
+      "detail": {
+        "energy": 33.3039
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 59 colours beyond its two main tones and soft shading across 40% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 36,
+      "cropPath": "region-36.png"
+    },
+    {
+      "id": "wish-right-four",
+      "kind": "control",
+      "note": "Fourth translucent viewer-wish ribbon at the right edge of the aisle.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.7248,
+        "y": 0.7255,
+        "w": 0.2625,
+        "h": 0.049
+      },
+      "px": {
+        "x": 682,
+        "y": 1213,
+        "w": 247,
+        "h": 82
+      },
+      "aspect": 3.0122,
+      "palette": [
+        {
+          "hex": "#4d3e38",
+          "coverage": 0.785
+        },
+        {
+          "hex": "#a99c9b",
+          "coverage": 0.0602
+        },
+        {
+          "hex": "#1b0f10",
+          "coverage": 0.057
+        },
+        {
+          "hex": "#f4f3f4",
+          "coverage": 0.0512
+        },
+        {
+          "hex": "#654629",
+          "coverage": 0.0466
+        }
+      ],
+      "detail": {
+        "energy": 38.4786
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 72 colours beyond its two main tones and soft shading across 37% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 37,
+      "cropPath": "region-37.png"
+    },
+    {
+      "id": "wish-right-four-avatar",
+      "kind": "image",
+      "note": "Circular TikTok viewer profile photo on the wish ribbon.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "wish-right-four",
+      "box": {
+        "x": 0.7386,
+        "y": 0.7333,
+        "w": 0.0521,
+        "h": 0.0287
+      },
+      "px": {
+        "x": 695,
+        "y": 1226,
+        "w": 49,
+        "h": 48
+      },
+      "aspect": 1.0208,
+      "palette": [
+        {
+          "hex": "#6b4c30",
+          "coverage": 0.2849
+        },
+        {
+          "hex": "#78664c",
+          "coverage": 0.2793
+        },
+        {
+          "hex": "#bad7ec",
+          "coverage": 0.1788
+        },
+        {
+          "hex": "#211714",
+          "coverage": 0.1453
+        },
+        {
+          "hex": "#617b92",
+          "coverage": 0.1117
+        }
+      ],
+      "detail": {
+        "energy": 10.9753
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wish-right-four-avatar.png",
+      "text": null,
+      "number": 38,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 2352,
+        "remainingPixels": 2352,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": [
+          "wish-right-four"
+        ]
+      },
+      "cropPath": "region-38.png",
+      "referencePath": "reference-38.png"
+    },
+    {
+      "id": "wish-right-four-text",
+      "kind": "text",
+      "note": "Viewer name and two-line wedding wish.",
+      "grid": null,
+      "parentId": "wish-right-four",
+      "box": {
+        "x": 0.8002,
+        "y": 0.7309,
+        "w": 0.1753,
+        "h": 0.0365
+      },
+      "px": {
+        "x": 753,
+        "y": 1222,
+        "w": 165,
+        "h": 61
+      },
+      "aspect": 2.7049,
+      "palette": [
+        {
+          "hex": "#4a3a35",
+          "coverage": 0.7786
+        },
+        {
+          "hex": "#eeeceb",
+          "coverage": 0.0699
+        },
+        {
+          "hex": "#b2abaa",
+          "coverage": 0.0602
+        },
+        {
+          "hex": "#908481",
+          "coverage": 0.0466
+        },
+        {
+          "hex": "#2a1212",
+          "coverage": 0.0447
+        }
+      ],
+      "detail": {
+        "energy": 33.6924
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 39,
+      "cropPath": "region-39.png"
+    },
+    {
+      "id": "bride-action",
+      "kind": "control",
+      "note": "Pink floral tile prompting viewers to claim the bride role.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.034,
+        "y": 0.8654,
+        "w": 0.2274,
+        "h": 0.0897
+      },
+      "px": {
+        "x": 32,
+        "y": 1447,
+        "w": 214,
+        "h": 150
+      },
+      "aspect": 1.4267,
+      "palette": [
+        {
+          "hex": "#163e8f",
+          "coverage": 0.3674
+        },
+        {
+          "hex": "#1a55b9",
+          "coverage": 0.3322
+        },
+        {
+          "hex": "#78aef7",
+          "coverage": 0.1106
+        },
+        {
+          "hex": "#f3eeec",
+          "coverage": 0.1036
+        },
+        {
+          "hex": "#f1ccb2",
+          "coverage": 0.0862
+        }
+      ],
+      "detail": {
+        "energy": 36.466
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 68 colours beyond its two main tones and soft shading across 37% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 40,
+      "cropPath": "region-40.png"
+    },
+    {
+      "id": "bride-action-avatar",
+      "kind": "image",
+      "note": "Circular bride portrait in the role-claim tile.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "bride-action",
+      "box": {
+        "x": 0.1041,
+        "y": 0.8816,
+        "w": 0.0871,
+        "h": 0.0431
+      },
+      "px": {
+        "x": 98,
+        "y": 1474,
+        "w": 82,
+        "h": 72
+      },
+      "aspect": 1.1389,
+      "palette": [
+        {
+          "hex": "#78aff8",
+          "coverage": 0.375
+        },
+        {
+          "hex": "#0f0f14",
+          "coverage": 0.223
+        },
+        {
+          "hex": "#183f92",
+          "coverage": 0.2128
+        },
+        {
+          "hex": "#f7c6a7",
+          "coverage": 0.0946
+        },
+        {
+          "hex": "#f0f1f3",
+          "coverage": 0.0946
+        }
+      ],
+      "detail": {
+        "energy": 15.6481
+      },
+      "medium": "raster",
+      "plate": "assets/plates/bride-action-avatar.png",
+      "text": null,
+      "number": 41,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 656,
+        "totalPixels": 5904,
+        "remainingPixels": 5248,
+        "excludedFraction": 0.1111111111111111,
+        "fullyExcluded": false,
+        "regions": [
+          {
+            "id": "bride-action-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 0,
+              "y": 64,
+              "w": 82,
+              "h": 8
+            },
+            "pixels": 656
+          }
+        ],
+        "ignoredContainers": [
+          "bride-action"
+        ]
+      },
+      "cropPath": "region-41.png",
+      "referencePath": "reference-41.png"
+    },
+    {
+      "id": "bride-action-label",
+      "kind": "text",
+      "note": "Two-line action label for claiming the bride role.",
+      "grid": null,
+      "parentId": "bride-action",
+      "box": {
+        "x": 0.0691,
+        "y": 0.9199,
+        "w": 0.1626,
+        "h": 0.0281
+      },
+      "px": {
+        "x": 65,
+        "y": 1538,
+        "w": 153,
+        "h": 47
+      },
+      "aspect": 3.2553,
+      "palette": [
+        {
+          "hex": "#15388a",
+          "coverage": 0.7193
+        },
+        {
+          "hex": "#f5f5f6",
+          "coverage": 0.1506
+        },
+        {
+          "hex": "#355798",
+          "coverage": 0.0629
+        },
+        {
+          "hex": "#5e77ab",
+          "coverage": 0.0336
+        },
+        {
+          "hex": "#c0cee2",
+          "coverage": 0.0336
+        }
+      ],
+      "detail": {
+        "energy": 38.2118
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 42,
+      "cropPath": "region-42.png"
+    },
+    {
+      "id": "groom-action",
+      "kind": "control",
+      "note": "Blue floral tile prompting viewers to claim the groom role.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.271,
+        "y": 0.8654,
+        "w": 0.2253,
+        "h": 0.0897
+      },
+      "px": {
+        "x": 255,
+        "y": 1447,
+        "w": 212,
+        "h": 150
+      },
+      "aspect": 1.4133,
+      "palette": [
+        {
+          "hex": "#c91a5e",
+          "coverage": 0.6731
+        },
+        {
+          "hex": "#f7afb9",
+          "coverage": 0.1548
+        },
+        {
+          "hex": "#f7c8ad",
+          "coverage": 0.0878
+        },
+        {
+          "hex": "#f8f4f4",
+          "coverage": 0.0453
+        },
+        {
+          "hex": "#e23d5b",
+          "coverage": 0.0389
+        }
+      ],
+      "detail": {
+        "energy": 34.4793
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 54 colours beyond its two main tones and soft shading across 46% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 43,
+      "cropPath": "region-43.png"
+    },
+    {
+      "id": "groom-action-avatar",
+      "kind": "image",
+      "note": "Circular groom portrait in the role-claim tile.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "groom-action",
+      "box": {
+        "x": 0.339,
+        "y": 0.8816,
+        "w": 0.0882,
+        "h": 0.0431
+      },
+      "px": {
+        "x": 319,
+        "y": 1474,
+        "w": 83,
+        "h": 72
+      },
+      "aspect": 1.1528,
+      "palette": [
+        {
+          "hex": "#f8adb8",
+          "coverage": 0.3653
+        },
+        {
+          "hex": "#f8c8ac",
+          "coverage": 0.2628
+        },
+        {
+          "hex": "#c61959",
+          "coverage": 0.205
+        },
+        {
+          "hex": "#4e200c",
+          "coverage": 0.1008
+        },
+        {
+          "hex": "#f8d8d7",
+          "coverage": 0.0661
+        }
+      ],
+      "detail": {
+        "energy": 11.9844
+      },
+      "medium": "raster",
+      "plate": "assets/plates/groom-action-avatar.png",
+      "text": null,
+      "number": 44,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 664,
+        "totalPixels": 5976,
+        "remainingPixels": 5312,
+        "excludedFraction": 0.1111111111111111,
+        "fullyExcluded": false,
+        "regions": [
+          {
+            "id": "groom-action-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 0,
+              "y": 64,
+              "w": 83,
+              "h": 8
+            },
+            "pixels": 664
+          }
+        ],
+        "ignoredContainers": [
+          "groom-action"
+        ]
+      },
+      "cropPath": "region-44.png",
+      "referencePath": "reference-44.png"
+    },
+    {
+      "id": "groom-action-label",
+      "kind": "text",
+      "note": "Two-line action label for claiming the groom role.",
+      "grid": null,
+      "parentId": "groom-action",
+      "box": {
+        "x": 0.3124,
+        "y": 0.9199,
+        "w": 0.1562,
+        "h": 0.0281
+      },
+      "px": {
+        "x": 294,
+        "y": 1538,
+        "w": 147,
+        "h": 47
+      },
+      "aspect": 3.1277,
+      "palette": [
+        {
+          "hex": "#bc1257",
+          "coverage": 0.7525
+        },
+        {
+          "hex": "#f8f6f7",
+          "coverage": 0.1281
+        },
+        {
+          "hex": "#e89ab8",
+          "coverage": 0.0504
+        },
+        {
+          "hex": "#f2c6d6",
+          "coverage": 0.0417
+        },
+        {
+          "hex": "#d5709b",
+          "coverage": 0.0273
+        }
+      ],
+      "detail": {
+        "energy": 34.8818
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 45,
+      "cropPath": "region-45.png"
+    },
+    {
+      "id": "wish-action",
+      "kind": "control",
+      "note": "Gold floral tile prompting viewers to send a wedding wish.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.5048,
+        "y": 0.8654,
+        "w": 0.2274,
+        "h": 0.0897
+      },
+      "px": {
+        "x": 475,
+        "y": 1447,
+        "w": 214,
+        "h": 150
+      },
+      "aspect": 1.4267,
+      "palette": [
+        {
+          "hex": "#613b10",
+          "coverage": 0.4833
+        },
+        {
+          "hex": "#8e5e1e",
+          "coverage": 0.2823
+        },
+        {
+          "hex": "#f2c67c",
+          "coverage": 0.1245
+        },
+        {
+          "hex": "#bb8538",
+          "coverage": 0.0622
+        },
+        {
+          "hex": "#f6f4ea",
+          "coverage": 0.0476
+        }
+      ],
+      "detail": {
+        "energy": 30.0652
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 46,
+      "cropPath": "region-46.png"
+    },
+    {
+      "id": "wish-action-icon",
+      "kind": "control",
+      "note": "Envelope mark centered above the wish action label.",
+      "grid": null,
+      "parentId": "wish-action",
+      "box": {
+        "x": 0.5696,
+        "y": 0.8858,
+        "w": 0.0999,
+        "h": 0.0431
+      },
+      "px": {
+        "x": 536,
+        "y": 1481,
+        "w": 94,
+        "h": 72
+      },
+      "aspect": 1.3056,
+      "palette": [
+        {
+          "hex": "#5c380a",
+          "coverage": 0.4928
+        },
+        {
+          "hex": "#f8cb7f",
+          "coverage": 0.3812
+        },
+        {
+          "hex": "#f8e5b0",
+          "coverage": 0.0493
+        },
+        {
+          "hex": "#81561b",
+          "coverage": 0.0493
+        },
+        {
+          "hex": "#ebac66",
+          "coverage": 0.0275
+        }
+      ],
+      "detail": {
+        "energy": 11.1432
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 47,
+      "cropPath": "region-47.png"
+    },
+    {
+      "id": "wish-action-label",
+      "kind": "text",
+      "note": "Wedding wish action label.",
+      "grid": null,
+      "parentId": "wish-action",
+      "box": {
+        "x": 0.5526,
+        "y": 0.9211,
+        "w": 0.1318,
+        "h": 0.0227
+      },
+      "px": {
+        "x": 520,
+        "y": 1540,
+        "w": 124,
+        "h": 38
+      },
+      "aspect": 3.2632,
+      "palette": [
+        {
+          "hex": "#5d370e",
+          "coverage": 0.7616
+        },
+        {
+          "hex": "#f5f4f2",
+          "coverage": 0.1285
+        },
+        {
+          "hex": "#7a5a3c",
+          "coverage": 0.0466
+        },
+        {
+          "hex": "#9e866d",
+          "coverage": 0.0335
+        },
+        {
+          "hex": "#c5b4a0",
+          "coverage": 0.0298
+        }
+      ],
+      "detail": {
+        "energy": 25.6174
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 48,
+      "cropPath": "region-48.png"
+    },
+    {
+      "id": "celebrate-action",
+      "kind": "control",
+      "note": "Red floral tile prompting viewers to celebrate the couple.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0.7386,
+        "y": 0.866,
+        "w": 0.2285,
+        "h": 0.0891
+      },
+      "px": {
+        "x": 695,
+        "y": 1448,
+        "w": 215,
+        "h": 149
+      },
+      "aspect": 1.443,
+      "palette": [
+        {
+          "hex": "#7e090c",
+          "coverage": 0.4678
+        },
+        {
+          "hex": "#b21116",
+          "coverage": 0.3132
+        },
+        {
+          "hex": "#ec2d43",
+          "coverage": 0.1038
+        },
+        {
+          "hex": "#f7f2ef",
+          "coverage": 0.0595
+        },
+        {
+          "hex": "#5e100e",
+          "coverage": 0.0557
+        }
+      ],
+      "detail": {
+        "energy": 36.9954
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "flags": [
+        {
+          "id": "painted-pixels",
+          "message": "Looks painted: 86 colours beyond its two main tones and soft shading across 45% of it. Drawn in code, this becomes a flat copy."
+        }
+      ],
+      "number": 49,
+      "cropPath": "region-49.png"
+    },
+    {
+      "id": "celebrate-action-art",
+      "kind": "image",
+      "note": "Flower bouquet image centered above the celebration label.",
+      "grid": null,
+      "parentId": "celebrate-action",
+      "box": {
+        "x": 0.8013,
+        "y": 0.8822,
+        "w": 0.1158,
+        "h": 0.0419
+      },
+      "px": {
+        "x": 754,
+        "y": 1475,
+        "w": 109,
+        "h": 70
+      },
+      "aspect": 1.5571,
+      "palette": [
+        {
+          "hex": "#6f0a0a",
+          "coverage": 0.3723
+        },
+        {
+          "hex": "#e82340",
+          "coverage": 0.3076
+        },
+        {
+          "hex": "#a40e19",
+          "coverage": 0.1835
+        },
+        {
+          "hex": "#4d140b",
+          "coverage": 0.0683
+        },
+        {
+          "hex": "#585f31",
+          "coverage": 0.0683
+        }
+      ],
+      "detail": {
+        "energy": 21.598
+      },
+      "medium": "raster",
+      "plate": "assets/plates/celebrate-action-art.png",
+      "text": null,
+      "number": 50,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 872,
+        "totalPixels": 7630,
+        "remainingPixels": 6758,
+        "excludedFraction": 0.11428571428571428,
+        "fullyExcluded": false,
+        "regions": [
+          {
+            "id": "celebrate-action-label",
+            "kind": "text",
+            "cropPx": {
+              "x": 0,
+              "y": 62,
+              "w": 109,
+              "h": 8
+            },
+            "pixels": 872
+          }
+        ],
+        "ignoredContainers": [
+          "celebrate-action"
+        ]
+      },
+      "cropPath": "region-50.png",
+      "referencePath": "reference-50.png"
+    },
+    {
+      "id": "celebrate-action-label",
+      "kind": "text",
+      "note": "Two-line celebration action label.",
+      "grid": null,
+      "parentId": "celebrate-action",
+      "box": {
+        "x": 0.7843,
+        "y": 0.9193,
+        "w": 0.1732,
+        "h": 0.0281
+      },
+      "px": {
+        "x": 738,
+        "y": 1537,
+        "w": 163,
+        "h": 47
+      },
+      "aspect": 3.4681,
+      "palette": [
+        {
+          "hex": "#72090a",
+          "coverage": 0.7128
+        },
+        {
+          "hex": "#f6f3f2",
+          "coverage": 0.1356
+        },
+        {
+          "hex": "#f13049",
+          "coverage": 0.0644
+        },
+        {
+          "hex": "#f3c8bc",
+          "coverage": 0.0443
+        },
+        {
+          "hex": "#a56165",
+          "coverage": 0.043
+        }
+      ],
+      "detail": {
+        "energy": 41.8639
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 51,
+      "cropPath": "region-51.png"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "foreground-mask",
+      "regionId": "hall-photo",
+      "message": "live-pill-label, viewer-count, like-count, floating-hearts, wedding-title, couple-names, wedding-date, groom-claim-label, bride-claim-label, wish-left-one-text, wish-right-one-text, wish-left-two-text, wish-right-two-text, wish-left-three-text, wish-right-three-text, wish-left-four-text, wish-right-four-text, bride-action-label, groom-action-label, wish-action-icon, wish-action-label, celebrate-action-label exclude 11.9% of this reference. Check that the excluded pixels contain foreground, not artwork between separate text elements. Split overly broad foreground bounds; review grouping must not change geometry."
+    },
+    {
+      "severity": "warning",
+      "code": "foreground-mask",
+      "regionId": "bride-action-avatar",
+      "message": "bride-action-label exclude 11.1% of this reference. Check that the excluded pixels contain foreground, not artwork between separate text elements. Split overly broad foreground bounds; review grouping must not change geometry."
+    },
+    {
+      "severity": "warning",
+      "code": "foreground-mask",
+      "regionId": "groom-action-avatar",
+      "message": "groom-action-label exclude 11.1% of this reference. Check that the excluded pixels contain foreground, not artwork between separate text elements. Split overly broad foreground bounds; review grouping must not change geometry."
+    },
+    {
+      "severity": "warning",
+      "code": "foreground-mask",
+      "regionId": "celebrate-action-art",
+      "message": "celebrate-action-label exclude 11.4% of this reference. Check that the excluded pixels contain foreground, not artwork between separate text elements. Split overly broad foreground bounds; review grouping must not change geometry."
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region live-pill: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region viewer-pill: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region like-pill: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region groom-claim-control: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region bride-claim-control: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-left-one: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-left-one-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-right-one: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-right-one-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-left-two: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-left-two-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-right-two: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-right-two-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-left-three: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-left-three-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-right-three: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-right-three-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-left-four: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-left-four-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-right-four: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-right-four-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region bride-action: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region bride-action-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region groom-action: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region groom-action-avatar: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region wish-action: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region celebrate-action: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)"
+    }
+  ],
+  "overlaps": [
+    {
+      "a": "hall-photo",
+      "b": "live-pill",
+      "pixels": 12449.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "live-pill-label",
+      "pixels": 4290.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "viewer-pill",
+      "pixels": 13720.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "viewer-count",
+      "pixels": 5920.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "like-pill",
+      "pixels": 11032.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "like-count",
+      "pixels": 2822.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "floating-hearts",
+      "pixels": 10670.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wedding-title",
+      "pixels": 4867.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "couple-names",
+      "pixels": 28728.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wedding-date",
+      "pixels": 2904.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "groom-claim-control",
+      "pixels": 11109.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "groom-claim-label",
+      "pixels": 4033.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "bride-claim-control",
+      "pixels": 12320.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "bride-claim-label",
+      "pixels": 4408.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-one",
+      "pixels": 24817.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-one-avatar",
+      "pixels": 2500.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-one-text",
+      "pixels": 13115.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-one",
+      "pixels": 23085.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-one-avatar",
+      "pixels": 2352.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-one-text",
+      "pixels": 12152.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-two",
+      "pixels": 22880.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-two-avatar",
+      "pixels": 2550.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-two-text",
+      "pixels": 11774.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-two",
+      "pixels": 18300.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-two-avatar",
+      "pixels": 2304.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-two-text",
+      "pixels": 9177.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-three",
+      "pixels": 19244.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-three-avatar",
+      "pixels": 2256.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-three-text",
+      "pixels": 10404.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-three",
+      "pixels": 16038.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-three-avatar",
+      "pixels": 2256.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-three-text",
+      "pixels": 7938.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-four",
+      "pixels": 22620.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-four-avatar",
+      "pixels": 2256.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-left-four-text",
+      "pixels": 12600.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-four",
+      "pixels": 20254.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-four-avatar",
+      "pixels": 2352.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-right-four-text",
+      "pixels": 10065.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "bride-action",
+      "pixels": 32100.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "bride-action-avatar",
+      "pixels": 5904.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "bride-action-label",
+      "pixels": 7191.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "groom-action",
+      "pixels": 31800.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "groom-action-avatar",
+      "pixels": 5976.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "groom-action-label",
+      "pixels": 6909.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-action",
+      "pixels": 32100.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-action-icon",
+      "pixels": 6768.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "wish-action-label",
+      "pixels": 4712.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "celebrate-action",
+      "pixels": 32035.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "hall-photo",
+      "b": "celebrate-action-art",
+      "pixels": 7630.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "hall-photo",
+      "b": "celebrate-action-label",
+      "pixels": 7661.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "live-pill",
+      "b": "live-pill-label",
+      "pixels": 4290.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "viewer-pill",
+      "b": "viewer-count",
+      "pixels": 5920.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "like-pill",
+      "b": "like-count",
+      "pixels": 2822.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "like-pill",
+      "b": "floating-hearts",
+      "pixels": 300.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "groom-claim-control",
+      "b": "groom-claim-label",
+      "pixels": 4033.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "bride-claim-control",
+      "b": "bride-claim-label",
+      "pixels": 4408.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-left-one",
+      "b": "wish-left-one-avatar",
+      "pixels": 2500.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-left-one",
+      "b": "wish-left-one-text",
+      "pixels": 13115.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-right-one",
+      "b": "wish-right-one-avatar",
+      "pixels": 2352.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-right-one",
+      "b": "wish-right-one-text",
+      "pixels": 12152.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-left-two",
+      "b": "wish-left-two-avatar",
+      "pixels": 2550.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-left-two",
+      "b": "wish-left-two-text",
+      "pixels": 11774.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-right-two",
+      "b": "wish-right-two-avatar",
+      "pixels": 2304.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-right-two",
+      "b": "wish-right-two-text",
+      "pixels": 9177.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-left-three",
+      "b": "wish-left-three-avatar",
+      "pixels": 2256.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-left-three",
+      "b": "wish-left-three-text",
+      "pixels": 10404.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-right-three",
+      "b": "wish-right-three-avatar",
+      "pixels": 2256.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-right-three",
+      "b": "wish-right-three-text",
+      "pixels": 7938.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-left-four",
+      "b": "wish-left-four-avatar",
+      "pixels": 2256.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-left-four",
+      "b": "wish-left-four-text",
+      "pixels": 12600.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-right-four",
+      "b": "wish-right-four-avatar",
+      "pixels": 2352.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-right-four",
+      "b": "wish-right-four-text",
+      "pixels": 10065.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "bride-action",
+      "b": "bride-action-avatar",
+      "pixels": 5904.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "bride-action",
+      "b": "bride-action-label",
+      "pixels": 7191.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "bride-action-avatar",
+      "b": "bride-action-label",
+      "pixels": 656.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "groom-action",
+      "b": "groom-action-avatar",
+      "pixels": 5976.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "groom-action",
+      "b": "groom-action-label",
+      "pixels": 6909.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "groom-action-avatar",
+      "b": "groom-action-label",
+      "pixels": 664.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "wish-action",
+      "b": "wish-action-icon",
+      "pixels": 6768.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-action",
+      "b": "wish-action-label",
+      "pixels": 4712.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "wish-action-icon",
+      "b": "wish-action-label",
+      "pixels": 1222.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "celebrate-action",
+      "b": "celebrate-action-art",
+      "pixels": 7630.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "celebrate-action",
+      "b": "celebrate-action-label",
+      "pixels": 7661.0,
+      "relationship": "container extent"
+    },
+    {
+      "a": "celebrate-action-art",
+      "b": "celebrate-action-label",
+      "pixels": 872.0,
+      "relationship": "overlapping elements"
+    }
+  ],
+  "reviewGroups": {},
+  "uncoveredInkCells": [],
+  "comparisonSheets": [
+    {
+      "path": "comparison-1.png",
+      "regionIds": [
+        "hall-photo",
+        "celebrate-action-art",
+        "bride-action-avatar",
+        "groom-action-avatar"
+      ]
+    }
+  ]
+}

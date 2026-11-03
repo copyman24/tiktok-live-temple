@@ -1,0 +1,712 @@
+{
+  "schemaVersion": 3,
+  "stage": "components",
+  "id": "components",
+  "title": "Plan and asset review · apps/virtual-wedding/web/stage.html",
+  "comp": {
+    "path": ".impeccable/mocks/wedding-stage-1.png",
+    "width": 941,
+    "height": 1672
+  },
+  "specSha256": "587fd35c4e9a3b7cafff3fc3a3003a3b8a40ea719ed15bfe06389c552ef07d57",
+  "components": [
+    {
+      "id": "wish-left-one-avatar",
+      "name": "Wish left one avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.0351,
+        "y": 0.4743,
+        "w": 0.0531,
+        "h": 0.0299
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "wish-right-one-avatar",
+      "name": "Wish right one avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.695,
+        "y": 0.5006,
+        "w": 0.0521,
+        "h": 0.0287
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "wish-left-two-avatar",
+      "name": "Wish left two avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.0383,
+        "y": 0.5377,
+        "w": 0.0531,
+        "h": 0.0305
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "wish-right-two-avatar",
+      "name": "Wish right two avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.7396,
+        "y": 0.5604,
+        "w": 0.051,
+        "h": 0.0287
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "wish-left-three-avatar",
+      "name": "Wish left three avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.0372,
+        "y": 0.6806,
+        "w": 0.051,
+        "h": 0.0281
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "wish-right-three-avatar",
+      "name": "Wish right three avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.7396,
+        "y": 0.686,
+        "w": 0.051,
+        "h": 0.0281
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "wish-left-four-avatar",
+      "name": "Wish left four avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.0361,
+        "y": 0.7321,
+        "w": 0.051,
+        "h": 0.0281
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "wish-right-four-avatar",
+      "name": "Wish right four avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.7386,
+        "y": 0.7333,
+        "w": 0.0521,
+        "h": 0.0287
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "bride-action-avatar",
+      "name": "Bride action avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.1041,
+        "y": 0.8816,
+        "w": 0.0871,
+        "h": 0.0431
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "groom-action-avatar",
+      "name": "Groom action avatar",
+      "kind": "control",
+      "role": "plan",
+      "box": {
+        "x": 0.339,
+        "y": 0.8816,
+        "w": 0.0882,
+        "h": 0.0431
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "medium": "code",
+      "preview": {
+        "kind": "comp-crop"
+      },
+      "codeDrawn": true,
+      "dependencies": []
+    },
+    {
+      "id": "hall-photo",
+      "name": "Hall photo",
+      "kind": "image",
+      "role": "asset",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "note": "Photographic Vietnamese wedding hall with the bride and groom, floral stage, crowd, and red aisle; the clean background plate sits under separate live interface overlays.",
+      "medium": "raster",
+      "preview": {
+        "kind": "image",
+        "path": "apps/virtual-wedding/web/assets/plates/hall-photo.png"
+      },
+      "dependencies": []
+    },
+    {
+      "id": "celebrate-action-art",
+      "name": "Celebrate action art",
+      "kind": "image",
+      "role": "asset",
+      "box": {
+        "x": 0.8013,
+        "y": 0.8822,
+        "w": 0.1158,
+        "h": 0.0419
+      },
+      "note": "Flower bouquet image centered above the celebration label.",
+      "medium": "raster",
+      "preview": {
+        "kind": "image",
+        "path": "apps/virtual-wedding/web/assets/plates/celebrate-action-art.png"
+      },
+      "dependencies": []
+    }
+  ],
+  "codeRegions": [
+    {
+      "id": "live-pill",
+      "name": "Live pill",
+      "kind": "control",
+      "box": {
+        "x": 0.0361,
+        "y": 0.0245,
+        "w": 0.2242,
+        "h": 0.0353
+      },
+      "note": "Red live-room status pill at the upper left."
+    },
+    {
+      "id": "live-pill-label",
+      "name": "Live pill label",
+      "kind": "text",
+      "box": {
+        "x": 0.0914,
+        "y": 0.0335,
+        "w": 0.152,
+        "h": 0.0179
+      },
+      "note": "White Vietnamese live status label."
+    },
+    {
+      "id": "viewer-pill",
+      "name": "Viewer pill",
+      "kind": "control",
+      "box": {
+        "x": 0.2667,
+        "y": 0.0263,
+        "w": 0.2604,
+        "h": 0.0335
+      },
+      "note": "Dark translucent viewer-count pill beside the live status."
+    },
+    {
+      "id": "viewer-count",
+      "name": "Viewer count",
+      "kind": "text",
+      "box": {
+        "x": 0.3188,
+        "y": 0.0341,
+        "w": 0.1966,
+        "h": 0.0191
+      },
+      "note": "White live-room viewer count."
+    },
+    {
+      "id": "like-pill",
+      "name": "Like pill",
+      "kind": "control",
+      "box": {
+        "x": 0.7545,
+        "y": 0.0257,
+        "w": 0.2094,
+        "h": 0.0335
+      },
+      "note": "Dark translucent like-count pill at the upper right."
+    },
+    {
+      "id": "like-count",
+      "name": "Like count",
+      "kind": "text",
+      "box": {
+        "x": 0.8448,
+        "y": 0.0329,
+        "w": 0.0882,
+        "h": 0.0203
+      },
+      "note": "Large white like total beside the heart mark."
+    },
+    {
+      "id": "floating-hearts",
+      "name": "Floating hearts",
+      "kind": "control",
+      "box": {
+        "x": 0.8576,
+        "y": 0.0574,
+        "w": 0.1169,
+        "h": 0.058
+      },
+      "note": "Small pink hearts floating below the like counter."
+    },
+    {
+      "id": "wedding-title",
+      "name": "Wedding title",
+      "kind": "text",
+      "box": {
+        "x": 0.4187,
+        "y": 0.1106,
+        "w": 0.1668,
+        "h": 0.0185
+      },
+      "note": "Small uppercase wedding ceremony heading on the stage sign."
+    },
+    {
+      "id": "couple-names",
+      "name": "Couple names",
+      "kind": "text",
+      "box": {
+        "x": 0.3188,
+        "y": 0.1304,
+        "w": 0.3634,
+        "h": 0.0502
+      },
+      "note": "Large script bride and groom names with a joining ring mark."
+    },
+    {
+      "id": "wedding-date",
+      "name": "Wedding date",
+      "kind": "text",
+      "box": {
+        "x": 0.4368,
+        "y": 0.1836,
+        "w": 0.1286,
+        "h": 0.0144
+      },
+      "note": "Small date centered below the couple names."
+    },
+    {
+      "id": "groom-claim-control",
+      "name": "Groom claim control",
+      "kind": "control",
+      "box": {
+        "x": 0.2338,
+        "y": 0.3056,
+        "w": 0.1711,
+        "h": 0.0413
+      },
+      "note": "Blue groom-role claim label beside the stage."
+    },
+    {
+      "id": "groom-claim-label",
+      "name": "Groom claim label",
+      "kind": "text",
+      "box": {
+        "x": 0.2635,
+        "y": 0.3182,
+        "w": 0.1158,
+        "h": 0.0221
+      },
+      "note": "White groom-role prompt and participant name."
+    },
+    {
+      "id": "bride-claim-control",
+      "name": "Bride claim control",
+      "kind": "control",
+      "box": {
+        "x": 0.6089,
+        "y": 0.3062,
+        "w": 0.187,
+        "h": 0.0419
+      },
+      "note": "Pink bride-role claim label beside the stage."
+    },
+    {
+      "id": "bride-claim-label",
+      "name": "Bride claim label",
+      "kind": "text",
+      "box": {
+        "x": 0.6451,
+        "y": 0.3182,
+        "w": 0.1233,
+        "h": 0.0227
+      },
+      "note": "White bride-role prompt and participant name."
+    },
+    {
+      "id": "wish-left-one",
+      "name": "Wish left one",
+      "kind": "control",
+      "box": {
+        "x": 0.0223,
+        "y": 0.4659,
+        "w": 0.3177,
+        "h": 0.0496
+      },
+      "note": "First translucent viewer-wish ribbon at the left edge of the aisle."
+    },
+    {
+      "id": "wish-left-one-text",
+      "name": "Wish left one text",
+      "kind": "text",
+      "box": {
+        "x": 0.0967,
+        "y": 0.4719,
+        "w": 0.2285,
+        "h": 0.0365
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "wish-right-one",
+      "name": "Wish right one",
+      "kind": "control",
+      "box": {
+        "x": 0.6823,
+        "y": 0.4916,
+        "w": 0.3029,
+        "h": 0.0484
+      },
+      "note": "First translucent viewer-wish ribbon at the right edge of the aisle."
+    },
+    {
+      "id": "wish-right-one-text",
+      "name": "Wish right one text",
+      "kind": "text",
+      "box": {
+        "x": 0.7577,
+        "y": 0.497,
+        "w": 0.2083,
+        "h": 0.0371
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "wish-left-two",
+      "name": "Wish left two",
+      "kind": "control",
+      "box": {
+        "x": 0.0255,
+        "y": 0.5299,
+        "w": 0.3039,
+        "h": 0.0478
+      },
+      "note": "Second translucent viewer-wish ribbon at the left edge of the aisle."
+    },
+    {
+      "id": "wish-left-two-text",
+      "name": "Wish left two text",
+      "kind": "text",
+      "box": {
+        "x": 0.102,
+        "y": 0.5359,
+        "w": 0.2157,
+        "h": 0.0347
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "wish-right-two",
+      "name": "Wish right two",
+      "kind": "control",
+      "box": {
+        "x": 0.7269,
+        "y": 0.5526,
+        "w": 0.2593,
+        "h": 0.0449
+      },
+      "note": "Second translucent viewer-wish ribbon at the right edge of the aisle."
+    },
+    {
+      "id": "wish-right-two-text",
+      "name": "Wish right two text",
+      "kind": "text",
+      "box": {
+        "x": 0.8023,
+        "y": 0.5574,
+        "w": 0.1711,
+        "h": 0.0341
+      },
+      "note": "Viewer name and short wedding wish."
+    },
+    {
+      "id": "wish-left-three",
+      "name": "Wish left three",
+      "kind": "control",
+      "box": {
+        "x": 0.0255,
+        "y": 0.6746,
+        "w": 0.3007,
+        "h": 0.0407
+      },
+      "note": "Third translucent viewer-wish ribbon at the left edge of the aisle."
+    },
+    {
+      "id": "wish-left-three-text",
+      "name": "Wish left three text",
+      "kind": "text",
+      "box": {
+        "x": 0.0967,
+        "y": 0.6794,
+        "w": 0.2168,
+        "h": 0.0305
+      },
+      "note": "Viewer name and short wedding compliment."
+    },
+    {
+      "id": "wish-right-three",
+      "name": "Wish right three",
+      "kind": "control",
+      "box": {
+        "x": 0.7269,
+        "y": 0.6806,
+        "w": 0.2582,
+        "h": 0.0395
+      },
+      "note": "Third translucent viewer-wish ribbon at the right edge of the aisle."
+    },
+    {
+      "id": "wish-right-three-text",
+      "name": "Wish right three text",
+      "kind": "text",
+      "box": {
+        "x": 0.8002,
+        "y": 0.6854,
+        "w": 0.1722,
+        "h": 0.0293
+      },
+      "note": "Viewer name and short celebration message."
+    },
+    {
+      "id": "wish-left-four",
+      "name": "Wish left four",
+      "kind": "control",
+      "box": {
+        "x": 0.0223,
+        "y": 0.7237,
+        "w": 0.3082,
+        "h": 0.0467
+      },
+      "note": "Fourth translucent viewer-wish ribbon at the left edge of the aisle."
+    },
+    {
+      "id": "wish-left-four-text",
+      "name": "Wish left four text",
+      "kind": "text",
+      "box": {
+        "x": 0.0967,
+        "y": 0.7285,
+        "w": 0.2232,
+        "h": 0.0359
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "wish-right-four",
+      "name": "Wish right four",
+      "kind": "control",
+      "box": {
+        "x": 0.7248,
+        "y": 0.7255,
+        "w": 0.2625,
+        "h": 0.049
+      },
+      "note": "Fourth translucent viewer-wish ribbon at the right edge of the aisle."
+    },
+    {
+      "id": "wish-right-four-text",
+      "name": "Wish right four text",
+      "kind": "text",
+      "box": {
+        "x": 0.8002,
+        "y": 0.7309,
+        "w": 0.1753,
+        "h": 0.0365
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "bride-action",
+      "name": "Bride action",
+      "kind": "control",
+      "box": {
+        "x": 0.034,
+        "y": 0.8654,
+        "w": 0.2274,
+        "h": 0.0897
+      },
+      "note": "Pink floral tile prompting viewers to claim the bride role."
+    },
+    {
+      "id": "bride-action-label",
+      "name": "Bride action label",
+      "kind": "text",
+      "box": {
+        "x": 0.0691,
+        "y": 0.9199,
+        "w": 0.1626,
+        "h": 0.0281
+      },
+      "note": "Two-line action label for claiming the bride role."
+    },
+    {
+      "id": "groom-action",
+      "name": "Groom action",
+      "kind": "control",
+      "box": {
+        "x": 0.271,
+        "y": 0.8654,
+        "w": 0.2253,
+        "h": 0.0897
+      },
+      "note": "Blue floral tile prompting viewers to claim the groom role."
+    },
+    {
+      "id": "groom-action-label",
+      "name": "Groom action label",
+      "kind": "text",
+      "box": {
+        "x": 0.3124,
+        "y": 0.9199,
+        "w": 0.1562,
+        "h": 0.0281
+      },
+      "note": "Two-line action label for claiming the groom role."
+    },
+    {
+      "id": "wish-action",
+      "name": "Wish action",
+      "kind": "control",
+      "box": {
+        "x": 0.5048,
+        "y": 0.8654,
+        "w": 0.2274,
+        "h": 0.0897
+      },
+      "note": "Gold floral tile prompting viewers to send a wedding wish."
+    },
+    {
+      "id": "wish-action-icon",
+      "name": "Wish action icon",
+      "kind": "control",
+      "box": {
+        "x": 0.5696,
+        "y": 0.8858,
+        "w": 0.0999,
+        "h": 0.0431
+      },
+      "note": "Envelope mark centered above the wish action label."
+    },
+    {
+      "id": "wish-action-label",
+      "name": "Wish action label",
+      "kind": "text",
+      "box": {
+        "x": 0.5526,
+        "y": 0.9211,
+        "w": 0.1318,
+        "h": 0.0227
+      },
+      "note": "Wedding wish action label."
+    },
+    {
+      "id": "celebrate-action",
+      "name": "Celebrate action",
+      "kind": "control",
+      "box": {
+        "x": 0.7386,
+        "y": 0.866,
+        "w": 0.2285,
+        "h": 0.0891
+      },
+      "note": "Red floral tile prompting viewers to celebrate the couple."
+    },
+    {
+      "id": "celebrate-action-label",
+      "name": "Celebrate action label",
+      "kind": "text",
+      "box": {
+        "x": 0.7843,
+        "y": 0.9193,
+        "w": 0.1732,
+        "h": 0.0281
+      },
+      "note": "Two-line celebration action label."
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "regions": [
+    {
+      "id": "hall-photo",
+      "kind": "image",
+      "pixelBox": {
+        "x": 0,
+        "y": 0,
+        "w": 941,
+        "h": 1672
+      },
+      "note": "Photographic Vietnamese wedding hall with the bride and groom, floral stage, crowd, and red aisle; the clean background plate sits under separate live interface overlays."
+    },
+    {
+      "id": "live-pill",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 34,
+        "y": 41,
+        "w": 211,
+        "h": 59
+      },
+      "note": "Red live-room status pill at the upper left."
+    },
+    {
+      "id": "live-pill-label",
+      "kind": "text",
+      "parentId": "live-pill",
+      "pixelBox": {
+        "x": 86,
+        "y": 56,
+        "w": 143,
+        "h": 30
+      },
+      "note": "White Vietnamese live status label."
+    },
+    {
+      "id": "viewer-pill",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 251,
+        "y": 44,
+        "w": 245,
+        "h": 56
+      },
+      "note": "Dark translucent viewer-count pill beside the live status."
+    },
+    {
+      "id": "viewer-count",
+      "kind": "text",
+      "parentId": "viewer-pill",
+      "pixelBox": {
+        "x": 300,
+        "y": 57,
+        "w": 185,
+        "h": 32
+      },
+      "note": "White live-room viewer count."
+    },
+    {
+      "id": "like-pill",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 710,
+        "y": 43,
+        "w": 197,
+        "h": 56
+      },
+      "note": "Dark translucent like-count pill at the upper right."
+    },
+    {
+      "id": "like-count",
+      "kind": "text",
+      "parentId": "like-pill",
+      "pixelBox": {
+        "x": 795,
+        "y": 55,
+        "w": 83,
+        "h": 34
+      },
+      "note": "Large white like total beside the heart mark."
+    },
+    {
+      "id": "floating-hearts",
+      "kind": "control",
+      "pixelBox": {
+        "x": 807,
+        "y": 96,
+        "w": 110,
+        "h": 97
+      },
+      "note": "Small pink hearts floating below the like counter."
+    },
+    {
+      "id": "wedding-title",
+      "kind": "text",
+      "pixelBox": {
+        "x": 394,
+        "y": 185,
+        "w": 157,
+        "h": 31
+      },
+      "note": "Small uppercase wedding ceremony heading on the stage sign."
+    },
+    {
+      "id": "couple-names",
+      "kind": "text",
+      "pixelBox": {
+        "x": 300,
+        "y": 218,
+        "w": 342,
+        "h": 84
+      },
+      "note": "Large script bride and groom names with a joining ring mark."
+    },
+    {
+      "id": "wedding-date",
+      "kind": "text",
+      "pixelBox": {
+        "x": 411,
+        "y": 307,
+        "w": 121,
+        "h": 24
+      },
+      "note": "Small date centered below the couple names."
+    },
+    {
+      "id": "groom-claim-control",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 220,
+        "y": 511,
+        "w": 161,
+        "h": 69
+      },
+      "note": "Blue groom-role claim label beside the stage."
+    },
+    {
+      "id": "groom-claim-label",
+      "kind": "text",
+      "parentId": "groom-claim-control",
+      "pixelBox": {
+        "x": 248,
+        "y": 532,
+        "w": 109,
+        "h": 37
+      },
+      "note": "White groom-role prompt and participant name."
+    },
+    {
+      "id": "bride-claim-control",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 573,
+        "y": 512,
+        "w": 176,
+        "h": 70
+      },
+      "note": "Pink bride-role claim label beside the stage."
+    },
+    {
+      "id": "bride-claim-label",
+      "kind": "text",
+      "parentId": "bride-claim-control",
+      "pixelBox": {
+        "x": 607,
+        "y": 532,
+        "w": 116,
+        "h": 38
+      },
+      "note": "White bride-role prompt and participant name."
+    },
+    {
+      "id": "wish-left-one",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 21,
+        "y": 779,
+        "w": 299,
+        "h": 83
+      },
+      "note": "First translucent viewer-wish ribbon at the left edge of the aisle."
+    },
+    {
+      "id": "wish-left-one-avatar",
+      "kind": "control",
+      "parentId": "wish-left-one",
+      "pixelBox": {
+        "x": 33,
+        "y": 793,
+        "w": 50,
+        "h": 50
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "wish-left-one-text",
+      "kind": "text",
+      "parentId": "wish-left-one",
+      "pixelBox": {
+        "x": 91,
+        "y": 789,
+        "w": 215,
+        "h": 61
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "wish-right-one",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 642,
+        "y": 822,
+        "w": 285,
+        "h": 81
+      },
+      "note": "First translucent viewer-wish ribbon at the right edge of the aisle."
+    },
+    {
+      "id": "wish-right-one-avatar",
+      "kind": "control",
+      "parentId": "wish-right-one",
+      "pixelBox": {
+        "x": 654,
+        "y": 837,
+        "w": 49,
+        "h": 48
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "wish-right-one-text",
+      "kind": "text",
+      "parentId": "wish-right-one",
+      "pixelBox": {
+        "x": 713,
+        "y": 831,
+        "w": 196,
+        "h": 62
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "wish-left-two",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 24,
+        "y": 886,
+        "w": 286,
+        "h": 80
+      },
+      "note": "Second translucent viewer-wish ribbon at the left edge of the aisle."
+    },
+    {
+      "id": "wish-left-two-avatar",
+      "kind": "control",
+      "parentId": "wish-left-two",
+      "pixelBox": {
+        "x": 36,
+        "y": 899,
+        "w": 50,
+        "h": 51
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "wish-left-two-text",
+      "kind": "text",
+      "parentId": "wish-left-two",
+      "pixelBox": {
+        "x": 96,
+        "y": 896,
+        "w": 203,
+        "h": 58
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "wish-right-two",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 684,
+        "y": 924,
+        "w": 244,
+        "h": 75
+      },
+      "note": "Second translucent viewer-wish ribbon at the right edge of the aisle."
+    },
+    {
+      "id": "wish-right-two-avatar",
+      "kind": "control",
+      "parentId": "wish-right-two",
+      "pixelBox": {
+        "x": 696,
+        "y": 937,
+        "w": 48,
+        "h": 48
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "wish-right-two-text",
+      "kind": "text",
+      "parentId": "wish-right-two",
+      "pixelBox": {
+        "x": 755,
+        "y": 932,
+        "w": 161,
+        "h": 57
+      },
+      "note": "Viewer name and short wedding wish."
+    },
+    {
+      "id": "wish-left-three",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 24,
+        "y": 1128,
+        "w": 283,
+        "h": 68
+      },
+      "note": "Third translucent viewer-wish ribbon at the left edge of the aisle."
+    },
+    {
+      "id": "wish-left-three-avatar",
+      "kind": "control",
+      "parentId": "wish-left-three",
+      "pixelBox": {
+        "x": 35,
+        "y": 1138,
+        "w": 48,
+        "h": 47
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "wish-left-three-text",
+      "kind": "text",
+      "parentId": "wish-left-three",
+      "pixelBox": {
+        "x": 91,
+        "y": 1136,
+        "w": 204,
+        "h": 51
+      },
+      "note": "Viewer name and short wedding compliment."
+    },
+    {
+      "id": "wish-right-three",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 684,
+        "y": 1138,
+        "w": 243,
+        "h": 66
+      },
+      "note": "Third translucent viewer-wish ribbon at the right edge of the aisle."
+    },
+    {
+      "id": "wish-right-three-avatar",
+      "kind": "control",
+      "parentId": "wish-right-three",
+      "pixelBox": {
+        "x": 696,
+        "y": 1147,
+        "w": 48,
+        "h": 47
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "wish-right-three-text",
+      "kind": "text",
+      "parentId": "wish-right-three",
+      "pixelBox": {
+        "x": 753,
+        "y": 1146,
+        "w": 162,
+        "h": 49
+      },
+      "note": "Viewer name and short celebration message."
+    },
+    {
+      "id": "wish-left-four",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 21,
+        "y": 1210,
+        "w": 290,
+        "h": 78
+      },
+      "note": "Fourth translucent viewer-wish ribbon at the left edge of the aisle."
+    },
+    {
+      "id": "wish-left-four-avatar",
+      "kind": "control",
+      "parentId": "wish-left-four",
+      "pixelBox": {
+        "x": 34,
+        "y": 1224,
+        "w": 48,
+        "h": 47
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "wish-left-four-text",
+      "kind": "text",
+      "parentId": "wish-left-four",
+      "pixelBox": {
+        "x": 91,
+        "y": 1218,
+        "w": 210,
+        "h": 60
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "wish-right-four",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 682,
+        "y": 1213,
+        "w": 247,
+        "h": 82
+      },
+      "note": "Fourth translucent viewer-wish ribbon at the right edge of the aisle."
+    },
+    {
+      "id": "wish-right-four-avatar",
+      "kind": "control",
+      "parentId": "wish-right-four",
+      "pixelBox": {
+        "x": 695,
+        "y": 1226,
+        "w": 49,
+        "h": 48
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "wish-right-four-text",
+      "kind": "text",
+      "parentId": "wish-right-four",
+      "pixelBox": {
+        "x": 753,
+        "y": 1222,
+        "w": 165,
+        "h": 61
+      },
+      "note": "Viewer name and two-line wedding wish."
+    },
+    {
+      "id": "bride-action",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 32,
+        "y": 1447,
+        "w": 214,
+        "h": 150
+      },
+      "note": "Pink floral tile prompting viewers to claim the bride role."
+    },
+    {
+      "id": "bride-action-avatar",
+      "kind": "control",
+      "parentId": "bride-action",
+      "pixelBox": {
+        "x": 98,
+        "y": 1474,
+        "w": 82,
+        "h": 72
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "bride-action-label",
+      "kind": "text",
+      "parentId": "bride-action",
+      "pixelBox": {
+        "x": 65,
+        "y": 1538,
+        "w": 153,
+        "h": 47
+      },
+      "note": "Two-line action label for claiming the bride role."
+    },
+    {
+      "id": "groom-action",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 255,
+        "y": 1447,
+        "w": 212,
+        "h": 150
+      },
+      "note": "Blue floral tile prompting viewers to claim the groom role."
+    },
+    {
+      "id": "groom-action-avatar",
+      "kind": "control",
+      "parentId": "groom-action",
+      "pixelBox": {
+        "x": 319,
+        "y": 1474,
+        "w": 83,
+        "h": 72
+      },
+      "note": "Circular runtime profile image from the associated TikTok viewer; show a color-matched initials fallback when no profile URL is available.",
+      "bleed": true,
+      "codeDrawn": true
+    },
+    {
+      "id": "groom-action-label",
+      "kind": "text",
+      "parentId": "groom-action",
+      "pixelBox": {
+        "x": 294,
+        "y": 1538,
+        "w": 147,
+        "h": 47
+      },
+      "note": "Two-line action label for claiming the groom role."
+    },
+    {
+      "id": "wish-action",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 475,
+        "y": 1447,
+        "w": 214,
+        "h": 150
+      },
+      "note": "Gold floral tile prompting viewers to send a wedding wish."
+    },
+    {
+      "id": "wish-action-icon",
+      "kind": "control",
+      "parentId": "wish-action",
+      "pixelBox": {
+        "x": 536,
+        "y": 1481,
+        "w": 94,
+        "h": 72
+      },
+      "note": "Envelope mark centered above the wish action label."
+    },
+    {
+      "id": "wish-action-label",
+      "kind": "text",
+      "parentId": "wish-action",
+      "pixelBox": {
+        "x": 520,
+        "y": 1540,
+        "w": 124,
+        "h": 38
+      },
+      "note": "Wedding wish action label."
+    },
+    {
+      "id": "celebrate-action",
+      "kind": "control",
+      "container": true,
+      "pixelBox": {
+        "x": 695,
+        "y": 1448,
+        "w": 215,
+        "h": 149
+      },
+      "note": "Red floral tile prompting viewers to celebrate the couple."
+    },
+    {
+      "id": "celebrate-action-art",
+      "kind": "image",
+      "parentId": "celebrate-action",
+      "pixelBox": {
+        "x": 754,
+        "y": 1475,
+        "w": 109,
+        "h": 70
+      },
+      "note": "Flower bouquet image centered above the celebration label."
+    },
+    {
+      "id": "celebrate-action-label",
+      "kind": "text",
+      "parentId": "celebrate-action",
+      "pixelBox": {
+        "x": 738,
+        "y": 1537,
+        "w": 163,
+        "h": 47
+      },
+      "note": "Two-line celebration action label."
+    }
+  ]
+}

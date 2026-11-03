@@ -5,9 +5,15 @@ dist/
 .cache/
 zerotts-worker.spec
 bun.lock
+!apps/virtual-wedding/bun.lock
 src-tauri/target/
 src-tauri/gen/
 src-tauri/binaries/*
+apps/virtual-wedding/node_modules/
+apps/virtual-wedding/.data/
+apps/virtual-wedding/src-tauri/target/
+apps/virtual-wedding/src-tauri/gen/
+apps/virtual-wedding/src-tauri/binaries/*
 embedded-assets.js
 .DS_Store
 *.log

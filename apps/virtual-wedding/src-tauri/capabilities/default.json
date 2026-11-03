@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "virtual-wedding-capability",
+  "description": "The wedding window uses the local wedding backend.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

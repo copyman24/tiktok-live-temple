@@ -1,0 +1,24 @@
+{
+  "name": "virtual-wedding-live",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A standalone TikTok Live virtual wedding app",
+  "scripts": {
+    "start": "bun run src/main.js",
+    "dev": "bun --watch src/main.js",
+    "check:isolation": "node scripts/check-isolation.mjs",
+    "build:backend": "node scripts/build-backend.mjs",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "tiktok-live-connector": "^2.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4"
+  }
+}

@@ -1,5 +1,7 @@
 # Virtual wedding mode plan
 
+> Superseded: the user clarified that Wedding must ship as a separate application and binary, independent of the prayer feature. This draft described an in-temple mode and is retained only as the record of the earlier plan. The standalone app boundary and interaction shape are documented in [Virtual Wedding Live architecture](../../../apps/virtual-wedding/ARCHITECTURE.md).
+
 ## Problem
 
 The user wants a TikTok Live wedding scene like the supplied screenshot, built on the current TikTok event connection. The app already receives comments, likes, follows, shares, gifts, and member joins. It maps comments, likes, social events, and gifts to Buddhist rituals, while member joins update the temple guest totals. The browser stage also renders only temple events. Wedding mode needs its own rules, state, and scene while keeping the existing local server, TikTok connection, JSON-RPC, WebSocket, OBS, and Tauri runtime.

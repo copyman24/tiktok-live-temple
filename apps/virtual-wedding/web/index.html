@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3eee6">
+    <title>Điều khiển lễ cưới · Migo Wedding Live</title>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Migo Wedding Live, trang chủ">
+        <span class="brand-seal" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 34S7 26.4 7 16a7.5 7.5 0 0 1 13-5.1A7.5 7.5 0 0 1 33 16c0 10.4-13 18-13 18Z"/><path d="M13 21h14M20 16v10"/></svg></span>
+        <span class="brand-copy"><b>Migo Wedding Live</b><small>ĐIỀU KHIỂN LỄ CƯỚI</small></span>
+      </a>
+      <div class="topbar-right">
+        <a class="stage-link" href="/stage?obs=1" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12H4zM9 21h6m-3-4v4"/><path d="m10 9 5 2-5 2z"/></svg><span>Mở sân khấu OBS</span></a>
+        <span class="backend-state" id="backend-state"><i></i><span>Đang kết nối</span></span>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="page-intro">
+        <div><p class="eyebrow">PHÒNG ĐIỀU PHỐI</p><h1>Một lễ cưới, cả phòng cùng vui.</h1><p class="intro-copy">Kết nối TikTok Live, chọn đôi uyên ương và dẫn dắt từng khoảnh khắc.</p></div>
+        <div class="live-room-pill" id="room-pill"><span class="room-pulse"></span><span id="room-state-label">Chưa kết nối TikTok</span></div>
+      </section>
+
+      <div class="dashboard-grid">
+        <section class="work-column" aria-label="Điều khiển nghi thức">
+          <section class="ceremony-section panel">
+            <div class="section-heading"><div><p class="eyebrow">NGHI THỨC</p><h2 id="phase-title">Sảnh đang mở cửa</h2></div><span class="phase-index" id="phase-index">01 <i>/ 06</i></span></div>
+            <div class="phase-track" id="phase-track" role="list" aria-label="Tiến trình lễ cưới"></div>
+            <div class="ceremony-actions"><p id="phase-help">Chọn cô dâu và chú rể trước khi bắt đầu.</p><div class="button-row"><button class="button button-quiet" id="open-ceremony" hidden>Mở lễ cưới mới</button><button class="button button-danger-quiet" id="end-ceremony" hidden>Kết thúc lễ</button><button class="button button-primary" id="advance-phase" disabled><span id="advance-label">Xác nhận đôi uyên ương</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></button></div></div>
+          </section>
+
+          <section class="couple-section panel">
+            <div class="section-heading couple-heading"><div><p class="eyebrow">NHÂN VẬT CHÍNH</p><h2>Ai sẽ bước lên lễ đường?</h2></div><span id="couple-lock-state" class="lock-state">Chưa khóa đôi</span></div>
+            <div class="roles-grid">
+              <form class="role-form groom-form" data-role="groom">
+                <label for="groom-input"><span class="role-icon groom-icon"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 8a7 7 0 0 0-14 0h14Z"/></svg></span><span><small>CHÚ RỂ</small><b id="groom-display">Đang chờ khán giả chọn</b></span></label>
+                <div class="role-entry"><input id="groom-input" name="name" maxlength="32" placeholder="Nhập tên chú rể" autocomplete="off"><button class="button button-small" type="submit">Chọn</button></div>
+              </form>
+              <form class="role-form bride-form" data-role="bride">
+                <label for="bride-input"><span class="role-icon bride-icon"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 8a7 7 0 0 0-14 0h14Z"/></svg></span><span><small>CÔ DÂU</small><b id="bride-display">Đang chờ khán giả chọn</b></span></label>
+                <div class="role-entry"><input id="bride-input" name="name" maxlength="32" placeholder="Nhập tên cô dâu" autocomplete="off"><button class="button button-small" type="submit">Chọn</button></div>
+              </form>
+            </div>
+            <div class="claims-area">
+              <div class="subsection-heading"><h3>Khán giả xin nhận vai</h3><span class="count-chip" id="claim-count">0</span></div>
+              <div class="claims-list" id="claims-list"><div class="empty-line">Chưa có yêu cầu. Khán giả bình luận <b>#codau</b> hoặc <b>#chure</b> để xin vai.</div></div>
+            </div>
+          </section>
+
+          <div class="lower-grid">
+            <section class="likes-section panel">
+              <div class="section-heading compact-heading"><div><p class="eyebrow">CẢ PHÒNG CÙNG THẢ TIM</p><h2>Mục tiêu lượt thích</h2></div><span class="stat-value" id="like-total">0</span></div>
+              <div class="progress-track"><span id="like-progress"></span></div>
+              <div class="goal-controls"><label for="like-goal">Mục tiêu</label><input id="like-goal" type="number" min="100" max="1000000" step="100" value="1000"><button class="button button-small button-outline" id="save-goal">Cập nhật</button></div>
+            </section>
+            <section class="wishes-section panel">
+              <div class="subsection-heading"><div><p class="eyebrow">LỜI CHÚC</p><h2>Gửi tới đôi bạn trẻ</h2></div><span class="count-chip" id="wish-total">0</span></div>
+              <div id="wish-list" class="wish-list"><div class="empty-line">Lời chúc mới sẽ xuất hiện tại đây.</div></div>
+            </section>
+          </div>
+
+          <section class="simulator-section panel">
+            <div class="section-heading compact-heading"><div><p class="eyebrow">THỬ TRƯỚC BUỔI LIVE</p><h2>Mô phỏng tương tác</h2></div><span class="sim-badge">Dùng cùng luồng xử lý TikTok</span></div>
+            <form id="simulate-form" class="sim-form">
+              <label>Tên khách mời<input id="sim-name" value="Khách mời" maxlength="32"></label>
+              <label>Hành động<select id="sim-kind"><option value="comment">Bình luận</option><option value="like">Thả tim</option><option value="gift">Gửi quà</option><option value="follow">Theo dõi</option><option value="share">Chia sẻ</option><option value="member">Thành viên</option></select></label>
+              <label id="sim-content-wrap" class="sim-content-label">Nội dung<input id="sim-content" value="#loichuc Chúc hai bạn trăm năm hạnh phúc"></label>
+              <label id="sim-count-wrap" hidden>Số lượng<input id="sim-count" type="number" min="1" max="100" value="25"></label>
+              <button class="button button-primary" type="submit">Gửi thử</button>
+            </form>
+            <div class="quick-comments" role="group" aria-label="Thử lệnh bình luận"><button data-comment="#codau">Thử #codau</button><button data-comment="#chure">Thử #chure</button><button data-comment="#loichuc Chúc mừng hạnh phúc!">Thử lời chúc</button></div>
+          </section>
+          <p class="notice" id="notice" role="status" aria-live="polite"></p>
+        </section>
+
+        <aside class="side-column" aria-label="Kết nối và xem trước">
+          <section class="connect-section panel">
+            <div class="section-heading compact-heading"><div><p class="eyebrow">TIKTOK LIVE</p><h2>Kết nối phòng</h2></div><span class="connect-light" id="connect-light"></span></div>
+            <form id="connect-form" class="connect-form"><label for="tiktok-username">Tên tài khoản đang phát</label><div><span class="at-sign">@</span><input id="tiktok-username" placeholder="ten_tai_khoan" autocomplete="off" maxlength="80"><button type="submit" id="connect-button" class="icon-button" aria-label="Kết nối TikTok"><svg viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5"/></svg></button></div></form>
+            <button id="disconnect-button" class="disconnect-button" hidden>Ngắt kết nối</button>
+            <p id="connect-help" class="connect-help">Nhập tên tài khoản đang livestream công khai.</p>
+          </section>
+
+          <section class="preview-section">
+            <div class="preview-heading"><div><p class="eyebrow">KHÁN GIẢ SẼ THẤY</p><h2>Sân khấu trực tiếp</h2></div><a href="/stage?obs=1" target="_blank" rel="noreferrer" aria-label="Mở sân khấu toàn màn hình"><svg viewBox="0 0 24 24"><path d="M14 4h6v6m0-6-8 8M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></a></div>
+            <div class="preview-frame"><iframe title="Xem trước sân khấu lễ cưới" src="/stage?preview=1" loading="eager"></iframe></div>
+            <div class="social-stats"><div><span class="stat-glyph follow-glyph">+</span><b id="follow-total">0</b><small>theo dõi</small></div><div><span class="stat-glyph share-glyph"><svg viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M5 14v5h14v-5"/></svg></span><b id="share-total">0</b><small>chia sẻ</small></div><div><span class="stat-glyph gift-glyph"><svg viewBox="0 0 24 24"><path d="M4 10h16v10H4zM3 6h18v4H3zM12 6v14m0-14H8a2 2 0 1 1 2-2l2 2Zm0 0h4a2 2 0 1 0-2-2l-2 2Z"/></svg></span><b id="gift-total">0</b><small>quà</small></div><div><span class="stat-glyph member-glyph"><svg viewBox="0 0 24 24"><path d="m12 2 2.5 6.4L21 11l-6.5 2.6L12 20l-2.5-6.4L3 11l6.5-2.6L12 2Z"/></svg></span><b id="member-total">0</b><small>hội viên</small></div></div>
+          </section>
+          <section class="host-tip"><span class="tip-mark">i</span><p><b>Mẹo cho khách mời</b><br>Bình luận <code>#loichuc</code> kèm lời chúc. Không cần gửi quà để tham gia lễ cưới.</p></section>
+        </aside>
+      </div>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

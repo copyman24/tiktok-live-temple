@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#4d101b">
+    <title>Lễ cưới trực tiếp</title>
+    <link rel="preload" as="image" href="/assets/plates/hall-photo.png">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/stage-layout.css">
+    <link rel="stylesheet" href="/stage.css">
+  </head>
+  <body class="stage-page">
+    <main id="stage" class="stage-shell" aria-label="Sân khấu đám cưới trực tiếp">
+      <div id="stage-frame" class="comp-frame">
+        <img class="hall-photo r-hall-photo" src="/assets/plates/hall-photo.png" alt="Sảnh cưới Việt Nam với lối đi đỏ và cổng hoa" draggable="false">
+        <div class="scene-shade" aria-hidden="true"></div>
+
+        <div class="live-badge r-live-pill"><span class="live-dot"></span><span id="live-label" class="r-live-pill-label">TRỰC TIẾP</span></div>
+        <div class="viewer-badge r-viewer-pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 8a7 7 0 0 0-14 0h14Z"/></svg>
+          <span id="viewer-count" class="r-viewer-count">0 đang xem</span>
+        </div>
+        <div class="like-badge r-like-pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-4.7-8-11a4.6 4.6 0 0 1 8-3.1A4.6 4.6 0 0 1 20 10c0 6.3-8 11-8 11Z"/></svg>
+          <span id="like-count" class="r-like-count">0</span>
+        </div>
+        <div id="heart-burst" class="heart-burst r-floating-hearts" aria-hidden="true"></div>
+
+        <div class="sign-kicker r-wedding-title">LỄ THÀNH HÔN</div>
+        <div class="couple-title r-couple-names"><span id="bride-title">Cô dâu</span><i aria-hidden="true">&amp;</i><span id="groom-title">Chú rể</span></div>
+        <div id="wedding-date" class="date-chip r-wedding-date">HÔM NAY · 2026</div>
+
+        <div class="role-chip groom-chip r-groom-claim-control">
+          <span id="groom-avatar" class="role-mark role-mark-groom avatar-fallback" aria-hidden="true">?</span>
+          <span><small>VAI CHÚ RỂ</small><b id="groom-name">Đang chờ</b></span>
+        </div>
+        <div class="role-chip bride-chip r-bride-claim-control">
+          <span id="bride-avatar" class="role-mark role-mark-bride avatar-fallback" aria-hidden="true">?</span>
+          <span><small>VAI CÔ DÂU</small><b id="bride-name">Đang chờ</b></span>
+        </div>
+        <div class="phase-ribbon"><span class="phase-flower" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></svg></span><span id="phase-label">ĐANG MỞ VAI · bình luận #codau / #chure</span></div>
+
+        <section id="wishes" class="wishes-layer" aria-label="Lời chúc từ khách mời">
+          <article class="wish-slot r-wish-left-one" data-slot="0" data-side="left"></article>
+          <article class="wish-slot r-wish-right-one" data-slot="1" data-side="right"></article>
+          <article class="wish-slot r-wish-left-two" data-slot="2" data-side="left"></article>
+          <article class="wish-slot r-wish-right-two" data-slot="3" data-side="right"></article>
+          <article class="wish-slot r-wish-left-three" data-slot="4" data-side="left"></article>
+          <article class="wish-slot r-wish-right-three" data-slot="5" data-side="right"></article>
+          <article class="wish-slot r-wish-left-four" data-slot="6" data-side="left"></article>
+          <article class="wish-slot r-wish-right-four" data-slot="7" data-side="right"></article>
+        </section>
+
+        <div class="event-toast" id="event-toast" role="status" aria-live="polite"></div>
+
+        <div class="action-tile action-bride r-bride-action"><span class="tile-icon"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 8a7 7 0 0 0-14 0h14Z"/></svg></span><span class="tile-caption"><small>BÌNH LUẬN</small><b>#codau</b></span></div>
+        <div class="action-tile action-groom r-groom-action"><span class="tile-icon"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 8a7 7 0 0 0-14 0h14Z"/></svg></span><span class="tile-caption"><small>BÌNH LUẬN</small><b>#chure</b></span></div>
+        <div class="action-tile action-wish r-wish-action"><span class="tile-icon"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5h-6L6 20v-4.2a2.5 2.5 0 0 1-2-2.4v-8Z"/><path d="m8 8 4 3 4-3"/></svg></span><span class="tile-caption"><small>GỬI LỜI CHÚC</small><b>#loichuc …</b></span></div>
+        <div class="action-tile action-gift r-celebrate-action"><span class="tile-icon"><img src="/assets/plates/celebrate-action-art.png" alt="" draggable="false"></span><span class="tile-caption"><small>CHÚC MỪNG</small><b>Gửi hoa</b></span></div>
+        <div class="stage-footer"><span>Gửi lời chúc trong bình luận</span><span id="wish-count">0 lời chúc</span></div>
+      </div>
+    </main>
+    <script type="module" src="/stage.js"></script>
+  </body>
+</html>
