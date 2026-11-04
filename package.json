@@ -6,7 +6,7 @@
   "scripts": {
     "start": "bun run server.js",
     "dev": "bun --watch server.js",
-    "postinstall": "bun scripts/setup-venv.js",
+    "postinstall": "bun scripts/postinstall.js",
     "setup:venv": "bun scripts/setup-venv.js",
     "build:backend": "bun scripts/build-backend.js",
     "build:sidecars:windows": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows-sidecars.ps1",
@@ -15,7 +15,6 @@
     "tauri:build": "tauri build",
     "prayer:dev": "tauri dev",
     "prayer:build": "tauri build",
-    "wedding:install": "bun install --cwd apps/virtual-wedding",
     "wedding:dev": "bun run --cwd apps/virtual-wedding tauri:dev",
     "wedding:build": "bun run --cwd apps/virtual-wedding tauri:build",
     "studio:start": "bun run apps/live-studio/src/main.js",

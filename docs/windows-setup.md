@@ -27,12 +27,11 @@ Windows 10 and 11 include WebView2. If the app window stays blank, install the W
 git clone https://github.com/evergard3n/tiktok-live-temple.git
 cd tiktok-live-temple
 bun install
-bun run wedding:install
 ```
 
-## 3. Voice (ZeroTTS) for development
+## 3. What `bun install` sets up
 
-`bun install` runs `scripts/setup-venv.js`. If `.venv` is missing, the script creates it with Python 3.11 through uv, then installs `zerotts` and `pillow`. If uv is not installed, it prints the manual command and the install still succeeds. To run the setup again, use `bun run setup:venv`. To skip it, set `SKIP_VENV_SETUP=1`.
+One `bun install` installs the root dependencies, then `scripts/postinstall.js` installs the wedding app's dependencies and runs `scripts/setup-venv.js` for the voice (ZeroTTS). If `.venv` is missing, the script creates it with Python 3.11 through uv, then installs `zerotts` and `pillow`. If uv is not installed, it prints the manual command and the install still succeeds. To run the setup again, use `bun run setup:venv`. To skip it, set `SKIP_VENV_SETUP=1`.
 
 Without `.venv`, the apps run without the spoken voice. Installed builds bundle their own voice worker.
 
