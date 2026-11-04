@@ -23,10 +23,16 @@ Run `bun run check:isolation` to verify the wedding-only package, Rust crate, id
 
 - `#codau` asks to claim the bride role.
 - `#chure` asks to claim the groom role.
-- `#loichuc <message>` posts a wedding wish.
-- Likes fill the celebration meter. Follows, shares, members, and gifts add scene reactions.
+- `#loichuc <message>` posts a wedding wish (+20 points for the viewer's side).
+- `#nhatrai` / `#nhagai` joins the groom's or bride's side for the whole ceremony. Likes (+1 each), wishes (+20), and gifts (+10 per coin) from side members move the tug-of-war bar at the top of the stage.
+- `hôn đi` (from the vows onward) fills the kiss chant. When the room reaches the goal (30 by default), the stage plays a kiss moment.
+- `dô!`, `zô`, `nâng ly`, `100%` fill the toast meter. Every 20 by default triggers "Một, hai, ba… DÔ!".
+- `#tunghoa` showers petals with the viewer's name (one per viewer every 6 s).
+- `#bathoa` enters the bouquet toss, which opens automatically in the celebration phase. The host presses "Tung hoa" to pick a random winner.
+- Gifts are recorded in the red-envelope guest book (Sổ mừng cưới, top 3 on stage). A gift worth 500+ coins, or one named like "Đám cưới"/"Wedding"/"Ring", fires fireworks.
+- Likes fill the like goal; reaching it fires fireworks. Follows, shares, and room joins show short welcome notices.
 
-The operator confirms role requests, locks the couple, and advances ceremony phases. TikTok gifts never choose the couple or advance the ceremony. The simulator in the dashboard uses the same event path without connecting to a live room.
+The operator confirms role requests, locks the couple, advances ceremony phases, and tosses the bouquet. Kiss and toast goals are set in the dashboard's crowd panel. TikTok gifts never choose the couple or advance the ceremony. The simulator in the dashboard uses the same event path without connecting to a live room.
 
 ## Local API
 

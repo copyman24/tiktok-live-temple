@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 130">
+  <defs>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e5303f"/><stop offset="1" stop-color="#8d0d1b"/></linearGradient>
+    <linearGradient id="gold" x1="0" x2="1"><stop offset="0" stop-color="#b37a1f"/><stop offset=".5" stop-color="#ffe7a3"/><stop offset="1" stop-color="#b37a1f"/></linearGradient>
+  </defs>
+  <rect x="8" y="6" width="84" height="118" rx="8" fill="url(#red)" stroke="#5e0711" stroke-width="2.5"/>
+  <path d="M8 40c20 16 64 16 84 0V14c0-4-4-8-8-8H16c-4 0-8 4-8 8Z" fill="#c21d2e" stroke="#5e0711" stroke-width="2"/>
+  <circle cx="50" cy="48" r="13" fill="url(#gold)" stroke="#7a4f12" stroke-width="1.5"/>
+  <rect x="18" y="16" width="64" height="118" rx="0" fill="none"/>
+  <text x="50" y="102" font-family="'Noto Serif', 'Songti SC', serif" font-weight="900" font-size="40" text-anchor="middle" fill="url(#gold)">囍</text>
+  <rect x="14" y="12" width="72" height="106" rx="5" fill="none" stroke="url(#gold)" stroke-width="1.6" stroke-dasharray="3 3"/>
+</svg>

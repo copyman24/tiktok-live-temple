@@ -102,7 +102,19 @@
             <button class="action-button action-button-ceremony" type="button" onclick="sendRpc('temple.grandCeremony', { coins: 500, giftName: 'Đại Lễ Kim Long Chầu Phật' })">
               <span class="action-name">Đại lễ Kim Long</span><span class="action-detail">Quà 500 xu</span>
             </button>
-            <button class="action-button action-button-reset" type="button" onclick="sendRpc('temple.resetMerit', {})">
+            <button class="action-button" type="button" onclick="sendRpc('temple.releaseFish', {})">
+              <span class="action-name">Phóng sinh cá chép</span><span class="action-detail">Bình luận “phóng sinh”</span>
+            </button>
+            <button class="action-button" type="button" onclick="sendRpc('temple.checkIn', { uniqueId: 'admin:' + document.getElementById('rpcUser').value })">
+              <span class="action-name">Điểm danh lễ Phật</span><span class="action-detail">Một lần mỗi ngày</span>
+            </button>
+            <button class="action-button" type="button" onclick="sendRpc('temple.like', { count: 50 })">
+              <span class="action-name">Thả 50 tim</span><span class="action-detail">Gõ mõ, thắp đèn công đức</span>
+            </button>
+            <button class="action-button" type="button" onclick="sendRpc('temple.shareBlessing', {})">
+              <span class="action-name">Chia sẻ buổi lễ</span><span class="action-detail">Lan tỏa phước lành</span>
+            </button>
+            <button class="action-button action-button-reset" type="button" onclick="if (confirm('Xóa toàn bộ công đức và bảng vàng hiện tại?')) sendRpc('temple.resetMerit', {})">
               <span class="action-name">Đặt lại công đức</span><span class="action-detail">Xóa tổng điểm hiện tại</span>
             </button>
           </div>
@@ -122,7 +134,15 @@
             <input type="text" id="simComment" value="Con xin gieo quẻ cầu tài lộc đầu tháng ạ" placeholder="Nhập bình luận TikTok" />
             <button class="button button-primary" id="btnSendComment" type="button">Gửi thử</button>
           </div>
-          <p class="helper-copy">Từ khóa: <code>thắp hương</code>, <code>bái phật</code>, <code>cầu…</code>, <code>xin xăm</code>, <code>thỉnh chuông</code>, <code>gõ mõ</code>.</p>
+          <p class="helper-copy">Từ khóa: <code>thắp hương</code>, <code>bái phật</code>, <code>cầu…</code>, <code>xin xăm</code>, <code>thỉnh chuông</code>, <code>gõ mõ</code>, <code>phóng sinh</code>, <code>điểm danh</code>. Mỗi bình luận <code>Nam mô A Di Đà Phật</code> góp một biến niệm chung.</p>
+          <label class="field-label" for="chantGoalInput">Mục tiêu cộng đồng</label>
+          <div class="field-action">
+            <input type="number" id="chantGoalInput" min="9" max="10000" value="108" aria-label="Số biến niệm Phật mỗi lần viên mãn" />
+            <input type="number" id="lampGoalInput" min="50" max="1000000" value="300" aria-label="Số tim để thắp một ngọn đèn" />
+            <button class="button" id="btnSaveGoals" type="button">Lưu</button>
+          </div>
+          <label class="helper-copy"><input type="checkbox" id="autoGoalsInput" checked /> Tự điều chỉnh theo số người xem (phòng vắng mục tiêu nhỏ, phòng đông mục tiêu lớn)</label>
+          <p class="helper-copy">Biến niệm Phật mỗi lần viên mãn · số tim để thắp một ngọn đèn công đức. Sửa số rồi bấm Lưu sẽ tắt chế độ tự điều chỉnh.</p>
         </section>
 
         <section class="panel support-panel" aria-labelledby="responseHeading">
@@ -163,6 +183,21 @@
       const username = document.getElementById('ttUser').value.trim();
       sendRpc('live.connect', { username });
     };
+    const autoGoalsInput = document.getElementById('autoGoalsInput');
+    autoGoalsInput.onchange = () => sendRpc('temple.setGoals', { autoGoals: autoGoalsInput.checked });
+    document.getElementById('btnSaveGoals').onclick = () => {
+      autoGoalsInput.checked = false;
+      sendRpc('temple.setGoals', {
+        autoGoals: false,
+        chantGoal: document.getElementById('chantGoalInput').value,
+        lampGoal: document.getElementById('lampGoalInput').value
+      });
+    };
+    fetch('/api/state').then((res) => res.json()).then((st) => {
+      if (st.chant?.goal) document.getElementById('chantGoalInput').value = st.chant.goal;
+      if (st.lamp?.goal) document.getElementById('lampGoalInput').value = st.lamp.goal;
+      if (st.settings) autoGoalsInput.checked = st.settings.autoGoals !== false;
+    }).catch(() => {});
     document.getElementById('btnDisc').onclick = () => sendRpc('live.disconnect', {});
     document.getElementById('btnSendComment').onclick = () => {
       const comment = document.getElementById('simComment').value.trim();

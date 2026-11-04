@@ -19,3 +19,6 @@ embedded-assets.js
 *.log
 *.m4a
 public/assets/bg_chant.m4a
+apps/live-studio/src-tauri/target/
+apps/live-studio/src-tauri/gen/
+apps/live-studio/src-tauri/binaries/*

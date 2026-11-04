@@ -20,6 +20,42 @@
         ],
         "createdAt": "2026-11-03T01:52:40.467Z",
         "reason": "Agent: the host canvas intentionally uses warm ivory from the supplied wedding hall reference; burgundy and antique gold continue that palette in controls and headings."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-11-03T18:24:59.140Z",
+        "reason": "Agent: the stage uses the live flame glow for its incense ember animation."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-11-03T18:38:35.653Z",
+        "reason": "Agent: the stage-wrapper is an intentional edge-to-edge 9:16 frame; dock sections have 16px vertical padding, and the last section has no bottom border."
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "public/index.html"
+        ],
+        "createdAt": "2026-11-03T18:38:35.709Z",
+        "reason": "Agent: central pose-frame raster images are alternate animation frames; one becomes visible when active, and the sanctuary background remains visible in the OBS capture."
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "public/css/live.css"
+        ],
+        "createdAt": "2026-11-03T18:38:35.769Z",
+        "reason": "Agent: the 11px border forms the comment-bubble tail; the 5px dock accent is on quick-dock, which has border-radius: 0."
       }
     ]
   }

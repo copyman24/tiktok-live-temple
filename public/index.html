@@ -20,7 +20,7 @@
       <div class="stage-9x16" id="stage9x16">
         <!-- 1. HÌNH NỀN CHÁNH ĐIỆN ĐỨC PHẬT A DI ĐÀ 8K SẮC NÉT -->
         <img
-          src="/assets/amitabha_stage.png"
+          src="/assets/amitabha_stage.webp"
           alt="Đức Phật A Di Đà Chánh Điện"
           class="sanctuary-bg-img"
         />
@@ -79,17 +79,21 @@
 
         <!-- PHÁP KHÍ TƯƠNG TÁC HAI BÊN BÀN THỜ: ĐẠI HỒNG CHUNG & MÕ GỖ & ỐNG XĂM -->
         <button class="ritual-hotspot bell-hotspot" id="bellStation" type="button" title="Thỉnh đại hồng chung" aria-label="Thỉnh đại hồng chung">
-          <span class="hotspot-label">Thỉnh Chuông</span>
+          <img class="hotspot-art" src="/assets/ritual/bell.svg" alt="" draggable="false" />
+          <span class="hotspot-copy"><span class="hotspot-label">Thỉnh chuông</span><span class="hotspot-cue">bình luận “thỉnh chuông”</span></span>
         </button>
-
+        <button class="ritual-hotspot fish-hotspot" id="fishStation" type="button" title="Phóng sinh cá chép" aria-label="Phóng sinh cá chép">
+          <img class="hotspot-art" src="/assets/ritual/koi.svg" alt="" draggable="false" />
+          <span class="hotspot-copy"><span class="hotspot-label">Phóng sinh</span><span class="hotspot-cue">bình luận “phóng sinh”</span></span>
+        </button>
         <button class="ritual-hotspot woodfish-hotspot" id="woodenFishStation" type="button" title="Gõ mõ tích công đức" aria-label="Gõ mõ tích công đức">
-          <span class="hotspot-label">Gõ Mõ (<span id="statWoodenFish">360</span>)</span>
+          <img class="hotspot-art" src="/assets/ritual/woodfish.svg" alt="" draggable="false" />
+          <span class="hotspot-copy"><span class="hotspot-label">Gõ mõ <b id="statWoodenFish">360</b></span><span class="hotspot-cue">thả tim để gõ mõ</span></span>
         </button>
-
         <button class="ritual-hotspot fortune-hotspot" id="fortuneCylinder" type="button" title="Xin xăm, gieo quẻ" aria-label="Xin xăm, gieo quẻ">
-          <span class="hotspot-label">Xin Xăm</span>
+          <img class="hotspot-art" src="/assets/ritual/fortune.svg" alt="" draggable="false" />
+          <span class="hotspot-copy"><span class="hotspot-label">Xin xăm</span><span class="hotspot-cue">bình luận “xin xăm”</span></span>
         </button>
-
         <!-- 4. CHỦ LỄ ĐANG DÂNG HƯƠNG TRƯỚC LƯ HƯƠNG ĐỒNG (GIỮA CHÁNH ĐIỆN) -->
         <div class="central-worshipper" id="centralWorshipper">
           <div class="worshipper-wish-bubble" id="centralWishBubble">
@@ -123,6 +127,8 @@
         <!-- 7. NGƯỜI XEM ĐANG BƯỚC ĐI TRÊN THẢM ĐỎ TIẾN LÊN DÂNG HƯƠNG -->
         <div class="carpet-walker-layer" id="carpetWalkerLayer"></div>
 
+        <!-- 7B. HỒ PHÓNG SINH: CÁ CHÉP BƠI QUA THẢM ĐỎ -->
+        <div class="koi-pond-layer" id="koiPondLayer" aria-hidden="true"></div>
         <!-- 8. ĐÈN HOA ĐĂNG / SỚ CẦU NGUYỆN BAY LÊN -->
         <div class="sky-lanterns-layer" id="skyLanternsLayer"></div>
 
@@ -140,35 +146,41 @@
             </div>
 
             <div class="hud-gift-cards">
-              <button class="hud-gift-card" id="cardIncense" type="button" title="Thắp hương">
-                <span class="gift-coin-tag">1 xu · bình luận</span>
+              <button class="hud-gift-card" id="cardIncense" type="button" title="Cùng niệm Phật">
+                <span class="gift-coin-tag">Bình luận</span>
                 <div class="gift-card-body">
-                  <span class="gift-title">Dâng hương</span>
+                  <span class="gift-title">Nam mô A Di Đà Phật</span>
+                  <span class="card-meter" aria-hidden="true"><i id="chantMeterFill"></i></span>
+                  <span class="card-meter-label"><strong id="chantCount">0</strong> / <span id="chantGoal">108</span> biến niệm · <span id="chantRounds">0</span> lần viên mãn</span>
                 </div>
               </button>
-
-              <button class="hud-gift-card" id="cardBlessing" type="button" title="Cầu phúc và thả hoa đăng">
-                <span class="gift-coin-tag">5 xu · tim</span>
+              <button class="hud-gift-card" id="cardBlessing" type="button" title="Thả tim thắp đèn công đức">
+                <span class="gift-coin-tag">Thả tim</span>
                 <div class="gift-card-body">
-                  <span class="gift-title">Cầu phúc</span>
+                  <span class="gift-title">Thắp đèn công đức <span class="merit-lamp-row" id="meritLampRow" aria-hidden="true"></span></span>
+                  <span class="card-meter is-lamp" aria-hidden="true"><i id="lampMeterFill"></i></span>
+                  <span class="card-meter-label"><strong id="lampLikes">0</strong> / <span id="lampGoal">300</span> tim · <span id="lampLit">0</span> ngọn đã sáng</span>
                 </div>
               </button>
-
-              <button class="hud-gift-card" id="cardLotus" type="button" title="Dâng hoa sen vàng">
-                <span class="gift-coin-tag">Từ 10 xu</span>
+              <button class="hud-gift-card" id="cardLotus" type="button" title="Tặng quà dâng lễ">
+                <span class="gift-coin-tag">Tặng quà</span>
                 <div class="gift-card-body">
-                  <span class="gift-title">Hoa sen</span>
+                  <span class="gift-title">Dâng lễ Tam Bảo</span>
+                  <span class="card-tier-list"><span>Hoa sen</span><span>Đèn lưu ly</span><span>Kim Long 100+ xu</span></span>
                 </div>
               </button>
             </div>
           </div>
-
-          <!-- Bên phải: Bảng TẤM LÒNG THÀNH (Top Công Đức) -->
-          <div class="hud-right-leaderboard">
-            <div class="hud-lb-header">Tấm lòng thành</div>
-            <div class="hud-lb-list" id="leaderboardList"></div>
-          </div>
         </footer>
+
+        <aside class="hud-right-leaderboard" aria-label="Bảng xếp hạng công đức">
+          <div class="hud-lb-header">Tấm lòng thành</div>
+          <div class="hud-lb-list" id="leaderboardList"></div>
+        </aside>
+
+        <div class="welcome-ticker" id="welcomeTicker" aria-live="polite"></div>
+        <ol class="gift-history" id="giftHistory" aria-label="Lịch sử tặng quà" aria-live="polite"></ol>
+        <div class="comment-bubbles-layer" id="commentBubblesLayer" aria-live="off"></div>
 
         <!-- BANNER ĐẠI LỄ KIM LONG CHẦU PHẬT -->
         <div class="grand-ceremony-banner" id="grandCeremonyBanner">
@@ -249,6 +261,10 @@
           <button class="dock-btn" id="btnRpcBell">Thỉnh chuông</button>
           <button class="dock-btn" id="btnRpcFortune">Xin xăm</button>
           <button class="dock-btn" id="btnRpcGiftLotus">Dâng hoa sen</button>
+          <button class="dock-btn" id="btnRpcFish">Phóng sinh</button>
+          <button class="dock-btn" id="btnRpcCheckIn">Điểm danh</button>
+          <button class="dock-btn" id="btnRpcChant">Niệm Phật</button>
+          <button class="dock-btn" id="btnRpcLikes">Thả 50 tim</button>
         </div>
         <button class="dock-btn gold" id="btnRpcGrandCeremony">
           Đại lễ Kim Long chầu Phật

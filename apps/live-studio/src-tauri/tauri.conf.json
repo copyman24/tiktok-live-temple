@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "TikTok Live Studio",
+  "version": "1.0.0",
+  "identifier": "com.linhung.tiktoklivestudio",
+  "build": {
+    "beforeDevCommand": {
+      "script": "bun ../../scripts/build-studio-backend.js",
+      "wait": true
+    },
+    "beforeBuildCommand": "bun ../../scripts/build-studio-backend.js",
+    "frontendDist": "http://127.0.0.1:3200/studio"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "TikTok Live Studio",
+        "url": "http://127.0.0.1:3200/studio",
+        "width": 1440,
+        "height": 920,
+        "minWidth": 960,
+        "minHeight": 640,
+        "create": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "externalBin": ["binaries/studio-backend"],
+    "resources": {
+      "../../../public/": "temple/public/",
+      "../../../tts_worker.py": "temple/tts_worker.py",
+      "../../virtual-wedding/web/": "wedding/web/",
+      "../web/": "studio/web/"
+    }
+  }
+}

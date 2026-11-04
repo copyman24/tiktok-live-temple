@@ -1,0 +1,15 @@
+{
+  "build": {
+    "beforeBuildCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File ../../scripts/build-studio-windows.ps1"
+  },
+  "bundle": {
+    "targets": ["nsis"],
+    "resources": {
+      "../../../public/": "temple/public/",
+      "../../../tts_worker.py": "temple/tts_worker.py",
+      "../../virtual-wedding/web/": "wedding/web/",
+      "../web/": "studio/web/",
+      "../../../src-tauri/binaries/zerotts-worker.exe": "zerotts-worker.exe"
+    }
+  }
+}

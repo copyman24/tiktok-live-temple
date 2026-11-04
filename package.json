@@ -10,7 +10,19 @@
     "build:sidecars:windows": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows-sidecars.ps1",
     "tauri": "tauri",
     "tauri:dev": "tauri dev",
-    "tauri:build": "tauri build"
+    "tauri:build": "tauri build",
+    "prayer:dev": "tauri dev",
+    "prayer:build": "tauri build",
+    "wedding:install": "bun install --cwd apps/virtual-wedding",
+    "wedding:dev": "bun run --cwd apps/virtual-wedding tauri:dev",
+    "wedding:build": "bun run --cwd apps/virtual-wedding tauri:build",
+    "studio:start": "bun run apps/live-studio/src/main.js",
+    "studio:dev": "bun --watch apps/live-studio/src/main.js",
+    "studio:backend": "bun scripts/build-studio-backend.js",
+    "studio:tauri:dev": "cd apps/live-studio && tauri dev",
+    "studio:build": "cd apps/live-studio && tauri build",
+    "build:all": "bun run prayer:build && bun run wedding:build && bun run studio:build",
+    "art:devotees": "bun design/art-gen/devotees.mjs"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -19,6 +31,7 @@
     "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "2.12.4"
+    "@tauri-apps/cli": "2.12.4",
+    "playwright-core": "1.56.1"
   }
 }

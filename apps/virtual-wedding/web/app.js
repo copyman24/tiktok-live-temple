@@ -51,7 +51,7 @@ async function act(method, params = {}) {
   try {
     const result = await rpc(method, params);
     if (result?.wedding) render(result);
-    else if (result?.state === 'connected' || result?.state === 'offline') refresh();
+    else if (result?.state === 'live' || result?.state === 'offline') refresh();
   } catch (error) {
     setNotice(error.message || 'Có lỗi khi thực hiện thao tác.');
   }
@@ -146,10 +146,11 @@ function renderWishes(wishes = []) {
 function render(snapshotValue) {
   if (!snapshotValue?.wedding) return;
   snapshot = snapshotValue;
+  if (typeof snapshotValue?.autoGoals === 'boolean') document.getElementById('auto-goals').checked = snapshotValue.autoGoals;
   setBackend(true);
   const { wedding, stream } = snapshot;
   const phase = wedding.phase;
-  const connected = stream.state === 'connected';
+  const connected = stream.state === 'live';
   document.getElementById('room-pill').dataset.connected = String(connected);
   document.getElementById('room-state-label').textContent = connected ? `Đang phát · @${stream.username}` : stream.state === 'connecting' ? 'Đang kết nối TikTok Live…' : 'Chưa kết nối TikTok';
   document.getElementById('connect-light').dataset.connected = String(connected);
@@ -185,6 +186,52 @@ function render(snapshotValue) {
   setText('share-total', Number(wedding.social.shares || 0).toLocaleString('vi-VN'));
   setText('gift-total', Number(wedding.social.gifts || 0).toLocaleString('vi-VN'));
   setText('member-total', Number(wedding.social.members || 0).toLocaleString('vi-VN'));
+  renderCrowd(wedding);
+}
+
+function renderCrowd(wedding) {
+  const n = (value) => Number(value || 0).toLocaleString('vi-VN');
+  if (wedding.teams) {
+    setText('dash-team-groom', n(wedding.teams.groom.score));
+    setText('dash-team-bride', n(wedding.teams.bride.score));
+    setText('dash-team-groom-members', `${n(wedding.teams.groom.members)} người`);
+    setText('dash-team-bride-members', `${n(wedding.teams.bride.members)} người`);
+  }
+  if (wedding.kiss) {
+    setText('dash-kiss', `${wedding.kiss.count} / ${wedding.kiss.goal}`);
+    setText('dash-kiss-moments', `${n(wedding.kiss.moments)} lần`);
+    if (document.activeElement?.id !== 'kiss-goal') document.getElementById('kiss-goal').value = wedding.kiss.goal;
+  }
+  if (wedding.cheers) {
+    setText('dash-cheers', `${wedding.cheers.count} / ${wedding.cheers.goal}`);
+    setText('dash-cheers-rounds', `${n(wedding.cheers.rounds)} lần`);
+    if (document.activeElement?.id !== 'cheers-goal') document.getElementById('cheers-goal').value = wedding.cheers.goal;
+  }
+  const bouquet = wedding.bouquet || {};
+  const status = bouquet.open
+    ? `Đang nhận khách bắt hoa: ${n(bouquet.entrantCount)} người. Bấm “Tung hoa” khi sẵn sàng.`
+    : bouquet.winner
+      ? `${bouquet.winner.name} đã bắt được hoa cưới.`
+      : 'Mở tự động khi chuyển sang “Chung vui”. Khách bình luận #bathoa để tham gia.';
+  setText('bouquet-status', status);
+  document.getElementById('bouquet-toss').disabled = !bouquet.open || !bouquet.entrantCount;
+  document.getElementById('bouquet-open').disabled = wedding.phase === 'lobby' || wedding.phase === 'ended' || bouquet.open;
+  const book = Array.isArray(wedding.giftBook) ? wedding.giftBook : [];
+  setText('gift-book-count', String(book.length));
+  const list = document.getElementById('dash-gift-book');
+  if (!book.length) {
+    const empty = document.createElement('div'); empty.className = 'empty-line'; empty.textContent = 'Người tặng quà sẽ được ghi tên ở đây.';
+    list.replaceChildren(empty);
+  } else {
+    list.replaceChildren(...book.map((entry) => {
+      const row = document.createElement('div'); row.className = 'wish-row';
+      const text = document.createElement('p');
+      const name = document.createElement('b'); name.textContent = entry.viewer.name;
+      text.append(name, document.createElement('br'), document.createTextNode(`${n(entry.count)} quà · ${n(entry.coins)} xu`));
+      row.append(avatar(entry.viewer.name, entry.viewer.avatar), text);
+      return row;
+    }));
+  }
 }
 
 function connectSocket() {
@@ -207,6 +254,9 @@ function announce(event) {
   if (!event) return;
   if (event.type === 'role_claimed') setNotice(`${event.claim.viewer.name} vừa xin nhận vai ${event.claim.role === 'bride' ? 'cô dâu' : 'chú rể'}.`);
   if (event.type === 'wish_received') setNotice(`Đã nhận lời chúc từ ${event.wish.viewer.name}.`);
+  if (event.type === 'bouquet_caught') setNotice(`${event.viewer.name} bắt được hoa cưới (${event.entrants} người tham gia).`);
+  if (event.type === 'kiss_moment') setNotice('Cả phòng đã hô đủ “hôn đi”!');
+  if (event.type === 'like_goal_reached') setNotice(`Đạt mục tiêu ${Number(event.total).toLocaleString('vi-VN')} lượt thích.`);
   if (event.type === 'gift_celebration') setNotice(`${event.viewer.name} vừa gửi ${event.count > 1 ? `${event.count} ` : ''}${event.name}.`);
 }
 
@@ -253,6 +303,23 @@ document.getElementById('simulate-form').addEventListener('submit', (event) => {
   if (selected === 'gift') { interaction.count = document.getElementById('sim-count').value || 1; interaction.name = 'Hoa chúc mừng'; }
   act('wedding.simulate', { interaction });
 });
+document.getElementById('auto-goals').addEventListener('change', (event) => act('wedding.goals.set', { autoGoals: event.target.checked }));
+document.getElementById('save-crowd-goals').addEventListener('click', () => act('wedding.goals.set', {
+  autoGoals: false,
+  kissGoal: document.getElementById('kiss-goal').value,
+  cheersGoal: document.getElementById('cheers-goal').value
+}));
+document.getElementById('bouquet-open').addEventListener('click', () => act('wedding.bouquet.open'));
+document.getElementById('bouquet-toss').addEventListener('click', () => act('wedding.bouquet.toss'));
+document.querySelector('[data-burst="kiss"]').addEventListener('click', async () => {
+  const goal = snapshot?.wedding?.kiss?.goal || 30;
+  for (let index = 0; index < goal; index += 1) {
+    await rpc('wedding.simulate', { interaction: { kind: 'comment', viewer: { id: `demo:kiss:${crypto.randomUUID()}`, name: `Khách ${index + 1}` }, text: 'hôn đi' } }).catch((error) => setNotice(error.message));
+  }
+});
+document.querySelector('[data-gift="wedding"]').addEventListener('click', () => act('wedding.simulate', {
+  interaction: { kind: 'gift', viewer: { id: 'demo:grand', name: document.getElementById('sim-name').value || 'Khách mời' }, name: 'Đám cưới', count: 1, coins: 1500 }
+}));
 document.querySelectorAll('[data-comment]').forEach((button) => button.addEventListener('click', () => {
   act('wedding.simulate', { interaction: { kind: 'comment', viewer: { id: `demo:${crypto.randomUUID()}`, name: document.getElementById('sim-name').value || 'Khách mời' }, text: button.dataset.comment } });
 }));

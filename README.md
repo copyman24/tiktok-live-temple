@@ -109,15 +109,34 @@ The backend listens on loopback port `3000` without account authentication. The 
 
 ---
 
+## 🎛️ TikTok Live Studio — một ứng dụng, hai phiên
+
+`apps/live-studio/` gộp Chùa Linh Ứng Online và Virtual Wedding Live vào **một** backend và **một** ứng dụng desktop. Mở `http://127.0.0.1:3200/studio`, chọn phiên; dữ liệu của phiên kia được giữ nguyên trong bộ nhớ (công đức của chùa vẫn lưu ra file). OBS chỉ cần một nguồn `http://127.0.0.1:3200/obs`, nguồn này tự chuyển sang sân khấu của phiên đang mở. Khi đổi phiên, Studio có thể kết nối lại phòng TikTok đang phát cho phiên mới.
+
+```sh
+bun run studio:start        # chạy Studio từ mã nguồn (cổng 3200)
+bun run studio:tauri:dev    # cửa sổ desktop khi phát triển
+bun run studio:build        # đóng gói (Windows: NSIS kèm ZeroTTS; Linux: deb/rpm/AppImage)
+```
+
+Xem thêm `apps/live-studio/README.md`.
+
+---
+
 ## 🎮 Bảng Quy Tắc Tương Tác TikTok Live
 
 | Sự kiện TikTok Live | Điều kiện / Từ khóa | Nghi thức trên Chánh Điện | Điểm Công Đức |
 | :--- | :--- | :--- | :---: |
-| **Thả tim (Like)** | Mỗi đợt thả tim | Gõ mõ gỗ tụng kinh + Làn sóng Phật tử vái lạy | `+1` / tim |
-| **Follow / Share** | Theo dõi hoặc chia sẻ | Thỉnh Đại Hồng Chung ngân vang + Sóng âm vàng | `+10` |
+| **Thả tim (Like)** | Mỗi đợt thả tim | Gõ mõ gỗ tụng kinh + Làn sóng Phật tử vái lạy; tim của cả phòng đổ đầy **Đèn công đức** (mặc định 300 tim/ngọn) | `+1` / tim |
+| **Follow** | Theo dõi kênh | Thỉnh Đại Hồng Chung ngân vang + Sóng âm vàng | `+10` |
+| **Share** | Chia sẻ buổi live | Lan tỏa phước lành: mưa cánh sen + dải thông báo | `+5` |
+| **Vào phòng** | Người xem mới vào live | Dải “… vừa bước vào chánh điện” (gộp nhiều người) | `+1` |
+| **Bình luận Niệm Phật** | `nam mô`, `a di đà phật` | Mỗi bình luận góp 1 biến niệm chung; đủ 108 biến → **Viên mãn**, mưa hoa sen, cả đạo tràng lạy, đọc tên người niệm nhiều nhất | `+5` mỗi người khi viên mãn |
+| **Bình luận Phóng sinh** | `phóng sinh`, `thả cá` | Cá chép bơi qua thảm đỏ mang tên + lời nguyện, đọc lời khấn | `+15` |
+| **Bình luận Điểm danh** | `điểm danh` | Mỗi ngày một lần; ghi chuỗi ngày lễ Phật liên tiếp (giờ Việt Nam) | `+5` + 2/ngày liên tiếp (tối đa 30) |
 | **Bình luận Thắp hương** | `thắp hương`, `dâng hương`, `bái phật`, `lạy phật` | Phật tử bước dọc thảm đỏ lên trước Lư Hương, quỳ đảnh lễ 3 lạy + Đọc tên khấn | `+15` |
 | **Bình luận Cầu nguyện** | `cầu ...`, `nguyện ...`, `nam mô`, `a di đà phật`, `bình an`, `chúc ...` | Bước lên đảnh lễ + Thả Đèn Hoa Đăng mang lời khấn bay lên trời + Đọc lời cầu nguyện | `+10` |
-| **Bình luận Xin xăm** | `xin xăm`, `gieo quẻ`, `rút quẻ`, `quẻ` | Lắc ống xăm + Mở tờ Giải Quẻ đồng bộ đúng lúc giọng đọc bắt đầu vang lên | `+10` |
+| **Bình luận Xin xăm** | `xin xăm`, `gieo quẻ`, `rút quẻ`, `quẻ` (không còn bắt nhầm chữ “quen”, “que”) | Lắc ống xăm + Mở tờ Giải Quẻ đồng bộ đúng lúc giọng đọc bắt đầu vang lên | `+10` |
 | **Tặng quà Nhỏ (1–4 xu)** | Hoa hồng (Rose), Heart Me... | Bước lên dâng Đài Hoa Sen Vàng + Thắp 3 nén hương + Đọc lời cảm tạ | `+20` / xu |
 | **Tặng quà Vừa (5–99 xu)** | Đèn lưu ly, Mâm ngũ quả... | Dâng Đèn Lưu Ly / Mâm Ngũ Quả + Thỉnh Chuông + Đọc lời chúc phúc | `+30` / xu |
 | **Tặng quà Lớn (≥ 100 xu)** | Quà ≥ 100 xu | **Đại Lễ Kim Long Chầu Phật**: Mưa hoa sen vàng, Hào quang vạn trượng, Chuông đồng ngân vang | `+50` / xu |
@@ -180,6 +199,12 @@ curl -X POST http://localhost:3000/rpc \
 - `temple.grandCeremony`: Kích hoạt Đại Lễ Kim Long Chầu Phật (`user`, `coins`, `giftName`).
 - `temple.updateSettings`: Cập nhật âm lượng nhạc nền (`musicVolume`), giọng đọc (`ttsVolume`), bật/tắt TTS.
 - `temple.resetMerit`: Đặt lại bảng thống kê Công Đức.
+- `temple.releaseFish`: Phóng sinh cá chép (`user`, `wish`).
+- `temple.checkIn`: Điểm danh lễ Phật hằng ngày (`user`, `uniqueId`).
+- `temple.shareBlessing`: Hiệu ứng chia sẻ buổi lễ (`user`).
+- `temple.like`: Giả lập thả tim (`user`, `count`) — gõ mõ và góp vào đèn công đức.
+- `temple.join`: Giả lập người xem vào phòng (`user`).
+- `temple.setGoals`: Đặt mục tiêu cộng đồng (`chantGoal`, `lampGoal`).
 - `live.connect` / `live.disconnect`: Kết nối / Ngắt kết nối phòng TikTok Live.
 
 ---
@@ -187,7 +212,11 @@ curl -X POST http://localhost:3000/rpc \
 ## 📁 Cấu Trúc Thư Mục
 
 ```text
-├── server.js                  # Bun.js HTTP + WebSocket JSON-RPC 2.0 Server & TikTok Live Connector
+├── server.js                  # Điểm chạy độc lập của Chùa Linh Ứng (gọi src/temple/server.js)
+├── src/temple/server.js       # Backend chùa dạng factory: HTTP + WebSocket JSON-RPC 2.0 & TikTok Live Connector
+├── apps/virtual-wedding/      # Ứng dụng lễ cưới độc lập (backend, giao diện, Tauri riêng)
+├── apps/live-studio/          # Studio gộp hai phiên vào một binary
+├── design/source-art/         # Ảnh gốc độ phân giải cao (không đóng gói vào ứng dụng)
 ├── tts_worker.py              # Tiến trình Python ZeroTTS thường trú (48kHz, chống rè/clipping, lọc ký tự lạ)
 ├── data/
 │   ├── merit-state.json       # Lưu trữ bền vững Bảng Vàng Công Đức của người xem thật

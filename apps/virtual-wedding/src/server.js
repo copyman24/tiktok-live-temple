@@ -7,23 +7,27 @@ import { createTikTokAdapter } from './tiktok.js';
 
 const RPC_ERRORS = { invalid: -32600, params: -32602, method: -32601, rule: -32010, internal: -32603 };
 
-export function createWeddingServer() {
-  const host = process.env.WEDDING_HOST || '127.0.0.1';
-  const port = readPort(process.env.WEDDING_PORT || '3108');
-  const webRoot = process.env.WEDDING_RESOURCE_DIR
+export function createWeddingServer(options = {}) {
+  const standalone = options.standalone !== false;
+  const host = options.host || process.env.WEDDING_HOST || '127.0.0.1';
+  const port = readPort(String(options.port || process.env.WEDDING_PORT || '3108'));
+  const webRoot = options.webRoot || (process.env.WEDDING_RESOURCE_DIR
     ? path.join(process.env.WEDDING_RESOURCE_DIR, 'web')
-    : path.resolve(import.meta.dir, '../web');
-  const shutdownToken = process.env.WEDDING_SHUTDOWN_TOKEN || '';
+    : path.resolve(import.meta.dir, '../web'));
+  const shutdownToken = standalone ? (process.env.WEDDING_SHUTDOWN_TOKEN || '') : '';
   const app = express();
-  const server = createServer(app);
-  const sockets = new WebSocketServer({ server, path: '/ws', maxPayload: 256 * 1024 });
+  const server = standalone ? createServer(app) : null;
+  const sockets = standalone
+    ? new WebSocketServer({ server, path: '/ws', maxPayload: 256 * 1024 })
+    : new WebSocketServer({ noServer: true, maxPayload: 256 * 1024 });
   let wedding = createWeddingState();
   let stream = { state: 'offline', username: '', viewerCount: 0, roomId: null, error: null };
   let sequence = 0;
   let closing = false;
+  let autoGoals = true;
 
   function snapshot() {
-    return { wedding: publicWeddingState(wedding), stream: { ...stream } };
+    return { wedding: publicWeddingState(wedding), stream: { ...stream }, autoGoals };
   }
 
   function notify(method, params) {
@@ -42,7 +46,24 @@ export function createWeddingServer() {
       notify('wedding.event', { sequence, actor, event });
     }
     if (wedding !== previous || transition.events.length > 0) notify('wedding.state', snapshot());
+    if (actor !== 'auto') retuneGoals();
     return snapshot();
+  }
+
+  // Mục tiêu "hôn đi", "dô!" và thả tim co giãn theo số người xem. Chỉ đổi khi vòng hiện tại
+  // còn gần như trống, để thanh tiến độ trên sân khấu không nhảy lùi.
+  function retuneGoals() {
+    if (!autoGoals || !(stream.viewerCount > 0)) return;
+    const target = goalsForAudience(stream.viewerCount);
+    const fresh = (count, goal) => count <= goal * 0.15;
+    const patch = {};
+    if (target.kissGoal !== wedding.kiss.goal && fresh(wedding.kiss.count, wedding.kiss.goal)) patch.kissGoal = target.kissGoal;
+    if (target.cheersGoal !== wedding.cheers.goal && fresh(wedding.cheers.count, wedding.cheers.goal)) patch.cheersGoal = target.cheersGoal;
+    if (Object.keys(patch).length) applyTransition({ type: 'wedding.setGoals', ...patch }, 'auto');
+    const likeProgress = wedding.likes.total % wedding.likes.goal;
+    if (Math.abs(target.likeGoal - wedding.likes.goal) / wedding.likes.goal > 0.3 && fresh(likeProgress, wedding.likes.goal)) {
+      applyTransition({ type: 'wedding.setLikeGoal', goal: target.likeGoal }, 'auto');
+    }
   }
 
   const tiktok = createTikTokAdapter({
@@ -53,6 +74,7 @@ export function createWeddingServer() {
     onStatus: (status) => {
       stream = status;
       notify('wedding.state', snapshot());
+      retuneGoals();
     }
   });
 
@@ -116,8 +138,25 @@ export function createWeddingServer() {
     if (method === 'wedding.couple.lock') return applyTransition({ type: 'wedding.lockCouple' }, 'host');
     if (method === 'wedding.phase.advance') return applyTransition({ type: 'wedding.advance' }, 'host');
     if (method === 'wedding.end') return applyTransition({ type: 'wedding.end' }, 'host');
+    if (method === 'wedding.bouquet.open') return applyTransition({ type: 'wedding.bouquetOpen' }, 'host');
+    if (method === 'wedding.bouquet.toss') return applyTransition({ type: 'wedding.bouquetToss' }, 'host');
+    if (method === 'wedding.goals.set') {
+      if (typeof params.autoGoals === 'boolean') autoGoals = params.autoGoals;
+      else if (params.kissGoal !== undefined || params.cheersGoal !== undefined) autoGoals = false;
+      if (autoGoals) {
+        retuneGoals();
+        notify('wedding.state', snapshot());
+        return snapshot();
+      }
+      return applyTransition({
+        type: 'wedding.setGoals',
+        kissGoal: params.kissGoal === undefined ? undefined : readNumber(params.kissGoal, 'Kiss goal must be a number.'),
+        cheersGoal: params.cheersGoal === undefined ? undefined : readNumber(params.cheersGoal, 'Cheers goal must be a number.')
+      }, 'host');
+    }
     if (method === 'wedding.likeGoal.set') {
       const goal = readNumber(params.goal, 'Like goal must be a number.');
+      autoGoals = false;
       return applyTransition({ type: 'wedding.setLikeGoal', goal }, 'host');
     }
     if (method === 'tiktok.connect') {
@@ -130,6 +169,12 @@ export function createWeddingServer() {
       return snapshot();
     }
     if (method === 'tiktok.disconnect') return { ...(await tiktok.disconnect()), wedding: publicWeddingState(wedding) };
+    if (method === 'wedding.audience.simulate') {
+      stream = { ...stream, viewerCount: readNumber(params.viewerCount, 'Viewer count must be a number.') };
+      notify('wedding.state', snapshot());
+      retuneGoals();
+      return snapshot();
+    }
     if (method === 'wedding.simulate') {
       const interaction = readSimulation(params.interaction);
       return applyTransition({ type: 'interaction', interaction }, 'simulator');
@@ -143,6 +188,7 @@ export function createWeddingServer() {
   }
 
   async function listen() {
+    if (!server) throw new Error('This wedding instance is embedded; the host server owns the port.');
     await new Promise((resolve, reject) => {
       server.once('error', reject);
       server.listen(port, host, resolve);
@@ -155,10 +201,33 @@ export function createWeddingServer() {
     closing = true;
     await tiktok.disconnect();
     for (const socket of sockets.clients) socket.close(1001, 'Wedding app shutting down');
-    await new Promise((resolve) => server.close(resolve));
+    if (server) await new Promise((resolve) => server.close(resolve));
   }
 
-  return { app, dispatch, listen, close, getSnapshot: snapshot };
+  // Studio session lifecycle: keep the ceremony in memory, release the live room and sockets.
+  async function deactivate() {
+    const username = stream.state === 'live' || stream.state === 'connecting' ? stream.username : '';
+    await tiktok.disconnect();
+    for (const socket of sockets.clients) socket.close(1012, 'Session switched');
+    return { username };
+  }
+
+  function handleUpgrade(request, socket, head) {
+    sockets.handleUpgrade(request, socket, head, (ws) => sockets.emit('connection', ws, request));
+  }
+
+  return {
+    app,
+    dispatch,
+    listen,
+    close,
+    deactivate,
+    activate: () => {},
+    handleUpgrade,
+    connectLive: (username) => dispatch('tiktok.connect', { username }),
+    getSnapshot: snapshot,
+    getStatus: () => ({ live: { ...stream } })
+  };
 }
 
 function readRpcRequest(body) {
@@ -239,4 +308,14 @@ function readPort(value) {
   const port = Number(value);
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('WEDDING_PORT must be between 1 and 65535.');
   return port;
+}
+
+function goalsForAudience(viewers) {
+  const audience = Math.max(1, Number(viewers) || 0);
+  const round = (value, step) => Math.round(value / step) * step;
+  return {
+    kissGoal: Math.min(300, Math.max(10, round(audience * 0.3, 5))),
+    cheersGoal: Math.min(200, Math.max(8, round(audience * 0.25, 2))),
+    likeGoal: Math.min(1_000_000, Math.max(200, round(audience * 20, audience >= 100 ? 500 : 100)))
+  };
 }

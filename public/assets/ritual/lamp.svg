@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="glow" cx=".5" cy=".45" r=".5">
+      <stop offset="0" stop-color="#fff6c4" stop-opacity=".95"/><stop offset=".5" stop-color="#ffc24a" stop-opacity=".35"/><stop offset="1" stop-color="#ff9a1f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffbe0"/><stop offset=".55" stop-color="#ffcf4a"/><stop offset="1" stop-color="#ff6a1a"/>
+    </linearGradient>
+    <linearGradient id="petal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd2dc"/><stop offset="1" stop-color="#d9476b"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0" x2="1">
+      <stop offset="0" stop-color="#7c5218"/><stop offset=".5" stop-color="#ffe39b"/><stop offset="1" stop-color="#7c5218"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="48" r="44" fill="url(#glow)"/>
+  <path d="M60 18c10 14 12 24 0 34-12-10-10-20 0-34Z" fill="url(#flame)"/>
+  <path d="M60 30c4 8 4 12 0 18-4-6-4-10 0-18Z" fill="#fff"/>
+  <path d="M60 104C38 100 26 86 26 66c14 2 26 10 34 24 8-14 20-22 34-24 0 20-12 34-34 38Z" fill="url(#petal)" stroke="#8f1f3a" stroke-width="1.8"/>
+  <path d="M60 100c-12-8-16-20-12-34 8 6 12 16 12 34Zm0 0c12-8 16-20 12-34-8 6-12 16-12 34Z" fill="#f48aa6" stroke="#8f1f3a" stroke-width="1.5"/>
+  <rect x="34" y="102" width="52" height="8" rx="4" fill="url(#base)" stroke="#5a3a15" stroke-width="1.5"/>
+</svg>

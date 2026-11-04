@@ -66,7 +66,9 @@ The host controls `lobby -> entrance -> vows -> rings -> celebration -> ended`. 
 
 - HTTP: `GET /health`, `POST /rpc`; WebSocket: `GET /ws`.
 - JSON-RPC requests use `{ jsonrpc: '2.0', id, method, params }`; notifications are `wedding.state` and `wedding.event`.
-- RPC commands include `wedding.state.get`, `wedding.open`, `wedding.assignRole`, `wedding.claim.confirm`, `wedding.claim.decline`, `wedding.couple.lock`, `wedding.phase.advance`, `wedding.end`, `wedding.likeGoal.set`, `tiktok.connect`, `tiktok.disconnect`, and `wedding.simulate`.
+- RPC commands include `wedding.state.get`, `wedding.open`, `wedding.assignRole`, `wedding.claim.confirm`, `wedding.claim.decline`, `wedding.couple.lock`, `wedding.phase.advance`, `wedding.end`, `wedding.likeGoal.set`, `wedding.goals.set` (kiss and toast goals), `wedding.bouquet.open`, `wedding.bouquet.toss`, `tiktok.connect`, `tiktok.disconnect`, and `wedding.simulate`.
+- Viewer crowd state (teams, kiss chant, toasts, petals, bouquet entrants, gift book) lives in the same reducer. Per-viewer cooldowns and team membership are bounded, and the public snapshot exposes only counts, the bouquet winner, and the top five gift-book entries.
+- `createWeddingServer({ standalone: false })` returns an embeddable instance (no port, `handleUpgrade`, `activate`/`deactivate`) for TikTok Live Studio.
 - The backend binds only `127.0.0.1:3108`. Tauri starts its own `wedding-backend` sidecar and uses an app-specific shutdown token.
 - The Tauri product and crate are named `Virtual Wedding Live` / `virtual-wedding-live`; the app identifier is `com.linhung.virtualweddinglive`.
 - App resources, logs, and local data resolve under the wedding app's own Tauri resource and application-data directories.

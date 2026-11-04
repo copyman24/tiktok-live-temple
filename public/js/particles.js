@@ -171,10 +171,12 @@ class TempleParticleEngine {
 
   spawnFloatingMerit(text = '+1 Công Đức', x = 540, y = 940, color = '#ffe082') {
     if (this.floatingTexts.length > 8) this.floatingTexts.shift();
+    // Chữ công đức sinh gần nhau thì xếp tầng lên trên để không chồng lên nhau.
+    const crowd = this.floatingTexts.filter((t) => Math.abs(t.x - x) < 160 && Math.abs(t.y - y) < 60).length;
     this.floatingTexts.push({
       text,
       x: x + (Math.random() - 0.5) * 36,
-      y,
+      y: y + crowd * 44,
       vy: -3.2,
       alpha: 1.0,
       color

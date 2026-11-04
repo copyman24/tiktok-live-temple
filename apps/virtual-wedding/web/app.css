@@ -50,7 +50,7 @@ h1 { margin-bottom: 7px; color: var(--wine-dark); font-family: Georgia, 'Times N
 .dashboard-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: start; gap: 22px; }
 .work-column, .side-column { display: grid; align-content: start; gap: 16px; min-width: 0; }
 .panel { border: 1px solid #e9e0d4; border-radius: 11px; background: var(--surface); box-shadow: 0 3px 14px #57331908; }
-.ceremony-section, .couple-section, .likes-section, .wishes-section, .simulator-section, .connect-section { padding: 19px 21px; }
+.ceremony-section, .couple-section, .likes-section, .wishes-section, .simulator-section, .connect-section, .crowd-section { padding: 19px 21px; }
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .section-heading .eyebrow, .subsection-heading .eyebrow, .preview-heading .eyebrow { margin-bottom: 5px; }
 h2 { margin-bottom: 0; color: var(--wine-dark); font-family: Georgia, 'Times New Roman', serif; font-size: 19px; font-weight: 500; letter-spacing: -.015em; }
@@ -173,3 +173,20 @@ h3 { margin-bottom: 0; color: #493c31; font-size: 12px; font-weight: 700; }
   .sim-form label:nth-child(3) { grid-column: span 2; }
   .sim-form button { grid-column: 2; justify-self: end; min-width: 96px; }
 }
+
+/* Crowd interaction panel */
+.crowd-section { display: flex; flex-direction: column; gap: 16px; }
+.crowd-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.crowd-card { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid #e5d9c7; border-radius: 12px; background: #fbf6ee; }
+.crowd-card small { color: #815b1e; font-size: 11px; font-weight: 700; letter-spacing: .06em; }
+.crowd-card b { color: #51121e; font-family: Georgia, 'Times New Roman', serif; font-size: 24px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.crowd-card span { color: #6c6258; font-size: 12px; }
+.crowd-card.is-bride { background: #fbf0f1; }
+.crowd-goals { flex-wrap: wrap; }
+.crowd-goals input { width: 90px; }
+.bouquet-box { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 16px; border: 1px dashed #d9c39b; border-radius: 12px; background: #fffaf1; }
+.bouquet-box p { margin: 4px 0 0; color: #6c6258; font-size: 13px; }
+.gift-book-dash .wish-list { max-height: 220px; overflow: auto; }
+@media (max-width: 900px) { .crowd-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bouquet-box { flex-direction: column; align-items: flex-start; } }
+
+.auto-goals { display: flex; align-items: center; gap: .5em; margin-top: .5rem; font-size: .85rem; opacity: .85; }
