@@ -6,6 +6,8 @@
   "scripts": {
     "start": "bun run server.js",
     "dev": "bun --watch server.js",
+    "postinstall": "bun scripts/setup-venv.js",
+    "setup:venv": "bun scripts/setup-venv.js",
     "build:backend": "bun scripts/build-backend.js",
     "build:sidecars:windows": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows-sidecars.ps1",
     "tauri": "tauri",
