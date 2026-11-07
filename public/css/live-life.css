@@ -1,0 +1,315 @@
+/* ==========================================================================
+   Sân khấu "sống" (public/js/live-life.js): camera, chim bay, Phật tử vãng lai,
+   lịch khóa lễ, đồng hồ âm lịch, pháp ngữ, mục tiêu thả tim, bình chọn, công đức giờ này.
+   Tọa độ theo khung 1080 x 1920 của sân khấu.
+   ========================================================================== */
+
+/* 1. Camera: các lớp cảnh nằm trong một khung, HUD (z >= 20) đứng yên bên ngoài. */
+.scene-camera {
+  position: absolute;
+  inset: 0;
+  width: 1080px;
+  height: 1920px;
+  z-index: 10;
+  transform-origin: 540px 760px;
+  animation: sceneCamera 150s ease-in-out infinite;
+}
+@keyframes sceneCamera {
+  0%, 6% { transform: scale(1) translate(0, 0); }
+  22%, 30% { transform: scale(1.045) translate(0, 8px); }
+  44%, 50% { transform: scale(1.045) translate(-14px, 6px); }
+  66%, 72% { transform: scale(1.045) translate(14px, 6px); }
+  88%, 100% { transform: scale(1) translate(0, 0); }
+}
+
+/* 4. Chim bay qua */
+.bird-flock {
+  position: absolute;
+  left: 0;
+  z-index: 16;
+  pointer-events: none;
+  animation: flockAcross 16s linear forwards;
+}
+.bird-flock.from-right { animation-name: flockAcrossBack; }
+@keyframes flockAcross {
+  from { transform: translate(-260px, 30px); }
+  to { transform: translate(1260px, -70px); }
+}
+@keyframes flockAcrossBack {
+  from { transform: translate(1260px, 20px) scaleX(-1); }
+  to { transform: translate(-260px, -80px) scaleX(-1); }
+}
+.bird {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  animation: birdFlap var(--flap, 0.4s) ease-in-out infinite alternate;
+}
+.bird svg { width: 100%; height: 100%; fill: rgba(255, 236, 190, 0.92); filter: drop-shadow(0 1px 2px rgba(60, 20, 0, 0.6)); }
+@keyframes birdFlap {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(0.35); }
+}
+
+/* 5. Phật tử vãng lai: đi lên thảm đỏ rồi khuất dần */
+.passerby {
+  position: absolute;
+  left: 540px;
+  top: 1790px;
+  z-index: 14;
+  width: 92px; /* đúng cỡ nhân vật trong sảnh */
+  height: 120px;
+  pointer-events: none;
+  transform-origin: 50% 100%;
+  animation: passerbyUp 18s linear forwards;
+}
+.passerby .devotee-sprite { width: 100%; height: 100%; object-fit: contain; }
+@keyframes passerbyUp {
+  0% { transform: translate(-50%, -100%) scale(1.12); opacity: 0; }
+  6% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translate(-50%, calc(-100% - 500px)) scale(0.62); opacity: 0; }
+}
+
+/* Thẻ chung: khung nâu đỏ viền vàng như bảng xếp hạng */
+.life-card {
+  position: absolute;
+  z-index: 22;
+  box-sizing: border-box;
+  border: 2px solid var(--lx-gold, #f4c862);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(91, 18, 12, 0.92) 0%, rgba(58, 9, 5, 0.92) 100%);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 227, 154, 0.3);
+  color: var(--lx-cream, #fff3d6);
+  font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  pointer-events: none;
+}
+
+/* 7. Đồng hồ + âm lịch (góc trái trên) và 6. đếm ngược khóa lễ (góc phải trên) */
+.temple-date,
+.ceremony-clock {
+  top: 24px;
+  width: 196px;
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.15;
+}
+.temple-date { left: 16px; }
+.ceremony-clock { right: 16px; }
+.td-time,
+.cc-time {
+  color: var(--lx-gold-bright, #ffe39a);
+  font-size: 42px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.td-day,
+.cc-label { font-size: 19px; font-weight: 600; }
+.td-lunar,
+.cc-sub { margin-top: 2px; font-size: 18px; color: var(--lx-gold, #f4c862); }
+.temple-date.is-special { border-color: #ffd36a; box-shadow: 0 0 18px rgba(255, 211, 106, 0.55), 0 6px 16px rgba(0, 0, 0, 0.45); }
+.ceremony-clock.is-live {
+  border-color: #ffd36a;
+  animation: ccPulse 2.4s ease-in-out infinite;
+}
+@keyframes ccPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(255, 211, 106, 0), 0 6px 16px rgba(0, 0, 0, 0.45); }
+  50% { box-shadow: 0 0 22px rgba(255, 211, 106, 0.7), 0 6px 16px rgba(0, 0, 0, 0.45); }
+}
+
+/* 6. Chữ kinh chạy: thay dòng chữ chạy trong lúc khóa lễ */
+.ceremony-verse {
+  position: absolute;
+  left: 0;
+  top: 168px;
+  width: 1080px;
+  height: 50px;
+  z-index: 22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: linear-gradient(90deg, rgba(58, 9, 5, 0) 0%, rgba(58, 9, 5, 0.94) 12%, rgba(58, 9, 5, 0.94) 88%, rgba(58, 9, 5, 0) 100%);
+  color: var(--lx-gold-bright, #ffe39a);
+  font-family: 'Noto Serif', serif;
+  font-size: 25px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  pointer-events: none;
+}
+.ceremony-verse .verse-seal {
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--lx-gold, #f4c862);
+  color: var(--lx-maroon-deep, #3a0905);
+  font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  font-size: 18px;
+}
+.ceremony-verse .verse-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 900px; }
+.ceremony-verse .verse-text.is-in { animation: verseIn 0.9s ease both; }
+@keyframes verseIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.stage-9x16.ceremony-on .ceremony-verse { opacity: 1; }
+.stage-9x16.ceremony-on .temple-marquee { opacity: 0; transition: opacity 1.2s ease; }
+
+/* 8. Pháp ngữ (cột trái, dưới cột quà) */
+.dharma-quote {
+  left: 16px;
+  top: 552px;
+  width: 440px;
+  padding: 10px 16px 12px;
+}
+.dharma-quote.is-in { animation: quoteIn 1.4s ease both; }
+@keyframes quoteIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.dq-source {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--lx-gold, #f4c862);
+  color: var(--lx-maroon-deep, #3a0905);
+  font-size: 15px;
+  font-weight: 700;
+}
+.dq-text {
+  margin: 0;
+  font-family: 'Noto Serif', serif;
+  font-size: 21px;
+  line-height: 1.35;
+  color: var(--lx-cream, #fff3d6);
+}
+
+/* 9. Mục tiêu thả tim (cột phải, dưới bảng xếp hạng) */
+.like-goal {
+  right: 14px;
+  top: 540px;
+  width: 340px;
+  padding: 8px 14px 10px;
+}
+.lg-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; white-space: nowrap; }
+.lg-title { font-size: 18px; font-weight: 700; color: var(--lx-gold-bright, #ffe39a); }
+.lg-lit { font-size: 15px; color: var(--lx-gold, #f4c862); white-space: nowrap; }
+.lg-bar {
+  height: 14px;
+  margin: 6px 0 4px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(244, 200, 98, 0.5);
+  overflow: hidden;
+}
+.lg-bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff7aa2 0%, #ffd36a 100%);
+  transition: width 0.8s ease;
+}
+.lg-count { font-size: 17px; text-align: right; font-variant-numeric: tabular-nums; }
+.like-goal.is-done { animation: goalDone 1.6s ease; }
+@keyframes goalDone {
+  0%, 100% { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45); }
+  35% { box-shadow: 0 0 34px rgba(255, 211, 106, 0.95), 0 6px 16px rgba(0, 0, 0, 0.45); transform: scale(1.04); }
+}
+
+/* 10. Bình chọn (cột phải, dưới mục tiêu thả tim) */
+.poll-card {
+  right: 14px;
+  top: 638px;
+  width: 340px;
+  padding: 8px 14px 10px;
+}
+.pc-head { display: flex; justify-content: space-between; align-items: center; }
+.pc-seal {
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--lx-gold, #f4c862);
+  color: var(--lx-maroon-deep, #3a0905);
+  font-size: 15px;
+  font-weight: 700;
+}
+.pc-left { font-size: 15px; color: var(--lx-gold, #f4c862); font-variant-numeric: tabular-nums; }
+.pc-question { margin: 5px 0 4px; font-size: 18px; font-weight: 700; color: var(--lx-gold-bright, #ffe39a); line-height: 1.2; }
+.pc-options { display: flex; flex-direction: column; gap: 4px; }
+.pc-option {
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  grid-template-rows: auto 6px;
+  column-gap: 8px;
+  align-items: center;
+  font-size: 17px;
+}
+.pc-num {
+  grid-row: 1 / 3;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--lx-gold, #f4c862);
+  color: var(--lx-maroon-deep, #3a0905);
+  font-weight: 800;
+  text-align: center;
+  line-height: 26px;
+}
+.pc-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pc-votes { font-weight: 700; font-variant-numeric: tabular-nums; color: var(--lx-gold-bright, #ffe39a); }
+.pc-bar { grid-column: 2 / 4; height: 6px; border-radius: 999px; background: rgba(0, 0, 0, 0.4); overflow: hidden; }
+.pc-bar i { display: block; height: 100%; background: linear-gradient(90deg, #ffd36a, #ff9f43); transition: width 0.6s ease; }
+.pc-foot { margin-top: 5px; font-size: 14px; color: rgba(255, 243, 214, 0.85); text-align: center; }
+.pc-foot b { color: var(--lx-gold-bright, #ffe39a); }
+
+/* 11. Công đức giờ này: chồng đúng lên bảng "Tấm lòng thành", luân phiên mờ dần */
+.hud-right-leaderboard { transition: opacity 0.8s ease; }
+.hourly-board { opacity: 0; pointer-events: none; }
+.hourly-board.is-shown { opacity: 1; }
+.stage-9x16.hourly-shown .hud-right-leaderboard:not(.hourly-board) { opacity: 0; }
+
+/* 13. Đổi hình nền: hiện dần ảnh mới */
+.sanctuary-bg-img.bg-swap-in { animation: bgSwapIn 1.2s ease both; }
+@keyframes bgSwapIn {
+  from { opacity: 0.25; }
+  to { opacity: 1; }
+}
+
+/* Nền bố cục "hall" (Đại điện): tượng Phật nhỏ cuối điện, tay ở (540, 526). Ẩn hào quang lớn,
+   quầng sáng trên tay và cột sáng thu nhỏ theo tượng; đỉnh đồng giữa sàn đúng chỗ lư hương cũ. */
+.stage-9x16[data-bg-layout='hall'] .buddha-halo-system { display: none; }
+.stage-9x16[data-bg-layout='hall'] .lotus-hand-halo { top: 526px; width: 80px; height: 60px; }
+.stage-9x16[data-bg-layout='hall'] .sacred-light-beam { top: 545px; height: 360px; width: 70px; opacity: 0.45; }
+
+/* Nền bố cục "hall3d" (Đại điện 3D, ảnh AI): tay Phật ở (540, 505), miệng đỉnh đồng ở y ~830,
+   6 đệm đỏ ở y ~1040. Dời lư hương (que hương + khói), đệm VIP và quầng sáng cho khớp ảnh. */
+.stage-9x16[data-bg-layout='hall3d'] .buddha-halo-system { display: none; }
+.stage-9x16[data-bg-layout='hall3d'] .lotus-hand-halo { top: 505px; width: 90px; height: 66px; }
+.stage-9x16[data-bg-layout='hall3d'] .sacred-light-beam { top: 525px; height: 300px; width: 70px; opacity: 0.4; }
+.stage-9x16[data-bg-layout='hall3d'] .incense-burner-zone { top: 725px; }
+.stage-9x16[data-bg-layout='hall3d'] .vip-devotee-slot { top: 1040px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .vip-devotee-slot:nth-child(1) { left: 109px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .vip-devotee-slot:nth-child(2) { left: 224px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .vip-devotee-slot:nth-child(3) { left: 341px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .vip-devotee-slot:nth-child(4) { left: 740px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .vip-devotee-slot:nth-child(5) { left: 855px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .vip-devotee-slot:nth-child(6) { left: 970px !important; }
+/* Đệm VIP trong ảnh nằm đúng chỗ 4 nút pháp khí: dồn 4 nút thành một cột bên phải (dưới bảng xếp hạng),
+   thanh thả tim + bình chọn sang cột trái, ẩn pháp ngữ. Người VIP quỳ trên đệm không bị che. */
+.stage-9x16[data-bg-layout='hall3d'] .dharma-quote { display: none; }
+.stage-9x16[data-bg-layout='hall3d'] .like-goal { left: 16px; right: auto; top: 552px; }
+.stage-9x16[data-bg-layout='hall3d'] .poll-card { left: 16px; right: auto; top: 652px; }
+.stage-9x16[data-bg-layout='hall3d'] .ritual-hotspot { left: auto !important; right: 26px !important; bottom: auto !important; }
+.stage-9x16[data-bg-layout='hall3d'] .fortune-hotspot { top: 545px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .fish-hotspot { top: 633px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .bell-hotspot { top: 721px !important; }
+.stage-9x16[data-bg-layout='hall3d'] .woodfish-hotspot { top: 809px !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-camera { animation: none; }
+}

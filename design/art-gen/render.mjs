@@ -9,10 +9,21 @@ import { readdirSync } from 'node:fs';
 function findChromium() {
   if (process.env.CHROME_PATH) return process.env.CHROME_PATH;
   const cache = join(homedir(), '.cache', 'ms-playwright');
-  if (!existsSync(cache)) return undefined;
-  const dir = readdirSync(cache).filter((d) => d.startsWith('chromium-')).sort().pop();
-  const bin = dir && join(cache, dir, 'chrome-linux64', 'chrome');
-  return bin && existsSync(bin) ? bin : undefined;
+  if (existsSync(cache)) {
+    const dir = readdirSync(cache).filter((d) => d.startsWith('chromium-')).sort().pop();
+    const bin = dir && join(cache, dir, 'chrome-linux64', 'chrome');
+    if (bin && existsSync(bin)) return bin;
+  }
+  // Windows / macOS: use an installed Chrome or Edge
+  const installed = [
+    join(process.env.PROGRAMFILES || 'C:\\Program Files', 'Google', 'Chrome', 'Application', 'chrome.exe'),
+    join(process.env['PROGRAMFILES(X86)'] || 'C:\\Program Files (x86)', 'Google', 'Chrome', 'Application', 'chrome.exe'),
+    join(process.env.LOCALAPPDATA || '', 'Google', 'Chrome', 'Application', 'chrome.exe'),
+    join(process.env['PROGRAMFILES(X86)'] || 'C:\\Program Files (x86)', 'Microsoft', 'Edge', 'Application', 'msedge.exe'),
+    join(process.env.PROGRAMFILES || 'C:\\Program Files', 'Microsoft', 'Edge', 'Application', 'msedge.exe'),
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+  ];
+  return installed.find((p) => existsSync(p));
 }
 
 export async function withRasterizer(fn) {

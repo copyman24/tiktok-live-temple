@@ -28,7 +28,11 @@
   const particles = new window.TempleParticleEngine(canvas);
   const audio = new window.TempleAudioEngine();
   const commentBubblesLayer = document.getElementById('commentBubblesLayer');
+  // Bóng chat trên đầu nhân vật: mỗi người xem một bóng, tối đa MAX_COMMENT_BUBBLES bóng cùng lúc.
+  // activeCommentBubble = bóng mới nhất (sớ cầu nguyện so với bóng này để không hiện trùng).
+  const commentBubbles = new Map(); // viewerId -> record
   let activeCommentBubble = null;
+  const MAX_COMMENT_BUBBLES = 4;
   const COMMENT_BUBBLE_DURATION_MS = 4800;
   const COMMENT_BUBBLE_EXIT_MS = 260;
 
@@ -45,9 +49,17 @@
 
   // 3. Vẽ các nén nhang đang cháy trong Lư Hương Đỉnh Đồng (x=540, y=895)
   const incenseHolder = document.getElementById('incenseSticksHolder');
+  const incenseZone = document.getElementById('incenseBurnerZone');
   let renderedStickCount = 0;
+  let lastIncenseCount = 9;
+  // Chân que hương (y trên sân khấu): theo vị trí lư hương trong CSS (top 790 -> 895). Nền khác có thể dời lư hương.
+  function incenseBaseY() {
+    const top = parseFloat(incenseZone ? getComputedStyle(incenseZone).top : '');
+    return (Number.isFinite(top) ? top : 790) + 105;
+  }
 
   function renderIncenseSticks(count) {
+    lastIncenseCount = count;
     const target = Math.max(3, Math.min(27, Number(count) || 9));
     if (target === renderedStickCount && incenseHolder.children.length > 0) return;
     renderedStickCount = target;
@@ -75,10 +87,38 @@
 
       const rad = (angleDeg * Math.PI) / 180;
       const tipX = 540 + (leftPx - 65) + Math.sin(rad) * heightPx;
-      const tipY = 895 - Math.cos(rad) * heightPx;
+      const tipY = incenseBaseY() - Math.cos(rad) * heightPx;
       tips.push({ x: tipX, y: tipY });
     }
     particles.setIncenseTips(tips);
+  }
+
+  // 3b. Bộ trang phục Phật tử: 4 màu áo tràng (lam, nâu, trắng, vàng) × tóc búi (nữ) / tóc ngắn (nam).
+  // Vẽ bằng design/art-gen/devotees.mjs. Mỗi người xem luôn mặc CÙNG một bộ (băm theo uniqueId),
+  // dù ngồi đạo tràng, lên đệm VIP hay đi dâng hương; ghế trống dùng bộ theo số ghế cho đạo tràng đa dạng.
+  const DEVOTEE_VARIANTS = ['lam-nu', 'lam-nam', 'nau-nu', 'nau-nam', 'trang-nu', 'trang-nam', 'vang-nu', 'vang-nam'];
+  const DEFAULT_VARIANT = 'lam-nu';
+  const DEVOTEE_POSES = ['walk1', 'walk2', 'kneelDown', 'kneel', 'forehead', 'bowMid', 'prostrate', 'prostrateDeep'];
+  const framesOf = (variant) => Object.fromEntries(
+    DEVOTEE_POSES.map((pose) => [pose, `/assets/devotees/${DEVOTEE_VARIANTS.includes(variant) ? variant : DEFAULT_VARIANT}/${pose}.webp`])
+  );
+  function variantFor(key) {
+    const text = String(key || '');
+    let h = 2166136261;
+    for (let i = 0; i < text.length; i++) h = Math.imul(h ^ text.charCodeAt(i), 16777619);
+    return DEVOTEE_VARIANTS[(h >>> 0) % DEVOTEE_VARIANTS.length];
+  }
+  // Giải mã sẵn mọi khung hình của mọi bộ (64 ảnh WebP, ~1,2 MB): đổi áo / đổi tư thế không bao giờ nháy.
+  const preloadedFrames = DEVOTEE_VARIANTS.flatMap((variant) => Object.values(framesOf(variant)).map((url) => {
+    const img = new Image();
+    img.src = url;
+    img.decode?.().catch(() => {});
+    return img;
+  }));
+  function dressSprite(img, variant, pose = 'kneel') {
+    if (!img) return;
+    const url = framesOf(variant)[pose];
+    if (img.getAttribute('src') !== url) img.src = url;
   }
 
   // 4. Dựng Hàng 6 Đệm Quỳ VIP (Top 6 Thí Chủ trên bục gỗ y=1188)
@@ -91,141 +131,404 @@
     { x: 940, y: 1188, rank: 6 }
   ];
 
+  // Six slots are created ONCE and only their name / viewer id change. Rebuilding them with innerHTML
+  // on every state update (each like, gift, comment) re-created the sprites: the images reloaded, the
+  // bow animation restarted and comment bubbles lost their anchor, so the stage flickered nonstop.
+  let vipSlots = null;
   function renderVipCushions(leaderboard = []) {
     const layer = document.getElementById('vipCushionsLayer');
     if (!layer) return;
 
-    layer.innerHTML = VIP_CUSHION_COORDS.map((slot, idx) => {
+    if (!vipSlots) {
+      layer.innerHTML = '';
+      vipSlots = VIP_CUSHION_COORDS.map((slot, idx) => {
+        const el = document.createElement('div');
+        el.className = 'vip-devotee-slot';
+        el.style.left = `${slot.x}px`;
+        el.style.top = `${slot.y}px`;
+        el.style.zIndex = String(12 + idx);
+        el.style.display = 'none'; // .vip-devotee-slot is display:flex, which would override [hidden]
+        const sprite = document.createElement('img');
+        sprite.src = framesOf(DEFAULT_VARIANT).kneel;
+        sprite.alt = 'VIP Devotee';
+        sprite.className = 'devotee-sprite';
+        const pill = document.createElement('div');
+        pill.className = 'vip-rank-pill';
+        const num = document.createElement('span');
+        num.className = 'vip-rank-num';
+        num.textContent = String(slot.rank);
+        const name = document.createElement('span');
+        name.className = 'vip-rank-name';
+        pill.append(num, name);
+        el.append(sprite, pill);
+        layer.appendChild(el);
+        return { el, sprite, name, sig: '' };
+      });
+    }
+
+    vipSlots.forEach((slot, idx) => {
       const dev = leaderboard[idx];
-      if (!dev) return '';
-      return `
-        <div class="vip-devotee-slot" data-viewer-id="${escapeHtml(dev.uniqueId || dev.name)}" style="left: ${slot.x}px; top: ${slot.y}px; z-index: ${12 + idx};">
-          <img src="/assets/devotee.png" alt="VIP Devotee" class="devotee-sprite" />
-          <div class="vip-rank-pill">
-            <span class="vip-rank-num">${slot.rank}</span>
-            <span class="vip-rank-name">${escapeHtml(shortenName(dev.name, 12))}</span>
-          </div>
-        </div>
-      `;
-    }).join('');
+      const id = dev ? String(dev.uniqueId || dev.name) : '';
+      const label = dev ? shortenName(dev.name, 12) : '';
+      const sig = `${id}|${label}`;
+      if (sig === slot.sig) return;
+      slot.sig = sig;
+      slot.el.style.display = dev ? '' : 'none';
+      if (dev) {
+        slot.el.dataset.viewerId = id;
+        slot.el.dataset.variant = variantFor(id);
+        dressSprite(slot.sprite, slot.el.dataset.variant);
+      } else delete slot.el.dataset.viewerId;
+      slot.name.textContent = label;
+    });
   }
 
   // 5. Dựng Đạo Tràng 40 Phật Tử Quỳ Lễ Hai Bên Thảm Đỏ (5 Hàng x 4 Cột mỗi bên)
   const congregationHall = document.getElementById('congregationHall');
   const HALL_SEAT_COORDS = [];
 
+  // Đạo tràng đông kín hai bên thảm đỏ: 8 hàng × 5 người mỗi bên = 80 chỗ, từ sau đệm VIP xuống sát
+  // 3 thẻ dưới đáy. Hàng xa nhỏ, hàng gần to; mép trong bám theo mép thảm đỏ (thảm rộng dần khi tới gần).
   (function buildHallGrid() {
-    const rows = 5;
-    const colsPerSide = 4;
+    const rows = 8;
+    const colsPerSide = 5;
+    const yFar = 1245;
+    const yNear = 1662; // chừa chỗ cho hàng người đứng phía trước (đầu + thân lộ trên 3 ô dưới)
     for (let r = 0; r < rows; r++) {
       const progress = r / (rows - 1); // 0 (xa) -> 1 (gần)
-      const y = Math.round(1290 + progress * 355); // 1290 -> 1645
-      const scale = +(0.76 + progress * 0.28).toFixed(2);
+      const y = Math.round(yFar + progress * (yNear - yFar));
+      const scale = +(0.6 + progress * 0.32).toFixed(2);
+      const carpetEdge = Math.round(335 - (y - 1290) * 0.135); // mép thảm bên trái tại độ sâu này
+      const outer = 40;
 
       // Cánh trái thảm đỏ
-      const leftInnerX = Math.round(335 - progress * 48); // mép thảm mở rộng dần
-      const leftOuterX = 48;
       for (let c = 0; c < colsPerSide; c++) {
         const t = c / (colsPerSide - 1);
-        const x = Math.round(leftOuterX + t * (leftInnerX - leftOuterX));
-        HALL_SEAT_COORDS.push({ side: 'L', row: r, col: c, x, y, scale });
+        HALL_SEAT_COORDS.push({ side: 'L', row: r, col: c, x: Math.round(outer + t * (carpetEdge - outer)), y, scale });
       }
+      // Cánh phải thảm đỏ (đối xứng qua giữa thảm, x = 540)
+      for (let c = 0; c < colsPerSide; c++) {
+        const t = c / (colsPerSide - 1);
+        HALL_SEAT_COORDS.push({ side: 'R', row: r, col: c, x: Math.round(1080 - carpetEdge + t * (carpetEdge - outer)), y, scale });
+      }
+    }
 
-      // Cánh phải thảm đỏ
-      const rightInnerX = Math.round(745 + progress * 48);
-      const rightOuterX = 1032;
-      for (let c = 0; c < colsPerSide; c++) {
-        const t = c / (colsPerSide - 1);
-        const x = Math.round(rightInnerX + t * (rightOuterX - rightInnerX));
-        HALL_SEAT_COORDS.push({ side: 'R', row: r, col: c, x, y, scale });
-      }
+    // Hàng người ĐỨNG gần người xem nhất (khoảng trống trên 3 ô dưới): một hàng dài kín bề ngang, đứng cả
+    // trên thảm đỏ. Chân khuất sau 3 ô dưới, chỉ thấy đầu và thân. Cột 0 bên trái = ngoài cùng, bên phải = sát giữa
+    // (giống quy ước các hàng quỳ).
+    const yStand = 1840;
+    const standScale = 1.12; // gần người xem nhất nên to hơn hàng quỳ; lộ ~100px đầu + thân trên 3 ô dưới
+    const standCount = 16;
+    const standLeft = 46;
+    const standStep = (1080 - standLeft * 2) / (standCount - 1);
+    const standPerSide = standCount / 2;
+    for (let i = 0; i < standCount; i++) {
+      const x = Math.round(standLeft + i * standStep);
+      const side = i < standPerSide ? 'L' : 'R';
+      const col = side === 'L' ? i : i - standPerSide;
+      // Người đứng sát nhau (~66px) mà bảng tên rộng ~110px: chỉ cách một người mới nhận người bình luận có tên,
+      // người còn lại là người đứng cho đông (không bảng tên), để tên không đè lên nhau.
+      const decor = i % 2 === 1;
+      HALL_SEAT_COORDS.push({ side, row: rows, col, x, y: yStand, scale: standScale, standing: true, perSide: standPerSide, decor });
     }
   })();
 
-  let lastRenderedLeaderboardJson = '';
+  // Hai hàng gần chính điện nhất (16 chỗ) dành cho người vừa tặng quà;
+  // ba hàng sau (24 chỗ) là người bình luận được chọn ngẫu nhiên.
+  const DONOR_ROWS = 2;
+  const COMMENTER_MIN_STAY_MS = 20000;
+  const hallSeats = [];
+  let vipViewerIds = new Set();
+  let hallHasSynced = false;
 
-  function renderCongregationHall(leaderboard = []) {
+  // Tên + avatar người xem nằm DƯỚI chân nhân vật (nhìn thấy trọn nhân vật), trên một lớp riêng phía trên
+  // cả đạo tràng: nếu đặt trong ghế thì hàng ngồi phía trước sẽ che mất bảng tên của hàng sau.
+  let hallLabelsLayer = null;
+
+  (function mountHallSeats() {
     if (!congregationHall) return;
-    // Những người xếp từ hạng 7 trở đi ngồi ở các vị trí đầu tiên cạnh thảm đỏ
-    const hallViewers = leaderboard.slice(6);
-    const sig = JSON.stringify(hallViewers.map((d) => [d.uniqueId, d.name, d.avatar, d.merit]));
-    if (sig === lastRenderedLeaderboardJson && congregationHall.children.length > 0) return;
-    lastRenderedLeaderboardJson = sig;
-
-    // Ưu tiên gắn thẻ tên vào các ghế gần thảm đỏ dễ nhìn nhất
-    const labeledSeatIndices = [
-      3, 4, 11, 12, 19, 20, 27, 28, 35, 36, 2, 5, 10, 13, 18, 21, 26, 29
-    ];
-    const seatViewerMap = new Map();
-    hallViewers.forEach((viewer, idx) => {
-      if (idx < labeledSeatIndices.length) {
-        seatViewerMap.set(labeledSeatIndices[idx], viewer);
-      }
+    congregationHall.innerHTML = '';
+    hallLabelsLayer = document.createElement('div');
+    hallLabelsLayer.className = 'hall-labels-layer';
+    hallLabelsLayer.setAttribute('aria-hidden', 'true');
+    congregationHall.after(hallLabelsLayer);
+    HALL_SEAT_COORDS.forEach((coord, idx) => {
+      const kind = coord.decor ? 'decor' : coord.row < DONOR_ROWS ? 'donor' : 'commenter';
+      const el = document.createElement('div');
+      el.className = `hall-seat ${kind}-seat${coord.standing ? ' standing-seat' : ''}`;
+      el.dataset.seatIdx = String(idx);
+      const pose = coord.standing ? 'walk1' : 'kneel'; // hàng đứng: khung đứng (bước nhẹ), các hàng khác quỳ
+      el.style.left = `${coord.x}px`;
+      el.style.top = `${coord.y}px`;
+      el.style.zIndex = String(20 + coord.row * 2);
+      el.style.transform = `translate(-50%, -100%) scale(${coord.scale})`;
+      // Ghế trống: bộ áo theo số ghế (idx × 5 đi hết 8 bộ, ghế cạnh nhau khác nhau).
+      const baseVariant = DEVOTEE_VARIANTS[(idx * 5 + coord.row) % DEVOTEE_VARIANTS.length];
+      el.dataset.variant = baseVariant;
+      const sprite = document.createElement('img');
+      sprite.src = framesOf(baseVariant)[pose];
+      sprite.alt = '';
+      sprite.className = 'devotee-sprite';
+      sprite.style.animationDelay = `${((idx * 0.27) % 3.5).toFixed(2)}s`;
+      el.appendChild(sprite);
+      congregationHall.appendChild(el);
+      // Bảng tên của ghế: neo ở chân nhân vật, co giãn theo hàng như nhân vật.
+      const label = document.createElement('div');
+      label.className = `hall-label ${kind}-label`;
+      label.style.left = `${coord.x}px`;
+      // Ghế cạnh nhau sát nhau: so le bảng tên (cột lẻ thấp hơn một chút) để tên không đè lên nhau.
+      // Bảng tên thu nhỏ theo hàng nhưng ít hơn nhân vật: hàng xa nhất 74% (thay vì 60%) cho dễ đọc,
+      // hàng gần gần như giữ nguyên. Ghế cạnh nhau sát nhau: cột lẻ thấp hơn một chút để tên không đè nhau.
+      // Hàng đứng: bảng tên nhỏ (85%) sát mép 3 ô dưới, để đầu và vai người đứng không bị che.
+      const labelScale = coord.standing ? 0.85 : +(coord.scale + (1 - coord.scale) * 0.35).toFixed(3);
+      // So le QUANH chân nhân vật: cột chẵn nhích lên (che vạt áo), cột lẻ ngay dưới chân. Bảng tên luôn
+      // dính với nhân vật của nó (so le xuống sâu thì bảng tên lọt vào hàng dưới, nhìn như của người khác).
+      // Hàng đứng: chân khuất sau 3 ô dưới (top 1804) nên bảng tên nằm ngay trên mép 3 ô, trước thân người đó.
+      label.style.top = coord.standing
+        ? `${1774 + (coord.col % 2 ? 0 : -4)}px`
+        : `${coord.y + Math.round((coord.col % 2 ? 6 : -30) * labelScale)}px`;
+      label.style.transform = `translate(-50%, 0) scale(${labelScale})`;
+      label.dataset.x = String(coord.x);
+      label.dataset.scale = String(labelScale);
+      hallLabelsLayer.appendChild(label);
+      // Độ "gần thảm đỏ": 0 là ghế sát thảm, dễ nhìn nhất.
+      const perSide = coord.perSide || 5; // hàng quỳ 5 người mỗi bên: cột 4 (trái) / 0 (phải) sát thảm
+      const inner = coord.side === 'L' ? perSide - 1 - coord.col : coord.col;
+      hallSeats.push({ el, sprite, label, baseVariant, kind, pose, standing: Boolean(coord.standing), row: coord.row, inner, side: coord.side, viewer: null, sig: '', lastActive: 0 });
     });
+  })();
 
-    congregationHall.innerHTML = HALL_SEAT_COORDS.map((seat, idx) => {
-      const viewer = seatViewerMap.get(idx);
-      const badgeHtml = viewer
-        ? `
-          <div class="seat-badge">
-            <span class="seat-avatar">${
-              viewer.avatar
-                ? `<img src="${escapeHtml(viewer.avatar)}" alt="" />`
-                : escapeHtml(String(viewer.name || 'P').charAt(0).toUpperCase())
-            }</span>
-            <span class="seat-username">${escapeHtml(shortenName(viewer.name, 11))}</span>
-          </div>
-        `
-        : '';
+  // Ghế người tặng quà: hàng đầu trước, ghế sát thảm trước, xen kẽ trái/phải.
+  const donorSeats = hallSeats
+    .filter((s) => s.kind === 'donor')
+    .sort((a, b) => a.row - b.row || a.inner - b.inner || (a.side === 'L' ? -1 : 1));
+  const commenterSeats = hallSeats.filter((s) => s.kind === 'commenter');
 
-      return `
-        <div
-          class="hall-seat"
-          data-seat-idx="${idx}"
-          ${viewer ? `data-viewer-id="${escapeHtml(viewer.uniqueId || viewer.name)}"` : ''}
-          style="left: ${seat.x}px; top: ${seat.y}px; z-index: ${20 + seat.row * 2}; transform: translate(-50%, -100%) scale(${seat.scale});"
-        >
-          <img
-            src="/assets/devotee.png"
-            alt="Phật tử"
-            class="devotee-sprite"
-            style="animation-delay: ${((idx * 0.27) % 3.5).toFixed(2)}s;"
-          />
-          ${badgeHtml}
-        </div>
-      `;
-    }).join('');
+  function normalizeViewer(raw) {
+    if (!raw) return null;
+    const id = String(raw.id || raw.uniqueId || raw.name || '').slice(0, 96);
+    const name = String(raw.name || raw.user || '').trim();
+    if (!id || !name) return null;
+    const avatar = /^https?:\/\//i.test(String(raw.avatar || '')) ? String(raw.avatar) : '';
+    return { id, name, avatar, giftName: raw.giftName || '' };
   }
 
-  // Preload toàn bộ 8 frame nhân vật vào bộ nhớ để chuyển frame mượt 0ms
-  const SPRITE_FRAMES = {
-    walk1: '/assets/devotee_walk.png',
-    walk2: '/assets/devotee_walk_2.png',
-    kneelDown: '/assets/devotee_kneel_down.png',
-    kneel: '/assets/devotee.png',
-    forehead: '/assets/devotee_bow.png',
-    bowMid: '/assets/devotee_bow_mid.png',
-    prostrate: '/assets/devotee_prostrate.png',
-    prostrateDeep: '/assets/devotee_prostrate_deep.png'
-  };
-  Object.values(SPRITE_FRAMES).forEach((url) => {
-    const img = new Image();
-    img.src = url;
-  });
+  // Mặt AI cho nhân vật ảo: người xem không có ảnh TikTok thật (giả lập, thử nghiệm) được gán cố định một
+  // ảnh trong public/assets/avatars/ai/ theo tài khoản. Thư mục trống thì vẫn hiện chữ cái như cũ.
+  let aiFacePool = [];
+  function aiFaceFor(key) {
+    if (!aiFacePool.length) return '';
+    let h = 2166136261;
+    const s = String(key || '');
+    for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619);
+    return aiFacePool[(h >>> 0) % aiFacePool.length];
+  }
+  function faceUrlFor(avatar, key) {
+    return avatar || aiFaceFor(key);
+  }
+  fetch('/api/ai-avatars')
+    .then((r) => (r.ok ? r.json() : { urls: [] }))
+    .then(({ urls }) => {
+      if (!Array.isArray(urls) || !urls.length) return;
+      aiFacePool = urls;
+      urls.forEach((url) => { new Image().src = url; });
+      // Ghế đã có người trước khi danh sách ảnh về: vẽ lại bảng tên của người chưa có ảnh.
+      hallSeats.forEach((seat) => {
+        if (seat.viewer && !seat.viewer.avatar) {
+          const viewer = seat.viewer;
+          seat.sig = '';
+          setSeatOccupant(seat, viewer);
+        }
+      });
+    })
+    .catch(() => {});
 
-  function pulseHallBowing() {
+  function buildSeatFace(viewer) {
+    const face = document.createElement('span');
+    face.className = 'seat-face';
+    const initial = viewer.name.charAt(0).toUpperCase() || 'P';
+    const src = faceUrlFor(viewer.avatar, viewer.id);
+    if (src) {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '';
+      img.referrerPolicy = 'no-referrer';
+      img.onerror = () => {
+        img.remove();
+        face.textContent = initial;
+      };
+      face.appendChild(img);
+    } else {
+      face.textContent = initial;
+    }
+    return face;
+  }
+
+  // Ghế sát mép sân khấu (x 40 / 1040): bảng tên đặt giữa nhân vật sẽ tràn ra ngoài và bị cắt chữ.
+  // Dịch bảng tên vào trong vừa đủ để nằm trọn trong khung (cách mép 8px).
+  function fitLabelInStage(label) {
+    const x = Number(label.dataset.x);
+    const scale = Number(label.dataset.scale) || 1;
+    const half = (label.offsetWidth * scale) / 2;
+    const shift = x - half < 8 ? 8 - (x - half) : x + half > 1072 ? 1072 - (x + half) : 0;
+    label.style.transform = `translate(calc(-50% + ${Math.round(shift / scale)}px), 0) scale(${scale})`;
+  }
+  // Phông chữ tải xong thì tên rộng/hẹp đi một chút: đo lại các bảng tên đang có người.
+  document.fonts?.ready.then(() => hallSeats.forEach((seat) => { if (seat.viewer) fitLabelInStage(seat.label); }));
+
+  function setSeatOccupant(seat, viewer, { arriving = false } = {}) {
+    const sig = viewer ? `${viewer.id}|${viewer.name}|${viewer.avatar}` : '';
+    if (sig === seat.sig) return;
+    seat.sig = sig;
+    seat.viewer = viewer;
+    seat.label.replaceChildren();
+    seat.label.classList.remove('seat-arrive');
+    // Người ngồi mặc bộ áo của mình; ghế trống trở lại bộ của ghế.
+    seat.el.dataset.variant = viewer ? variantFor(viewer.id) : seat.baseVariant;
+    dressSprite(seat.sprite, seat.el.dataset.variant, seat.pose || 'kneel');
+    if (!viewer) {
+      seat.el.removeAttribute('data-viewer-id');
+      seat.el.classList.remove('is-occupied');
+      return;
+    }
+    seat.el.dataset.viewerId = viewer.id;
+    seat.el.classList.add('is-occupied');
+    const occupant = document.createElement('div');
+    occupant.className = 'seat-occupant';
+    const name = document.createElement('span');
+    name.className = 'seat-name';
+    name.textContent = shortenName(viewer.name, 10);
+    occupant.append(buildSeatFace(viewer), name);
+    seat.label.appendChild(occupant);
+    fitLabelInStage(seat.label);
+    if (arriving) {
+      void seat.label.offsetWidth;
+      seat.label.classList.add('seat-arrive');
+      setTimeout(() => seat.label.classList.remove('seat-arrive'), 1800);
+    }
+  }
+
+  function syncDonorRows(recentDonors = []) {
+    const donors = recentDonors.map(normalizeViewer).filter((d) => d && !vipViewerIds.has(d.id));
+    const wanted = new Map(donors.map((d) => [d.id, d]));
+    donorSeats.forEach((seat) => {
+      if (seat.viewer && !wanted.has(seat.viewer.id)) setSeatOccupant(seat, null);
+    });
+    // Mới nhất trước: người vừa tặng quà nhận ghế trống đẹp nhất còn lại; người cũ giữ nguyên chỗ.
+    donors.forEach((donor) => {
+      const seated = donorSeats.find((s) => s.viewer?.id === donor.id);
+      if (seated) {
+        setSeatOccupant(seated, donor);
+        return;
+      }
+      const free = donorSeats.find((s) => !s.viewer);
+      if (!free) return;
+      const asCommenter = commenterSeats.find((s) => s.viewer?.id === donor.id);
+      if (asCommenter) setSeatOccupant(asCommenter, null);
+      setSeatOccupant(free, donor, { arriving: hallHasSynced });
+    });
+  }
+
+  function pickRandom(list) {
+    return list[Math.floor(Math.random() * list.length)];
+  }
+
+  // Cho một người bình luận vào ngồi các hàng sau. Hết ghế thì (khi replace=true) mời một người
+  // đã ngồi đủ lâu mà không bình luận thêm nhường chỗ, chọn ngẫu nhiên.
+  function seatCommenter(raw, { replace = false, arriving = true } = {}) {
+    const viewer = normalizeViewer(raw);
+    if (!viewer || vipViewerIds.has(viewer.id)) return null;
+    const existing = hallSeats.find((s) => s.viewer?.id === viewer.id);
+    if (existing) {
+      existing.lastActive = Date.now();
+      return existing.el;
+    }
+    let target = pickRandom(commenterSeats.filter((s) => !s.viewer));
+    if (!target && replace) {
+      const now = Date.now();
+      target = pickRandom(commenterSeats.filter((s) =>
+        now - s.lastActive > COMMENTER_MIN_STAY_MS && !commentBubbles.has(s.viewer?.id)));
+    }
+    if (!target) return null;
+    setSeatOccupant(target, viewer, { arriving });
+    target.lastActive = Date.now();
+    return target.el;
+  }
+
+  function fillCommenterRows(recentCommenters = []) {
+    const pool = recentCommenters.slice();
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    for (const commenter of pool) {
+      if (!commenterSeats.some((s) => !s.viewer)) break;
+      seatCommenter(commenter, { arriving: hallHasSynced });
+    }
+  }
+
+  function renderCongregationHall(st) {
     if (!congregationHall) return;
-    const seats = congregationHall.querySelectorAll('.hall-seat');
-    seats.forEach((el, i) => {
-      if (i % 4 !== 0) return;
-      const img = el.querySelector('.devotee-sprite');
-      if (!img) return;
-      const delay = (i % 4) * 80;
-      setTimeout(() => { img.src = SPRITE_FRAMES.forehead; }, delay);
-      setTimeout(() => { img.src = SPRITE_FRAMES.bowMid; }, delay + 140);
-      setTimeout(() => { img.src = SPRITE_FRAMES.prostrateDeep; }, delay + 300);
-      setTimeout(() => { img.src = SPRITE_FRAMES.bowMid; }, delay + 620);
-      setTimeout(() => { img.src = SPRITE_FRAMES.kneel; }, delay + 780);
+    const leaderboard = Array.isArray(st.leaderboard) ? st.leaderboard : [];
+    vipViewerIds = new Set(leaderboard.slice(0, VIP_CUSHION_COORDS.length).map((d) => String(d.uniqueId || d.name)));
+    // Ai đã lên đệm VIP thì rời ghế đạo tràng để không xuất hiện hai lần.
+    hallSeats.forEach((seat) => {
+      if (seat.viewer && vipViewerIds.has(seat.viewer.id)) setSeatOccupant(seat, null);
+    });
+    syncDonorRows(Array.isArray(st.recentDonors) ? st.recentDonors : []);
+    fillCommenterRows(Array.isArray(st.recentCommenters) ? st.recentCommenters : []);
+    hallHasSynced = true;
+  }
+
+  // (Mọi khung hình của mọi bộ áo đã được giải mã sẵn ở mục 3b.)
+
+  // Đạo tràng cúi lạy theo nhịp mõ / chuông. Mỗi lượt thả tim đều gõ mõ, nên trong phòng live đông
+  // tim tới liên tục: trước đây mỗi tim làm 1/4 đạo tràng lạy cùng lúc (100 lần đổi ảnh / tim), các lượt
+  // chồng lên nhau và cả sảnh nháy liên tục. Giờ:
+  //  - lượt thường (gõ mõ): tối đa 1 lượt / 3 giây, 8 người ngẫu nhiên;
+  //  - lượt lớn (chuông, viên mãn, đại lễ): luôn chạy, cứ 2 người 1 người lạy;
+  //  - người đang lạy dở thì bỏ qua (không bao giờ chồng khung hình);
+  //  - lạy lan từ hàng sau ra hàng trước, mỗi người trễ 70 ms.
+  const HALL_BOW_COOLDOWN_MS = 3000;
+  const HALL_BOW_SMALL_COUNT = 8;
+  let lastHallBowAt = 0;
+
+  function pulseHallBowing({ big = false } = {}) {
+    if (!congregationHall) return;
+    const now = Date.now();
+    if (!big && now - lastHallBowAt < HALL_BOW_COOLDOWN_MS) return;
+    lastHallBowAt = now;
+
+    // Hàng người đứng không quỳ lạy theo nhịp mõ.
+    const idle = hallSeats.filter((seat) => !seat.bowing && seat.sprite && !seat.standing);
+    let chosen;
+    if (big) {
+      chosen = idle.filter((_, i) => i % 2 === 0);
+    } else {
+      chosen = idle.slice();
+      for (let i = chosen.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [chosen[i], chosen[j]] = [chosen[j], chosen[i]];
+      }
+      chosen = chosen.slice(0, HALL_BOW_SMALL_COUNT);
+    }
+    chosen.sort((a, b) => a.row - b.row);
+
+    chosen.forEach((seat, k) => {
+      const el = seat.el;
+      const img = seat.sprite;
+      const delay = k * 70;
+      seat.bowing = true;
+      // Lạy bằng đúng bộ áo đang mặc (đọc lúc đổi khung, phòng khi người ngồi vừa đổi).
+      const pose = (name) => () => dressSprite(img, el.dataset.variant, name);
+      // Khuôn mặt (avatar) cúi theo thân khi lạy.
+      setTimeout(() => el.classList.add('is-bowing'), delay + 140);
+      setTimeout(() => el.classList.remove('is-bowing'), delay + 700);
+      setTimeout(pose('forehead'), delay);
+      setTimeout(pose('bowMid'), delay + 140);
+      setTimeout(pose('prostrateDeep'), delay + 300);
+      setTimeout(pose('bowMid'), delay + 620);
+      setTimeout(() => { pose('kneel')(); seat.bowing = false; }, delay + 780);
     });
   }
 
@@ -234,6 +537,17 @@
     while (prostrationTimers.length > 0) {
       clearTimeout(prostrationTimers.pop());
     }
+  }
+
+  // Người đang làm lễ ở giữa (uniqueId, hoặc tên khi không có): quyết định bộ áo của nhân vật đi dâng hương.
+  let centralViewerKey = '';
+  function dressCentralWorshipper(key) {
+    const stack = document.getElementById('centralSpriteStack');
+    if (!stack) return;
+    const variant = variantFor(key);
+    if (stack.dataset.variant === variant) return;
+    stack.dataset.variant = variant;
+    stack.querySelectorAll('.pose-frame').forEach((img) => dressSprite(img, variant, img.dataset.pose));
   }
 
   // Chuyển đổi tức thời giữa 8 khung hình đã giải mã sẵn trên GPU (KHÔNG BAO GIỜ BỊ MẤT HÌNH)
@@ -274,31 +588,60 @@
     schedulePose(startDelayMs + 5350, 'kneel');
   }
 
+  // Mỗi lần đi lên thảm đỏ có một số thứ tự: sự kiện của lượt đi cũ (bị lượt mới thay) bị bỏ qua.
+  let walkGeneration = 0;
+  let onWalkEnd = () => {};
+  // Combo quà của cùng một người (Rose thứ 2, 3...): nhân vật không đi lại từ đầu, chỉ đổi dòng chữ.
+  const WALK_CONTINUE_MS = 6000;
+  let lastWalk = { key: '', at: 0 };
+
   // Hiệu ứng thí chủ ĐỨNG ĐI BỘ từng bước dọc thảm đỏ rồi Hạ gối Quỳ Đảnh Lễ (trên cùng 1 nhân vật, không bao giờ mất hình)
   function animateWalkerOnCarpet(user, avatar, actionLabel, wish) {
     const centralEl = document.getElementById('centralWorshipper');
     if (!centralEl) return;
 
+    const key = centralViewerKey || user;
+    if (key && key === lastWalk.key && Date.now() - lastWalk.at < WALK_CONTINUE_MS) {
+      updateCentralWorshipper(user, avatar, actionLabel, wish, false);
+      lastWalk.at = Date.now();
+      return;
+    }
+    lastWalk = { key, at: Date.now() };
+
     clearProstrationTimers();
     updateCentralWorshipper(user, avatar, actionLabel, wish, false);
 
     // Khởi động bước đi từ cuối thảm đỏ lên chính điện
+    const walk = ++walkGeneration;
+    centralEl.removeEventListener('animationend', onWalkEnd);
     centralEl.classList.remove('walking-up');
     void centralEl.offsetWidth;
     centralEl.classList.add('walking-up');
 
+    // Bước chân đổi khung mỗi 185 ms cho tới khi THỰC SỰ tới lư hương.
+    let stepFrame = 0;
     setCentralPose('walk1');
-    for (let step = 1; step <= 10; step++) {
-      schedulePose(step * 185, step % 2 === 0 ? 'walk1' : 'walk2');
-    }
+    prostrationTimers.push(setInterval(() => {
+      stepFrame++;
+      setCentralPose(stepFrame % 2 === 0 ? 'walk1' : 'walk2');
+    }, 185));
 
-    // Khi bước tới trước Lư Hương (2.05s): dừng bước, hạ gối quỳ xuống đệm và bắt đầu Đảnh lễ 3 lạy
-    prostrationTimers.push(
-      setTimeout(() => {
-        centralEl.classList.remove('walking-up');
-      }, 2100)
-    );
-    playThreeBowsSequence(2050);
+    // Quỳ xuống khi CSS đi hết thảm đỏ (animationend), không theo đồng hồ cố định: trước đây hết 2,1 giây
+    // là quỳ dù hình còn đang giữa thảm (máy bận, hoặc animation bị rút ngắn), nên nhân vật giật về
+    // lư hương hoặc "đi tại chỗ". Dự phòng 3,5 giây phòng khi animationend không tới.
+    function arrive() {
+      if (walk !== walkGeneration || centralEl.dataset.arrived === String(walk)) return;
+      centralEl.dataset.arrived = String(walk);
+      centralEl.removeEventListener('animationend', onWalkEnd);
+      clearProstrationTimers();
+      centralEl.classList.remove('walking-up');
+      playThreeBowsSequence(0);
+    }
+    onWalkEnd = (event) => {
+      if (event.target === centralEl && event.animationName === 'centralWalkUpCarpet') arrive();
+    };
+    centralEl.addEventListener('animationend', onWalkEnd);
+    prostrationTimers.push(setTimeout(arrive, 3500));
   }
 
   function updateCentralWorshipper(user, avatar, actionLabel, wish, doThreeBows = true) {
@@ -308,14 +651,20 @@
     const avatarEl = document.getElementById('centralAvatar');
     const beam = document.getElementById('sacredLightBeam');
 
+    dressCentralWorshipper(centralViewerKey || user);
     if (nameEl) nameEl.textContent = user || 'Thí Chủ Hữu Duyên';
     if (actEl) actEl.textContent = actionLabel || 'Dâng hương cầu an';
     if (wishEl) wishEl.textContent = `“${wish || 'Nam Mô A Di Đà Phật, cầu bình an cát tường'}”`;
 
     if (avatarEl) {
-      if (avatar) {
-        avatarEl.innerHTML = `<img src="${escapeHtml(avatar)}" alt="" />`;
+      const faceSrc = faceUrlFor(avatar, centralViewerKey || user);
+      if (faceSrc) {
+        if (avatarEl.dataset.src !== faceSrc || !avatarEl.querySelector('img')) {
+          avatarEl.dataset.src = faceSrc;
+          avatarEl.innerHTML = `<img src="${escapeHtml(faceSrc)}" alt="" />`;
+        }
       } else {
+        avatarEl.dataset.src = '';
         avatarEl.textContent = String(user || 'T').trim().charAt(0).toUpperCase();
       }
     }
@@ -367,17 +716,18 @@
 
     const lb = Array.isArray(st.leaderboard) ? st.leaderboard : [];
     renderVipCushions(lb);
-    renderCongregationHall(lb);
+    renderCongregationHall(st);
     refreshCommentBubbles();
 
     // Đồng bộ tên Chủ Lễ mặc định theo người dẫn đầu thực tế nếu chưa có sự kiện mới
     if (!hasInitializedRealLeader && lb.length > 0) {
       hasInitializedRealLeader = true;
       const topDev = lb[0];
+      centralViewerKey = topDev.uniqueId || topDev.name;
       updateCentralWorshipper(
         topDev.name,
         topDev.avatar,
-        `Công đức: ${Number(topDev.merit).toLocaleString('vi-VN')} CĐ`,
+        `Đã dâng ${Number(topDev.coins || 0).toLocaleString('vi-VN')} xu`,
         topDev.lastWish || 'Nam Mô A Di Đà Phật, cầu bình an cát tường',
         false
       );
@@ -385,21 +735,39 @@
 
     // Cập nhật bảng công đức Top 5 ở góc trên bên phải
     const lbList = document.getElementById('leaderboardList');
-    if (lbList) {
-      const topLeaders = lb.slice(0, 5);
+    const topLeaders = lb.slice(0, 5);
+    const leadersSig = JSON.stringify(topLeaders.map((item) => [item.rank, item.name, item.coins]));
+    // Only rebuild when the top 5 actually changed (state arrives on every like/comment).
+    if (lbList && lbList.dataset.sig !== leadersSig) {
+      lbList.dataset.sig = leadersSig;
+      // Mỗi hàng: huy chương (1 vàng, 2 bạc, 3 đồng), tên, số xu, thanh tiến độ so với người dẫn đầu.
+      const topCoins = Math.max(1, Number(topLeaders[0]?.coins || 0));
       lbList.innerHTML = topLeaders.length
         ? topLeaders
             .map(
               (item) => `
-          <div class="leader-item">
+          <div class="leader-item" data-rank="${item.rank}">
             <span class="leader-rank">${item.rank}</span>
-            <span class="leader-name">${escapeHtml(shortenName(item.name, 14))}</span>
-            <span class="leader-merit">${Number(item.merit).toLocaleString('vi-VN')}</span>
+            <span class="leader-main">
+              <span class="leader-line">
+                <span class="leader-name">${escapeHtml(shortenName(item.name, 14))}</span>
+                <span class="leader-merit">${Number(item.coins || 0).toLocaleString('vi-VN')}</span>
+              </span>
+              <span class="leader-bar"><i style="width:${Math.max(6, Math.round((Number(item.coins || 0) / topCoins) * 100))}%"></i></span>
+            </span>
           </div>
         `
             )
             .join('')
-        : '<p class="leader-empty">Chưa có người đóng góp</p>';
+        : '<p class="leader-empty">Chưa có người dâng lễ</p>';
+    }
+
+    // "N thí chủ đang có mặt": số người xem phòng live (ẩn khi chưa kết nối)
+    const presenceLine = document.getElementById('presenceLine');
+    const viewers = Number(st.tiktok?.viewerCount || 0);
+    if (presenceLine) {
+      presenceLine.hidden = !(st.tiktok?.connected && viewers > 0);
+      document.getElementById('presenceCount').textContent = viewers.toLocaleString('vi-VN');
     }
 
     // Trạng thái kết nối TikTok Live
@@ -472,19 +840,41 @@
     meter.classList.add('is-bumped');
   }
 
+  // Niệm Phật / đèn công đức vẫn chạy (viên mãn, đèn sáng, mục tiêu tự co giãn) nhưng không còn hiện trên
+  // thẻ dưới đáy: phần tử nào không có trên trang thì bỏ qua.
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  }
+
   function renderChant(chant) {
     if (!chant) return;
-    document.getElementById('chantCount').textContent = Number(chant.count || 0).toLocaleString('vi-VN');
-    document.getElementById('chantGoal').textContent = Number(chant.goal || 108).toLocaleString('vi-VN');
-    document.getElementById('chantRounds').textContent = Number(chant.rounds || 0).toLocaleString('vi-VN');
+    setText('chantCount', Number(chant.count || 0).toLocaleString('vi-VN'));
+    setText('chantGoal', Number(chant.goal || 108).toLocaleString('vi-VN'));
+    setText('chantRounds', Number(chant.rounds || 0).toLocaleString('vi-VN'));
     setMeter('chantMeterFill', chant.count, chant.goal);
+  }
+
+  // 3 thẻ dưới đáy: số lượt mỗi mức quà trong buổi live (máy chủ đẩy temple.liveStats mỗi lần đổi)
+  function renderLiveStats(stats) {
+    if (!stats) return;
+    for (const [id, value] of [['statTierHoa', stats.hoa], ['statTierHuong', stats.huong], ['statTierCongduc', stats.congduc]]) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      const text = Number(value || 0).toLocaleString('vi-VN');
+      if (el.textContent === text) continue;
+      el.textContent = text;
+      el.classList.remove('stat-bump');
+      void el.offsetWidth;
+      el.classList.add('stat-bump');
+    }
   }
 
   function renderLamp(lamp, animateNew = false) {
     if (!lamp) return;
-    document.getElementById('lampLikes').textContent = Number(lamp.likes || 0).toLocaleString('vi-VN');
-    document.getElementById('lampGoal').textContent = Number(lamp.goal || 300).toLocaleString('vi-VN');
-    document.getElementById('lampLit').textContent = Number(lamp.lit || 0).toLocaleString('vi-VN');
+    setText('lampLikes', Number(lamp.likes || 0).toLocaleString('vi-VN'));
+    setText('lampGoal', Number(lamp.goal || 300).toLocaleString('vi-VN'));
+    setText('lampLit', Number(lamp.lit || 0).toLocaleString('vi-VN'));
     setMeter('lampMeterFill', lamp.likes, lamp.goal);
     const row = document.getElementById('meritLampRow');
     const shown = Math.min(5, Number(lamp.lit) || 0);
@@ -503,6 +893,7 @@
   function renderCommunityMeters(st) {
     renderChant(st.chant);
     renderLamp(st.lamp, renderedLampCount >= 0);
+    renderLiveStats(st.liveStats);
   }
 
   let tickerTimer = null;
@@ -593,8 +984,16 @@
   let fortuneTimer = null;
   let grandTimer = null;
 
+  let lastRitualEventAt = 0; // live-life.js: chỉ cho sảnh tự lạy khi không có sự kiện thật vừa xảy ra
   function triggerRitualVisuals(ev) {
     if (!ev) return;
+    lastRitualEventAt = Date.now();
+    // Nghi thức đến từ bình luận (xin xăm, phóng sinh, cầu nguyện...): người bình luận ở yên ghế của họ,
+    // lời bình luận hiện trên nhân vật đó; nhân vật giữa thảm đỏ dành cho người tặng quà.
+    const byComment = Boolean(ev.fromComment);
+    const central = (...args) => { if (!byComment) updateCentralWorshipper(...args); };
+    // Cùng một người: cùng bộ áo với ghế của họ trong đạo tràng / đệm VIP.
+    if (ev.user && !byComment) centralViewerKey = ev.uniqueId || ev.user;
 
     if (ev.type === 'offerGift' || ev.type === 'grandCeremony') {
       showGiftHistory(ev);
@@ -610,7 +1009,7 @@
         strikeHotspot('fishStation');
         releaseKoi(ev.user, ev.wish);
         particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 540, 1380, '#ffd9b0');
-        updateCentralWorshipper(ev.user, ev.avatar, `Phóng sinh cá chép (+${ev.merit} CĐ)`, ev.wish, true);
+        central(ev.user, ev.avatar, `Phóng sinh cá chép (+${ev.merit} CĐ)`, ev.wish, true);
         break;
       }
 
@@ -630,7 +1029,7 @@
         audio.playTempleBell(1.15);
         setTimeout(() => audio.playWoodenFish(), 600);
         particles.spawnGrandCeremonyRain();
-        pulseHallBowing();
+        pulseHallBowing({ big: true });
         showGrandCeremonyBanner(
           (ev.top && ev.top[0]) || 'Đạo tràng',
           `Viên mãn ${ev.goal} biến niệm Phật`,
@@ -657,7 +1056,7 @@
         audio.playIncenseChime();
         particles.spawnIncenseBurst(540, 895);
         particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 540, 860, '#ffe082');
-        animateWalkerOnCarpet(ev.user, ev.avatar, `Dâng ${ev.count} nén hương (+${ev.merit} CĐ)`, ev.wish);
+        if (!byComment) animateWalkerOnCarpet(ev.user, ev.avatar, `Dâng ${ev.count} nén hương (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
@@ -672,10 +1071,10 @@
       case 'ringBell': {
         audio.playTempleBell(1.0);
         strikeHotspot('bellStation');
-        pulseHallBowing();
+        pulseHallBowing({ big: true });
         particles.spawnBellWave(540, 510, 4);
         particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 190, 935, '#fff3b0');
-        updateCentralWorshipper(ev.user, ev.avatar, `Thỉnh đại hồng chung (+${ev.merit} CĐ)`, ev.wish);
+        central(ev.user, ev.avatar, `Thỉnh đại hồng chung (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
@@ -683,16 +1082,48 @@
         audio.playIncenseChime();
         spawnSkyLantern(ev.user, ev.wish);
         particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 540, 920, '#ffb74d');
-        animateWalkerOnCarpet(ev.user, ev.avatar, `Cầu phúc (+${ev.merit} CĐ)`, ev.wish);
+        if (!byComment) animateWalkerOnCarpet(ev.user, ev.avatar, `Cầu phúc (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
       case 'offerGift': {
-        audio.playIncenseChime();
-        audio.playTempleBell(0.85);
-        particles.spawnIncenseBurst(540, 895);
-        particles.spawnFloatingMerit(`+${ev.merit} Công Đức`, 540, 840, '#fff3b0');
-        animateWalkerOnCarpet(ev.user, ev.avatar, `Dâng ${formatGiftDescription(ev)} (+${ev.merit} CĐ)`, ev.wish);
+        // Mỗi mức quà một tương tác riêng; người tặng luôn đi lên thảm đỏ.
+        //   hoa (dưới 5 xu)     : dâng hoa, cánh hoa rơi
+        //   huong (5–9 xu)      : thắp hương, khói hương bùng lên
+        //   congduc (từ 10 xu)  : bùng nổ công đức, chuông ngân, cả đạo tràng lạy
+        // tierUp = lượt mới / vừa lên mức: hiệu ứng lớn; bông tiếp theo trong combo: hiệu ứng nhẹ.
+        const tier = ev.tier || (ev.coins >= 10 ? 'congduc' : ev.coins >= 5 ? 'huong' : 'hoa');
+        const big = ev.tierUp !== false;
+        const gift = formatGiftDescription(ev);
+        let label;
+        if (tier === 'hoa') {
+          audio.playIncenseChime();
+          petalShower(big ? 16 : 6);
+          particles.spawnFloatingMerit(`Dâng hoa +${ev.merit} CĐ`, 540, 840, '#ffc1d6');
+          label = `Dâng hoa · ${gift}`;
+        } else if (tier === 'huong') {
+          audio.playIncenseChime();
+          particles.spawnIncenseBurst(540, 895);
+          if (big) petalShower(8);
+          particles.spawnFloatingMerit(`Thắp hương +${ev.merit} CĐ`, 540, 840, '#ffe082');
+          label = `Thắp hương · ${gift}`;
+        } else {
+          particles.spawnIncenseBurst(540, 895);
+          particles.spawnFloatingMerit(`Bùng nổ công đức +${ev.merit}`, 540, 820, '#fff3b0');
+          if (big) {
+            audio.playTempleBell(1.0);
+            strikeHotspot('bellStation');
+            particles.spawnBellWave(540, 510, 4);
+            petalShower(22);
+            pulseHallBowing({ big: true });
+            showTicker('CÔNG ĐỨC', `<strong>${escapeHtml(ev.user)}</strong> dâng ${escapeHtml(gift)} · bùng nổ công đức`, 4200);
+          } else {
+            audio.playIncenseChime();
+            petalShower(6);
+          }
+          label = `Bùng nổ công đức · ${gift}`;
+        }
+        animateWalkerOnCarpet(ev.user, ev.avatar, `${label} (+${ev.merit} CĐ)`, ev.wish);
         break;
       }
 
@@ -700,7 +1131,7 @@
         audio.playTempleBell(1.2);
         setTimeout(() => audio.playTempleBell(1.1), 900);
         particles.spawnGrandCeremonyRain();
-        pulseHallBowing();
+        pulseHallBowing({ big: true });
         showGrandCeremonyBanner(ev.user, formatGiftDescription(ev), ev.merit);
         animateWalkerOnCarpet(ev.user, ev.avatar, `${formatGiftDescription(ev)} (+${ev.merit} CĐ)`, ev.wish);
         break;
@@ -709,7 +1140,7 @@
       case 'drawFortune': {
         audio.playFortuneShake();
         strikeHotspot('fortuneCylinder');
-        updateCentralWorshipper(
+        central(
           ev.user,
           ev.avatar,
           'Đang xin xăm…',
@@ -722,7 +1153,7 @@
           onStart: () => {
             audio.playIncenseChime();
             showFortuneModal(ev.user, ev.fortune);
-            updateCentralWorshipper(
+            central(
               ev.user,
               ev.avatar,
               `Quẻ số ${ev.fortune?.number} (${ev.fortune?.rank})`,
@@ -834,9 +1265,10 @@
     const avatar = document.createElement('span');
     avatar.className = 'gift-history-avatar';
     avatar.textContent = user.charAt(0).toUpperCase() || 'T';
-    if (/^https?:\/\//i.test(String(event.avatar || ''))) {
+    const giftFace = faceUrlFor(/^https?:\/\//i.test(String(event.avatar || '')) ? event.avatar : '', event.uniqueId || user);
+    if (giftFace) {
       const image = document.createElement('img');
-      image.src = event.avatar;
+      image.src = giftFace;
       image.alt = '';
       image.onerror = () => {
         image.remove();
@@ -856,7 +1288,7 @@
     gift.className = 'gift-history-gift';
     const giftName = document.createElement('span');
     giftName.className = 'gift-history-name';
-    giftName.textContent = name;
+    giftName.textContent = `dâng ${name}`;
     const giftCount = document.createElement('span');
     giftCount.className = 'gift-history-count';
     giftCount.textContent = `× ${count}`;
@@ -866,7 +1298,7 @@
     const notice = document.createElement('li');
     notice.className = 'gift-history-item';
     notice.append(avatar, copy);
-    while (history.children.length >= 3) history.lastElementChild.remove();
+    while (history.children.length >= 4) history.lastElementChild.remove();
     history.prepend(notice);
 
     setTimeout(() => {
@@ -876,90 +1308,92 @@
     }, 5000);
   }
 
+  // Nhân vật của người xem: đang dâng hương giữa chánh điện > đệm VIP > ghế đạo tràng.
+  // Trả về phần tử "đầu" để bóng chat bám vào (avatar trên ghế, hoặc cả nhân vật).
   function findCommentCharacter(viewerId) {
-    const characters = document.querySelectorAll('.vip-devotee-slot, .hall-seat');
-    for (const character of characters) {
-      if (character.dataset.viewerId === viewerId || character.dataset.commentViewerId === viewerId) {
-        return character;
+    const central = document.getElementById('centralWorshipper');
+    if (central && viewerId && viewerId === centralViewerKey) {
+      // Nhân vật giữa đã có bóng lời khấn trên đầu: bóng chat đặt trên bóng lời khấn, không che nó.
+      const wish = document.getElementById('centralWishBubble');
+      if (wish && wish.offsetHeight && wish.textContent.trim() && getComputedStyle(wish).display !== 'none') return wish;
+      return document.getElementById('centralSpriteStack') || central;
+    }
+    for (const character of document.querySelectorAll('.vip-devotee-slot, .hall-seat')) {
+      if (character.dataset.viewerId === viewerId) {
+        // Bóng chat trên đầu nhân vật (bảng tên + avatar giờ nằm dưới chân).
+        return character.querySelector('.devotee-sprite') || character;
       }
     }
     return null;
   }
 
-  function claimCommentCharacter(record) {
-    const seats = document.querySelectorAll('.hall-seat');
-    const seat = [...seats].find((item) => !item.dataset.viewerId && !item.dataset.commentViewerId);
-    if (!seat) return null;
+  const BUBBLE_GAP = 10; // khoảng trống giữa hai bóng chồng nhau / giữa bóng và đầu
+  const STAGE_TOP_LIMIT = 88; // không đè thanh trạng thái trên cùng
 
-    seat.dataset.commentViewerId = record.viewerId;
-    const badge = document.createElement('div');
-    badge.className = 'seat-badge commenter-seat-badge';
-    const avatar = document.createElement('span');
-    avatar.className = 'seat-avatar';
-    avatar.textContent = record.user.charAt(0).toUpperCase() || 'T';
-    if (/^https?:\/\//i.test(record.avatar)) {
-      const image = document.createElement('img');
-      image.src = record.avatar;
-      image.alt = '';
-      image.onerror = () => {
-        image.remove();
-        avatar.textContent = record.user.charAt(0).toUpperCase() || 'T';
-      };
-      avatar.textContent = '';
-      avatar.appendChild(image);
-    }
-    const name = document.createElement('span');
-    name.className = 'seat-username';
-    name.textContent = shortenName(record.user, 11);
-    badge.append(avatar, name);
-    seat.appendChild(badge);
-    return seat;
-  }
-
-  function releaseCommentCharacter(record) {
-    const seat = [...document.querySelectorAll('.hall-seat')]
-      .find((item) => item.dataset.commentViewerId === record.viewerId);
-    if (!seat) return;
-    seat.removeAttribute('data-comment-viewer-id');
-    seat.querySelector('.commenter-seat-badge')?.remove();
-  }
-
-  function positionCommentBubble(record) {
-    const character = findCommentCharacter(record.viewerId) || claimCommentCharacter(record);
-    if (!character || !commentBubblesLayer) {
-      record.bubble.style.display = 'none';
-      return;
-    }
-
+  // Đặt mọi bóng lên đầu nhân vật của mình; bóng mới đè lên bóng cũ thì đẩy bóng mới lên trên.
+  function layoutCommentBubbles() {
+    if (!commentBubblesLayer || !commentBubbles.size) return;
     const stageRect = stage9x16.getBoundingClientRect();
-    const characterRect = character.getBoundingClientRect();
     const scale = stageRect.width / 1080;
     if (!scale) return;
-    const x = (characterRect.left + characterRect.width / 2 - stageRect.left) / scale;
-    const y = (characterRect.top - stageRect.top) / scale;
-    record.bubble.style.display = '';
-    record.bubble.style.left = `${x}px`;
-    record.bubble.style.top = `${Math.max(88, y - 12)}px`;
-    record.bubble.dataset.side = x < 220 ? 'left' : x > 860 ? 'right' : 'center';
+    const placed = [];
+    for (const record of commentBubbles.values()) { // Map giữ thứ tự: bóng cũ trước
+      const head = findCommentCharacter(record.viewerId);
+      if (!head) {
+        record.bubble.style.display = 'none';
+        continue;
+      }
+      const r = head.getBoundingClientRect();
+      const x = (r.left + r.width / 2 - stageRect.left) / scale;
+      const headTop = (r.top - stageRect.top) / scale;
+      record.bubble.style.display = '';
+      const w = record.bubble.offsetWidth;
+      const h = record.bubble.offsetHeight;
+      // Sát mép sân khấu thì bóng lệch vào trong, đuôi vẫn chỉ đúng đầu nhân vật.
+      const side = x - w / 2 < 16 ? 'left' : x + w / 2 > 1064 ? 'right' : 'center';
+      const left = side === 'left' ? x - 26 : side === 'right' ? x - w + 26 : x - w / 2;
+      let bottom = headTop - BUBBLE_GAP;
+      for (let pass = 0; pass < placed.length; pass++) {
+        const hit = placed.find((p) => left < p.right + 6 && left + w > p.left - 6 && bottom > p.top - BUBBLE_GAP && bottom - h < p.bottom + BUBBLE_GAP);
+        if (!hit) break;
+        bottom = hit.top - BUBBLE_GAP;
+      }
+      bottom = Math.max(STAGE_TOP_LIMIT + h, bottom);
+      record.bubble.dataset.side = side;
+      record.bubble.style.left = `${Math.round(side === 'left' ? x - 26 : side === 'right' ? x + 26 : x)}px`;
+      record.bubble.style.top = `${Math.round(bottom)}px`;
+      placed.push({ left, right: left + w, top: bottom - h, bottom });
+    }
+  }
+
+  // Nhân vật có thể đang di chuyển (đi lên thảm đỏ, cúi lạy): bám theo mỗi khung hình khi còn bóng.
+  let bubbleFrame = 0;
+  function followCommentBubbles() {
+    if (bubbleFrame) return;
+    const step = () => {
+      layoutCommentBubbles();
+      bubbleFrame = commentBubbles.size ? requestAnimationFrame(step) : 0;
+    };
+    bubbleFrame = requestAnimationFrame(step);
   }
 
   function refreshCommentBubbles() {
-    if (activeCommentBubble) positionCommentBubble(activeCommentBubble);
+    layoutCommentBubbles();
   }
 
   function dismissCommentBubble(record, immediate = false, resumePrayerQueue = true) {
-    if (!record || activeCommentBubble !== record) return;
+    if (!record || commentBubbles.get(record.viewerId) !== record) return;
     clearTimeout(record.expiryTimer);
     clearTimeout(record.removeTimer);
     if (!immediate) {
       record.bubble.classList.add('is-leaving');
-      record.removeTimer = setTimeout(() => dismissCommentBubble(record, true), COMMENT_BUBBLE_EXIT_MS);
+      record.removeTimer = setTimeout(() => dismissCommentBubble(record, true, resumePrayerQueue), COMMENT_BUBBLE_EXIT_MS);
       return;
     }
-    releaseCommentCharacter(record);
     record.bubble.remove();
-    activeCommentBubble = null;
-    if (resumePrayerQueue) schedulePrayerSelection();
+    commentBubbles.delete(record.viewerId);
+    activeCommentBubble = [...commentBubbles.values()].pop() || null;
+    if (resumePrayerQueue && !commentBubbles.size) schedulePrayerSelection();
   }
 
   function showCommentBubble(params) {
@@ -968,13 +1402,18 @@
     if (!user || !comment || !commentBubblesLayer) return;
 
     const viewerId = String(params.uniqueId || user).slice(0, 96);
+    // Người bình luận vào ngồi các hàng sau (hoặc đổi chỗ với người đã im lặng lâu) để bóng chat có chỗ bám.
+    seatCommenter({ id: viewerId, name: user, avatar: params.avatar }, { replace: true });
     pausePrayerSlipForLiveComment({ viewerId, user, text: { textContent: comment } });
-    let record = activeCommentBubble;
-    if (record && record.viewerId !== viewerId) {
-      dismissCommentBubble(record, true, false);
-      record = null;
-    }
-    if (!record) {
+
+    let record = commentBubbles.get(viewerId);
+    if (record) {
+      commentBubbles.delete(viewerId); // bình luận tiếp: thành bóng mới nhất (xếp sau cùng)
+    } else {
+      // Đủ chỗ: bóng cũ nhất nhường chỗ.
+      while (commentBubbles.size >= MAX_COMMENT_BUBBLES) {
+        dismissCommentBubble(commentBubbles.values().next().value, true, false);
+      }
       const bubble = document.createElement('div');
       bubble.className = 'comment-bubble';
       bubble.dataset.side = 'center';
@@ -986,8 +1425,9 @@
       bubble.append(name, text);
       commentBubblesLayer.appendChild(bubble);
       record = { viewerId, bubble, name, text, user, avatar: '', expiryTimer: null, removeTimer: null };
-      activeCommentBubble = record;
     }
+    commentBubbles.set(viewerId, record);
+    activeCommentBubble = record;
 
     clearTimeout(record.expiryTimer);
     clearTimeout(record.removeTimer);
@@ -996,7 +1436,8 @@
     record.name.textContent = user;
     record.text.textContent = comment;
     record.bubble.classList.remove('is-leaving');
-    positionCommentBubble(record);
+    layoutCommentBubbles();
+    followCommentBubbles();
     record.expiryTimer = setTimeout(() => dismissCommentBubble(record), COMMENT_BUBBLE_DURATION_MS);
   }
 
@@ -1071,7 +1512,7 @@
 
   function schedulePrayerSelection() {
     expirePendingPrayerComments();
-    if (!pendingPrayerComments.length || prayerVisible || activeCommentBubble || prayerGatherTimer || prayerGapTimer) return;
+    if (!pendingPrayerComments.length || prayerVisible || commentBubbles.size || prayerGatherTimer || prayerGapTimer) return;
     prayerGatherTimer = setTimeout(showNextPrayerComment, PRAYER_GATHER_MS);
   }
 
@@ -1114,7 +1555,8 @@
     prayerGatherTimer = null;
     prayerGapTimer = null;
     expirePendingPrayerComments();
-    if (!pendingPrayerComments.length || prayerVisible || !prayerSlip) return;
+    // Bóng chat đang hiện: chờ (bóng cuối cùng tắt sẽ gọi lại schedulePrayerSelection).
+    if (!pendingPrayerComments.length || prayerVisible || !prayerSlip || commentBubbles.size) return;
 
     const index = Math.floor(Math.random() * pendingPrayerComments.length);
     const [item] = pendingPrayerComments.splice(index, 1);
@@ -1154,7 +1596,8 @@
       comment,
       receivedAt: Date.now()
     };
-    if (samePrayerAndLiveComment(item, activeCommentBubble)) return;
+    // Đang hiện trong bóng chat của chính người đó (bất kỳ bóng nào): không hiện thêm sớ trùng lời.
+    if ([...commentBubbles.values()].some((bubble) => samePrayerAndLiveComment(item, bubble))) return;
     if (pendingPrayerComments.some((pending) => pending.username === username && pending.comment === comment)) return;
 
     if (pendingPrayerComments.length >= PRAYER_QUEUE_LIMIT) pendingPrayerComments.shift();
@@ -1169,6 +1612,8 @@
     ws.onmessage = (event) => {
       try {
         const msg = JSON.parse(event.data);
+        // Cho live-life.js (khóa lễ, bình chọn, top giờ, mục tiêu đèn) nghe cùng luồng tin.
+        window.dispatchEvent(new CustomEvent('temple:message', { detail: msg }));
         if (msg.method === 'temple.state') {
           updateUIState(msg.params);
         } else if (msg.method === 'temple.event') {
@@ -1181,6 +1626,8 @@
         } else if (msg.method === 'temple.chant') {
           renderChant(msg.params);
           bumpMeter('chantMeterFill');
+        } else if (msg.method === 'temple.liveStats') {
+          renderLiveStats(msg.params);
         } else if (msg.method === 'temple.lamp') {
           renderLamp(msg.params);
         } else if (msg.method === 'temple.welcome') {
@@ -1233,7 +1680,7 @@
   }
 
   function getFormInput() {
-    const user = document.getElementById('inputDevoteeName')?.value.trim() || 'Quỳnh_Finn';
+    const user = document.getElementById('inputDevoteeName')?.value.trim() || 'Minh Lê';
     const wish =
       document.getElementById('inputDevoteeWish')?.value.trim() ||
       'Cầu cho gia đình bình an, tài lộc hanh thông';
@@ -1246,26 +1693,14 @@
     callRpc('temple.burnIncense', { user, count: 3, wish });
   });
 
-  document.getElementById('cardIncense')?.addEventListener('click', () => {
-    const { user } = getFormInput();
-    callRpc('temple.comment', { comment: 'Nam mô A Di Đà Phật', user, uniqueId: `demo:${user}:${Date.now()}` });
-  });
-
-  document.getElementById('cardBlessing')?.addEventListener('click', () => {
-    const { user } = getFormInput();
-    callRpc('temple.like', { user, count: 25 });
-  });
-
-  document.getElementById('cardLotus')?.addEventListener('click', () => {
+  // Bấm ô ở trang điều khiển: gửi thử đúng mức quà của ô (tập dượt trước khi live)
+  const demoGift = (coins, giftName, giftCount) => {
     const { user, wish } = getFormInput();
-    callRpc('temple.offerGift', {
-      user,
-      giftType: 'lotus',
-      coins: 20,
-      giftName: 'Đài Hoa Sen Vàng',
-      wish
-    });
-  });
+    callRpc('temple.offerGift', { user, uniqueId: `demo:${user}`, coins, giftName, giftCount, wish });
+  };
+  document.getElementById('cardIncense')?.addEventListener('click', () => demoGift(1, 'Rose', 1));
+  document.getElementById('cardBlessing')?.addEventListener('click', () => demoGift(5, 'Rose', 5));
+  document.getElementById('cardLotus')?.addEventListener('click', () => demoGift(10, 'Rose', 10));
 
   document.getElementById('fishStation')?.addEventListener('click', () => {
     const { user, wish } = getFormInput();
@@ -1360,6 +1795,29 @@
     callRpc('live.connect', { username });
   });
 
+  // Xác nhận bằng 2 lần bấm ngay trên nút (confirm() bị chặn trong dock OBS / khung xem trước)
+  const btnResetLeaderboard = document.getElementById('btnResetLeaderboard');
+  let resetArmTimer = null;
+  btnResetLeaderboard?.addEventListener('click', async () => {
+    if (!resetArmTimer) {
+      btnResetLeaderboard.classList.add('armed');
+      btnResetLeaderboard.textContent = 'Bấm lần nữa để xoá';
+      resetArmTimer = setTimeout(() => {
+        resetArmTimer = null;
+        btnResetLeaderboard.classList.remove('armed');
+        btnResetLeaderboard.textContent = 'Reset bảng xếp hạng';
+      }, 4000);
+      return;
+    }
+    clearTimeout(resetArmTimer);
+    resetArmTimer = null;
+    btnResetLeaderboard.classList.remove('armed');
+    btnResetLeaderboard.textContent = 'Đang xoá…';
+    await callRpc('temple.resetLeaderboard');
+    btnResetLeaderboard.textContent = 'Đã xoá ✓';
+    setTimeout(() => { btnResetLeaderboard.textContent = 'Reset bảng xếp hạng'; }, 2000);
+  });
+
   document.getElementById('btnToggleAutoSim')?.addEventListener('click', () => {
     autoSimState = !autoSimState;
     callRpc('live.setAutoSim', { enabled: autoSimState });
@@ -1432,4 +1890,23 @@
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
   }
+
+  // Các hàm sân khấu dùng chung cho live-life.js (sân khấu tự chuyển động khi không ai tương tác).
+  window.TempleStage = {
+    stage: stage9x16,
+    audio,
+    particles,
+    framesOf,
+    DEVOTEE_VARIANTS,
+    pulseHallBowing,
+    petalShower,
+    showTicker,
+    escapeHtml,
+    lastEventAt: () => lastRitualEventAt,
+    // Đổi nền làm lư hương đổi chỗ: vẽ lại que hương để khói bốc đúng đầu que.
+    refreshIncense: () => {
+      renderedStickCount = 0;
+      renderIncenseSticks(lastIncenseCount);
+    }
+  };
 })();

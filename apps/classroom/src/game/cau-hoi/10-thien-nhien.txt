@@ -1,0 +1,76 @@
+# Thiên nhiên, thời tiết
+> Đây là thứ trong thiên nhiên, trời đất.
+MẶT TRỜI | Mọc đằng đông lặn đằng tây, mới bảy giờ sáng đã chiếu thẳng vào mặt lúc đi làm. | 1
+MẶT TRĂNG | Tròn nhất vào rằm, chị Hằng với chú Cuội ở trên đó. | 1 | ÔNG TRĂNG
+NGÔI SAO | Lấp lánh trên trời đêm, ở thành phố khói bụi thì không thấy cái nào. | 1 | SAO
+CẦU VỒNG | Bảy màu hiện ra sau cơn mưa, thấy là phải chụp đăng story liền. | 1
+MÂY | Trắng như bông trôi lững lờ, cũng là chỗ lưu ảnh trên điện thoại. | 1 | ĐÁM MÂY
+MƯA | Nước từ trời rơi xuống, đúng lúc tan làm, đúng hôm quên áo. | 1
+MƯA PHÙN | Lất phất mùa xuân miền Bắc, quần áo phơi ba ngày không khô. | 2
+MƯA ĐÁ | Trời ném xuống cả cục nước đá, đập móp nóc xe. | 2
+SẤM SÉT | Đùng đoàng chớp loé trong cơn giông, cả nhà rút phích cắm tivi. | 2 | SẤM, SÉT
+GIÓ | Không nhìn thấy mà làm bay cả tóc mới uốn. | 1
+BÃO | Gió giật mưa lớn tốc mái nhà, nghe tin này dân văn phòng chỉ mong được nghỉ làm. | 1
+LỐC XOÁY | Cột không khí cuốn tròn hút mọi thứ lên trời, như sếp giao việc dồn dập. | 3
+SƯƠNG MÙ | Trắng xoá buổi sáng, nhìn không rõ đường, Đà Lạt ai cũng mê. | 2
+TUYẾT | Bông trắng lạnh rơi mùa đông xứ lạnh, Sa Pa mà có là cả nước kéo lên. | 1
+BĂNG | Nước đông cứng lại, nghe thì giống một nhóm bạn đi chơi chung. | 1
+GIÓ MÙA ĐÔNG BẮC | Đợt lạnh tràn về miền Bắc, dân Sài Gòn chỉ biết qua bản tin. | 3
+NẮNG NÓNG | Trời bốn mươi độ, ra đường như lò nướng, chống nắng kín từ đầu tới chân. | 2
+LŨ LỤT | Nước dâng ngập nhà cửa miền Trung, cả nước cùng góp tiền cứu trợ. | 2 | LŨ, LỤT
+HẠN HÁN | Lâu ngày không mưa, ruộng nứt nẻ như ví tiền cuối tháng. | 2
+ĐỘNG ĐẤT | Mặt đất rung lắc dữ dội, Nhật Bản gặp như cơm bữa. | 2
+NÚI LỬA | Phun dung nham nóng chảy, giống cô Ngân lúc thấy ai chép đáp án. | 2
+SÓNG THẦN | Sóng biển khổng lồ sau trận rung chuyển dưới đáy đại dương. | 3
+NÚI | Cao hơn đồi, có đỉnh, leo lên chụp ảnh "săn mây". | 1
+ĐỒI | Thấp hơn núi, Mộc Châu trồng chè xanh mướt trên đó. | 1
+SÔNG | Dòng nước chảy ra biển, "... có khúc, người có lúc". | 1
+SUỐI | Nước trong chảy róc rách trên núi, cắm trại ngâm chân mát lạnh. | 1
+THÁC | Nước đổ từ trên cao xuống trắng xoá, Bản Giốc là đẹp nhất. | 1 | THÁC NƯỚC
+HỒ | Nước đứng yên rộng mênh mông, Hà Nội có Gươm, có Tây. | 1
+BIỂN | Nước mặn có sóng vỗ, có cát, hè nào cũng hẹn đi mà chưa đi. | 1
+ĐẠI DƯƠNG | Vùng nước rộng nhất hành tinh, Thái Bình là cái lớn nhất. | 2
+BÃI BIỂN | Chỗ nằm phơi nắng, xây lâu đài cát, viết tên crush rồi sóng xoá mất. | 2
+ĐẢO | Đất nổi giữa biển, đi phải ngồi tàu say sóng. | 1 | HÒN ĐẢO
+HANG ĐỘNG | Lỗ lớn trong núi có thạch nhũ, Quảng Bình nhiều vô kể. | 2 | HANG
+SA MẠC | Toàn cát, nóng, ít mưa, đi lạc là thấy ảo ảnh có nước. | 2
+RỪNG | Nhiều cây nhiều thú, "... vàng biển bạc". | 1 | KHU RỪNG
+RỪNG NHIỆT ĐỚI | Rừng rậm nóng ẩm như Amazon, lá phổi xanh của Trái Đất. | 3
+ĐỒNG LÚA | Cánh đồng xanh rì ở quê, mùa gặt vàng óng, dân chụp ảnh cưới mê. | 2 | CÁNH ĐỒNG
+ĐẤT | Ta đứng trên nó, cây mọc từ nó, ở thành phố mua một mét là tiền tỷ. | 1
+ĐÁ | Cứng, có loại cuội, có loại granit, cũng là động từ khi người yêu bỏ. | 1 | HÒN ĐÁ
+CÁT | Hạt nhỏ li ti trên bãi biển, đi về là có trong giày cả tuần. | 1
+BÙN | Đất nhão sau mưa, đi xe qua là bắn đầy quần. | 1
+LỬA | Nóng đỏ, cháy rực, "tình yêu như ... cháy". | 1
+KHÓI | Bay lên từ đám cháy hay bếp than, cũng là thứ "toả" ra khi nướng thịt. | 1
+NƯỚC | Không có thì không sống được, cơ thể người chứa tới bảy mươi phần trăm. | 1
+KHÔNG KHÍ | Thứ ta hít thở mỗi giây, Hà Nội mùa đông thì chất lượng đỏ báo động. | 2
+OXY | Khí cây cối nhả ra cho ta thở, trong bệnh viện có bình riêng. | 2 | Ô XI
+BẦU TRỜI | Màu xanh trên đầu ta, "một ... thương nhớ" là chuyện tình cảm. | 1
+BÌNH MINH | Lúc mặt trời mới mọc, dân văn phòng chỉ thấy khi thức trắng chạy deadline. | 2
+HOÀNG HÔN | Lúc mặt trời lặn, trời đỏ cam, cà phê rooftop chật kín người chụp ảnh. | 2
+NỬA ĐÊM | Mười hai giờ đêm, giờ của mì tôm, lướt điện thoại và nhắn tin cho người yêu cũ. | 2
+MÙA XUÂN | Mùa có Tết, hoa nở, bị hỏi lương bao nhiêu với bao giờ lấy chồng. | 1
+MÙA HÈ | Mùa nóng nghỉ học ba tháng, đi làm rồi không còn nữa. | 1 | MÙA HẠ
+MÙA THU | Mùa lá vàng rơi, có Trung thu, Hà Nội đẹp nhất năm. | 1
+MÙA ĐÔNG | Mùa lạnh, mặc áo khoác, ai ế thì thấy lạnh gấp đôi. | 1
+MÙA MƯA | Miền Nam có hai mùa, đây là mùa chiều nào cũng ướt và ngập đường. | 2
+MÙA KHÔ | Miền Nam có hai mùa, đây là mùa nắng ráo, nóng như rang. | 2
+TRÁI ĐẤT | Hành tinh xanh ta đang sống, tắt đèn một giờ mỗi năm để bảo vệ nó. | 2
+SAO HỎA | Hành tinh đỏ, tỷ phú công nghệ mơ đưa người lên sống. | 2
+SAO KIM | Hành tinh sáng nhất trên trời, buổi sớm gọi sao Mai, buổi tối gọi sao Hôm. | 3
+SAO MỘC | Hành tinh lớn nhất hệ Mặt Trời, có một vết đỏ khổng lồ. | 3
+SAO THỔ | Hành tinh có vành đai đẹp nhất, đeo nhẫn từ trước khi có người yêu. | 3
+SAO BĂNG | Vệt sáng vụt qua trời đêm, kịp ước thì ước tăng lương. | 2
+NGÂN HÀ | Dải sáng trắng vắt ngang trời đêm, chụp được thì phải lên núi xa thành phố. | 3 | DẢI NGÂN HÀ
+NHẬT THỰC | Mặt Trăng che Mặt Trời giữa ban ngày, phải đeo kính chuyên dụng mới được nhìn. | 3
+NGUYỆT THỰC | Bóng Trái Đất che Mặt Trăng, có khi trăng thành màu đỏ máu. | 3
+VŨ TRỤ | Bao la chứa mọi vì sao, "... gửi tín hiệu" là câu cửa miệng của dân tin tâm linh. | 2
+NHIỆT ĐỘ | Đo bằng độ C, mở điều hoà mười sáu độ là bị mẹ mắng. | 2
+DỰ BÁO THỜI TIẾT | Xem sau thời sự để biết mai mưa hay nắng, báo nắng mà vẫn mưa. | 3
+SƯƠNG MUỐI | Lớp băng trắng phủ cây cỏ trên núi khi rét đậm, rau màu chết hết. | 3
+RÉT ĐẬM | Trời lạnh dưới mười lăm độ ở miền Bắc, bật dậy khỏi chăn là cả một kỳ tích. | 3 | RÉT HẠI
+GIÓ LÀO | Gió khô nóng thổi miền Trung mùa hè, phơi áo mười phút là khô. | 3
+TRIỀU CƯỜNG | Nước biển dâng cao ngập phố Sài Gòn dù trời không mưa. | 3
+THẠCH NHŨ | Đá rủ xuống từ trần hang, nhỏ giọt cả nghìn năm mới thành. | 3
+MẠCH NƯỚC NGẦM | Dòng chảy bí mật dưới lòng đất, khoan giếng là gặp. | 3 | NƯỚC NGẦM

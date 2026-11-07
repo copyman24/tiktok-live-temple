@@ -3,7 +3,7 @@ import { createServer } from 'node:http';
 import path from 'node:path';
 import { WebSocketServer, WebSocket } from 'ws';
 import { createWeddingState, publicWeddingState, reduceWedding, WeddingRuleError } from './domain.js';
-import { createTikTokAdapter } from './tiktok.js';
+import { createLiveConnection } from '../../../packages/live-core/src/tiktok.js';
 
 const RPC_ERRORS = { invalid: -32600, params: -32602, method: -32601, rule: -32010, internal: -32603 };
 
@@ -21,7 +21,7 @@ export function createWeddingServer(options = {}) {
     ? new WebSocketServer({ server, path: '/ws', maxPayload: 256 * 1024 })
     : new WebSocketServer({ noServer: true, maxPayload: 256 * 1024 });
   let wedding = createWeddingState();
-  let stream = { state: 'offline', username: '', viewerCount: 0, roomId: null, error: null };
+  let stream = { state: 'offline', username: '', viewerCount: 0, totalLikes: 0, roomId: null, error: null, retryInMs: null };
   let sequence = 0;
   let closing = false;
   let autoGoals = true;
@@ -66,17 +66,18 @@ export function createWeddingServer(options = {}) {
     }
   }
 
-  const tiktok = createTikTokAdapter({
-    onInteraction: (interaction) => {
-      try { applyTransition({ type: 'interaction', interaction }, 'tiktok'); }
-      catch (error) { console.warn(`[Wedding event] ${error.message}`); }
-    },
-    onStatus: (status) => {
-      stream = status;
-      notify('wedding.state', snapshot());
-      retuneGoals();
-    }
-  });
+  // live-core connection: reconnects by itself until tiktok.disconnect(). Inside Studio, options.live is
+  // Studio's one shared connection and Studio calls onLiveEvent / onLiveStatus.
+  function onLiveEvent(interaction) {
+    try { applyTransition({ type: 'interaction', interaction }, 'tiktok'); }
+    catch (error) { console.warn(`[Wedding event] ${error.message}`); }
+  }
+  function onLiveStatus(status) {
+    stream = status;
+    notify('wedding.state', snapshot());
+    retuneGoals();
+  }
+  const tiktok = options.live || createLiveConnection({ onEvent: onLiveEvent, onStatus: onLiveStatus });
 
   app.disable('x-powered-by');
   app.use(express.json({ limit: '256kb', strict: true }));
@@ -168,7 +169,10 @@ export function createWeddingServer(options = {}) {
       }
       return snapshot();
     }
-    if (method === 'tiktok.disconnect') return { ...(await tiktok.disconnect()), wedding: publicWeddingState(wedding) };
+    if (method === 'tiktok.disconnect') {
+      await tiktok.disconnect();
+      return snapshot();
+    }
     if (method === 'wedding.audience.simulate') {
       stream = { ...stream, viewerCount: readNumber(params.viewerCount, 'Viewer count must be a number.') };
       notify('wedding.state', snapshot());
@@ -199,15 +203,16 @@ export function createWeddingServer(options = {}) {
   async function close() {
     if (closing) return;
     closing = true;
-    await tiktok.disconnect();
+    if (!options.live) await tiktok.disconnect();
     for (const socket of sockets.clients) socket.close(1001, 'Wedding app shutting down');
     if (server) await new Promise((resolve) => server.close(resolve));
   }
 
   // Studio session lifecycle: keep the ceremony in memory, release the live room and sockets.
   async function deactivate() {
-    const username = stream.state === 'live' || stream.state === 'connecting' ? stream.username : '';
-    await tiktok.disconnect();
+    // Studio's shared connection stays up. Our own connection: hand the room over and stop retrying.
+    const username = options.live ? '' : tiktok.getWanted();
+    if (!options.live) await tiktok.disconnect();
     for (const socket of sockets.clients) socket.close(1012, 'Session switched');
     return { username };
   }
@@ -225,6 +230,9 @@ export function createWeddingServer(options = {}) {
     activate: () => {},
     handleUpgrade,
     connectLive: (username) => dispatch('tiktok.connect', { username }),
+    onLiveEvent,
+    onLiveStatus,
+    getPhase: () => wedding.phase,
     getSnapshot: snapshot,
     getStatus: () => ({ live: { ...stream } })
   };

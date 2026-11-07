@@ -1,0 +1,63 @@
+# Khoa học, công nghệ
+> Đây là thứ thuộc về khoa học, công nghệ.
+KÍNH LÚP | Phóng to chữ nhỏ, có cán cầm, thám tử trong phim lúc nào cũng mang theo. | 2
+KÍNH HIỂN VI | Nhìn thấy vi khuẩn, tiết sinh học ai cũng tranh nhau ngó. | 3
+KÍNH THIÊN VĂN | Ngắm sao trên trời, có loại khổng lồ bay ngoài vũ trụ. | 3
+NAM CHÂM | Hút sắt, dán lên tủ lạnh, giống người có duyên hút hết ánh nhìn. | 2
+ĐIỆN | Chạy trong dây làm sáng bóng đèn, mất là cả xóm ra ngõ. | 1
+PIN | Cục nhỏ lắp vào điều khiển tivi, điện thoại còn năm phần trăm là hoảng. | 1
+TRỌNG LỰC | Lực làm quả táo rơi trúng đầu Newton, cũng là lý do sáng thứ hai không dậy nổi. | 3 | LỰC HẤP DẪN
+ÁNH SÁNG | Đi nhanh nhất vũ trụ, nhanh hơn cả tốc độ hết lương. | 2
+ÂM THANH | Tai nghe được, truyền qua không khí, ngoài vũ trụ thì không có. | 2
+NHIỆT | Năng lượng làm nóng, cũng là chữ "giải ..." khi uống trà đá ngày hè. | 2
+NƯỚC SÔI | Một trăm độ C, pha mì tôm ba phút. | 2
+NƯỚC ĐÓNG BĂNG | Không độ C, thành đá viên bỏ vào trà sữa. | 3 | ĐÓNG BĂNG
+BỐC HƠI | Nước biến thành hơi khi nóng, như tiền lương sau ba ngày. | 2 | BAY HƠI
+TAN CHẢY | Kem để ngoài nắng bị vậy, tim cũng bị khi crush cười. | 2
+NGUYÊN TỬ | Hạt nhỏ xíu tạo nên mọi vật, gồm hạt nhân và các electron. | 3
+PHÂN TỬ | Gồm nhiều nguyên tử liên kết, nước là hai hydro một oxy. | 3
+VI KHUẨN | Sinh vật nhỏ xíu, có loại có lợi trong sữa chua, có loại gây bệnh. | 2
+VIRUS | Gây cảm cúm, nhỏ hơn vi khuẩn, giao mùa là lây cả phòng. | 2 | VI RÚT
+QUANG HỢP | Cây xanh dùng ánh sáng làm thức ăn, ước gì người cũng no bằng cách này. | 3
+HẠT GIỐNG | Gieo xuống đất sẽ nảy mầm, dân văn phòng mua về trồng ban công. | 2
+NẢY MẦM | Hạt đậu nứt vỏ mọc chồi, khoai tây để lâu trong bếp cũng bị. | 2
+RỄ CÂY | Phần cây hút nước dưới đất, bám sâu như thói quen thức khuya. | 2 | RỄ
+LÁ CÂY | Màu xanh, quang hợp, mùa thu thì vàng rơi đầy phố. | 1
+KHỦNG LONG | Bò sát khổng lồ tuyệt chủng, phim công viên kỷ Jura làm sống lại. | 2
+HÓA THẠCH | Xương động vật cổ hoá đá, người cổ hủ cũng hay bị gọi vậy. | 3
+TIẾN HÓA | Thuyết của Darwin, khỉ thành người, người thành dân văn phòng gù lưng. | 3
+ROBOT | Máy móc biết làm việc như người, quán ăn giờ có loại bưng đồ ăn. | 1 | RÔ BỐT
+TRÍ TUỆ NHÂN TẠO | Máy biết suy nghĩ, viết tắt AI, sinh viên nhờ làm bài tập. | 3 | AI
+CHATGPT | Trợ lý trò chuyện nổi tiếng, hỏi gì cũng trả lời, bị nghi viết hộ tiểu luận. | 2
+MÁY ẢNH | Chụp hình có ống kính rời, đi du lịch đeo cổ cho ra dáng nhiếp ảnh gia. | 2
+MÁY PHOTO | Sao chép tài liệu, mùa thi đề cương xếp hàng dài trước tiệm. | 2
+INTERNET | Mạng toàn cầu, mất mấy phút là cả văn phòng ngừng làm việc. | 1 | MẠNG
+MẬT KHẨU | Dãy ký tự bí mật để đăng nhập, đặt xong là quên, bấm quên mỗi lần. | 2 | PASSWORD
+ỨNG DỤNG | Phần mềm tải về điện thoại, đặt đồ ăn, gọi xe, xem video đều có. | 2 | APP
+PHẦN MỀM | Chương trình chạy trên máy tính, cập nhật đúng lúc đang gấp. | 2
+VIRUS MÁY TÍNH | Chương trình độc hại, tải phim lậu là dính. | 3
+ĐIỆN TOÁN ĐÁM MÂY | Lưu dữ liệu trên mạng, ảnh trong máy đầy thì đẩy hết lên đây. | 3 | CLOUD
+MÀN HÌNH | Phần hiển thị hình ảnh, mỗi ngày nhìn nó hơn mười tiếng. | 1
+CẢM ỨNG | Chạm tay vào màn hình là dùng được, tay ướt là bấm loạn xạ. | 2
+MÃ QR | Ô vuông đen trắng quét để chuyển khoản, đi chợ cũng không cần tiền mặt. | 2 | QR CODE
+ĐỊNH VỊ | Bật lên điện thoại để chỉ đường, có lúc dẫn vào tận ngõ cụt. | 2 | GPS
+VỆ TINH | Bay quanh Trái Đất truyền sóng, có cả trạm vũ trụ người ở. | 2
+ĐIỆN GIÓ | Cánh quạt khổng lồ ven biển Ninh Thuận, Bạc Liêu, chụp ảnh sống ảo đẹp. | 2
+THỦY ĐIỆN | Nhà máy điện từ đập nước, Hoà Bình là cái nổi tiếng. | 3
+Ô NHIỄM | Khói bụi rác thải làm bẩn môi trường, sáng ra mở app thấy chỉ số đỏ lòm. | 2
+RÁC THẢI NHỰA | Túi ni lông với ống hút trăm năm không phân huỷ, thay bằng ống hút giấy. | 3
+TÁI CHẾ | Biến đồ cũ thành đồ mới, chai nhựa thành áo thun. | 2
+TIẾT KIỆM ĐIỆN | Ra khỏi phòng nhớ tắt đèn, tháng nóng hoá đơn tăng vọt mới nhớ. | 3
+PHÒNG THÍ NGHIỆM | Nơi có ống nghiệm, áo blouse trắng, nhà khoa học trong phim hay làm nổ. | 3
+ỐNG NGHIỆM | Ống thuỷ tinh nhỏ trong giờ hoá, quán trà sữa còn dùng đựng siro. | 2
+BẢNG TUẦN HOÀN | Bảng xếp các nguyên tố hoá học, thuộc hết là thần đồng. | 3
+NƯỚC MUỐI | Súc miệng sát khuẩn, bị đau họng là mẹ bắt dùng. | 2
+AXIT | Chất chua có thể ăn mòn, trong dạ dày cũng có. | 2 | A XÍT
+KIM LOẠI | Sắt, đồng, nhôm, cũng là dòng nhạc rock gào thét. | 2
+NHỰA | Vật liệu làm chai nước, đồ chơi, hộp đựng cơm văn phòng. | 1
+THỦY TINH | Làm cốc trong suốt dễ vỡ, tên một vị thần dâng nước. | 2
+CAO SU | Làm lốp xe, dây thun, nhai kẹo này thì dai như ... | 2
+XE TỰ LÁI | Ô tô không cần người cầm lái, chạy ở Việt Nam chắc đứng im luôn. | 3
+THỰC TẾ ẢO | Đeo kính vào như đang ở thế giới khác, quơ tay đập trúng đồ trong nhà. | 3 | VR
+NHÀ PHÁT MINH | Edison, Tesla đều là những người như vậy. | 3
+BÓNG ĐÈN SỢI ĐỐT | Phát minh gắn tên Edison, giờ được thay bằng đèn LED tiết kiệm. | 3

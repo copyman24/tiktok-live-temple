@@ -42,7 +42,12 @@
     "resources": {
       "../../../public/": "temple/public/",
       "../../../tts_worker.py": "temple/tts_worker.py",
+      "../../../packages/live-core/browser/": "temple/packages/live-core/browser/",
       "../../virtual-wedding/web/": "wedding/web/",
+      "../../classroom/dist/": "classroom/dist/",
+      "../../classroom/public/": "classroom/public/",
+      "../../classroom/src/game/cau-hoi/": "classroom/src/game/cau-hoi/",
+      "../../classroom/src/game/cau-hoi-show/": "classroom/src/game/cau-hoi-show/",
       "../web/": "studio/web/"
     }
   }

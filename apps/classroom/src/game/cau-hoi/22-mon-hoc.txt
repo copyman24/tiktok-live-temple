@@ -1,0 +1,33 @@
+# Môn học
+> Đây là một môn học.
+TOÁN | Môn có cộng trừ nhân chia, lớn lên chỉ dùng để tính lương còn bao nhiêu. | 1
+TIẾNG VIỆT | Môn tập đọc, tập viết, chính tả ở tiểu học, gõ có dấu là nhờ nó. | 2
+NGỮ VĂN | Môn viết văn tả mẹ, phân tích bài thơ, viết dài cho đủ trang. | 2 | VĂN
+LỊCH SỬ | Môn học về các triều đại, nhớ ngày tháng năm còn khó hơn nhớ sinh nhật người yêu. | 2 | SỬ
+ĐỊA LÝ | Môn học về sông núi, bản đồ, khí hậu, vẽ biểu đồ tròn. | 2 | ĐỊA LÍ, ĐỊA
+THỂ DỤC | Môn học ngoài sân, chạy vòng quanh trường, ai cũng xin nghỉ vì đau bụng. | 1
+HÓA HỌC | Môn có bảng tuần hoàn và ống nghiệm, cân bằng phương trình tới hoa mắt. | 2 | HÓA
+SINH HỌC | Môn học về tế bào, cây cối, con vật, có bài về gen di truyền. | 2 | SINH
+VẬT LÝ | Môn có định luật Newton, điện trở, ròng rọc. | 2 | VẬT LÍ, LÝ, LÍ
+MỸ THUẬT | Môn vẽ tranh tô màu, đứa vẽ đẹp được cả lớp nhờ vẽ hộ. | 2 | MĨ THUẬT
+ÂM NHẠC | Môn tập hát, học nốt nhạc, thổi sáo dọc ríu rít. | 1 | NHẠC
+TIN HỌC | Môn học máy tính, tranh thủ chơi game lúc thầy không để ý. | 2 | TIN
+NGOẠI NGỮ | Môn học tiếng nước ngoài, học mười năm vẫn sợ nói. | 2
+GIÁO DỤC CÔNG DÂN | Môn dạy đạo đức, pháp luật, đi làm rồi mới thấy cần. | 3 | GDCD
+CÔNG NGHỆ | Môn học trồng cây, nấu ăn, lắp mạch điện, sách có nhưng ít khi thực hành. | 3
+ĐẠO ĐỨC | Môn dạy lễ phép ở tiểu học, đi thưa về chào. | 2
+TẬP VIẾT | Tiết tô chữ trong vở ô li, ngồi thẳng lưng, cầm bút đúng cách. | 2
+CHÍNH TẢ | Cô đọc cả lớp viết, sai dấu là trừ điểm, như lớp mình gõ thiếu dấu là không tính. | 2
+KỂ CHUYỆN | Tiết đứng trước lớp kể lại câu chuyện, run tới quên hết. | 2
+KHOA HỌC | Môn tìm hiểu tự nhiên ở lớp bốn, lớp năm, học về nước, không khí, ánh sáng. | 2
+HÌNH HỌC | Phần toán về tam giác, đường tròn, vẽ thêm một đường phụ là ra. | 2
+ĐẠI SỐ | Phần toán có x, y, phương trình, đi tìm x còn khó hơn tìm người yêu. | 3
+TIẾNG ANH | Môn học có "hello", "how are you", trả lời "I'm fine thank you" suốt mười năm. | 1
+QUỐC PHÒNG | Môn học tháo lắp súng, đi đều bước, sinh viên năm nhất đi học tập trung. | 3 | GIÁO DỤC QUỐC PHÒNG
+LUYỆN TỪ VÀ CÂU | Phân môn tiếng Việt học danh từ, động từ, tính từ. | 3
+TẬP ĐỌC | Đứng lên đọc to bài văn trong sách, đọc vấp là cả lớp cười. | 2
+TẬP LÀM VĂN | Phân môn viết bài văn ngắn, đề nào cũng mở bài "Em có một người mẹ". | 3
+THỦ CÔNG | Môn cắt dán giấy màu, gấp thuyền gấp máy bay, dính keo đầy tay. | 2
+HÁT NHẠC | Tiết cả lớp vỗ tay hát theo cô, đứa hát to nhất thường lệch tông. | 2
+LÝ THUYẾT | Phần học trên sách chưa làm thật, nói thì hay mà làm thì khác. | 3
+THỰC HÀNH | Phần làm thật trong phòng thí nghiệm hay xưởng, đi làm mới thấy quan trọng. | 3

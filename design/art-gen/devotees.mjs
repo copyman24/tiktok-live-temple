@@ -1,6 +1,9 @@
-// Generates the 8 devotee pose sprites (back view, Vietnamese áo tràng lam) for the
-// prayer stage. Output: public/assets/devotee*.png at 280x380 (2x the old sprites).
-//   bun design/art-gen/devotees.mjs [--out dir] [--sheet sheet.png]
+// Generates the devotee pose sprites (back view, Vietnamese áo tràng) for the prayer stage.
+// 8 looks (4 robe colours × bun / short hair) × 8 poses, so the 40-seat hall is a mixed crowd.
+// Output:
+//   public/assets/devotees/<variant>/<pose>.webp   every variant (used by the stage)
+//   public/assets/devotee*.png                      the default look (grey-blue, bun), kept for older pages
+//   bun design/art-gen/devotees.mjs [--out dir] [--sheet sheet.png] [--only variant]
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,19 +14,50 @@ const W = 280;
 const H = 380;
 const CX = 140;
 
-const ROBE = { hi: '#cfc9c4', mid: '#8a93a5', lo: '#4f5870', seam: '#3d455a' };
+// Robe colours. Each needs enough range (hi → lo) for the fold shading to read on a red carpet.
+export const PALETTES = {
+  lam: { // grey-blue áo tràng lam (the original look)
+    hi: '#cfc9c4', mid: '#8a93a5', lo: '#4f5870', seam: '#3d455a', line: '#2a3142',
+    sash: ['#6b7891', '#465169'], knot: '#56627a', collar: '#5d6a82', shade: ['#1b2133', '#141826'],
+    pants: ['#3a404f', '#434a5b', '#3f4656'], sheen: '#f4efe8'
+  },
+  nau: { // brown
+    hi: '#dcc6a6', mid: '#9c7752', lo: '#5a3e27', seam: '#47301e', line: '#2e1f14',
+    sash: ['#7a5a3c', '#4e3622'], knot: '#68492e', collar: '#6e5034', shade: ['#2a1a0f', '#1f130a'],
+    pants: ['#3d2f24', '#47372a', '#42342a'], sheen: '#f6e9d6'
+  },
+  trang: { // white / cream, grey-blue sash for contrast
+    hi: '#fdfbf6', mid: '#e6e0d5', lo: '#aaa295', seam: '#8f877a', line: '#6b6458',
+    sash: ['#8a93a5', '#5d6680'], knot: '#6f7890', collar: '#cdc5b6', shade: ['#4a4438', '#3a352c'],
+    pants: ['#5a5650', '#66625b', '#5f5b54'], sheen: '#ffffff'
+  },
+  vang: { // light yellow
+    hi: '#fcf2cc', mid: '#e4cb80', lo: '#a98a40', seam: '#8a6f30', line: '#5a4318',
+    sash: ['#a8742a', '#7a5018'], knot: '#8f6020', collar: '#c9a352', shade: ['#4a3810', '#3a2c0c'],
+    pants: ['#4a4030', '#544836', '#4e4433'], sheen: '#fff8e2'
+  }
+};
+
+// <robe>-<hair>: nu = bun (women), nam = short hair (men)
+export const VARIANTS = Object.keys(PALETTES).flatMap((robe) => [`${robe}-nu`, `${robe}-nam`]);
+export const DEFAULT_VARIANT = 'lam-nu';
+
 const HAIR = { hi: '#4a3b33', lo: '#110c0a' };
 const SKIN = { hi: '#ecc2a3', lo: '#b07e62', sole: '#c89a7c' };
 
-const defs = `
+// Current look while drawing one sprite (set by poseSvg).
+let ROBE = PALETTES.lam;
+let HAIR_STYLE = 'bun';
+
+const defs = () => `
   <linearGradient id="robe" gradientUnits="userSpaceOnUse" x1="70" y1="10" x2="230" y2="372">
     <stop offset="0" stop-color="${ROBE.hi}"/><stop offset="0.45" stop-color="${ROBE.mid}"/><stop offset="1" stop-color="${ROBE.lo}"/>
   </linearGradient>
   <radialGradient id="ao" cx="0.42" cy="0.32" r="0.78">
     <stop offset="0" stop-color="#ffe6c4" stop-opacity="0.3"/>
     <stop offset="0.5" stop-color="#fff3e2" stop-opacity="0"/>
-    <stop offset="0.82" stop-color="#1b2133" stop-opacity="0.18"/>
-    <stop offset="1" stop-color="#141826" stop-opacity="0.5"/>
+    <stop offset="0.82" stop-color="${ROBE.shade[0]}" stop-opacity="0.18"/>
+    <stop offset="1" stop-color="${ROBE.shade[1]}" stop-opacity="0.5"/>
   </radialGradient>
   <radialGradient id="hair" cx="0.38" cy="0.3" r="0.8">
     <stop offset="0" stop-color="${HAIR.hi}"/><stop offset="0.6" stop-color="#211915"/><stop offset="1" stop-color="${HAIR.lo}"/>
@@ -32,7 +66,7 @@ const defs = `
     <stop offset="0" stop-color="${SKIN.hi}"/><stop offset="1" stop-color="${SKIN.lo}"/>
   </radialGradient>
   <linearGradient id="sash" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#6b7891"/><stop offset="1" stop-color="#465169"/>
+    <stop offset="0" stop-color="${ROBE.sash[0]}"/><stop offset="1" stop-color="${ROBE.sash[1]}"/>
   </linearGradient>
   <filter id="cloth" x="-5%" y="-5%" width="110%" height="110%">
     <feTurbulence type="fractalNoise" baseFrequency="0.55 0.09" numOctaves="3" seed="7" result="n"/>
@@ -49,12 +83,12 @@ let clipId = 0;
 function cloth(d, folds = [], { fill = 'url(#robe)', highlights = [] } = {}) {
   const id = `c${clipId++}`;
   const foldPaths = folds.map((p) => `<path d="${spline(p, false)}" fill="none" stroke="${ROBE.seam}" stroke-opacity="0.42" stroke-width="3.2" stroke-linecap="round"/>`).join('');
-  const hiPaths = highlights.map((p) => `<path d="${spline(p, false)}" fill="none" stroke="#f4efe8" stroke-opacity="0.28" stroke-width="2.4" stroke-linecap="round"/>`).join('');
+  const hiPaths = highlights.map((p) => `<path d="${spline(p, false)}" fill="none" stroke="${ROBE.sheen}" stroke-opacity="0.28" stroke-width="2.4" stroke-linecap="round"/>`).join('');
   return `<clipPath id="${id}"><path d="${d}"/></clipPath>
     <g filter="url(#cloth)"><path d="${d}" fill="${fill}"/><path d="${d}" fill="url(#ao)"/>
       <g clip-path="url(#${id})"><g filter="url(#soft)">${foldPaths}${hiPaths}</g></g>
     </g>
-    <path d="${d}" fill="none" stroke="#2a3142" stroke-opacity="0.55" stroke-width="1.4"/>`;
+    <path d="${d}" fill="none" stroke="${ROBE.line}" stroke-opacity="0.55" stroke-width="1.4"/>`;
 }
 
 function shadow(cx, cy, rx, ry) {
@@ -77,10 +111,11 @@ function ellipsePath(cx, cy, rx, ry, rot = 0) {
 }
 
 // Back of head with bun and wooden hairpin. `bunDy` moves the bun relative to the head
-// (negative = on top, ~0 = facing camera when bowing).
+// (negative = on top, ~0 = facing camera when bowing). Short hair (HAIR_STYLE 'short') has no bun.
 function head({ cx = CX, cy, rx, ry, bunDy = -ry * 0.95, bunR = rx * 0.56, ears = true }) {
   const earL = ears ? skin(ellipsePath(cx - rx + 2, cy + ry * 0.12, 5.5, 10, -8)) : '';
   const earR = ears ? skin(ellipsePath(cx + rx - 2, cy + ry * 0.12, 5.5, 10, 8)) : '';
+  if (HAIR_STYLE === 'short') return shortHairHead({ cx, cy, rx, ry, earL, earR, ears });
   const hair = ellipsePath(cx, cy, rx, ry);
   const nape = `<path d="${spline([[cx - rx * 0.55, cy + ry * 0.72], [cx, cy + ry * 1.04], [cx + rx * 0.55, cy + ry * 0.72], [cx, cy + ry * 0.86]])}" fill="#2a1f1a"/>`;
   const strands = [-0.5, -0.2, 0.15, 0.45]
@@ -95,20 +130,43 @@ function head({ cx = CX, cy, rx, ry, bunDy = -ry * 0.95, bunR = rx * 0.56, ears 
     <path d="${bun}" fill="url(#hair)" stroke="#0c0807" stroke-opacity="0.6" stroke-width="1"/>${coil}${pin}`;
 }
 
+// Short men's haircut seen from behind: skin at the nape, hair cut in a soft line above it,
+// a little fuller at the crown. Bowing poses (no ears) show mostly the crown.
+function shortHairHead({ cx, cy, rx, ry, earL, earR, ears }) {
+  const scalp = skin(ellipsePath(cx, cy, rx * 0.96, ry * 0.98));
+  // Upright: hair stops above the ears and tapers down to a rounded nape, so skin shows around the
+  // ears and the neck (a bob-like flat cut read as a woman's hairstyle). Bowing (no ears): mostly crown.
+  const side = ears ? -0.08 : 0.35; // hairline at the temples (fraction of ry from centre)
+  const nape = ears ? 0.74 : 0.8;
+  const hair = spline([
+    [cx - rx * 0.99, cy + ry * side], [cx - rx * 1.0, cy - ry * 0.4], [cx - rx * 0.62, cy - ry * 0.97],
+    [cx, cy - ry - 2.5], [cx + rx * 0.62, cy - ry * 0.97], [cx + rx * 1.0, cy - ry * 0.4],
+    [cx + rx * 0.99, cy + ry * side], [cx + rx * 0.72, cy + ry * (side + 0.3)], [cx + rx * 0.4, cy + ry * (nape - 0.06)],
+    [cx, cy + ry * nape], [cx - rx * 0.4, cy + ry * (nape - 0.06)], [cx - rx * 0.72, cy + ry * (side + 0.3)]
+  ]);
+  const strands = [-0.6, -0.28, 0, 0.28, 0.6]
+    .map((k) => `<path d="${spline([[cx + rx * k * 0.45, cy - ry * 0.9], [cx + rx * k * 0.8, cy - ry * 0.15], [cx + rx * k * 0.55, cy + ry * (nape - 0.12)]], false)}" fill="none" stroke="#5a4a40" stroke-opacity="0.24" stroke-width="1.1"/>`)
+    .join('');
+  // soft fade where the clipper cut meets the skin
+  const fade = `<path d="${spline([[cx - rx * 0.78, cy + ry * (side + 0.22)], [cx - rx * 0.38, cy + ry * (nape - 0.04)], [cx, cy + ry * (nape + 0.04)], [cx + rx * 0.38, cy + ry * (nape - 0.04)], [cx + rx * 0.78, cy + ry * (side + 0.22)]], false)}" fill="none" stroke="#3a2c24" stroke-opacity="0.3" stroke-width="2.6" filter="url(#soft)"/>`;
+  const shine = `<path d="${spline([[cx - rx * 0.6, cy - ry * 0.3], [cx - rx * 0.28, cy - ry * 0.74], [cx + rx * 0.08, cy - ry * 0.82]], false)}" fill="none" stroke="#9c8676" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" filter="url(#soft)"/>`;
+  return `${scalp}<path d="${hair}" fill="url(#hair)" stroke="#0c0807" stroke-opacity="0.35" stroke-width="0.8"/>${strands}${fade}${shine}${earL}${earR}`;
+}
+
 function neck(cx, top, bottom, hw) {
   return skin(spline([[cx - hw, top], [cx + hw, top], [cx + hw + 2, bottom], [cx, bottom + 3], [cx - hw - 2, bottom]]));
 }
 
 function collar(cx, y, hw) {
-  return `<path d="${spline([[cx - hw, y + 2], [cx, y - 5], [cx + hw, y + 2], [cx + hw - 4, y + 11], [cx, y + 5], [cx - hw + 4, y + 11]])}" fill="#5d6a82" stroke="#2a3142" stroke-opacity="0.6" stroke-width="1.2"/>`;
+  return `<path d="${spline([[cx - hw, y + 2], [cx, y - 5], [cx + hw, y + 2], [cx + hw - 4, y + 11], [cx, y + 5], [cx - hw + 4, y + 11]])}" fill="${ROBE.collar}" stroke="${ROBE.line}" stroke-opacity="0.6" stroke-width="1.2"/>`;
 }
 
 function sash(cx, y, hw, tail = 34) {
   const band = spline([[cx - hw, y - 4], [cx, y - 6], [cx + hw, y - 4], [cx + hw, y + 5], [cx, y + 4], [cx - hw, y + 5]]);
-  const tails = `<path d="${spline([[cx - 4, y], [cx - 11, y + tail * 0.5], [cx - 9, y + tail], [cx - 2, y + tail * 0.95], [cx - 1, y + tail * 0.4]])}" fill="url(#sash)" stroke="#2a3142" stroke-opacity="0.5"/>
-    <path d="${spline([[cx + 4, y], [cx + 12, y + tail * 0.55], [cx + 11, y + tail * 1.05], [cx + 3, y + tail], [cx + 1, y + tail * 0.4]])}" fill="url(#sash)" stroke="#2a3142" stroke-opacity="0.5"/>
-    <ellipse cx="${cx}" cy="${y}" rx="8" ry="6" fill="#56627a" stroke="#2a3142" stroke-opacity="0.6"/>`;
-  return `<path d="${band}" fill="url(#sash)" stroke="#2a3142" stroke-opacity="0.5"/>${tails}`;
+  const tails = `<path d="${spline([[cx - 4, y], [cx - 11, y + tail * 0.5], [cx - 9, y + tail], [cx - 2, y + tail * 0.95], [cx - 1, y + tail * 0.4]])}" fill="url(#sash)" stroke="${ROBE.line}" stroke-opacity="0.5"/>
+    <path d="${spline([[cx + 4, y], [cx + 12, y + tail * 0.55], [cx + 11, y + tail * 1.05], [cx + 3, y + tail], [cx + 1, y + tail * 0.4]])}" fill="url(#sash)" stroke="${ROBE.line}" stroke-opacity="0.5"/>
+    <ellipse cx="${cx}" cy="${y}" rx="8" ry="6" fill="${ROBE.knot}" stroke="${ROBE.line}" stroke-opacity="0.6"/>`;
+  return `<path d="${band}" fill="url(#sash)" stroke="${ROBE.line}" stroke-opacity="0.5"/>${tails}`;
 }
 
 function mirror(points) {
@@ -167,7 +225,7 @@ const poses = {
     return [
       shadow(CX, 364, 98, 13),
       sole(114, 362, -14),
-      `<path d="${spline([[160, 330], [182, 332], [186, 366], [174, 372], [160, 368]])}" fill="#3f4656"/>`,
+      `<path d="${spline([[160, 330], [182, 332], [186, 366], [174, 372], [160, 368]])}" fill="${ROBE.pants[2]}"/>`,
       skin(ellipsePath(173, 364, 12, 9, 0)),
       cloth(profile(CX, lowerRows, 8), [[[116, 240], [104, 300], [96, 352]], [[160, 240], [170, 300], [176, 350]]], { highlights: [[[104, 250], [92, 300], [80, 340]]] }),
       kneelTorso(-14),
@@ -255,9 +313,9 @@ function walkFrame(dir) {
   const sway = dir * 1.5;
   return [
     shadow(CX, 364, 64, 11),
-    `<path d="${spline([[far - 9, 330], [far + 9, 330], [far + 8, 356], [far - 8, 356]])}" fill="#3a404f"/>`,
+    `<path d="${spline([[far - 9, 330], [far + 9, 330], [far + 8, 356], [far - 8, 356]])}" fill="${ROBE.pants[0]}"/>`,
     `<path d="${ellipsePath(far, 354, 10, 6, 0)}" fill="#2a2522"/>`,
-    `<path d="${spline([[near - 10, 334], [near + 10, 334], [near + 10, 360], [near - 10, 360]])}" fill="#434a5b"/>`,
+    `<path d="${spline([[near - 10, 334], [near + 10, 334], [near + 10, 360], [near - 10, 360]])}" fill="${ROBE.pants[1]}"/>`,
     sole(near, 364, dir * 8),
     cloth(profile(CX + sway, robeRows, 6), [[[118, 190], [108, 270], [98, 338]], [[CX, 196], [CX + dir * 4, 270], [CX + dir * 2, 340]], [[162, 190], [172, 270], [182, 338]]], { highlights: [[[110, 200], [96, 280], [86, 330]]] }),
     cloth(profile(CX, [[92, 34], [100, 50], [130, 50], [168, 42], [182, 42]]), [[[CX, 100], [CX, 176]], [[110, 108], [118, 172]], [[170, 108], [162, 172]]], { highlights: [[[104, 104], [100, 150]]] }),
@@ -281,27 +339,55 @@ const FILES = {
   prostrateDeep: 'devotee_prostrate_deep.png',
 };
 
-export function poseSvg(key) {
+export function poseSvg(key, variant = DEFAULT_VARIANT) {
+  const [robe, hair] = variant.split('-');
+  if (!PALETTES[robe] || !['nu', 'nam'].includes(hair)) throw new Error(`Unknown devotee variant: ${variant}`);
+  ROBE = PALETTES[robe];
+  HAIR_STYLE = hair === 'nam' ? 'short' : 'bun';
   clipId = 0;
-  return svgDoc(W, H, defs, poses[key]());
+  return svgDoc(W, H, defs(), poses[key]());
+}
+
+const ORDER = ['walk1', 'walk2', 'kneelDown', 'kneel', 'forehead', 'bowMid', 'prostrate', 'prostrateDeep'];
+
+// Inline one rendered pose into a bigger SVG (unique clip / gradient ids per cell).
+function cell(key, variant, i, x, y) {
+  const body = poseSvg(key, variant).replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '')
+    .replace(/id="([a-z]+\d*)"/g, `id="$1_${i}"`).replace(/url\(#([a-z]+\d*)\)/g, `url(#$1_${i})`);
+  return `<g transform="translate(${x} ${y})">${body}</g>`;
 }
 
 if (import.meta.main) {
   const args = process.argv.slice(2);
+  const arg = (name) => (args.includes(name) ? args[args.indexOf(name) + 1] : null);
   const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-  const out = args.includes('--out') ? args[args.indexOf('--out') + 1] : join(root, 'public', 'assets');
-  const sheet = args.includes('--sheet') ? args[args.indexOf('--sheet') + 1] : null;
+  const out = arg('--out') || join(root, 'public', 'assets');
+  const sheet = arg('--sheet');
+  const only = arg('--only');
+  const variants = only ? [only] : VARIANTS;
   mkdirSync(out, { recursive: true });
   await withRasterizer(async (rasterize) => {
-    for (const [key, file] of Object.entries(FILES)) {
-      writeFileSync(join(out, file), await rasterize(poseSvg(key), { width: W, height: H, scale: 3 }));
-      console.log('wrote', join(out, file));
+    for (const variant of variants) {
+      const dir = join(out, 'devotees', variant);
+      mkdirSync(dir, { recursive: true });
+      for (const key of ORDER) {
+        writeFileSync(join(dir, `${key}.webp`), await rasterize(poseSvg(key, variant), { width: W, height: H, scale: 3, type: 'image/webp', quality: 0.9 }));
+      }
+      console.log('wrote', dir);
+    }
+    // The default look also keeps the original PNG names (index.html and older pages use them).
+    if (variants.includes(DEFAULT_VARIANT)) {
+      for (const [key, file] of Object.entries(FILES)) {
+        writeFileSync(join(out, file), await rasterize(poseSvg(key, DEFAULT_VARIANT), { width: W, height: H, scale: 3 }));
+      }
+      console.log('wrote', join(out, 'devotee*.png'));
     }
     if (sheet) {
-      const order = ['walk1', 'walk2', 'kneelDown', 'kneel', 'forehead', 'bowMid', 'prostrate', 'prostrateDeep'];
-      const imgs = order.map((k, i) => `<g transform="translate(${i * W} 0)">${poseSvg(k).replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '').replace(/id="(c\d+)"/g, `id="$1_${i}"`).replace(/url\(#(c\d+)\)/g, `url(#$1_${i})`)}</g>`).join('');
-      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W * 8}" height="${H}"><rect width="100%" height="100%" fill="#5a3a2a"/>${imgs}</svg>`;
-      writeFileSync(sheet, await rasterize(svg, { width: W * 8, height: H, scale: 1 }));
+      // One row per variant, poses left to right.
+      let i = 0;
+      const rows = variants.map((variant, r) => ORDER.map((key, c) => cell(key, variant, i++, c * W, r * H)).join('')).join('');
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W * 8}" height="${H * variants.length}"><rect width="100%" height="100%" fill="#5a3a2a"/>${rows}</svg>`;
+      writeFileSync(sheet, await rasterize(svg, { width: W * 8, height: H * variants.length, scale: 1 }));
       console.log('wrote', sheet);
     }
   });

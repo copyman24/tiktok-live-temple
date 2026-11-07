@@ -1,0 +1,70 @@
+# Món ăn Việt
+> Đây là món ăn trong bữa cơm người Việt.
+PHỞ | Món Hà Nội ăn sáng, ăn trưa, ăn khuya đều được, người miền Nam ăn kèm cả rổ rau. | 1
+BÁNH MÌ | Bữa sáng mười lăm nghìn của dân đi làm, vừa chạy xe vừa ăn, kẹp pa tê với chả. | 1
+BÚN CHẢ | Món Hà Nội từng mời cả tổng thống Mỹ, thịt nướng than thả vào bát nước mắm. | 2
+BÁNH CHƯNG | Bánh vuông gói lá dong, Tết nào cũng ăn tới ngán rồi đem rán. | 2
+BÁNH TÉT | Anh em miền Nam của bánh chưng, tròn dài, cắt bằng sợi dây. | 2
+CƠM TẤM | Hạt gạo vỡ mà thành món quốc dân Sài Gòn, sườn nướng thơm điếc mũi. | 2
+NEM RÁN | Cuộn bánh đa nem chiên vàng, mâm cỗ nào cũng có, miền Nam gọi tên khác. | 2 | CHẢ GIÒ
+BÁNH XÈO | Đổ bột vào chảo nghe tiếng kêu thành tên, cuốn rau chấm nước mắm. | 2
+GỎI CUỐN | Bánh tráng cuốn tôm thịt, ăn healthy để bù cho trà sữa hôm qua. | 2
+BÚN BÒ HUẾ | Bún sợi to của xứ Huế, nước cay thơm sả, có miếng giò heo. | 3
+MÌ QUẢNG | Sợi mì vàng, ít nước, ai xa quê Quảng Nam cũng nhớ. | 3
+CAO LẦU | Đặc sản phố cổ Hội An, sợi dai, ăn với thịt xá xíu. | 3
+HỦ TIẾU | Món sợi nhỏ của miền Nam, gọi kèm chữ Nam Vang là sang. | 2
+BÁNH CUỐN | Bột gạo tráng mỏng như lụa, cuốn nhân thịt với mộc nhĩ. | 2
+BÁNH BAO | Bánh tròn trắng hấp nóng, cắn tới giữa thấy trứng cút là trúng số. | 2
+XÔI | Nếp đồ chín, gói lá chuối ăn sáng, rẻ mà no tới trưa. | 1
+CHÁO | Món mẹ nấu khi mình ốm, ốm xong lại không thèm nữa. | 1
+CƠM | Thứ người Việt phải ăn mới thấy no, ăn bún phở cả ngày vẫn nói "chưa ăn gì". | 1
+CANH CHUA | Nồi canh có me, cà chua, dứa, giá, húp một muỗng là tỉnh ngủ. | 2
+CÁ KHO TỘ | Cá kho trong nồi đất, nước màu cánh gián, tốn cơm kinh khủng. | 3
+THỊT KHO TRỨNG | Món Tết miền Nam, kho với nước dừa, ăn từ mùng một tới mùng mười. | 3
+RAU MUỐNG XÀO TỎI | Đĩa rau quốc dân, quán cơm nào cũng có, thơm mùi tỏi phi. | 3
+ĐẬU PHỤ | Khối trắng mềm làm từ đậu nành, rẻ mà ngon, cứu ví cuối tháng. | 2 | ĐẬU HŨ
+NƯỚC MẮM | Chai nước chấm làm từ cá, người Việt đi nước ngoài là nhét vào vali. | 1
+MẮM TÔM | Chén chấm màu tím, mùi nồng, người mê thì mê, người sợ thì bịt mũi. | 2
+BÚN ĐẬU | Mẹt bún lá, đậu rán vàng, chả cốm, ăn với chén mắm tím. | 2 | BÚN ĐẬU MẮM TÔM
+CHẢ CÁ | Món cá Hà Nội nổi tiếng phố Lã Vọng, ăn với thì là. | 3
+BÚN RIÊU | Bát bún có gạch cua nổi lềnh bềnh, thêm miếng đậu rán. | 2
+BÁNH CĂN | Bánh nhỏ đổ khuôn đất, Đà Lạt trời lạnh ăn là hết sảy. | 3
+BÁNH KHỌT | Bánh nhỏ giòn rụm, đặc sản Vũng Tàu, cuốn rau cải. | 3
+BÁNH BÈO | Bánh nhỏ trong chén, rắc tôm chấy đỏ, đặc sản Huế. | 3
+BÁNH ĐA | Tấm bánh nướng giòn, bẻ ăn với ốc hay xúc hến. | 2 | BÁNH TRÁNG
+BÁNH GIÒ | Bánh hình chóp gói lá chuối, bóc ra thơm phức, ăn lúc trời lạnh. | 3
+BÁNH TRÔI | Viên bột nếp có hòn đường bên trong, ăn ngày ba tháng ba. | 3
+BÁNH CHAY | Bạn đi cùng bánh trôi ngày Tết Hàn thực, chan nước đường. | 3
+BÁNH DÀY | Bánh tròn trắng tượng trưng cho trời, đi đôi với bánh chưng. | 3
+BÁNH CỐM | Bánh màu xanh lá của phố Hàng Than, hay có trong lễ ăn hỏi. | 3
+NEM CHUA | Đặc sản Thanh Hoá, chua nhẹ, gói lá chuối, ăn với tỏi ớt. | 3
+GIÒ LỤA | Khoanh tròn trắng hồng gói lá chuối, mâm cỗ Tết không thể thiếu. | 3 | CHẢ LỤA
+CƠM CHÁY | Lớp cơm dính đáy nồi, ngày xưa tranh nhau, giờ thành đặc sản. | 2
+BÒ BÍA | Cuốn bánh tráng có củ sắn, lạp xưởng, trứng, bán xe đẩy cổng trường. | 3
+BÁNH ƯỚT | Bánh mỏng mềm ăn với chả lụa, chấm nước mắm. | 3
+BÚN MẮM | Món miền Tây nấu từ mắm cá, mùi nồng nàn, ăn là ghiền. | 3
+BÁNH CANH | Sợi bột to dai, nấu với cua hoặc giò heo, nước sánh. | 2
+MÌ TÔM | Bạn thân cuối tháng của dân đi làm, thêm quả trứng là thành bữa tiệc. | 1 | MÌ GÓI
+TRỨNG VỊT LỘN | Luộc ăn với rau răm, muối tiêu, người nước ngoài nhìn mà sợ. | 3 | HỘT VỊT LỘN
+CHÁO LÒNG | Cháo nấu với lòng heo, ăn kèm quẩy, quán vỉa hè đông nghịt. | 3
+XÔI XÉO | Xôi vàng phủ đậu xanh và hành phi, bữa sáng của người Hà Nội. | 3
+BÚN THANG | Bát bún Hà Nội cầu kỳ nhất, có trứng tráng thái chỉ, giò, gà xé. | 3
+CÁ VIÊN CHIÊN | Xiên que ăn vặt, đứng ở cổng trường hay cổng công ty đều có. | 3
+CHÈ | Món ngọt đủ loại, đậu đỏ, bưởi, khúc bạch, ăn xong quên mình đang giảm cân. | 1
+SỮA CHUA | Hũ nhỏ ăn lạnh sau bữa trưa cho đỡ đầy bụng, tốt cho tiêu hoá. | 2 | DA UA
+BÁNH TRUNG THU | Bánh nướng bánh dẻo ăn rằm tháng tám, hộp quà biếu sếp nhiều nhất. | 3
+MỨT | Khay đồ ngọt ngày Tết, khách tới mời ăn mà ai cũng ngại. | 2
+DƯA HÀNH | Hũ chua giòn ăn với thịt mỡ ngày Tết, đỡ ngán. | 3
+GÀ LUỘC | Con gà vàng ươm trên mâm cúng giao thừa, ngậm bông hoa hồng. | 2
+NỘM | Rau củ trộn chua ngọt, rắc lạc rang, miền Nam gọi là gỏi. | 2 | GỎI
+BÁNH QUẨY | Que bột chiên giòn, chấm cháo hoặc thả vào bát phở. | 3 | QUẨY, GIÒ CHÁO QUẨY
+CƠM RANG | Cơm nguội hôm qua đảo chảo với trứng, món cứu đói của sinh viên. | 2 | CƠM CHIÊN
+TRỨNG ỐP LA | Trứng chiên giữ nguyên lòng đỏ tròn, chọc ra là chảy. | 3
+XÚC XÍCH | Thịt xay nhồi vỏ dài, nướng ăn vặt hay bỏ vào mì tôm. | 2
+LẠP XƯỞNG | Thịt nhồi phơi khô màu đỏ, ăn với xôi hay cơm chiên. | 3
+BÁNH GẠO | Món ăn vặt giòn tan, xé gói ra ăn mãi không dừng. | 3
+NƯỚC CHẤM | Chén nhỏ giữa mâm, chua cay mặn ngọt, cả nhà cùng chấm. | 2
+CANH CUA | Nấu với rau đay, mồng tơi, mùa hè ăn với cà pháo là nhất. | 3
+CÀ PHÁO | Quả nhỏ tròn muối chua, cắn giòn tan, đi với canh cua. | 3
+BÁNH TÔM | Đặc sản Hồ Tây, tôm đặt trên lát khoai lang chiên giòn. | 3
+BÚN CÁ | Bún nấu với cá rán, thì là, đặc sản Hải Phòng. | 3

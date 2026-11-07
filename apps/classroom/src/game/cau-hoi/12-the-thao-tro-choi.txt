@@ -1,0 +1,73 @@
+# Thể thao, trò chơi
+> Đây là một môn thể thao.
+BÓNG ĐÁ | Môn vua, hai mươi hai người tranh một quả, tuyển Việt Nam thắng là cả nước đi bão. | 1
+BÓNG CHUYỀN | Đánh bóng qua lưới cao bằng tay, giờ nghỉ trưa công ty hay chơi bản hơi. | 2
+BÓNG RỔ | Ném bóng vào vòng treo cao, cao mét sáu thì chỉ đứng xem. | 2
+CẦU LÔNG | Đánh quả có lông vũ bằng vợt, môn thể thao quốc dân của dân văn phòng. | 2
+BÓNG BÀN | Đánh trái bóng nhỏ trên bàn có lưới, nghe lốc cốc suốt giờ nghỉ trưa. | 2
+QUẦN VỢT | Môn có giải Wimbledon, sân cỏ, ăn dâu kem. | 3 | TENNIS
+BƠI LỘI | Môn dưới nước, hè nào cũng định đi học mà toàn ngồi mép hồ. | 2 | BƠI
+CỜ VUA | Có vua, hậu, xe, mã, tượng, tốt, phim về thần đồng chơi nó từng gây sốt. | 2
+CỜ TƯỚNG | Có tướng, sĩ, pháo, mã, tốt, các ông ngồi vỉa hè đánh, người xem thì chỉ nước. | 2
+CỜ CÁ NGỰA | Đổ xúc xắc đi vòng, đá ngựa bạn về chuồng, chơi xong là giận nhau. | 3
+CỜ CARO | Ai năm ô liền hàng trước là thắng, vẽ ở trang cuối vở trong giờ học. | 2
+VÕ THUẬT | Vovinam, karate, taekwondo đều thuộc nhóm này, học xong vẫn sợ gián. | 2
+ĐUA XE | Chạy nhanh nhất về đích, F1 là giải đắt đỏ nhất. | 2
+ĐẠP XE | Môn thể thao bằng xe hai bánh, cuối tuần dân văn phòng mặc đồ bó đạp lên núi. | 2
+CHẠY MARATHON | Chạy bốn mươi hai cây số, khoe huy chương lên mạng là chính. | 3 | MARATHON
+NHẢY XA | Chạy đà rồi bật mạnh vào hố cát, giờ thể dục ai cũng sợ. | 2
+NHẢY CAO | Bật qua xà ngang, kiểu ngửa lưng qua xà là đẹp nhất. | 2
+ĐẨY TẠ | Đẩy quả cầu sắt nặng ra xa từ vai. | 3
+CỬ TẠ | Nâng thanh sắt nặng qua đầu, Việt Nam từng có huy chương Olympic môn này. | 3
+BẮN CUNG | Giương cung nhắm hồng tâm, mũi tên của thần tình yêu cũng là môn này. | 3
+TRƯỢT BĂNG | Đi giày lưỡi dao lướt trên mặt nước đóng cứng, ngã là ê mông. | 3
+LƯỚT SÓNG | Đứng trên ván cưỡi sóng biển, Đà Nẵng mùa đông có sóng đẹp. | 3
+LEO NÚI | Chinh phục đỉnh cao, cũng là cách "chữa lành" sau khi chia tay. | 2
+YOGA | Bài tập dẻo dai, thở sâu, mua thảm đẹp xong để góc nhà. | 2
+SEA GAMES | Đại hội thể thao Đông Nam Á, hai năm một lần, làm chủ nhà là Việt Nam đứng nhất bảng tổng sắp. | 3
+WORLD CUP | Giải bóng lớn nhất hành tinh bốn năm một lần, mùa này nhiều người mất ngủ. | 2
+OLYMPIC | Thế vận hội có biểu tượng năm vòng tròn, có ngọn đuốc cháy suốt giải. | 2 | THẾ VẬN HỘI
+HUY CHƯƠNG VÀNG | Phần thưởng cho người về nhất, vận động viên hay cắn thử khi chụp ảnh. | 3
+THỦ MÔN | Người duy nhất trên sân được bắt bóng bằng tay, cản được phạt đền là thành người hùng. | 2
+TIỀN ĐẠO | Cầu thủ đứng trên cùng chuyên ghi bàn, sút trượt là bị cả mạng chửi. | 2
+PHẠT ĐỀN | Sút từ chấm mười một mét, cả nhà không dám nhìn màn hình. | 2 | PENALTY
+VIỆT VỊ | Lỗi đứng sau hậu vệ cuối cùng khi nhận bóng, giải thích ba lần người yêu vẫn không hiểu. | 3
+THẺ ĐỎ | Trọng tài rút ra là phải rời sân, cô Ngân cũng muốn có để rút cho ai chép đáp án. | 2
+HIỆP PHỤ | Hoà sau chín mươi phút thì đá thêm, mai đi làm muộn chắc luôn. | 3
+BÀN THẮNG | Bóng vào lưới, cả quán cà phê đứng dậy hét. | 1 | GOAL
+> Đây là một trò chơi.
+NHẢY DÂY | Quay sợi dây và nhảy qua, giờ dân giảm cân mua loại có đếm số. | 1
+ĐÁ CẦU | Tâng quả cầu lông gà bằng chân, giờ ra chơi đá trúng cửa sổ phòng hiệu trưởng. | 2
+NHẢY LÒ CÒ | Kẻ ô dưới sân, ném viên sỏi, nhảy một chân. | 3 | LÒ CÒ
+KÉO CO | Hai đội nắm sợi dây kéo về phía mình, team building công ty nào cũng có. | 2
+BỊT MẮT BẮT DÊ | Bị che mắt đi tìm bạn, cả bọn kêu "be be" trêu. | 3
+TRỐN TÌM | Một người đếm tới mười, cả bọn đi núp, có đứa núp xong về nhà ngủ luôn. | 1
+Ô ĂN QUAN | Bốc sỏi rải vào các ô vuông, hai đầu là hai ô tròn to. | 3
+CHƠI CHUYỀN | Tung quả và nhặt que theo vần đọc, các bạn nữ ngày xưa mê lắm. | 3 | CHUYỀN
+BẮN BI | Búng viên bi thuỷ tinh vào lỗ, đầu gối quần đứa nào cũng sờn. | 2
+ĐÁNH KHĂNG | Dùng que dài đánh que ngắn bay xa, trò của trẻ con thôn quê. | 3
+THẢ DIỀU | Chạy trên đê lộng gió cho cánh diều bay lên, chiều hè ở quê. | 2
+NÉM LON | Ném dép cho đổ chồng lon, dép bay vào nhà hàng xóm là toang. | 3
+RỒNG RẮN LÊN MÂY | Cả bọn nối đuôi nhau, hát "có cây núc nác", thầy thuốc đi bắt. | 3
+MÈO ĐUỔI CHUỘT | Cả vòng nắm tay, một bạn chạy đuổi một bạn chui qua chui lại. | 3
+OẲN TÙ TÌ | Búa, kéo, bao, dùng để quyết ai rửa bát. | 2
+NU NA NU NỐNG | Ngồi duỗi chân đọc đồng dao, chân ai bị chỉ cuối thì co lại. | 3
+ĐÁNH ĐÁO | Ném đồng xu vào lỗ nhỏ trên đất, trò ăn tiền của trẻ con ngày xưa. | 3
+BẬP BÊNH | Hai người ngồi hai đầu lên xuống, người nặng hơn thì thắng. | 2
+CẦU TRƯỢT | Leo lên rồi trượt xuống ở sân chơi, người lớn chơi là kẹt mông. | 2
+XÍCH ĐU | Ngồi đung đưa có người đẩy, quán cà phê nào cũng làm để chụp ảnh. | 2
+ĐU DÂY | Treo người trên dây đu qua đu lại như khỉ. | 2
+XẾP HÌNH | Ráp cả nghìn mảnh thành bức tranh, rơi mất một mảnh là ức chế cả tuần. | 2 | PUZZLE
+RUBIK | Khối vuông xoay sáu mặt sáu màu, có người giải trong vài giây. | 2
+ĐÔ MI NÔ | Xếp thẳng hàng cả tiếng đồng hồ, chạm nhẹ một cái đổ cả dãy. | 3 | DOMINO
+BÀI TÂY | Năm mươi hai lá, có cơ rô chuồn bích, Tết nào cả nhà cũng ngồi quây quần. | 3 | BỘ BÀI
+LIÊN QUÂN | Game điện thoại năm đánh năm, thua thì đổ lỗi cho đồng đội. | 2
+FREE FIRE | Game bắn súng sinh tồn, nhảy dù từ máy bay xuống đảo. | 3
+MINECRAFT | Game xây dựng bằng khối vuông, đào xuống dưới là gặp quái. | 3
+TETRIS | Game gạch rơi từ trên xuống, xếp kín một hàng là nổ. | 2 | XẾP GẠCH
+RẮN SĂN MỒI | Game trên điện thoại cục gạch, ăn càng nhiều càng dài, cắn đuôi là thua. | 3
+MARIO | Ông thợ sửa ống nước người Ý, nhảy đập nấm cứu công chúa. | 2
+POKEMON | Thu phục quái thú vào quả bóng đỏ trắng, có chuột điện màu vàng. | 2
+TRƯỢT PATIN | Mang giày có bánh xe lướt quanh công viên, ngã là ôm người lạ. | 3 | PATIN
+ĐUA THUYỀN | Cả đội cùng chèo theo nhịp trống về đích, lễ hội đầu năm hay có. | 3
+ĐẤM BỐC | Đeo găng đấm nhau trên võ đài, dân văn phòng tập để xả stress với sếp. | 2 | QUYỀN ANH, BOXING

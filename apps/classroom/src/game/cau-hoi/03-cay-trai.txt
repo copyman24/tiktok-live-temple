@@ -1,0 +1,84 @@
+# Cây cối, hoa quả
+> Đây là một loại quả.
+QUẢ CHUỐI | Vỏ vàng, khỉ mê nhất, ăn xong vứt vỏ là có người trượt chân. | 1 | TRÁI CHUỐI, CHUỐI
+QUẢ CAM | Nhiều vitamin C, vắt lấy nước uống lúc bị cảm. | 1 | TRÁI CAM, CAM
+QUẢ TÁO | Quả đỏ rơi trúng đầu Newton, cũng là logo một hãng điện thoại. | 1 | TRÁI TÁO, TÁO
+QUẢ DƯA HẤU | Vỏ xanh ruột đỏ, mùa hè bổ ra mát cả nhà, ăn Tết cũng có. | 2 | DƯA HẤU, TRÁI DƯA HẤU
+SẦU RIÊNG | Vua các loại trái cây, gai tua tủa, mang lên xe khách là bị đuổi xuống. | 2
+MĂNG CỤT | Vỏ tím dày, ruột trắng như tép tỏi, được gọi là nữ hoàng trái cây. | 2
+CHÔM CHÔM | Quả đỏ có lông xù xì như mới ngủ dậy. | 2
+THANH LONG | Vỏ hồng có tai xanh, ruột trắng chấm đen, ăn nhiều đi vệ sinh đỏ hết. | 2
+MÍT | Quả to, múi vàng, bóc xong dính nhựa đầy tay. | 1
+XOÀI | Chín vàng ăn ngọt, còn xanh thì chấm muối ớt ở cổng trường. | 1
+ỔI | Quả xanh giòn chấm muối ớt, ăn nhiều là táo bón. | 1
+ĐU ĐỦ | Chín ruột cam ăn ngọt, còn xanh thì làm nộm với khô bò. | 2
+NHÃN | Quả nhỏ vỏ nâu, cùi trắng ngọt lịm, đặc sản Hưng Yên. | 2
+VẢI THIỀU | Đặc sản Lục Ngạn, vỏ đỏ sần, mùa hè bán khắp phố. | 2
+QUẢ BƯỞI | Múi to, Trung thu bày lên mâm làm con chó, vỏ nấu nước gội đầu. | 1 | BƯỞI, TRÁI BƯỞI
+QUẢ DỪA | Uống nước xong nạo cơm, Bến Tre nổi tiếng. | 1 | DỪA, TRÁI DỪA
+QUẢ KHẾ | Cắt ra hình ngôi sao, trong truyện ăn một quả trả cục vàng. | 2 | KHẾ
+QUẢ MẬN | Miền Bắc màu tím chua, miền Nam đỏ giòn, cùng tên mà khác hẳn. | 2 | MẬN, TRÁI MẬN
+QUẢ NHO | Mọc thành chùm, làm rượu vang, ăn không cần bóc vỏ. | 1 | NHO
+DÂU TÂY | Quả đỏ có hạt li ti ngoài vỏ, lên Đà Lạt ai cũng vào vườn hái. | 2
+VÚ SỮA | Bóp mềm rồi mút, nước trắng ngọt, đặc sản Lò Rèn miền Tây. | 2
+MÃNG CẦU | Vỏ có nhiều mắt, ruột trắng nhiều hạt đen, miền Bắc gọi tên ngắn hơn. | 3 | NA
+QUẢ LÊ | Giòn nhiều nước, hình như cái hồ lô, ăn mát cổ. | 2 | LÊ
+QUẢ HỒNG | Chín đỏ mềm vào mùa thu, cùng tên với một loài hoa. | 2 | HỒNG
+QUẢ CÓC | Chua giòn, ăn với muối tôm, nghe tên là chảy nước miếng. | 2 | CÓC
+QUẢ ME | Chua lè, làm mứt, nấu canh chua, ngâm đường đá. | 2 | ME
+QUẢ CHANH | Vắt vào nước mắm, pha trà, ai chua ngoa cũng bị ví với nó. | 1 | CHANH
+QUẢ ỚT | Ăn vào cay xé lưỡi, người miền Trung ăn như rau. | 1 | ỚT
+QUẢ CÀ CHUA | Đỏ mọng, nấu canh, làm sốt, đắp mặt nạ. | 1 | CÀ CHUA
+DƯA CHUỘT | Thái lát ăn kèm cơm cho mát, đắp lên mắt khi làm đẹp. | 2 | DƯA LEO
+> Đây là một loại rau củ.
+CÀ RỐT | Củ màu cam, thỏ thích ăn, ăn nhiều sáng mắt. | 1
+KHOAI LANG | Củ nướng thơm lừng mùa đông, món ăn kiêng của người giảm cân. | 2
+KHOAI TÂY | Củ dùng để chiên thành que vàng giòn, chấm tương cà. | 2
+CỦ HÀNH | Phi lên thơm phức, bóc vỏ cay mắt tới chảy nước mắt. | 2 | HÀNH
+CỦ TỎI | Ma cà rồng sợ nhất, ăn xong nói chuyện người ta lùi ra. | 2 | TỎI
+CỦ GỪNG | Cay nồng, pha trà uống ấm bụng, "... già ... cay". | 2 | GỪNG
+BẮP CẢI | Lá cuộn tròn thành bắp, luộc chấm trứng. | 2
+RAU MUỐNG | Rau quốc dân, luộc chấm nước tương, quán cơm nào cũng có. | 2
+SU HÀO | Củ xanh nhạt có râu, xào hoặc nấu canh. | 3
+BÍ ĐỎ | Halloween khoét ra làm đèn, nấu canh bổ não. | 2 | BÍ NGÔ
+MƯỚP ĐẮNG | Đắng mà mát, miền Nam gọi tên khác nghĩa là qua cơn khổ. | 3 | KHỔ QUA
+> Đây là một loại cây.
+CÂY TRE | Mọc quanh luỹ làng, Thánh Gióng nhổ đánh giặc, biểu tượng người Việt. | 2 | TRE
+CÂY ĐA | Cây cổ thụ đầu làng, rễ buông thõng, chú Cuội ngồi gốc nó. | 2 | ĐA
+CÂY PHƯỢNG | Nở đỏ rực mùa hè, báo hiệu chia tay tuổi học trò. | 2 | HOA PHƯỢNG
+CÂY BÀNG | Lá đỏ mùa đông, trồng ở sân trường, quả chín vàng ăn chát chát. | 3 | BÀNG
+CÂY THÔNG | Lá kim, Đà Lạt nhiều nhất, Noel treo đèn lên. | 2 | THÔNG
+CÂY XƯƠNG RỒNG | Cây đầy gai sống ở sa mạc, để bàn làm việc nói là hút sóng máy tính. | 3 | XƯƠNG RỒNG
+CÂY LÚA | Cây cho ra hạt gạo nuôi cả nước. | 1 | LÚA
+CÂY NGÔ | Bắp có râu, luộc hay nướng đều ngon, miền Nam gọi là bắp. | 2 | BẮP, CÂY BẮP
+CÂY MÍA | Ép lấy nước ngọt uống mùa hè, có đốt như cây tre. | 2 | MÍA
+> Đây là một loài hoa.
+HOA SEN | Quốc hoa Việt Nam, gần bùn mà chẳng hôi tanh mùi bùn. | 2
+HOA HỒNG | Đẹp mà có gai, Valentine giá tăng gấp ba. | 1
+HOA MAI | Hoa vàng chưng Tết miền Nam. | 2
+HOA ĐÀO | Hoa màu hồng chưng Tết miền Bắc. | 2
+HOA CÚC | Hoa vàng nhiều cánh nhỏ, nở mùa thu, chụp ảnh với áo dài. | 2
+HOA HƯỚNG DƯƠNG | Luôn quay theo mặt trời, giống nhân viên luôn quay theo sếp. | 3
+HOA LAN | Hoa quý, treo chậu ở hiên nhà, có chậu giá cả tỷ đồng. | 2
+HOA SỮA | Mùa thu Hà Nội thơm nồng mùi hoa này, người thích người không. | 3
+HOA BAN | Hoa trắng của núi rừng Tây Bắc, nở mùa xuân. | 3
+HOA GẠO | Hoa đỏ nở tháng ba trên cây cao đầu làng. | 3
+HOA MƯỜI GIỜ | Hoa nhỏ nở đúng giữa buổi sáng, tên theo giờ nở. | 3
+HOA TULIP | Hoa nổi tiếng của Hà Lan, có cả cánh đồng nhiều màu. | 3 | TULIP
+HOA OẢI HƯƠNG | Hoa tím nổi tiếng ở Pháp, tên tiếng Anh là lavender. | 3 | LAVENDER
+> Đây là một loại cây cỏ.
+CÂY CAU | Thân thẳng tắp, quả ăn với trầu, có trong truyện tình anh em. | 3 | CAU
+LÁ TRẦU | Lá têm với cau, "miếng ... là đầu câu chuyện". | 3 | TRẦU
+CÂY DỪA | Thân cao, quả cho nước ngọt mát, Bến Tre trồng khắp nơi. | 2
+NẤM | Mọc sau mưa, có loại ăn được, có loại độc, nhúng lẩu là ngon. | 2
+CỎ | Mọc khắp sân, trâu bò thích gặm, "... nhà bên luôn xanh hơn". | 1
+RÊU | Lớp xanh trơn mọc trên đá ẩm, giẫm phải là trượt ngã. | 2
+> Đây là một loại quả.
+QUẢ ĐÀO | Tôn Ngộ Không ăn trộm ở vườn của Vương Mẫu. | 3 | ĐÀO TIÊN
+> Đây là một loại hạt hoặc củ.
+HẠT ĐIỀU | Hạt rang muối, đặc sản Bình Phước, quà biếu Tết sang chảnh. | 3 | ĐIỀU
+HẠT SEN | Nấu chè, giúp ngủ ngon, đặc sản Huế. | 3
+ĐẬU PHỘNG | Rang lên ăn với xôi, nhậu thì gọi một đĩa, miền Bắc gọi là lạc. | 2 | LẠC, CỦ LẠC
+CỦ SẮN | Luộc chấm đường, miền Nam gọi khoai mì. | 3 | SẮN, KHOAI MÌ
+> Đây là một loại quả.
+QUẢ BƠ | Xay sinh tố béo ngậy, cũng là từ chỉ việc lờ người khác đi. | 2 | BƠ

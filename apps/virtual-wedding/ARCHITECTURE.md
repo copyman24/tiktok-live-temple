@@ -15,7 +15,7 @@ The cross-judge phase was skipped: the supplied model routing assigns every arch
 ```text
 apps/virtual-wedding/
   src/domain.js       # wedding state, command/input shapes, pure reducer
-  src/tiktok.js       # TikTok lifecycle and raw-payload normalization
+  (TikTok lifecycle and payload normalization come from packages/live-core, see below)
   src/server.js       # HTTP, JSON-RPC, WebSocket snapshots/events, static files
   src/main.js         # composition root and shutdown
   scripts/check-isolation.mjs # build-time app-boundary assertions
@@ -68,13 +68,13 @@ The host controls `lobby -> entrance -> vows -> rings -> celebration -> ended`. 
 - JSON-RPC requests use `{ jsonrpc: '2.0', id, method, params }`; notifications are `wedding.state` and `wedding.event`.
 - RPC commands include `wedding.state.get`, `wedding.open`, `wedding.assignRole`, `wedding.claim.confirm`, `wedding.claim.decline`, `wedding.couple.lock`, `wedding.phase.advance`, `wedding.end`, `wedding.likeGoal.set`, `wedding.goals.set` (kiss and toast goals), `wedding.bouquet.open`, `wedding.bouquet.toss`, `tiktok.connect`, `tiktok.disconnect`, and `wedding.simulate`.
 - Viewer crowd state (teams, kiss chant, toasts, petals, bouquet entrants, gift book) lives in the same reducer. Per-viewer cooldowns and team membership are bounded, and the public snapshot exposes only counts, the bouquet winner, and the top five gift-book entries.
-- `createWeddingServer({ standalone: false })` returns an embeddable instance (no port, `handleUpgrade`, `activate`/`deactivate`) for TikTok Live Studio.
+- `createWeddingServer({ standalone: false, live })` returns an embeddable instance (no port, `handleUpgrade`, `activate`/`deactivate`, `onLiveEvent`/`onLiveStatus`, `getPhase`) for TikTok Live Studio. Inside Studio, `live` is Studio's one shared TikTok connection: the wedding does not open its own, and switching sessions does not leave the room.
 - The backend binds only `127.0.0.1:3108`. Tauri starts its own `wedding-backend` sidecar and uses an app-specific shutdown token.
 - The Tauri product and crate are named `Virtual Wedding Live` / `virtual-wedding-live`; the app identifier is `com.linhung.virtualweddinglive`.
 - App resources, logs, and local data resolve under the wedding app's own Tauri resource and application-data directories.
 
 ## Alternatives and tradeoffs
 
-An in-temple mode was rejected because it would share prayer state, resources, lifecycle, and binary identity. A shared internal connector/runtime package was rejected because the current connector flow is coupled to temple rituals and has no neutral reusable API. Reuse the external connector package, not the temple implementation.
+An in-temple mode was rejected because it would share prayer state, resources, lifecycle, and binary identity. A shared connector package was first rejected because the temple's connector was coupled to its rituals. With a third session (the classroom) planned, the neutral parts now live in `packages/live-core`: connect with a live check and timeout, reconnect with backoff (15 s doubling to 2 min) until `tiktok.disconnect`, a stale-event guard, gift-combo de-duplication, and `sentAt` (TikTok send time on the local clock). live-core contains no prayer code; `scripts/check-isolation.mjs` allows imports from it and scans it for prayer references. Stream states are `offline`, `connecting`, `live`, `reconnecting` and `error`; the dashboard offers "Dừng kết nối" while connecting or waiting to retry.
 
 Two apps will duplicate small amounts of RPC and sidecar lifecycle code. That makes the standalone build obvious and keeps a wedding change from altering the prayer app. Ceremony state intentionally resets on restart; a future product requirement can add explicit session persistence.

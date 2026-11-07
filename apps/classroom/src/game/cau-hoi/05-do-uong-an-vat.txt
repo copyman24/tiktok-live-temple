@@ -1,0 +1,61 @@
+# Đồ uống, ăn vặt
+> Đây là đồ uống hoặc món ăn vặt.
+CÀ PHÊ | Nhiên liệu buổi sáng của dân văn phòng, chưa uống thì chưa bật được não. | 1
+CÀ PHÊ SỮA ĐÁ | Pha phin nhỏ giọt, thêm sữa đặc, đổ đá, món quốc dân của người Việt. | 3
+BẠC XỈU | Ly nhiều sữa ít cà phê, dành cho người muốn tỉnh mà sợ mất ngủ. | 3
+CÀ PHÊ TRỨNG | Đặc sản Hà Nội, lớp kem trứng béo ngậy trên ly cà phê đen. | 3
+NƯỚC MÍA | Ép từ cây ngọt, thêm quất, mười nghìn một ly mát cả buổi chiều. | 2
+NƯỚC DỪA | Uống thẳng từ quả, uống xong còn cạo cùi ăn tiếp. | 2
+SINH TỐ | Trái cây xay với sữa và đá, uống thay bữa sáng cho đỡ mập. | 2
+NƯỚC CAM | Vắt từ quả, nhiều vitamin C, mẹ ép uống lúc bị cảm. | 1
+SỮA TƯƠI | Uống mỗi sáng với hy vọng cao thêm vài phân. | 2
+SỮA ĐẬU NÀNH | Xay từ hạt đậu, mua ở xe đẩy buổi sáng, uống nóng. | 3
+NƯỚC NGỌT | Có ga, uống xong ợ một cái, ăn gà rán mà thiếu là chưa đủ bộ. | 1
+NƯỚC SÂM | Nấu từ rễ tranh, mía lau, mùa hè uống cho mát gan. | 3
+RAU MÁ | Xay uống giải nhiệt, màu xanh lá, có quán thêm cả đậu xanh. | 3 | NƯỚC RAU MÁ
+KEM | Mút que lạnh buốt mùa hè, ăn nhanh không chảy hết ra tay. | 1
+KEM ỐC QUẾ | Kem đặt trên chiếc bánh hình nón giòn, ăn tới đáy là ngon nhất. | 3
+KẸO MÚT | Kẹo có que cầm, ngậm mãi không hết, cô thưởng cho đỡ áp lực. | 2
+KẸO DẺO | Kẹo mềm hình con gấu nhiều màu, nhai dai dai. | 2
+KẸO BÔNG | Đường kéo thành sợi như đám mây hồng, cắn một miếng là tan. | 2
+KẸO KÉO | Kẹo mạch nha kéo dài, rắc lạc, tuổi thơ ai cũng từng đổi ve chai lấy nó. | 3
+KẸO CAO SU | Nhai mãi không nuốt, thổi bong bóng, dính lên tóc là khóc. | 2
+BIM BIM | Gói snack nửa không khí nửa đồ ăn, xé ra kêu rột roạt. | 1 | SNACK
+BỎNG NGÔ | Mua ở rạp phim đắt hơn vé, ăn hết trước khi phim bắt đầu. | 2 | BẮP RANG
+TƯƠNG ỚT | Chai đỏ cay, ăn gì cũng chấm, ăn phở cũng phải bóp vào. | 2
+TƯƠNG CÀ | Chai đỏ chua ngọt, khoai tây chiên mà thiếu nó là buồn. | 2
+BÁNH TRÁNG NƯỚNG | Pizza kiểu Đà Lạt, nướng trên than hồng, trời lạnh ăn là ghiền. | 3
+NEM NƯỚNG | Xiên thịt nướng cuốn bánh tráng, chấm nước sốt sánh, đặc sản Nha Trang. | 3
+XOÀI LẮC | Xoài xanh cho vào hộp lắc với muối ớt, chua tới nhăn mặt. | 3
+CHÈ KHÚC BẠCH | Viên thạch sữa vuông trắng, rắc hạnh nhân, ăn mát lạnh. | 3
+CHÈ BƯỞI | Có cùi bưởi giòn sần sật, chan nước cốt dừa. | 3
+CHÈ BẮP | Nấu từ hạt ngô vàng, rưới nước cốt dừa béo ngậy. | 3 | CHÈ NGÔ
+THẠCH | Mát lạnh, rung rinh như tim lúc gặp crush. | 2 | RAU CÂU
+TÀO PHỚ | Đậu phụ non ăn với nước đường gừng, tiếng rao đầu ngõ. | 3 | TÀU HŨ, ĐẬU HŨ NƯỚC ĐƯỜNG
+BÁNH QUY | Bánh giòn tròn, hộp thiếc đẹp mà mở ra toàn là kim chỉ của mẹ. | 2
+BÁNH SINH NHẬT | Có nến để thổi, ước một điều, rồi bị trét lên mặt. | 3
+BÁNH CUPCAKE | Bánh nhỏ trong cốc giấy, phủ kem, xinh quá không nỡ ăn. | 3 | CUPCAKE
+BÁNH BÔNG LAN | Bánh xốp mềm vàng, thơm trứng, mua ở tiệm đầu ngõ. | 3
+BÁNH PIA | Đặc sản Sóc Trăng, vỏ nhiều lớp, nhân đậu và sầu riêng. | 3
+BÁNH ĐẬU XANH | Đặc sản Hải Dương, hộp nhỏ ăn với trà, khô tới nỗi phải uống nước. | 3
+KẸO DỪA | Đặc sản Bến Tre, xứ của loại cây có quả uống được nước. | 2
+MẬT ONG | Ong làm ra, vàng sánh, ngọt lịm, pha với chanh khi bị đau họng. | 2
+ĐƯỜNG | Bột trắng ngọt, cho vào cà phê, kẻ thù của người giảm cân. | 1
+MUỐI | Hạt trắng mặn làm từ nước biển, chấm hoa quả với ớt. | 1
+NƯỚC LỌC | Không màu không mùi, uống đủ hai lít mỗi ngày là đẹp da, nói thì dễ. | 1
+NƯỚC ĐÁ | Viên lạnh thả vào ly, quán trà đá miễn phí thêm thoải mái. | 1
+SỮA ĐẶC | Hộp ngọt lịm quậy vào cà phê, ngày xưa chấm bánh mì ăn sáng. | 2
+BÁNH PIZZA | Bánh tròn nước Ý, cắt tam giác, miếng nào cũng tranh nhau phần nhiều phô mai. | 2 | PIZZA
+MÌ CAY | Món Hàn có cấp độ cay, gọi cấp cao để thể hiện rồi khóc. | 2
+KIMCHI | Cải thảo muối đỏ của Hàn Quốc, phim Hàn nào cũng thấy. | 2
+TRÀ XANH | Lá chè pha uống, vị chát nhẹ, cũng là tên gọi người chen vào chuyện tình. | 2
+NƯỚC ÉP | Trái cây ép lấy nước nguyên chất, uống để thấy mình sống lành mạnh. | 2
+NƯỚC TĂNG LỰC | Uống vào để thức khuya chạy deadline, sáng hôm sau mệt gấp đôi. | 3
+BÁNH RÁN | Viên bột nếp chiên vàng, lăn đường hoặc nhân đậu xanh. | 3 | BÁNH CAM
+BÁNH TIÊU | Bánh chiên phồng rỗng ruột, rắc mè, ăn kèm sữa đậu nành. | 3
+BÁNH DONUT | Bánh tròn có lỗ giữa, phủ đường, cảnh sát Mỹ trong phim hay ăn. | 3 | DONUT
+HẠT DƯA | Cắn tách tách ngày Tết, vỏ đỏ, cắn cả buổi chưa no. | 2
+Ô MAI | Đặc sản Hàng Đường, mơ mận ngâm chua ngọt, quà Tết của Hà Nội. | 2
+CƠM NẮM | Cơm nén chặt mang đi ăn đường, chấm muối vừng. | 2
+MUỐI VỪNG | Hạt rang thơm giã với muối, chấm cơm nắm hay rắc lên xôi. | 3 | MUỐI MÈ
+BÁNH MÌ QUE | Bánh dài nhỏ như que, phết pa tê cay, đặc sản Hải Phòng. | 3

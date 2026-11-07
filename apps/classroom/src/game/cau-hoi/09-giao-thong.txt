@@ -1,0 +1,74 @@
+# Phương tiện, giao thông
+> Đây là thứ liên quan tới xe cộ, đi lại.
+XE ĐẠP | Hai bánh đạp bằng chân, hồi đi học chở crush phía sau là cả một bầu trời. | 1
+XE MÁY | Phương tiện quốc dân, cả nhà bốn người vẫn ngồi vừa một chiếc. | 1
+Ô TÔ | Bốn bánh có vô lăng, mua xong thì không có chỗ đậu. | 1 | XE HƠI
+XE BUÝT | Chở nhiều người, dừng ở trạm, sinh viên đi bằng vé tháng cho đỡ tốn. | 2 | XE BUS
+XE KHÁCH | Chở người đi tỉnh xa, Tết về quê phải đặt vé từ tháng mười. | 2
+XE TẢI | Chở hàng nặng, chạy đêm trên quốc lộ, đèn pha chói mắt. | 2
+XE CỨU THƯƠNG | Hú còi chở người bệnh tới viện, gặp là phải nhường đường ngay. | 3
+XE CỨU HỎA | Màu đỏ, có thang và vòi nước, gọi số một trăm mười bốn. | 3
+XE ĐẠP ĐIỆN | Học sinh cấp ba mê lắm, không cần bằng lái, sạc pin là chạy. | 3
+XE LĂN | Xe có hai bánh to cho người không đi lại được, tự lấy tay đẩy. | 2
+XÍCH LÔ | Xe ba bánh người đạp phía sau, chở khách Tây dạo phố cổ. | 2
+TÀU HỎA | Chạy trên đường ray Bắc Nam, kêu xình xịch, trễ giờ là chuyện thường. | 2 | XE LỬA
+TÀU ĐIỆN NGẦM | Chạy dưới lòng đất, Sài Gòn chờ mười mấy năm mới được đi. | 3 | METRO
+MÁY BAY | Bay trên trời chở khách, săn vé rẻ không hành lý lúc nửa đêm. | 1
+TRỰC THĂNG | Có cánh quạt quay trên nóc, cất cánh thẳng đứng, đám cưới đại gia hay thuê. | 2
+TÀU THỦY | Đi trên biển, to lớn, say sóng là nằm bẹp cả chuyến. | 2
+THUYỀN | Chèo trên sông, "... theo lái, gái theo chồng". | 1
+CANO | Chạy vút trên mặt nước có động cơ, ra đảo bị văng nước ướt hết tóc. | 2 | CA NÔ
+XUỒNG | Thuyền nhỏ ba lá miền Tây, chở trái cây đi chợ nổi. | 2
+BÈ | Tre nứa kết lại nổi trên mặt nước, ngồi trôi theo dòng suối. | 2
+KHINH KHÍ CẦU | Quả bóng khổng lồ bay nhờ khí nóng, chụp ảnh cầu hôn là hết sảy. | 3
+TÀU NGẦM | Lặn sâu dưới biển, trong phim hành động hay có. | 3
+TÊN LỬA | Phóng lên vũ trụ, giá xăng tăng nhanh như cái này. | 2
+ĐÈN ĐỎ | Gặp thì phải dừng, chín mươi chín giây dài nhất cuộc đời. | 1
+ĐÈN XANH | Gặp là được đi, xe sau bấm còi trước cả khi nó bật. | 1
+ĐÈN VÀNG | Đi chậm lại chuẩn bị dừng, nhiều người tưởng là cố vượt cho nhanh. | 2
+VẠCH KẺ ĐƯỜNG | Sọc trắng ở ngã tư cho người đi bộ, xe máy hay đỗ đè lên. | 3 | VẠCH QUA ĐƯỜNG
+VỈA HÈ | Phần đường của người đi bộ, giờ toàn quán trà đá với xe đỗ. | 2
+NGÃ TƯ | Chỗ bốn con đường gặp nhau, giờ cao điểm kẹt cứng không lối thoát. | 2
+BÙNG BINH | Vòng tròn giữa giao lộ, đi lạc là chạy vòng vòng mãi không ra. | 2 | VÒNG XUYẾN
+CAO TỐC | Đường chạy nhanh không cho xe máy, về quê mùa lễ vẫn kẹt như thường. | 2 | ĐƯỜNG CAO TỐC
+CẦU VƯỢT | Bắc ngang qua đường, đi bộ lên thì mỏi chân, nên ai cũng băng qua dưới. | 2
+ĐƯỜNG HẦM | Xuyên qua núi hoặc dưới sông, vào là mất sóng điện thoại. | 2
+BẾN XE | Nơi xe khách đón trả khách, vừa bước xuống là bị mời xe ôm tới tấp. | 2
+SÂN BAY | Nơi máy bay cất hạ cánh, ăn tô phở trong này giá gấp ba ngoài đường. | 2
+NHÀ GA | Nơi tàu hỏa dừng đón khách, chỗ chia tay trong phim tình cảm. | 2
+BẾN CẢNG | Nơi tàu biển cập bờ, xếp đầy công te nơ. | 2 | CẢNG
+TRẠM XĂNG | Đổ xăng cho xe, thứ năm tăng giá là xếp hàng dài. | 2 | CÂY XĂNG
+BẰNG LÁI | Thi lý thuyết rớt hai lần mới có, cảnh sát hỏi là phải đưa ra. | 2 | BẰNG LÁI XE
+VÔ LĂNG | Tay quay điều khiển ô tô, ngồi ghế phụ thì hay chỉ đạo người cầm nó. | 2
+PHANH | Bóp vào cho xe dừng, ước gì có cái này cho việc tiêu tiền. | 2 | THẮNG
+BÁNH XE | Hình tròn lăn trên đường, xe có bốn cái thì vẫn phải xếp hàng chờ kẹt. | 1
+BIỂN SỐ | Tấm biển ghi số trước sau xe, đẹp như tứ quý là đấu giá tiền tỷ. | 2 | BIỂN SỐ XE
+CÒI XE | Bấm bíp bíp, dân Việt Nam bấm từ lúc đèn còn chưa xanh. | 1
+ĐÈN PHA | Đèn trước xe chiếu sáng ban đêm, bật sáng chói là bị chửi. | 2
+XĂNG | Nhiên liệu đổ vào bình, giá lên giá xuống theo từng thứ năm. | 1
+LỐP XE | Vỏ cao su bọc quanh bánh, mòn hết gai là trượt khi mưa. | 2 | VỎ XE
+THỦNG LỐP | Cán đinh giữa đường, dắt bộ đi tìm tiệm vá, đúng ngày trễ làm. | 2 | THỦNG SĂM
+GỬI XE | Đưa xe cho người trông nhận vé, đi cà phê mười nghìn mà mất năm nghìn cho khoản này. | 2
+VÉ XE | Tờ giấy nhỏ nhận khi gửi xe, làm mất là khai báo mỏi mồm. | 2
+DÂY AN TOÀN | Thắt vào khi ngồi ô tô, không thắt là xe kêu tít tít. | 3
+GRAB | Ứng dụng gọi xe màu xanh lá, mưa xuống là giá tăng gấp đôi. | 2
+XE ĐẠP ĐÔI | Hai người cùng đạp một xe, cặp đôi đi Đà Lạt hay thuê. | 3
+VÁN TRƯỢT | Tấm ván có bốn bánh, đứng lên lướt đi, ngã là trầy cả gối. | 3 | SKATEBOARD
+XE TRƯỢT | Đứng một chân đẩy, có tay lái, dân văn phòng nước ngoài đi làm bằng loại chạy điện. | 3 | XE SCOOTER
+TÀU LƯỢN | Trò chơi lao vun vút ở công viên, la hét còn to hơn lúc nhận lương. | 3 | TÀU LƯỢN SIÊU TỐC
+ĐU QUAY | Vòng tròn khổng lồ quay chậm ở công viên, cặp đôi lên tới đỉnh thì hôn nhau. | 2
+CÁP TREO | Cabin treo trên dây đưa người lên núi, nhìn xuống là run chân. | 2
+TÀU VŨ TRỤ | Đưa phi hành gia lên trời, cô Ngân đi cũng được nếu có wifi. | 3
+ĐƯỜNG RAY | Hai thanh sắt song song cho tàu chạy, chụp ảnh ở đây rất nguy hiểm. | 2
+GA TÀU | Nơi ngồi chờ lên tàu hỏa, loa thông báo đọc nghe không rõ chữ nào. | 2
+LÀN ĐƯỜNG | Phần đường chia cho từng loại xe, đi sai là bị phạt nguội. | 3
+ĐI BỘ | Không dùng xe, chỉ dùng chân, mười nghìn bước một ngày cho khoẻ. | 1
+CẢNH SÁT | Đứng ở chốt, vẫy xe vào kiểm tra, ai cũng giật mình. | 2
+MŨ XE ĐẠP | Đội khi đạp xe đường dài, có lỗ thoáng, dân thể thao mua cả triệu. | 3
+XE ĐẠP THỂ THAO | Xe có nhiều số, lốp to, mua về để giảm cân nhưng toàn để trong nhà. | 3
+XE CÔNG NÔNG | Máy cày ở quê kéo thùng hàng, chạy kêu tành tạch. | 3
+MÁY CÀY | Thay con trâu cày ruộng, "trâu ơi ta bảo trâu này" giờ hết việc. | 2
+XE BÒ | Bò kéo thùng gỗ ở quê, chậm mà chắc. | 2
+XE NGỰA | Ngựa kéo chở người thời xưa, giờ chỉ còn ở khu du lịch. | 2
+TÀU CAO TỐC | Tàu chạy hơn ba trăm cây số một giờ, Hà Nội vào Sài Gòn chỉ mấy tiếng là ước mơ. | 3
+XE ĐIỆN | Chạy pin không xả khói, cắm sạc qua đêm, giờ chạy đầy phố. | 2

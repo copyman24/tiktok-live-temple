@@ -33,7 +33,8 @@
     "targets": ["nsis"],
     "externalBin": ["binaries/temple-backend"],
     "resources": {
-      "../public/": "public/"
+      "../public/": "public/",
+      "../packages/live-core/browser/": "packages/live-core/browser/"
     }
   }
 }

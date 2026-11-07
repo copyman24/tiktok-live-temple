@@ -1,0 +1,119 @@
+# Lịch sử Việt Nam
+# Câu lịch sử: chỉ hỏi ở vị trí 'su' trong GAME.roundPlan, không lẫn vào câu chữ thường.
+# Phạm vi: lịch sử Việt Nam tới năm 1945, kiến thức sách giáo khoa, tránh chuyện còn tranh cãi.
+# Chi tiết nào các nguồn ghi khác nhau thì KHÔNG đưa vào gợi ý (vd năm sinh, lý do tên gọi).
+# Viết lại 2026-11-05 (chủ kênh duyệt): chia nhóm theo danh xưng, cô đọc "Đây là tên một vị vua gồm 11 chữ cái." rồi hỏi thẳng
+# "Ai là...", "Vị vua nào...", "Con sông nào...". Dòng ">" là danh xưng của nhóm bên dưới.
+# Mỗi dòng: ĐÁP ÁN | câu hỏi | độ khó (1 dễ, 2 vừa, 3 khó) | cách trả lời khác cũng tính đúng
+> Đây là tên một vị vua.
+VUA HÙNG | Các vị vua nào dựng nước Văn Lang, có ngày giỗ tổ mùng mười tháng ba âm lịch? | 1 | HÙNG VƯƠNG
+AN DƯƠNG VƯƠNG | Vị vua nào xây thành Cổ Loa? | 2 | THỤC PHÁN
+LÝ BÍ | Vị vua nào lập ra nước Vạn Xuân năm 544? | 3 | LÝ NAM ĐẾ
+ĐINH BỘ LĨNH | Vị vua nào dẹp loạn mười hai sứ quân, lên ngôi hoàng đế năm 968? | 2 | ĐINH TIÊN HOÀNG
+LÊ HOÀN | Vị vua nào đánh thắng quân Tống năm 981, lập ra nhà Tiền Lê? | 3 | LÊ ĐẠI HÀNH
+LÝ CÔNG UẨN | Vị vua nào dời đô từ Hoa Lư ra thành Đại La năm 1010? | 2 | LÝ THÁI TỔ
+LÝ THÁNH TÔNG | Vị vua nhà Lý nào đặt quốc hiệu Đại Việt năm 1054? | 3
+LÝ CHIÊU HOÀNG | Ai là nữ hoàng duy nhất trong lịch sử nước ta, nhường ngôi cho chồng là Trần Cảnh? | 2
+TRẦN NHÂN TÔNG | Vị vua nhà Trần nào chống Nguyên Mông, sau đi tu và lập ra Thiền phái Trúc Lâm? | 3
+HỒ QUÝ LY | Ai là người lập ra nhà Hồ năm 1400, đổi tên nước là Đại Ngu? | 3
+LÊ LỢI | Vị vua nào lãnh đạo khởi nghĩa Lam Sơn, đánh đuổi quân Minh, lập ra nhà Hậu Lê? | 1 | LÊ THÁI TỔ
+LÊ THÁNH TÔNG | Vị vua nhà Lê nào cho soạn bộ luật Hồng Đức? | 3
+NGUYỄN HUỆ | Vị anh hùng áo vải nào đại phá quân Thanh vào mùa xuân năm 1789? | 1 | QUANG TRUNG, VUA QUANG TRUNG
+GIA LONG | Vị vua đầu tiên của nhà Nguyễn, lên ngôi năm 1802, có niên hiệu là gì? | 2
+MINH MẠNG | Vị vua thứ hai nhà Nguyễn nào đổi quốc hiệu thành Đại Nam? | 3 | MINH MỆNH
+HÀM NGHI | Vị vua nhỏ tuổi nhà Nguyễn nào ra chiếu Cần Vương năm 1885, kêu gọi chống Pháp? | 3 | VUA HÀM NGHI
+> Đây là tên một nữ anh hùng.
+HAI BÀ TRƯNG | Hai chị em nào khởi nghĩa đánh đuổi quân Đông Hán năm 40? | 1 | TRƯNG TRẮC, TRƯNG NHỊ
+BÀ TRIỆU | Người phụ nữ nào khởi nghĩa chống quân Ngô năm 248, nói muốn cưỡi cơn gió mạnh, đạp luồng sóng dữ? | 2 | TRIỆU THỊ TRINH
+BÙI THỊ XUÂN | Nữ tướng nào của nhà Tây Sơn nổi tiếng chỉ huy đội voi chiến? | 3
+> Đây là tên một vị tướng.
+LÝ THƯỜNG KIỆT | Vị tướng nhà Lý nào chặn đánh quân Tống trên sông Như Nguyệt năm 1077? | 2
+TRẦN HƯNG ĐẠO | Vị tướng nhà Trần nào chỉ huy đánh thắng quân Nguyên Mông năm 1285 và 1288? | 1 | TRẦN QUỐC TUẤN, HƯNG ĐẠO VƯƠNG
+TRẦN BÌNH TRỌNG | Vị tướng nhà Trần nào nói: ta thà làm quỷ nước Nam chứ không thèm làm vương đất Bắc? | 2
+TRẦN QUỐC TOẢN | Thiếu niên nhà Trần nào bóp nát quả cam vì không được bàn việc nước? | 2
+YẾT KIÊU | Vị tướng nhà Trần nào bơi lặn rất giỏi, lặn xuống đục thuyền giặc? | 3
+PHẠM NGŨ LÃO | Theo sử kể, vị tướng nào ngồi đan sọt bên đường mải nghĩ việc nước, bị giáo đâm vào đùi vẫn không hay? | 3
+LÊ LAI | Vị tướng nào mặc áo giả làm Lê Lợi, hi sinh để cứu chủ tướng? | 2
+> Đây là tên một vị anh hùng.
+NGÔ QUYỀN | Ai là người đánh tan quân Nam Hán trên sông Bạch Đằng năm 938? | 1
+TRIỆU QUANG PHỤC | Ai là người lãnh đạo đánh giặc từ đầm lầy, được gọi là Dạ Trạch Vương? | 3
+MAI THÚC LOAN | Ai là thủ lĩnh khởi nghĩa ở Hoan Châu chống nhà Đường, được gọi là Hắc Đế? | 3
+PHÙNG HƯNG | Ai là người khởi nghĩa chống nhà Đường, được dân tôn là Bố Cái Đại Vương? | 3
+KHÚC THỪA DỤ | Ai là người giành quyền tự chủ cho nước ta năm 905? | 3
+TRƯƠNG ĐỊNH | Ai là lãnh tụ nghĩa quân chống Pháp ở Gò Công, được dân tôn là Bình Tây đại nguyên soái? | 3
+PHAN ĐÌNH PHÙNG | Ai là lãnh tụ khởi nghĩa Hương Khê, hưởng ứng phong trào Cần Vương? | 3
+HOÀNG HOA THÁM | Ai là thủ lĩnh khởi nghĩa Yên Thế, được gọi là Hùm xám Yên Thế? | 2 | ĐỀ THÁM
+KIM ĐỒNG | Ai là đội trưởng đầu tiên của đội nhi đồng cứu quốc ở làng Nà Mạ, Cao Bằng, hi sinh năm 1943? | 1 | NÔNG VĂN DỀN
+> Đây là tên một nhân vật lịch sử.
+TRẦN THỦ ĐỘ | Vị thái sư nhà Trần nào nói: đầu thần chưa rơi xuống đất, xin bệ hạ đừng lo? | 3
+TÔN THẤT THUYẾT | Vị quan phụ chính nào đưa vua Hàm Nghi rời kinh thành Huế năm 1885 để chống Pháp? | 3
+HOÀNG DIỆU | Vị tổng đốc Hà Nội nào tuẫn tiết khi thành Hà Nội rơi vào tay Pháp năm 1882? | 3
+> Đây là tên một nhà yêu nước.
+PHAN BỘI CHÂU | Ai là người khởi xướng phong trào Đông Du, đưa thanh niên Việt Nam sang Nhật Bản học tập? | 3
+PHAN CHÂU TRINH | Nhà yêu nước nào chủ trương khai dân trí, chấn dân khí, hậu dân sinh? | 3
+LÝ TỰ TRỌNG | Người thanh niên yêu nước nào hi sinh năm 1931, nói: con đường của thanh niên chỉ có thể là con đường cách mạng? | 3
+NGUYỄN TẤT THÀNH | Bác Hồ mang tên gì khi ra đi tìm đường cứu nước từ bến Nhà Rồng năm 1911? | 2
+> Đây là tên một danh nhân.
+NGUYỄN TRÃI | Ai là người viết Bình Ngô đại cáo, mưu sĩ giúp Lê Lợi đánh quân Minh? | 1
+CHU VĂN AN | Người thầy nổi tiếng nào thời Trần dâng sớ xin chém bảy tên nịnh thần? | 2
+TUỆ TĨNH | Vị danh y nào thời Trần có câu: thuốc Nam chữa bệnh cho người Nam? | 3
+MẠC ĐĨNH CHI | Vị trạng nguyên nào thời Trần người nhỏ bé mà tài giỏi, viết bài phú Ngọc tỉnh liên? | 3
+LƯƠNG THẾ VINH | Vị trạng nguyên nào giỏi toán thời Lê, được dân gian gọi là Trạng Lường? | 3
+LÊ QUÝ ĐÔN | Nhà bác học lớn nào thời Lê là tác giả sách Vân đài loại ngữ? | 3
+LÊ HỮU TRÁC | Vị danh y nổi tiếng nào thời Lê có hiệu là Hải Thượng Lãn Ông? | 3
+NGUYỄN DU | Đại thi hào nào là tác giả Truyện Kiều? | 1
+HỒ XUÂN HƯƠNG | Nữ sĩ nào được mệnh danh là Bà chúa thơ Nôm? | 2
+> Đây là tên một địa danh lịch sử.
+BẠCH ĐẰNG | Con sông nào có trận cắm cọc gỗ dưới lòng sông, nơi Ngô Quyền đánh thắng năm 938? | 2 | SÔNG BẠCH ĐẰNG
+SÔNG NHƯ NGUYỆT | Dòng sông nào là nơi Lý Thường Kiệt chặn quân Tống năm 1077, nay gọi là sông Cầu? | 3 | NHƯ NGUYỆT
+THĂNG LONG | Kinh đô nào được đặt tên năm 1010, nghĩa là rồng bay lên? | 1
+HOA LƯ | Kinh đô nào của nhà Đinh và nhà Tiền Lê, nay thuộc Ninh Bình? | 2
+HUẾ | Kinh đô của nhà Nguyễn ở đâu? | 1 | PHÚ XUÂN
+CỔ LOA | Tòa thành nào có các vòng thành xoắn ốc nổi tiếng ở Đông Anh, Hà Nội? | 2 | THÀNH CỔ LOA
+THÀNH NHÀ HỒ | Tòa thành nào xây bằng đá lớn ở Thanh Hóa, là di sản thế giới? | 2
+YÊN TỬ | Ngọn núi nào là nơi vua Trần Nhân Tông tu hành? | 2 | NÚI YÊN TỬ
+VÂN ĐỒN | Ở đâu Trần Khánh Dư đánh tan đoàn thuyền lương của quân Nguyên năm 1288? | 3
+CHI LĂNG | Ải nào là nơi nghĩa quân Lam Sơn chém tướng giặc Liễu Thăng năm 1427? | 3 | ẢI CHI LĂNG
+HỒ GƯƠM | Hồ nào ở Hà Nội gắn với truyền thuyết vua Lê Lợi trả gươm thần cho Rùa Vàng? | 1 | HỒ HOÀN KIẾM, HOÀN KIẾM
+ĐỐNG ĐA | Gò đất nào ở Hà Nội ghi dấu chiến thắng quân Thanh năm 1789? | 2 | GÒ ĐỐNG ĐA
+RẠCH GẦM | Trận đánh nào năm 1785 trên sông Tiền, Nguyễn Huệ đánh tan quân Xiêm, cùng với Xoài Mút? | 3 | RẠCH GẦM XOÀI MÚT
+VĂN MIẾU | Nơi nào ở Thăng Long thờ Khổng Tử, xây năm 1070 thời vua Lý Thánh Tông? | 2
+QUỐC TỬ GIÁM | Nơi nào được xem là trường đại học đầu tiên của nước ta, lập năm 1076? | 2
+HOÀNG THÀNH | Khu di tích nào của Thăng Long ở Hà Nội được công nhận là di sản văn hóa thế giới? | 2 | HOÀNG THÀNH THĂNG LONG
+CHÙA MỘT CỘT | Ngôi chùa nào ở Hà Nội dựng năm 1049 thời nhà Lý, hình bông sen nở trên một cột đá? | 2 | CHÙA DIÊN HỰU
+NGỌ MÔN | Cổng chính phía nam của Hoàng thành Huế tên là gì? | 3 | CỬA NGỌ MÔN
+HỘI AN | Phố cổ nào có Chùa Cầu, từng là thương cảng sầm uất có nhiều thương nhân Nhật Bản và người Hoa? | 2 | PHỐ CỔ HỘI AN
+BẾN NHÀ RỒNG | Bác Hồ ra đi tìm đường cứu nước năm 1911 từ bến nào? | 2 | NHÀ RỒNG
+PÁC BÓ | Nơi nào ở Cao Bằng Bác Hồ sống và làm việc khi về nước năm 1941? | 2 | HANG PÁC BÓ
+SUỐI LÊ NIN | Con suối nào ở Pác Bó được Bác Hồ đặt theo tên một lãnh tụ nước ngoài? | 3
+BA ĐÌNH | Bác Hồ đọc Tuyên ngôn Độc lập ngày 2 tháng 9 năm 1945 ở quảng trường nào? | 1 | QUẢNG TRƯỜNG BA ĐÌNH
+> Đây là tên một quốc hiệu.
+VĂN LANG | Nhà nước đầu tiên của người Việt, do các vua Hùng đứng đầu, tên là gì? | 1
+ÂU LẠC | Nhà nước nào do An Dương Vương lập ra sau nước Văn Lang? | 2
+VẠN XUÂN | Lý Bí đặt tên nước là gì năm 544, mong đất nước muôn mùa xuân? | 3
+ĐẠI CỒ VIỆT | Thời nhà Đinh, nước ta mang tên gì? | 3
+ĐẠI VIỆT | Năm 1054 thời nhà Lý, nước ta đổi quốc hiệu thành gì? | 2
+VIỆT NAM | Năm 1804, vua Gia Long đặt quốc hiệu nước ta là gì? | 2
+> Đây là tên một tác phẩm lịch sử.
+CHIẾU DỜI ĐÔ | Lý Công Uẩn ban ra bài chiếu nào năm 1010 khi chuyển kinh đô? | 3 | THIÊN ĐÔ CHIẾU
+NAM QUỐC SƠN HÀ | Bài thơ nào thời Lý được xem là bản tuyên ngôn độc lập đầu tiên của nước ta? | 3
+HỊCH TƯỚNG SĨ | Trần Hưng Đạo viết bài hịch nào để khích lệ tướng sĩ đánh giặc Nguyên Mông? | 3
+BÌNH NGÔ ĐẠI CÁO | Áng văn nào được xem là bản tuyên ngôn độc lập thứ hai, viết sau khi thắng quân Minh? | 2
+LUẬT HỒNG ĐỨC | Bộ luật nổi tiếng nào ra đời thời vua Lê Thánh Tông? | 3 | QUỐC TRIỀU HÌNH LUẬT
+> Đây là một từ lịch sử.
+NHÀ LÝ | Lý Công Uẩn lập ra triều đại nào năm 1009? | 2 | TRIỀU LÝ
+NHÀ TRẦN | Triều đại nào ba lần đánh thắng quân Nguyên Mông? | 1 | TRIỀU TRẦN
+NHÀ NGUYỄN | Triều đại phong kiến cuối cùng của nước ta là triều đại nào? | 1 | TRIỀU NGUYỄN
+TÂY SƠN | Phong trào nào do ba anh em Nguyễn Nhạc, Nguyễn Huệ, Nguyễn Lữ lãnh đạo? | 2 | NHÀ TÂY SƠN
+LAM SƠN | Cuộc khởi nghĩa do Lê Lợi lãnh đạo, bắt đầu năm 1418, tên là gì? | 2 | KHỞI NGHĨA LAM SƠN
+DIÊN HỒNG | Hội nghị các bô lão nào thời Trần, cả hội nghị đồng thanh hô "Đánh"? | 2 | HỘI NGHỊ DIÊN HỒNG
+SÁT THÁT | Quân sĩ nhà Trần thích hai chữ gì lên cánh tay, thề đánh giặc Nguyên Mông? | 3
+CẦN VƯƠNG | Phong trào giúp vua chống Pháp, hưởng ứng chiếu của vua Hàm Nghi năm 1885, tên là gì? | 3
+ĐÔNG DU | Phong trào nào đưa thanh niên Việt Nam sang Nhật Bản học đầu thế kỷ hai mươi? | 3 | PHONG TRÀO ĐÔNG DU
+TRỐNG ĐỒNG | Hiện vật nổi tiếng nào của văn hóa Đông Sơn, mặt có hình ngôi sao và chim lạc? | 1
+ĐÔNG SƠN | Nền văn hóa thời đồ đồng nào nổi tiếng với trống đồng, đặt theo tên một làng ở Thanh Hóa? | 3 | VĂN HÓA ĐÔNG SƠN
+CỬU ĐỈNH | Chín cái vạc đồng lớn đặt trước Thế Miếu trong Hoàng thành Huế gọi là gì? | 3
+BIA TIẾN SĨ | Những tấm bia đá nào đặt trên lưng rùa ở Văn Miếu, khắc tên người đỗ tiến sĩ? | 2
+TRẠNG NGUYÊN | Người đỗ đầu kỳ thi Đình thời phong kiến được gọi là gì? | 2
+CHỮ NÔM | Người Việt xưa tạo ra chữ gì dựa trên chữ Hán để ghi tiếng Việt? | 2
+CHỮ QUỐC NGỮ | Chữ viết bằng chữ cái La-tinh mà chúng ta dùng hằng ngày gọi là gì? | 2 | QUỐC NGỮ

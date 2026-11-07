@@ -9,6 +9,7 @@ bun.lock
 src-tauri/target/
 src-tauri/gen/
 src-tauri/binaries/*
+apps/classroom/.data/
 apps/virtual-wedding/node_modules/
 apps/virtual-wedding/.data/
 apps/virtual-wedding/src-tauri/target/

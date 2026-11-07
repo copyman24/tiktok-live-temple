@@ -1,0 +1,25 @@
+# Mật mã trạm (game Đường lên đỉnh Everest): người xem gõ thẳng từ khoá, có dấu.
+# Mỗi dòng: MẬT MÃ | gợi ý 1 (khó nhất, 30 điểm) | gợi ý 2 (20 điểm) | gợi ý 3 (dễ nhất, 10 điểm)
+# Gợi ý không được chứa nguyên mật mã. Kiểm tra: npx tsx src/game/bank.check.ts
+TRÀ SỮA | Gen Z gọi đây là "nước thánh", uống xong mới làm việc nổi. | Gọi thêm trân châu, thạch, kem cheese là đủ bộ. | Ly đồ uống pha trà với sữa, cắm ống hút to.
+ÁO DÀI | Có hai tà, một trước một sau. | Nữ sinh cấp ba mặc màu trắng tới trường. | Trang phục truyền thống của phụ nữ Việt Nam.
+ĐÈN LỒNG | Tối rằm ở Hội An treo kín phố. | Khung tre bọc vải lụa đủ màu, thắp nến bên trong. | Trung thu trẻ con cầm đi rước.
+CÀ PHÊ | Giúp dân văn phòng sống sót qua sáng thứ hai. | Buôn Ma Thuột là thủ phủ của nó. | Pha phin, thêm sữa đặc, bỏ đá.
+LƯƠNG | Ngày nhận thì vui, ba ngày sau thì buồn. | Công ty chuyển vào tài khoản mỗi tháng. | Tiền công đi làm.
+BÁNH CHƯNG | Lang Liêu dâng vua cha, tượng trưng cho đất. | Gói lá dong, nhân đậu xanh với thịt mỡ. | Bánh vuông ăn Tết của miền Bắc.
+HOA SEN | Gần bùn mà chẳng hôi tanh mùi bùn. | Hạt nấu chè, lá gói cơm. | Loài hoa mọc dưới ao, nhiều người xem là quốc hoa.
+CHỢ NỔI | Không có quầy, chỉ có ghe thuyền. | Treo món hàng trên cây sào gọi là cây bẹo. | Chợ họp ngay trên sông ở miền Tây.
+PHỞ | Có bò tái, bò chín, có cả gà. | Bánh sợi dẹt, nước dùng ninh xương cả đêm. | Món ăn sáng nổi tiếng nhất Hà Nội.
+TRỐNG ĐỒNG | Hiện vật nổi tiếng của văn hóa Đông Sơn. | Mặt có hình ngôi sao nhiều cánh ở giữa. | Nhạc cụ cổ bằng kim loại, gõ vào kêu vang.
+SƠN ĐOÒNG | Do một người dân địa phương tên Hồ Khanh phát hiện. | Bên trong có cả rừng cây và mây riêng. | Hang động lớn nhất thế giới ở vùng Phong Nha.
+KHAI GIẢNG | Có tiếng trống vang lên mở đầu buổi lễ. | Năm nào cũng vào đầu tháng chín. | Ngày lễ mở đầu năm học mới.
+TẾT | Có bao lì xì đỏ và câu hỏi "bao giờ lấy chồng". | Cả nhà ngồi canh nồi bánh chưng. | Dịp lễ lớn nhất trong năm của người Việt.
+CÁ VOI | Thở bằng phổi, thỉnh thoảng phun cột nước lên trời. | Không phải loài cá dù tên gọi có chữ cá. | Động vật lớn nhất hành tinh, sống dưới biển.
+MẬT KHẨU | Đặt xong là quên, phải bấm "quên" để lấy lại. | Nên có chữ hoa, chữ số và ký tự đặc biệt. | Dãy ký tự bí mật để đăng nhập tài khoản.
+NGÔI SAO | Người nổi tiếng cũng được gọi như vậy. | Có hình năm cánh trên lá cờ Tổ quốc. | Lấp lánh trên bầu trời đêm.
+VĂN MIẾU | Có 82 tấm bia tiến sĩ đặt trên lưng rùa. | Xây năm 1070 thời nhà Lý. | Trường đại học đầu tiên của Việt Nam, ở Hà Nội.
+CẦU VỒNG | Muốn thấy phải quay lưng về phía Mặt Trời. | Đỏ, cam, vàng, lục, lam, chàm, tím. | Hiện ra trên trời sau cơn mưa.
+ĐIỆN BIÊN PHỦ | Lừng lẫy năm châu, chấn động địa cầu. | Đại tướng Võ Nguyên Giáp chỉ huy chiến dịch. | Chiến thắng năm 1954.
+KÉO CO | Hai đội, một sợi dây thừng. | Hội làng và team building nào cũng có. | Trò chơi giành sợi dây về phía đội mình.
+HẠ LONG | Theo truyền thuyết, rồng mẹ đáp xuống đây. | Có gần hai nghìn hòn đảo đá vôi. | Vịnh di sản thế giới ở Quảng Ninh.
+OẲN TÙ TÌ | Không cần dụng cụ, chỉ cần một bàn tay. | Dùng để quyết định ai rửa bát. | Búa, kéo, bao.

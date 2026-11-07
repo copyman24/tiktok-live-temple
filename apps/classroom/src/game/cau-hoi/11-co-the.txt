@@ -1,0 +1,74 @@
+# Cơ thể, sức khỏe
+> Đây là bộ phận cơ thể.
+MẮT | Dùng để nhìn, lướt điện thoại tới hai giờ sáng thì thâm quầng như gấu trúc. | 1 | CON MẮT
+MŨI | Dùng để ngửi, đi ngang quán trà sữa là tự quay đầu xe. | 1 | CÁI MŨI
+MIỆNG | Dùng để ăn và nói, cô Ngân dùng nhiều nhất trong lớp. | 1 | CÁI MIỆNG
+TAI | Dùng để nghe, sếp gọi tên thì không nghe, ai nói "trà sữa" là nghe liền. | 1 | CÁI TAI
+RĂNG | Đánh mỗi sáng tối cho trắng, đi niềng tốn cả mấy chục triệu. | 1 | CÁI RĂNG
+LƯỠI | Nếm vị chua cay mặn ngọt, "... không xương nhiều đường lắt léo". | 1 | CÁI LƯỠI
+TÓC | Mọc trên đầu, thất tình là đi cắt ngắn liền. | 1 | MÁI TÓC
+LÔNG MÀY | Hai vệt trên mắt, chị em tỉa mỗi tuần, kẻ lệch là cả ngày khó chịu. | 2
+LÔNG MI | Sợi cong ở mí mắt, chị em chuốt mascara hoặc gắn giả cho dài. | 2
+MÁ | Hai bên mặt, cười có lúm đồng tiền, người lớn hay véo mỗi dịp Tết. | 1 | GÒ MÁ
+CẰM | Phía dưới miệng, chụp góc dưới lên là thấy thêm một cái nữa. | 1
+CỔ | Nối đầu với thân, cúi điện thoại cả ngày là mỏi nhừ. | 1
+VAI | Chỗ đeo cặp sách, cũng là chỗ để người ta dựa vào lúc buồn. | 1 | BỜ VAI
+TAY | Dùng để cầm nắm, lướt điện thoại nhiều tới mức mỏi rã rời. | 1 | BÀN TAY
+NGÓN TAY | Mỗi bàn tay có năm cái, gõ đáp án vào bình luận nhanh nhất lớp. | 1
+MÓNG TAY | Cắt ngắn cho sạch, chị em ra tiệm nail sơn đủ màu. | 2
+KHUỶU TAY | Chỗ gập giữa cánh tay, va vào cạnh bàn là tê rần. | 3 | CÙI CHỎ, KHUỶU
+CHÂN | Dùng để đi, đi mười nghìn bước một ngày là nhức mỏi. | 1 | BÀN CHÂN
+ĐẦU GỐI | Chỗ gập giữa chân, hồi nhỏ ngã xe trầy chỗ này hoài. | 2
+GÓT CHÂN | Phần sau bàn chân, đi giày mới là phồng rộp. | 2
+BỤNG | Ăn no thì căng tròn, sau Tết là phải hóp lại khi chụp ảnh. | 1 | CÁI BỤNG
+RỐN | Cái lỗ nhỏ giữa bụng, "... của vũ trụ" là người nghĩ mình quan trọng nhất. | 1
+LƯNG | Phía sau thân, ngồi văn phòng tám tiếng là đau ê ẩm. | 1
+TIM | Đập thình thịch trong lồng ngực, gặp crush thì đập nhanh gấp đôi. | 1 | TRÁI TIM
+PHỔI | Hít thở không khí, ở thành phố bụi mịn thì khổ nó lắm. | 1
+GAN | Lọc độc trong máu, nhậu nhiều thì hại, người liều lĩnh thì bị gọi là to. | 2
+DẠ DÀY | Nơi tiêu hoá thức ăn, bỏ bữa sáng chạy deadline là đau. | 2 | BAO TỬ
+RUỘT | Ống dài trong bụng, có non có già, nóng lòng thì "nóng" cái này. | 2
+THẬN | Lọc máu tạo nước tiểu, có hai quả, ngồi lì cả ngày không uống nước là hại. | 2
+NÃO | Bộ phận suy nghĩ trong đầu, thứ hai đầu tuần thì như chưa khởi động. | 1 | BỘ NÃO
+XƯƠNG | Khung cứng của cơ thể, uống sữa cho chắc, già đi thì kêu răng rắc. | 1
+MÁU | Màu đỏ chảy trong mạch, đi hiến là được tặng sữa với bánh. | 1
+DA | Lớp ngoài cùng cơ thể, chị em skincare mười bước mỗi tối. | 1 | LÀN DA
+MỒ HÔI | Chảy ra khi nóng hay chạy nhiều, "đổ ... sôi nước mắt" mới kiếm ra tiền. | 2
+NƯỚC MẮT | Chảy ra khi khóc, xem phim Hàn là rơi lã chã. | 1
+> Đây là chuyện cơ thể, sức khỏe.
+NỤ CƯỜI | Thứ đẹp nhất trên gương mặt, cô Ngân cười mỗi khi có bạn trả lời đúng. | 1
+LÚM ĐỒNG TIỀN | Vết lõm xinh trên má khi cười, có là được khen duyên. | 3
+NỐT RUỒI | Chấm nhỏ trên da, xem tướng bảo có chỗ này là giàu. | 2
+TÀN NHANG | Đốm nâu nhỏ trên mặt, đi nắng không che là mọc thêm. | 3
+MỤN | Nổi trên mặt tuổi dậy thì, thức khuya chạy deadline cũng nổi. | 1 | MỤN TRỨNG CÁ
+SỐT | Người nóng, nhiệt kế báo ba mươi chín độ, lý do xin nghỉ làm chính đáng nhất. | 1 | BỊ SỐT
+CẢM CÚM | Hắt xì, sổ mũi, đau đầu, giao mùa là cả phòng lây nhau. | 2 | CẢM, CÚM
+HO | Khụ khụ, đang họp mà bị là cả phòng quay lại nhìn. | 1
+ĐAU BỤNG | Ăn bậy ngoài vỉa hè là bị, đang kẹt xe mà bị là toi. | 1
+ĐAU RĂNG | Ăn kẹo nhiều quá thì bị, nhức tới mức không ngủ được. | 1
+SÂU RĂNG | Ăn ngọt không chịu đánh răng thì răng bị con này đục lỗ. | 2
+CẬN THỊ | Nhìn xa không rõ, phải đeo kính, chơi điện thoại trong bóng tối là tăng độ. | 2
+NHIỆT KẾ | Kẹp nách để đo nhiệt độ người, ốm là mẹ nhét vào liền. | 2
+KHẨU TRANG | Đeo che miệng mũi tránh bụi, cũng là cách đi chợ không cần trang điểm. | 2
+THUỐC | Uống khi ốm, có viên, có siro, đắng tới mức phải kèm kẹo. | 1
+BỆNH VIỆN | Nơi khám chữa bệnh, đi khám là xếp hàng cả buổi sáng. | 1
+TIÊM PHÒNG | Chích vắc xin để không bị bệnh, người lớn cũng sợ kim. | 2 | TIÊM CHỦNG
+BĂNG CÁ NHÂN | Miếng dán lên vết đứt tay, có loại in hình hoạt hình dễ thương. | 3 | URGO
+VITAMIN | Chất có nhiều trong rau quả, dân văn phòng mua viên sủi uống cho đỡ mệt. | 2
+CHIỀU CAO | Đo bằng thước, khai trên mạng thì tự cộng thêm năm phân. | 2
+CÂN NẶNG | Đứng lên cân để đo, sau Tết là không dám bước lên. | 2
+TẬP THỂ DỤC | Vận động mỗi sáng cho khoẻ, kế hoạch đầu năm mà tới tháng hai là bỏ. | 2
+ĐÁNH RĂNG | Việc làm mỗi sáng và trước khi ngủ, lười quá thì nhai kẹo cao su thay. | 1
+RỬA TAY | Làm trước khi ăn, xoa xà phòng đủ hai mươi giây mới sạch. | 1
+TẮM | Làm mỗi tối cho sạch, mùa đông miền Bắc phải đấu tranh tư tưởng mới dám. | 1
+NGÁP | Há miệng to khi buồn ngủ, một người làm là cả phòng làm theo. | 1
+HẮT HƠI | Một cái "hắt xì" bất ngờ, người ta bảo là có ai đang nhắc mình. | 2 | HẮT XÌ
+NẤC CỤT | Ăn vội là bị, hức hức không ngừng, hù một cái là hết. | 2 | NẤC
+CHUỘT RÚT | Bơi lâu hay ngủ dậy bị co cứng bắp chân, đau tới phát khóc. | 3
+TÊ CHÂN | Ngồi xổm lâu đứng dậy như có kiến bò, đi không nổi. | 2
+VÂN TAY | Đường nét riêng trên đầu ngón, dùng mở khoá điện thoại và chấm công. | 2
+NHÓM MÁU | A, B, AB hoặc O, dân mê bói còn xem để đoán tính cách. | 3
+TẾ BÀO | Đơn vị nhỏ nhất của cơ thể sống, não thiếu ngủ là chết bớt. | 3
+CƠ BẮP | Tập gym cho to lên, chụp ảnh trong gương khoe lên mạng. | 2
+CƠ BỤNG | Người tập gym khoe sáu múi, dân văn phòng chỉ có một múi tròn. | 3 | SIX PACK
+HUYẾT ÁP | Đo bằng máy bó tay, gặp sếp khó tính là tăng vọt. | 3

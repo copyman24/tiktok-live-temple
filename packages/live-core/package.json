@@ -1,0 +1,18 @@
+{
+  "name": "@linhung/live-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared TikTok Live building blocks for the prayer, wedding and classroom sessions",
+  "exports": {
+    ".": "./src/index.js",
+    "./tiktok": "./src/tiktok.js",
+    "./username": "./src/username.js"
+  },
+  "scripts": {
+    "test": "bun test"
+  },
+  "dependencies": {
+    "tiktok-live-connector": "^2.5.0"
+  }
+}

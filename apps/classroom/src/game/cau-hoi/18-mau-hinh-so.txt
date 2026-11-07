@@ -1,0 +1,78 @@
+# Màu sắc, hình học, con số
+> Đây là một màu sắc.
+MÀU ĐỎ | Màu quả ớt chín, lá cờ, phong bì lì xì Tết, và chữ cô phê "làm lại". | 1 | ĐỎ
+MÀU XANH | Màu lá cây, bầu trời, cũng là màu đèn được đi. | 1 | XANH
+MÀU VÀNG | Màu chuối chín, ngôi sao trên cờ, và cái thẻ trọng tài rút ra nhắc nhở. | 1 | VÀNG
+MÀU TÍM | Màu hoa sim, mực học trò ngày xưa, người "thuỷ chung" hay mặc. | 1 | TÍM
+MÀU HỒNG | Màu kẹo bông, đeo kính màu này nhìn đời thấy đẹp. | 1 | HỒNG
+MÀU CAM | Màu quả cam, áo shipper giao đồ ăn chạy khắp phố. | 1 | CAM
+MÀU NÂU | Màu cà phê sữa đá, màu áo bà ba miền Tây. | 1 | NÂU
+MÀU ĐEN | Màu bảng lớp mình, cũng là màu ngày xui "đen như chó mực". | 1 | ĐEN
+MÀU TRẮNG | Màu áo dài nữ sinh, màu trang giấy và màu ví lúc cuối tháng. | 1 | TRẮNG
+MÀU XÁM | Màu tro, mây u ám, tâm trạng sáng thứ hai. | 2 | XÁM, MÀU GHI
+MÀU BẠC | Màu nhẫn đeo tay, tóc người già, và màu tóc nhuộm của Gen Z. | 2 | BẠC
+CẦU VỒNG BẢY SẮC | Đỏ, cam, vàng, lục, lam, chàm, tím, hiện ra sau cơn mưa. | 3
+> Đây là kiến thức hình học.
+HÌNH TRÒN | Không có góc nào, như cái bánh pizza chưa cắt. | 1
+HÌNH VUÔNG | Bốn cạnh bằng nhau, bốn góc vuông, như cái bánh chưng. | 1
+HÌNH TAM GIÁC | Có ba cạnh ba góc, như miếng pizza, như mối tình có người thứ ba. | 2
+HÌNH CHỮ NHẬT | Hai cạnh dài hai cạnh ngắn, như màn hình điện thoại. | 3
+HÌNH THOI | Bốn cạnh bằng nhau nhưng xiêu vẹo, như viên kim cương trên lá bài rô. | 2
+HÌNH THANG | Có hai cạnh đáy song song, tên nghe như để leo lên. | 2
+NGÔI SAO NĂM CÁNH | Hình màu vàng giữa lá cờ Việt Nam. | 3
+HÌNH TRÁI TIM | Biểu tượng tình yêu, bấm đúp vào ảnh là hiện ra. | 2
+KHỐI LẬP PHƯƠNG | Hình hộp sáu mặt vuông như con xúc xắc, như khối rubik. | 3
+HÌNH CẦU | Tròn trịa mọi phía như quả bóng, như bụng sau Tết. | 2 | KHỐI CẦU
+HÌNH NÓN | Giống cái nón lá, đáy tròn đỉnh nhọn, như ốc quế kem. | 3 | KHỐI NÓN
+ĐƯỜNG THẲNG | Kẻ bằng thước không cong, nhịp tim mà như vậy là toang. | 2
+ĐƯỜNG CONG | Uốn lượn không thẳng, chị em tập gym để có. | 2
+GÓC VUÔNG | Chín mươi độ, như góc bảng, góc màn hình. | 2
+ĐƯỜNG KÍNH | Đoạn đi qua tâm nối hai mép hình tròn, bằng hai lần bán kính. | 3
+BÁN KÍNH | Từ tâm tới mép hình tròn, nghe như "bán" cặp kính. | 3
+CHU VI | Tổng độ dài các cạnh, đi bộ quanh hồ một vòng là đo được. | 2
+DIỆN TÍCH | Tính bằng mét vuông, căn hộ thành phố thì nhỏ xíu mà giá trên trời. | 2
+> Đây là con số hoặc phép tính.
+SỐ KHÔNG | Số trước số một, cũng là số dư tài khoản ngày hai mươi lăm. | 1 | KHÔNG
+SỐ MỘT | Số đứng đầu, hạng nhất, ai yêu cô thì gõ nó. | 1 | MỘT
+MƯỜI | Số ngón tay của hai bàn tay, điểm tuyệt đối. | 1 | SỐ MƯỜI
+MỘT TRĂM | Mười lần mười, tờ tiền polime màu xanh lá. | 2 | TRĂM
+MỘT NGHÌN | Mười lần một trăm, tờ tiền nhỏ ngày xưa mua được cây kem. | 2 | NGHÌN, MỘT NGÀN
+MỘT TRIỆU | Một nghìn lần một nghìn, số lần chép phạt cao nhất của cô Ngân. | 2 | TRIỆU
+MỘT TỶ | Ước mơ của nhiều người khi mua vé số, ở thành phố chưa mua nổi căn hộ. | 2 | TỶ, TỈ
+PHÉP CỘNG | Một với một thành hai, cũng là thứ cân nặng làm sau Tết. | 2
+PHÉP TRỪ | Lấy đi bớt, như lương bị trừ khi đi làm muộn. | 2
+PHÉP NHÂN | Học bằng bảng cửu chương, deadline làm nó với số việc. | 2
+PHÉP CHIA | Chia đều cho mọi người, đi ăn chung thì app tính hộ. | 2
+BẢNG CỬU CHƯƠNG | Học thuộc từ hai nhân một tới chín nhân mười, quên là bị khẻ tay. | 3
+SỐ CHẴN | Số chia hết cho hai, tặng hoa thì kiêng không tặng kiểu này. | 2
+SỐ LẺ | Số không chia hết cho hai, người còn độc thân hay tự gọi mình là thế. | 2
+PHÂN SỐ | Một phần hai, ba phần tư, có tử số và mẫu số. | 2
+PHẦN TRĂM | Kí hiệu %, mùa sale giảm năm mươi cái này là chen nhau mua. | 2
+SỐ PI | Ba phẩy mười bốn, tính chu vi hình tròn. | 2 | PI
+TÁ | Mười hai cái, mua trứng hay bút chì hay đếm kiểu này. | 2
+CHỤC | Mười cái, mua xoài ngoài chợ miền Nam có khi được mười hai. | 1
+CẶP | Hai cái đi với nhau, như tình nhân, như đôi đũa. | 1 | ĐÔI
+> Đây là đơn vị đo.
+GIÂY | Đơn vị nhỏ nhất trên đồng hồ, gõ đáp án nhanh hơn bạn một cái là thắng. | 1
+PHÚT | Sáu mươi giây, "đợi em năm ..." là đợi nửa tiếng. | 1
+GIỜ | Sáu mươi phút, đi làm tám cái mà như tám năm. | 1
+NGÀY | Hai mươi bốn giờ, thứ hai thì dài như cả tuần. | 1
+TUẦN | Bảy ngày, từ thứ hai tới chủ nhật, mong nhất là cuối. | 1
+THÁNG | Khoảng ba mươi ngày, lương chỉ đủ tiêu tới giữa. | 1
+NĂM | Mười hai tháng, Tết là hết một cái cũ. | 1
+THẾ KỶ | Một trăm năm, chờ người yêu nhắn lại cũng lâu như vậy. | 2 | THẾ KỈ
+NĂM NHUẬN | Năm có tháng hai hai mươi chín ngày, ai sinh ngày đó bốn năm mới có sinh nhật. | 3
+KÍ LÔ GAM | Đơn vị đo cân nặng, sau Tết tăng mấy cái là bình thường. | 3 | KILOGAM, CÂN, KÝ
+MÉT | Đơn vị đo chiều dài, trăm cái là đường chạy ngắn nhất ở Olympic. | 1
+CÂY SỐ | Một nghìn mét, đi bộ thì mệt, chạy xe thì vèo cái tới. | 2 | KI LÔ MÉT, KM
+LÍT | Đơn vị đo chai nước, uống đủ hai cái mỗi ngày cho đẹp da. | 1
+ĐỘ C | Đơn vị đo nhiệt độ, Sài Gòn ba mươi lăm cái là chuyện thường. | 2
+> Đây là thứ trong giờ toán, giờ địa.
+LA BÀN | Kim luôn chỉ hướng bắc, giờ ai cũng dùng bản đồ điện thoại. | 2
+HƯỚNG ĐÔNG | Nơi mặt trời mọc, nhà xoay về phía này là sáng sớm chói mắt. | 2 | ĐÔNG
+HƯỚNG TÂY | Nơi mặt trời lặn, nhà xoay về phía này là chiều nóng như rang. | 2 | TÂY
+BÊN TRÁI | Ngược với bên phải, nơi trái tim nằm. | 1 | TRÁI
+TRÊN DƯỚI | Hai hướng đối nhau theo chiều đứng, "... một lòng" cả công ty. | 2
+SỐ LA MÃ | Kiểu chữ số I, V, X trên đồng hồ cổ và tên chương sách. | 3
+MÁY TÍNH BỎ TÚI | Cầm tay bấm cộng trừ nhân chia, đi chợ tính tiền thối. | 3
+THƯỚC ĐO GÓC | Hình bán nguyệt có vạch độ, trong hộp đồ dùng hình học. | 3

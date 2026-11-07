@@ -109,17 +109,24 @@ The backend listens on loopback port `3000` without account authentication. The 
 
 ---
 
-## 🎛️ TikTok Live Studio — một ứng dụng, hai phiên
+## 🎛️ TikTok Live Studio — một ứng dụng, ba phiên
 
-`apps/live-studio/` gộp Chùa Linh Ứng Online và Virtual Wedding Live vào **một** backend và **một** ứng dụng desktop. Mở `http://127.0.0.1:3200/studio`, chọn phiên; dữ liệu của phiên kia được giữ nguyên trong bộ nhớ (công đức của chùa vẫn lưu ra file). OBS chỉ cần một nguồn `http://127.0.0.1:3200/obs`, nguồn này tự chuyển sang sân khấu của phiên đang mở. Khi đổi phiên, Studio có thể kết nối lại phòng TikTok đang phát cho phiên mới.
+`apps/live-studio/` gộp Chùa Linh Ứng Online, Virtual Wedding Live và **Lớp Học Chữ** vào **một** backend và **một** ứng dụng desktop. Mở `http://127.0.0.1:3200/studio` rồi chọn phiên. Dữ liệu của các phiên kia được giữ nguyên: lễ cưới và tiết học tạm dừng trong bộ nhớ, công đức và điểm lớp học lưu ra file. OBS chỉ cần một nguồn `http://127.0.0.1:3200/obs`, nguồn này tự chuyển sang sân khấu của phiên đang mở.
+
+Studio giữ **một** kết nối TikTok chung cho cả ba phiên. Đổi phiên không làm rớt phòng live. Kết nối tự nối lại khi rớt mạng hoặc hết phiên live (15 giây, gấp đôi tới 2 phút), cho tới khi bấm Ngắt. Báo cáo người xem tăng/giảm theo từng phần của mọi phiên ở `/studio/bao-cao`.
 
 ```sh
+bun run classroom:build     # build giao diện Lớp Học Chữ (React)
 bun run studio:start        # chạy Studio từ mã nguồn (cổng 3200)
 bun run studio:tauri:dev    # cửa sổ desktop khi phát triển
 bun run studio:build        # đóng gói (Windows: NSIS kèm ZeroTTS; Linux: deb/rpm/AppImage)
 ```
 
-Xem thêm `apps/live-studio/README.md`.
+Xem thêm `apps/live-studio/README.md`, `apps/classroom/README.md` và `packages/live-core/README.md`.
+
+### Lõi dùng chung `packages/live-core`
+
+Ba phiên dùng chung: kết nối TikTok (tự nối lại, nhận link chia sẻ `vt.tiktok.com`, giờ gửi bình luận chuẩn để xếp ai nhanh nhất), giọng đọc (Edge → Google → ZeroTTS offline), bộ lọc tên và bình luận, lưu trữ `bun:sqlite`, JSON-RPC qua `/ws`, và luật "chỉ một trang sân khấu đọc giọng" (mở thêm nguồn OBS không còn bị hai giọng đè nhau). Kiểm tra: `bun run test`.
 
 ---
 
@@ -215,7 +222,9 @@ curl -X POST http://localhost:3000/rpc \
 ├── server.js                  # Điểm chạy độc lập của Chùa Linh Ứng (gọi src/temple/server.js)
 ├── src/temple/server.js       # Backend chùa dạng factory: HTTP + WebSocket JSON-RPC 2.0 & TikTok Live Connector
 ├── apps/virtual-wedding/      # Ứng dụng lễ cưới độc lập (backend, giao diện, Tauri riêng)
-├── apps/live-studio/          # Studio gộp hai phiên vào một binary
+├── apps/classroom/            # Lớp Học Chữ: trò chơi đố chữ (lõi chạy trên server, giao diện React)
+├── apps/live-studio/          # Studio gộp ba phiên vào một binary
+├── packages/live-core/        # Lõi dùng chung: TikTok, giọng đọc, lọc chữ, lưu trữ, RPC, báo cáo
 ├── design/source-art/         # Ảnh gốc độ phân giải cao (không đóng gói vào ứng dụng)
 ├── tts_worker.py              # Tiến trình Python ZeroTTS thường trú (48kHz, chống rè/clipping, lọc ký tự lạ)
 ├── data/

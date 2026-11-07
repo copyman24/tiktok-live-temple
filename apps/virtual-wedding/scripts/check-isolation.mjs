@@ -1,8 +1,10 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { dirname, extname, resolve } from 'node:path';
+import { dirname, extname, isAbsolute, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const appRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+// The one shared package the wedding app may import: neutral TikTok Live plumbing, no prayer code.
+const liveCoreRoot = resolve(appRoot, '..', '..', 'packages', 'live-core', 'src');
 const sourceRoot = resolve(appRoot, 'src');
 const rustRoot = resolve(appRoot, 'src-tauri', 'src');
 const packageJson = JSON.parse(readFileSync(resolve(appRoot, 'package.json'), 'utf8'));
@@ -22,19 +24,20 @@ if (!cargo.includes('name = "virtual-wedding-live"')) failures.push('The Rust cr
 
 for (const [source, target] of Object.entries(config.bundle?.resources || {})) {
   const sourcePath = resolve(appRoot, 'src-tauri', source);
-  if (!sourcePath.startsWith(`${appRoot}/`)) failures.push(`A Tauri resource escapes the app directory: ${source}`);
+  if (!inside(appRoot, sourcePath)) failures.push(`A Tauri resource escapes the app directory: ${source}`);
   if (!String(target).startsWith('web/')) failures.push(`A Tauri resource maps outside the wedding web directory: ${target}`);
 }
 
 const forbidden = /tiktok-live-temple|com\.linhung\.tiktoklivetemple|temple-backend|TEMPLE_SHUTDOWN_TOKEN|\bRituals\b/;
-for (const root of [sourceRoot, rustRoot]) {
+for (const root of [sourceRoot, rustRoot, liveCoreRoot]) {
   for (const file of filesUnder(root)) {
     const content = readFileSync(file, 'utf8');
-    if (forbidden.test(content)) failures.push(`Prayer-app reference found in ${file.slice(appRoot.length + 1)}.`);
+    const label = relative(resolve(appRoot, '..', '..'), file);
+    if (forbidden.test(content)) failures.push(`Prayer-app reference found in ${label}.`);
     if (extname(file) === '.js') {
       for (const match of content.matchAll(/(?:from\s*|import\s*\()(['"])(\.\.?\/[^'"]+)\1/g)) {
         const target = resolve(dirname(file), match[2]);
-        if (!target.startsWith(`${appRoot}/`)) failures.push(`Local import escapes the app directory: ${match[2]} in ${file.slice(appRoot.length + 1)}.`);
+        if (!inside(appRoot, target) && !inside(liveCoreRoot, target)) failures.push(`Local import escapes the app directory: ${match[2]} in ${label}.`);
       }
     }
   }
@@ -45,7 +48,13 @@ if (failures.length) {
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
-console.log('Standalone app boundary verified: package, Rust crate, Tauri identity, port, resources, sidecar, and source imports are wedding-local.');
+console.log('Standalone app boundary verified: package, Rust crate, Tauri identity, port, resources, sidecar, and source imports are wedding-local (plus packages/live-core).');
+
+// Path-separator safe (the old `startsWith(appRoot + '/')` check failed every import on Windows).
+function inside(parent, child) {
+  const rel = relative(parent, child);
+  return rel === '' || (!rel.startsWith('..') && !isAbsolute(rel));
+}
 
 function filesUnder(directory) {
   return readdirSync(directory).flatMap((name) => {

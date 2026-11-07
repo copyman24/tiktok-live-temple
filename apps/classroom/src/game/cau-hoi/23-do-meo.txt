@@ -1,0 +1,236 @@
+# Đố mẹo
+# Câu đố mẹo: chỉ hỏi ở câu 7 và câu 13 của mỗi tiết (GAME.roundPlan 'meo'), không lẫn vào câu chữ thường.
+# Mỗi dòng: ĐÁP ÁN | câu đố | độ khó (để 2) | cách trả lời khác cũng tính đúng (cách nhau dấu phẩy)
+> Câu đố mẹo nè, cẩn thận bị cô lừa nha.
+QUẦN ĐẢO | Quần gì rộng nhất thế giới? | 2
+XÃ HỘI | Xã gì đông dân nhất? | 2
+KÉO CO | Môn thể thao gì muốn thắng thì phải đi lùi? | 2
+TÊN | Cái gì của mình mà người khác gọi nhiều hơn mình? | 2 | CÁI TÊN
+ĐƯỜNG ĐỜI | Con đường nào dài nhất? | 2
+THÁNG HAI | Tháng nào trong năm ngắn nhất? | 2 | THÁNG 2
+THAN | Lúc mua thì đen, lúc dùng thì đỏ, bỏ đi thì xám là cái gì? | 2 | CỤC THAN
+CÁI BÓNG | Cái gì lúc nào cũng đi theo mình mà không bao giờ bắt được? | 2 | BÓNG
+CÁI LỖ | Cái gì càng lấy bớt đi thì càng to ra? | 2 | LỖ
+TUỔI | Cái gì chỉ tăng mà không bao giờ giảm? | 2 | TUỔI TÁC
+BÍ MẬT | Cái gì nói ra một cái là mất ngay? | 2
+ĐỒNG HỒ | Cái gì có mặt, có kim mà không biết khâu vá? | 2
+CÁI LƯỢC | Cái gì có răng mà không bao giờ cắn ai? | 2 | LƯỢC
+QUẢ TRỨNG | Cái gì phải đập vỡ ra rồi mới dùng được? | 2 | TRỨNG
+CÁI KHĂN | Cái gì càng lau càng ướt? | 2 | KHĂN, KHĂN TẮM
+CON CUA | Con gì lúc nào cũng đi ngang mà không bị ai phạt? | 2 | CUA
+CÁI GHẾ | Cái gì có bốn chân, có lưng mà không đi được? | 2 | GHẾ
+CÁI CHAI | Cái gì có cổ mà không có đầu? | 2 | CHAI, ÁO, CÁI ÁO
+CÂY KIM | Cái gì có một mắt mà không nhìn thấy gì? | 2 | KIM, KIM KHÂU
+NGÀY MAI | Cái gì luôn ở phía trước mà không bao giờ tới? | 2
+RĂNG | Cái gì ngày nào cũng bị đánh mà không kêu đau? | 2 | HÀM RĂNG
+CÁI GỐI | Cái gì đêm nào cũng nằm dưới đầu mình? | 2 | GỐI
+TIẾNG VỌNG | Cái gì nhại lại lời mình mà không có miệng? | 2 | TIẾNG VANG
+CẦU THANG | Cái gì có lên có xuống mà không nhúc nhích? | 2
+CÁI GƯƠNG | Cái gì nhìn vào là thấy mình mà không phải ảnh chụp? | 2 | GƯƠNG
+CƠN MƯA | Cái gì rơi từ trên cao xuống mà không bao giờ bị đau? | 2 | MƯA
+CHÌA KHÓA | Cái gì có răng mà mở được cửa? | 2
+SỐ CHÍN | Số nào lộn ngược lại thì thành số sáu? | 2 | CHÍN, 9
+ĐÔI GIÀY | Cái gì có lưỡi mà không biết nói? | 2 | GIÀY, CÁI GIÀY
+NƯỚC | Cái gì càng rửa càng bẩn? | 2
+HÔM QUA | Ngày nào không bao giờ quay trở lại? | 2
+CÂY NẾN | Cái gì càng cháy càng ngắn lại? | 2 | NẾN
+ĐÔI MẮT | Cái gì nhắm lại thì không thấy gì? | 2 | MẮT
+LỜI HỨA | Cái gì đã cho người khác rồi mà mình vẫn phải giữ? | 2
+TRÁI TIM | Cái gì đập suốt ngày đêm mà không ai la? | 2 | TIM
+TỜ LỊCH | Cái gì mỗi ngày bị xé đi một tờ? | 2 | LỊCH
+CON ỐC | Con gì đi đâu cũng cõng nhà theo? | 2 | ỐC, ỐC SÊN, CON ỐC SÊN, RÙA, CON RÙA
+QUẢ DỨA | Quả gì có cả trăm mắt mà không nhìn thấy gì? | 2 | DỨA, THƠM, QUẢ THƠM, TRÁI THƠM, KHÓM
+BẮP NGÔ | Cây gì có râu, mặc áo nhiều lớp, bên trong toàn hạt vàng? | 2 | NGÔ, BẮP, TRÁI BẮP
+QUẢ CHUỐI | Quả gì mặc áo vàng, ăn xong thì vứt áo đi? | 2 | CHUỐI, TRÁI CHUỐI
+CON GÀ | Con gì báo thức mỗi sáng mà không cần pin? | 2 | GÀ, GÀ TRỐNG, CON GÀ TRỐNG
+CÁI Ô | Cái gì trời mưa thì mở, trời tạnh thì gấp? | 2 | Ô, DÙ, CÁI DÙ, CÂY DÙ
+CỦ HÀNH | Cái gì làm người ta rơi nước mắt mà không đánh ai? | 2 | HÀNH, HÀNH TÂY
+VIÊN PHẤN | Cái gì càng viết càng ngắn lại? | 2 | PHẤN, BÚT CHÌ, CÂY BÚT CHÌ
+BẢN ĐỒ | Cái gì có sông mà không có nước, có núi mà không có đá? | 2
+ĐÁM MÂY | Cái gì bay lơ lửng trên trời mà không có cánh? | 2 | MÂY, BÓNG BAY
+CON ĐƯỜNG | Cái gì đi khắp nơi mà vẫn nằm yên một chỗ? | 2 | ĐƯỜNG
+CÁI KÉO | Cái gì có hai lưỡi mà không biết nói, chỉ biết cắt? | 2 | KÉO
+BONG BÓNG | Cái gì càng thổi càng to? | 2 | BÓNG BAY, QUẢ BÓNG BAY
+CƠN GIÓ | Cái gì thổi bay mũ mà không ai nhìn thấy? | 2 | GIÓ
+CÁI CÂN | Cái gì biết mình nặng bao nhiêu ký? | 2 | CÂN
+NHIỆT KẾ | Cái gì biết mình bị sốt mà không phải bác sĩ? | 2 | CẶP NHIỆT ĐỘ, CẶP NHIỆT
+MẶT TRỜI | Ông gì sáng nào cũng dậy sớm hơn cả lớp? | 2 | ÔNG MẶT TRỜI
+MẶT TRĂNG | Cái gì chỉ sáng vào ban đêm, có lúc tròn có lúc khuyết? | 2 | TRĂNG, ÔNG TRĂNG
+HEO ĐẤT | Con gì không ăn cơm mà chỉ ăn tiền? | 2 | LỢN ĐẤT, CON HEO ĐẤT
+CÂY CẦU | Cái gì bắc ngang sông cho người đi qua mà không phải con đò? | 2 | CẦU
+ĐIỆN THOẠI | Cái gì nhỏ xíu mà nói chuyện được với người ở rất xa? | 2 | DI ĐỘNG
+TI VI | Cái hộp gì có người nói chuyện ở bên trong? | 2 | TV
+TỦ LẠNH | Cái tủ gì mùa hè ai cũng thích mở ra? | 2
+CÁI QUẠT | Cái gì quay vù vù cả ngày mà không chóng mặt? | 2 | QUẠT, QUẠT MÁY
+XE ĐẠP | Xe gì không cần xăng, chỉ cần đôi chân? | 2
+MÁY BAY | Cái gì bay trên trời mà chở được cả trăm người? | 2 | PHI CƠ
+CON CHÓ | Con gì giữ nhà mà không cần chìa khóa? | 2 | CHÓ
+CON MÈO | Con gì rửa mặt mà không cần nước? | 2 | MÈO
+CON VOI | Con gì có vòi mà không phải cái ấm? | 2 | VOI
+CÁI ẤM | Cái gì có vòi mà không phải con voi? | 2 | ẤM, ẤM NƯỚC, ẤM TRÀ
+CON NHỆN | Con gì không có máy mà dệt được lưới? | 2 | NHỆN
+CON ONG | Con gì làm ra mật mà không cần nhà máy? | 2 | ONG
+CON CÚ | Con gì thức suốt đêm mà không phải học bài? | 2 | CÚ, CÚ MÈO
+CON CHUỘT | Con gì sợ mèo mà ngày nào cũng nằm cạnh máy tính? | 2 | CHUỘT
+CON TÔM | Con gì càng nấu càng đỏ? | 2 | TÔM, CUA, CON CUA
+BÚP BÊ | Em bé gì không bao giờ khóc đòi ăn? | 2
+ÔNG GIÀ NOEL | Ông gì mỗi năm chỉ đi làm đúng một đêm? | 2 | ÔNG GIÀ NÔ EN, ÔNG GIÀ NOEN
+CỘT ĐIỆN | Cái gì đứng suốt ngày ngoài đường mà không mỏi chân? | 2
+BÙ NHÌN | Ông gì đứng ngoài đồng đuổi chim mà không biết đi? | 2 | THẰNG BÙ NHÌN
+CÁI MŨI | Cái gì có hai lỗ mà không phải ổ cắm điện? | 2 | MŨI, LỖ MŨI
+CÁI TAI | Cái gì nghe hết mọi chuyện mà không bao giờ nói? | 2 | TAI, LỖ TAI
+CÁI LƯỠI | Cái gì ở trong miệng, nếm được mọi món mà không phải răng? | 2 | LƯỠI
+MÁI TÓC | Cái gì càng cắt càng mọc dài ra? | 2 | TÓC, MÓNG TAY
+CHIẾC LÁ | Cái gì mùa thu rơi đầy sân mà không ai ném? | 2 | LÁ, LÁ CÂY
+CỤC TẨY | Cái gì càng dùng càng nhỏ, chuyên đi xoá lỗi sai? | 2 | TẨY, GÔM, CỤC GÔM
+RA CHƠI | Giờ gì cả lớp mong nhất? | 2 | GIỜ RA CHƠI
+QUẢ ỚT | Quả gì nhỏ xíu mà ăn vào nóng ran cả miệng? | 2 | ỚT, TRÁI ỚT
+SỐ KHÔNG | Số gì nhân với số nào cũng ra chính nó? | 2 | KHÔNG, 0, SỐ 0
+SỐ MỘT | Số gì nhân với số nào cũng ra đúng số kia? | 2 | MỘT, 1, SỐ 1
+CẦU VỒNG | Cây cầu gì có bảy màu mà không ai đi qua được? | 2 | CẦU VÒNG
+CON DIỀU | Con gì bay được nhờ một sợi dây? | 2 | DIỀU, CÁNH DIỀU
+CÁI BÁT | Cái gì ngày nào cũng đựng cơm mà không ăn miếng nào? | 2 | BÁT, CHÉN, CÁI CHÉN
+ĐÔI ĐŨA | Hai anh em gì ngày nào cũng gắp đồ ăn cho mình? | 2 | ĐŨA
+BÓNG ĐÈN | Quả gì bật lên thì sáng mà không ăn được? | 2 | ĐÈN, QUẢ BÓNG ĐÈN
+BÀN CHẢI | Cái gì có lông mà sáng nào cũng chà lên răng? | 2 | BÀN CHẢI ĐÁNH RĂNG
+CÁI CẶP | Cái gì ngày nào cũng đi học mà không biết chữ? | 2 | CẶP, CẶP SÁCH, BA LÔ
+BẢNG ĐEN | Cái gì cô viết lên suốt mà không bao giờ đầy? | 2 | BẢNG
+CÁI THƯỚC | Cái gì không biết đếm mà đo được mọi thứ? | 2 | THƯỚC, THƯỚC KẺ
+QUYỂN SÁCH | Cái gì có lá mà không phải cây, có gáy mà không phải người? | 2 | SÁCH, CUỐN SÁCH, VỞ, QUYỂN VỞ
+CON MUỖI | Con gì hát vo ve bên tai mà không ai muốn nghe? | 2 | MUỖI
+GIẤC NGỦ | Cái gì đêm nào cũng tới mà không gõ cửa? | 2 | GIẤC MƠ
+BÓNG ĐÁ | Môn gì hai mươi hai người tranh nhau một quả bóng? | 2 | ĐÁ BÓNG
+NHÀ VỆ SINH | Phòng gì ai cũng phải vào mà chẳng ai muốn ở lâu? | 2 | PHÒNG VỆ SINH, TOILET, WC
+CHỮ O | Chữ cái gì tròn như quả trứng? | 2 | O
+TRÁI ĐẤT | Quả gì to nhất mà không ai ăn được? | 2 | QUẢ ĐẤT
+# Thêm 2026-11-05: kiểu câu Nhanh Như Chớp (lừa logic, chơi chữ, nói lái), viết lại bằng lời cô Ngân
+CHUỘT MICKEY | Chuột nào đi bằng hai chân, đeo găng tay trắng, nổi tiếng khắp thế giới? | 1 | MICKEY
+CON NGƯỜI | Sở thú bốc cháy, con gì chạy ra ngoài đầu tiên? | 2 | NGƯỜI
+TẤT CẢ | Một năm có mấy tháng có ngày hai mươi tám? | 2 | TẤT CẢ CÁC THÁNG, MƯỜI HAI THÁNG
+QUẢ BÓNG | Cầu thủ đá phạt đền thì sút vào cái gì? | 2 | BÓNG, TRÁI BÓNG
+ỐNG HÚT | Ly nước đầy ắp, muốn lấy nước dưới đáy mà không đổ ra ngoài thì dùng gì? | 2
+BIỂN SỐ | Biển nào nhỏ nhất thế giới, xe nào cũng phải có một cái? | 2 | BIỂN SỐ XE, BIỂN SỐ NHÀ
+COMPA | Muốn vẽ vòng tròn thật tròn thì bỏ cây thước xuống, cầm cái gì lên? | 1
+CÙI CHỎ PHẢI | Cái gì tay trái chạm được mà tay phải có cố cách mấy cũng không chạm được? | 3 | KHUỶU TAY PHẢI
+BUỒN NGỦ | Lúc nào là lúc tốt nhất để đi ngủ? | 2 | KHI BUỒN NGỦ
+THỨ NHÌ | Đang chạy đua, bạn vượt qua người đang về nhì. Giờ bạn đứng thứ mấy? | 3 | THỨ HAI, HẠNG NHÌ
+DORAEMON | Con mèo nào sợ chuột nhất quả đất? | 2 | ĐÔ RÊ MON, DOREMON
+ÔNG THỌ | Người đàn ông nổi tiếng nào trên hộp có sữa? | 2
+BÓNG CON VOI | Cái gì to bằng con voi mà không nặng một gam nào? | 2
+CÁI CƯA | Có cả hàm răng mà không có cái miệng nào là cái gì? | 2 | CƯA
+LUỘC | Làm sao cho con cua bò thẳng? | 3 | ĐEM LUỘC, LUỘC CHÍN
+BẰNG MIỆNG | A gọi B là bác, B gọi C là ông, C gọi D là cậu... Hỏi A gọi Z bằng gì? | 3 | BẰNG MỒM
+HAI QUẢ | Trên bàn có ba trái táo, bạn lấy đi hai trái. Bạn đang cầm mấy quả táo? | 3 | 2 QUẢ, HAI TRÁI, 2 TRÁI
+QUE DIÊM | Trời lạnh, trong phòng có cây đèn, bếp dầu, bếp củi, bạn chỉ có một cây diêm. Thắp cái gì trước? | 2 | DIÊM, CÂY DIÊM
+BÁN KẾT | Bán cái gì mà chỉ cần bốn đội? | 2
+HÔM NAY | Kể ba ngày liền nhau không dùng tên thứ: hôm qua, ngày mai, còn ở giữa là gì? | 1
+NHÀ NƯỚC | Toà nhà nào lớn nhất thế giới? | 2
+HẠ LONG | Rồng bay lên ở Thăng Long, đáp xuống ở đâu? | 2 | VỊNH HẠ LONG
+CON RÙA | Ai có nhà di động đầu tiên, đi đâu cũng cõng nhà theo? | 2 | RÙA, ỐC SÊN, CON ỐC SÊN
+CÁI ÁO | Cái gì có cổ mà không có đầu, có tay mà không có ngón? | 1 | ÁO
+CON NGỰA | Con gì đi ngủ vẫn mang nguyên giày sắt? | 2 | NGỰA
+MỞ MẮT | Việc đầu tiên bạn làm mỗi sáng thức dậy là gì? | 2
+CON TEM | Đi khắp thế giới mà cứ dính nguyên một góc là cái gì? | 2 | TEM
+NGƯỜI MẸ | Người lớn dắt đứa bé leo núi. Bé là con người lớn, nhưng người lớn không phải cha bé. Người lớn là ai? | 2 | MẸ
+NGỦ BAN ĐÊM | Thức trắng bảy ngày liền mà không thiếu ngủ, bí quyết là gì? | 3 | NGỦ ĐÊM
+ĐÁNH CỜ | Ba mươi hai quân đánh nhau loạn xạ mà không ai đổ máu là đang làm gì? | 2 | CHƠI CỜ
+TỐ NGA | Cô gái bảo đếm giỏ bắp có mười hai trái là biết tên cô. Mười hai trái bắp là một tá ngô, nói lái lại thì cô tên gì? | 3
+GÃY TAY | Bệnh gì bác sĩ nào gặp cũng phải bó tay? | 2
+MƯỜI LĂM | Thợ săn bắn "cái rằm" vào đàn chim. Hỏi chết mấy con? | 3 | 15, MƯỜI LĂM CON
+TÀU HỎA | Con gì ăn than uống nước, nhả khói chạy trên đường ray? | 2 | TÀU LỬA, CON TÀU
+CÂU CÁ | Trên nhấp, dưới giật, ngồi im cả buổi là đang làm gì? | 2
+CHỤP ẢNH MÀU | Gấu trúc ước cả đời mà không bao giờ làm được chuyện gì? | 3
+DÒNG SÔNG | Con gì cõng được khúc gỗ to mà không mang nổi viên sỏi nhỏ? | 3 | CON SÔNG, SÔNG
+HAI MƯƠI NGHÌN | Một ông mù và ba của ông điếc đi ăn phở, mỗi tô mười nghìn. Trả hết bao nhiêu? | 3 | 20 NGHÌN, HAI CHỤC NGHÌN
+TỪ ĐIỂN | Ở đâu "hôm nay" luôn đứng trước "hôm qua"? | 3 | CUỐN TỪ ĐIỂN
+TRỌC ĐẦU | Đi dưới mưa ướt hết mặt mũi mà tóc không ướt sợi nào, vì sao? | 2 | ĐẦU TRỌC, HÓI ĐẦU
+KHÔNG ĂN CỎ | Con hổ bị xích cách bụi cỏ ba mươi mốt mét, xích dài ba mươi mét. Làm sao hổ ăn được cỏ? | 2 | HỔ KHÔNG ĂN CỎ
+CHÍNH | Từ nào trong tiếng Việt có "chín" chữ h? | 3
+CHÍN NGƯỜI | Bố mẹ có sáu con trai, mỗi con trai có một em gái. Nhà có mấy người? | 3 | 9 NGƯỜI
+CHÂN MÀY | Nàng Mô na Li sa trong bức tranh nổi tiếng thiếu cái gì trên mặt? | 3 | LÔNG MÀY
+CHIM CÁNH CỤT | Chim gì có cánh mà không bay, mặc áo đuôi tôm đứng trên băng? | 1 | CÁNH CỤT
+BÀN PHÍM | Cái gì có phím mà không phải đàn, có chữ mà không phải sách? | 2
+ĐÈN ĐỎ | Đèn gì bật lên là cả dòng xe đứng im, không ai dám cãi? | 1
+CON DAO | Con gì có mũi, có lưỡi mà không có mắt, không có miệng? | 2 | DAO
+LỖ MŨI | Cái gì có hai lỗ, có gió thì sống, hết gió thì chết? | 2 | MŨI
+CON DỐC | Con gì không có xương sống mà vẫn đứng sừng sững? | 3 | DỐC
+XE TĂNG | Xe nào chỉ biết tăng chứ không bao giờ giảm? | 2
+KHÔNG CÓ | Ba con gà có tất cả bao nhiêu cái răng? | 2 | KHÔNG CÁI NÀO, KHÔNG
+CUA HOÀNG ĐẾ | Con gì vừa sinh ra đã làm vua? | 2
+NHÀ BĂNG | Nhà nào lạnh lẽo mà ai cũng muốn ghé, nhất là ngày lãnh lương? | 2 | NGÂN HÀNG
+BÔNG TAI | Bông gì không mọc trên cây, chỉ để đeo chứ không để cắm bình? | 2
+KIẾN THỨC | Kiến nào không bao giờ ngủ, càng nuôi càng lớn? | 2
+QUẢ BÁO | Quả gì không ai muốn ăn trúng? | 2
+ĐỒNG TIỀN | Đồng gì ai cũng thích mà cuối tháng nào cũng thiếu? | 1 | TIỀN
+CẦU TRUYỀN HÌNH | Cái gì không chân, không đuôi, không thân mà có nhiều đầu? | 3
+BÁNH SỪNG TRÂU | Bánh gì mang tên một bộ phận trên đầu con vật? | 2
+ỐC ĐẢO | Ốc gì to nhất, nằm giữa sa mạc mà có nước? | 2
+CẤT NHÀ | Cái gì càng cất lại càng thấy rõ? | 3
+CON LỪA | Con gì sinh ra đã mang tiếng xấu, nghe tên là biết chuyên gạt người? | 2 | LỪA
+BÁNH ĐA | Bánh gì ăn một cái mà tên nghe lại là nhiều? | 2
+KIM CƯƠNG | Kim gì ai cũng muốn có, càng to càng đắt? | 1
+KIM TIÊM | Kim gì trẻ con sợ nhất? | 1 | KIM CHÍCH
+OẲN TÙ TÌ | Trò gì mà kéo thắng bao, bao thắng búa, búa lại thắng kéo? | 1 | OẲN TÙ XÌ
+KHÔNG ĐỘI NÓN | Cô bé quàng khăn đỏ đội nón màu gì? | 3 | KHÔNG ĐỘI, KHÔNG CÓ NÓN
+KHÔNG CON NÀO | Gà trống và gà mái thi bơi qua sông, con nào tới bờ trước? | 2 | KHÔNG CÓ
+THÁNG NĂM | Ngày tháng mười chưa cười đã tối, đêm tháng mấy chưa nằm đã sáng? | 3 | THÁNG 5
+KHÔNG CÒN | Tí có năm viên kẹo chia đều cho năm bạn, Tí còn lại mấy viên? | 2 | KHÔNG CÒN VIÊN NÀO, KHÔNG
+XE LỬA | Xe gì càng vô ga càng chạy chậm? | 2
+CON CÓC | Con gì bỏ chữ đầu, bỏ chữ cuối thì thành một con chim? | 3 | CÓC
+CÔNG TỬ | Con công mà chết thì chơi chữ gọi là gì? | 3
+HOA HẬU | Hoa gì lúc nào cũng đứng phía sau? | 2
+HOA GIẤY | Hoa gì mang tên một đồ dùng học sinh ngày nào cũng xài? | 2
+NÉM NỔI | Bên hồ có viên gạch. Ném viên gạch xuống hồ có nổi không? | 3
+CẦM ĐỒ | Cái gì cầm càng nhiều thì càng dễ mất? | 3
+LÂM ĐỒNG | Tỉnh nào nghe tên vừa có rừng vừa có ruộng? | 3
+BÁNH XE | Bánh gì không ăn được mà ngày nào cũng lăn? | 1
+SẦU RIÊNG | Quả gì ôm nỗi buồn một mình? | 1
+CHUỒN CHUỒN | Con gì bay thấp thì mưa, bay cao thì nắng, bay vừa thì râm? | 1
+CÂY TRE | Cây nhang càng đốt càng ngắn, cây gì càng nhiều đốt càng dài? | 3 | TRE
+CON GIÁP | Con gì đầu chuột đuôi heo? | 3 | MƯỜI HAI CON GIÁP
+NƯỚC SÔI | Nước nào nóng nhất? | 1
+CỜ TƯỚNG | Ở đâu ngựa qua sông được mà voi thì không bao giờ qua? | 3 | BÀN CỜ TƯỚNG
+MẶC CẢ | Ra chợ, các bà các mẹ hay mặc gì nhất? | 2
+CHE MẮT | Làm sao một bàn tay che kín cả bầu trời? | 2 | LẤY TAY CHE MẮT
+MAI MỐT | Mai gì không bao giờ nở hoa? | 2
+LÀM THINH | Làm gì mà không phát ra một tiếng nào? | 2 | IM LẶNG
+LỜI NÓI | Thứ gì xuất khẩu được mà nhập khẩu thì không? | 3
+BỮA SÁNG | Hai thứ không ai ăn được vào bữa tối là bữa trưa và bữa gì? | 2
+BA PHÚT | Ba con mèo bắt ba con chuột mất đúng 3 phút. Một trăm con mèo bắt một trăm con chuột hết bao lâu? | 3 | 3 PHÚT
+GĂNG TAY | Có năm ngón, có cả ngón cái mà không phải bàn tay là cái gì? | 1
+BÓNG TỐI | Cái gì càng nhiều thì càng khó nhìn thấy? | 2
+CÁ THÁNG TƯ | Cá gì mỗi năm chỉ sống đúng một ngày? | 3 | CÁ THÁNG 4
+ĐỘC ĐẮC | Độc gì trúng phải mà không chết, còn mừng rơi nước mắt? | 2
+BÓNG BAY | Cái gì càng to càng dễ vỡ? | 2 | QUẢ BÓNG BAY
+CHỈ NHA KHOA | Chỉ nào không dùng để may vá? | 2
+CÁ CHUỒN | Cá gì mang tên một con côn trùng biết bay? | 2
+NĂM NGÓN TAY | Năm ông ở chung một nhà, bốn ông ba đốt, một ông hai đốt là gì? | 2 | NGÓN TAY, BÀN TAY
+SỰ IM LẶNG | Cái gì vừa gọi tên ra là nó biến mất? | 3 | IM LẶNG
+NƯỚC MỸ | Bên trái nhà xanh, bên phải nhà đỏ. Vậy nhà trắng ở đâu? | 3 | MỸ, Ở MỸ
+NƯỚC NGA | Trước mặt quảng trường xanh, sau lưng quảng trường trắng. Quảng trường đỏ ở đâu? | 3 | NGA, Ở NGA
+KHÔNG BAO GIỜ | Anh hơn em năm tuổi. Bao nhiêu năm nữa hai anh em bằng tuổi nhau? | 2
+BA TUỔI | Năm nay em chín tuổi, anh mười hai tuổi. Năm năm nữa anh hơn em mấy tuổi? | 2 | 3 TUỔI
+CHỊ GÁI | Ba người nhận Thiên là em trai, Thiên lại bảo mình không có anh trai nào. Ba người đó là gì của Thiên? | 2 | BA CHỊ GÁI
+THỨ BẢY | Sau thứ sáu ngày mười ba đáng sợ là ngày gì? | 1 | THỨ BẢY NGÀY MƯỜI BỐN
+CON SÓI | Trong câu "lòng lang dạ thú", lang là con gì? | 2 | SÓI
+CON LA | Con gì vừa sinh ra đã la om sòm? | 2 | LA
+MƯA | Quạ tắm thì ráo, sáo tắm thì sao? | 2 | TRỜI MƯA
+HOA MAI | Hoa gì không phải là hôm nay? | 2
+NGÀY XƯA | Ngày nào có từ rất lâu mà chưa ai thấy bao giờ? | 2 | NGÀY XỬA NGÀY XƯA
+CÔNG LÝ | Công nào không có lông, không biết múa? | 2
+TÔM HÙM | Con gì ở dưới nước màu sẫm, luộc lên thì đỏ au? | 2
+CHIM ĐỒ CHƠI | Chim gì không bao giờ bay, cũng chẳng bao giờ đi? | 2
+QUÂN CỜ | Tướng nào không ăn không uống mà vẫn ra trận? | 2 | TƯỚNG CỜ
+CỬA SỔ | Thứ gì giúp ta nhìn xuyên qua bức tường dễ dàng? | 1
+GÀ MÁI | Con gì không gáy ò ó o mà vẫn được gọi là gà? | 2 | GÀ CON
+# Sáng tác thêm 2026-11-05: đố mẹo đời sống đi làm, Gen Z
+LƯƠNG | Thứ gì mỗi tháng đến một lần mà đi nhanh hơn cả tia chớp? | 2 | TIỀN LƯƠNG
+THỨ HAI | Ngày nào trong tuần dân đi làm sợ nhất? | 1
+BÁO THỨC | Cái gì sáng nào cũng kêu mà ai cũng bấm cho nó im rồi ngủ tiếp? | 1 | ĐỒNG HỒ BÁO THỨC
+CỤC SẠC | Thứ gì điện thoại còn năm phần trăm là cả phòng đi hỏi mượn? | 1 | SẠC, CỦ SẠC
+HÓA ĐƠN | Tờ giấy gì cầm lên sau bữa ăn sang chảnh là thấy đau tim? | 2
+CUỐI TUẦN | Hai ngày gì trôi qua nhanh nhất trong tuần? | 1
+ẢNH THẺ | Ảnh gì chụp ai cũng xấu mà vẫn phải dán vào hồ sơ? | 2
+KẸT XE | Thứ gì giờ cao điểm nào cũng có, đứng im một chỗ mà vẫn mệt? | 1 | TẮC ĐƯỜNG
+HẾT PIN | Điện thoại sợ nhất chuyện gì? | 1
+NGỦ QUÊN | Làm gì mà càng làm càng trễ giờ đi học? | 2

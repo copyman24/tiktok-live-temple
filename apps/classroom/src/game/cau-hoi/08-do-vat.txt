@@ -1,0 +1,74 @@
+# Đồ vật trong nhà
+> Đây là một đồ vật.
+TIVI | Bố mở lên xem thời sự bảy giờ, rồi ngủ gật trước màn hình. | 1
+MÁY GIẶT | Bỏ quần áo vào, nó quay ầm ầm, lấy ra thấy mất một chiếc tất. | 2
+QUẠT MÁY | Chạy vù vù mùa hè, có nút số một hai ba, quay qua quay lại. | 2 | CÁI QUẠT
+ĐIỀU HÒA | Bật mười tám độ đắp chăn ngủ, cuối tháng nhìn tiền điện thì toát mồ hôi. | 2 | MÁY LẠNH
+NỒI CƠM ĐIỆN | Bấm nút xuống, nghe cạch một cái là có cơm chín, quên bấm là nhịn đói. | 3
+BẾP GA | Vặn núm nghe tách tách là lửa xanh bật lên. | 2
+ẤM ĐUN NƯỚC | Sôi xong tự tắt, dân văn phòng dùng để pha mì. | 3 | ẤM SIÊU TỐC
+CÁI CHỔI | Dùng để quét nhà, mẹ cầm lên là cả nhà chạy. | 1 | CHỔI
+CÂY LAU NHÀ | Vắt khô rồi đẩy khắp sàn, lau xong có người đi dép vào là đổ hết công. | 3
+CÁI XÔ | Đựng nước, có quai xách, đi kèm cây lau nhà. | 2 | XÔ
+CÁI CHẬU | Giặt đồ, rửa rau, ngày xưa còn dùng tắm cho em bé. | 2 | CHẬU
+CÁI GHẾ | Thứ chiều nào dân văn phòng cũng ngả lưng, ngồi xoay vòng vòng cho đỡ chán. | 1 | GHẾ
+CÁI BÀN | Đặt mâm cơm, ngồi học, ngồi làm, gục xuống ngủ trưa. | 1 | BÀN
+GIƯỜNG | Nơi hứa đi ngủ sớm rồi nằm lướt điện thoại tới hai giờ sáng. | 1
+CÁI GỐI | Kê đầu khi ngủ, ôm khi buồn, ném khi cãi nhau. | 1 | GỐI
+CHĂN | Đắp cho ấm, sáng mùa đông là thứ khó rời xa nhất. | 1 | MỀN
+MÀN | Mắc lên chống muỗi, ngủ dậy phải gấp lại, ai cũng lười. | 2 | MÙNG
+CÁI TỦ | Đựng quần áo, mở ra đầy đồ mà vẫn thấy "không có gì để mặc". | 1 | TỦ
+GƯƠNG | Soi vào thấy mặt mình, sáng nào cũng đứng trước nó nửa tiếng. | 1 | KIẾNG
+LƯỢC | Dùng để chải tóc, mỗi lần chải lại rụng thêm vài sợi. | 1
+BÀN CHẢI | Đánh răng mỗi sáng, ba tháng nên thay một lần mà ai cũng quên. | 1 | BÀN CHẢI ĐÁNH RĂNG
+KEM ĐÁNH RĂNG | Bóp lên bàn chải, mùi bạc hà, bóp từ giữa tuýp là bị mắng. | 3
+XÀ PHÒNG | Chà tay ra bọt, rửa sạch vi khuẩn, rơi xuống sàn là trơn trượt. | 2 | XÀ BÔNG
+DẦU GỘI | Gội đầu cho tóc thơm, quảng cáo nào tóc cũng bay trong gió. | 2
+KHĂN TẮM | Lau người sau khi tắm, quấn lên đầu thành cái tháp. | 2
+BÀN LÀ | Làm phẳng áo nhăn trước giờ đi làm năm phút. | 2 | BÀN ỦI
+MÁY SẤY TÓC | Thổi gió nóng cho tóc khô, ồn tới mức không nghe ai nói gì. | 3
+ĐỒNG HỒ | Có kim giờ, kim phút, kim giây, ngồi họp nhìn nó mười lần. | 2
+ĐỒNG HỒ BÁO THỨC | Reng reng mỗi sáng, bị đập tắt rồi ngủ tiếp. | 3
+ĐIỆN THOẠI | Thứ các bạn đang cầm để học với cô, rời tay năm phút là thấy thiếu. | 1
+MÁY TÍNH | Gõ phím, lướt web, làm báo cáo, sếp đi qua thì chuyển tab. | 2 | LAPTOP
+CHUỘT MÁY TÍNH | Cầm di di trên bàn để trỏ trên màn hình, tên giống một con vật. | 3
+BÀN PHÍM | Có các chữ Q W E R T Y, gõ mạnh lúc bực bội. | 2
+TAI NGHE | Đeo vào nghe nhạc, giả vờ không nghe thấy sếp gọi. | 2
+SẠC ĐIỆN THOẠI | Pin còn một phần trăm thì cắm vào, đi đâu cũng phải mang. | 3 | CỤC SẠC
+Ổ ĐIỆN | Chỗ cắm phích, ở quán cà phê ai ngồi gần nó là người thắng. | 2
+BÓNG ĐÈN | Bật công tắc là sáng, trong truyện tranh hiện trên đầu khi có ý tưởng. | 1
+CÔNG TẮC | Bấm tách một cái là đèn tắt, ai nằm gần nhất thì phải dậy bấm. | 2
+CHÌA KHÓA | Thứ cứ tới lúc ra khỏi nhà là biến mất. | 2
+Ổ KHÓA | Treo ở cổng, cần chìa mới mở, chìa thì lại đang mất. | 2
+CÁI KÉO | Có hai lưỡi, cắt giấy, mở hàng đặt online. | 1 | KÉO
+CON DAO | Thái rau thái thịt, cùn rồi thì thái cà chua nát bét. | 1 | DAO
+CÁI THỚT | Tấm gỗ kê để thái đồ ăn, ngày Tết chặt gà kêu cốp cốp. | 2 | THỚT
+ĐÔI ĐŨA | Hai que gắp thức ăn, người nước ngoài cầm lóng ngóng. | 1 | ĐŨA
+CÁI THÌA | Múc canh múc cơm, miền Nam gọi là muỗng. | 1 | THÌA, MUỖNG, CÁI MUỖNG
+CÁI BÁT | Đựng cơm, ăn xong để lại trong bồn là bị mắng. | 1 | BÁT, CHÉN, CÁI CHÉN
+CÁI ĐĨA | Mặt phẳng tròn đựng thức ăn, rửa nhiều nhất sau mỗi bữa. | 1 | ĐĨA, DĨA
+CÁI CỐC | Đựng nước uống, trên bàn làm việc ai cũng có một cái in hình mèo. | 1 | CỐC, LY, CÁI LY
+CÁI NỒI | Nấu canh, luộc rau, nấu mì lúc nửa đêm. | 1 | NỒI
+CÁI CHẢO | Chiên trứng, xào rau, trong phim hoạt hình dùng để đánh người. | 1 | CHẢO
+CÁI MUÔI | Múc canh từ nồi ra bát, miền Nam gọi cái vá. | 2 | MUÔI, VÁ
+CÁI RỔ | Có nhiều lỗ, đựng rau cho ráo nước. | 2 | RỔ
+CÁI LÀN | Đan bằng cói, bà xách đi chợ, giờ thành món thời trang. | 3 | LÀN, GIỎ
+CÁI Ô | Trời mưa bung ra che, trời nắng thì quên ở nhà. | 1 | CÂY DÙ, Ô, DÙ
+ÁO MƯA | Đang đi xe thì mưa, dừng lại mặc xong thì tạnh. | 2
+DÉP LÀO | Dép tông quai kẹp ngón, bay xa nhất khi mẹ ném. | 2 | DÉP TÔNG, DÉP KẸP
+DÉP TỔ ONG | Dép nhựa nhiều lỗ huyền thoại, đi mưa không sợ ướt. | 3
+GIÀY THỂ THAO | Mua để chạy bộ, cuối cùng chỉ mang đi cà phê. | 3
+MŨ BẢO HIỂM | Đội khi đi xe máy, tháo ra là tóc xẹp lép. | 3 | NÓN BẢO HIỂM
+KÍNH RÂM | Đeo chống nắng, nhìn cho ngầu, chụp ảnh sống ảo. | 2 | KÍNH MÁT
+VÍ TIỀN | Thứ cuối tháng mở ra chỉ thấy hoá đơn và ảnh thẻ. | 2 | CÁI VÍ, BÓP
+BALO | Túi đeo hai quai sau lưng, dân văn phòng đựng laptop với hộp cơm. | 2 | BA LÔ
+VALI | Kéo đi du lịch, có bánh xe, về thì nặng gấp đôi lúc đi. | 2
+CÁI LƯỚI | Giăng để đánh cá, căng ở khung thành bóng đá. | 2
+CÁI THANG | Leo lên chỗ cao thay bóng đèn, phải có người giữ chân. | 2 | THANG
+CÁI BÚA | Đóng đinh, gõ trật thì trúng ngón tay. | 1 | BÚA
+CÁI KÌM | Kẹp, bẻ dây thép, trong thùng đồ nghề của bố. | 2 | KÌM
+TUA VÍT | Vặn ốc vít, đầu dẹt hay đầu chữ thập. | 2 | TUỐC NƠ VÍT
+BÌNH HOA | Cắm hoa trang trí, trên bàn cô Ngân đang có một cái. | 2 | LỌ HOA
+RÈM CỬA | Kéo che nắng ở cửa sổ, chủ nhật kéo kín ngủ tới trưa. | 2
+THẢM | Trải dưới sàn cho êm chân, mèo thích nằm nhất nhà. | 2
+CỬA SỔ | Mở ra cho gió vào, ngồi cạnh nó trong lớp là chỗ ngắm trời đẹp nhất. | 1

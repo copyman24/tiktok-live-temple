@@ -1,9 +1,16 @@
-// Compiles the TikTok Live Studio backend (prayer + wedding sessions) into one Tauri sidecar.
+// Compiles the TikTok Live Studio backend (prayer + wedding + classroom sessions) into one Tauri sidecar.
+// The classroom's React pages are built first (apps/classroom/dist is bundled as a Tauri resource).
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 
 const repoRoot = path.resolve(__dirname, '..');
+
+const web = spawnSync('bun', [path.join(repoRoot, 'apps', 'classroom', 'scripts', 'build-web.ts')], { cwd: repoRoot, stdio: 'inherit' });
+if (web.error || web.status !== 0) {
+  console.error(`Could not build the classroom pages${web.error ? `: ${web.error.message}` : ''}.`);
+  process.exit(web.status || 1);
+}
 const targets = {
   'x86_64-pc-windows-msvc': { bunTarget: 'bun-windows-x64', extension: '.exe' },
   'x86_64-unknown-linux-gnu': { bunTarget: 'bun-linux-x64', extension: '' }

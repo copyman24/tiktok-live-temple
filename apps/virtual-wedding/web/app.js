@@ -151,13 +151,24 @@ function render(snapshotValue) {
   const { wedding, stream } = snapshot;
   const phase = wedding.phase;
   const connected = stream.state === 'live';
+  const retrying = stream.state === 'reconnecting';
+  const roomLabel = connected ? `Đang phát · @${stream.username}`
+    : stream.state === 'connecting' ? 'Đang kết nối TikTok Live…'
+    : retrying ? `Chờ kết nối lại @${stream.username}…`
+    : 'Chưa kết nối TikTok';
+  const retryNote = retrying && stream.retryInMs ? ` Tự thử lại sau ${Math.round(stream.retryInMs / 1000)} giây.` : '';
   document.getElementById('room-pill').dataset.connected = String(connected);
-  document.getElementById('room-state-label').textContent = connected ? `Đang phát · @${stream.username}` : stream.state === 'connecting' ? 'Đang kết nối TikTok Live…' : 'Chưa kết nối TikTok';
+  document.getElementById('room-state-label').textContent = roomLabel;
   document.getElementById('connect-light').dataset.connected = String(connected);
   document.getElementById('tiktok-username').value = connected ? stream.username : document.getElementById('tiktok-username').value;
   document.getElementById('connect-button').disabled = stream.state === 'connecting';
-  document.getElementById('disconnect-button').hidden = !connected;
-  document.getElementById('connect-help').textContent = stream.error || (connected ? `${Number(stream.viewerCount || 0).toLocaleString('vi-VN')} khán giả đang xem.` : 'Nhập tên tài khoản đang livestream công khai.');
+  // Also offered while connecting or waiting to retry: it is the only way to stop the reconnect loop.
+  const disconnectButton = document.getElementById('disconnect-button');
+  disconnectButton.hidden = !(connected || retrying || stream.state === 'connecting');
+  disconnectButton.textContent = connected ? 'Ngắt kết nối' : 'Dừng kết nối';
+  document.getElementById('connect-help').textContent = stream.error
+    ? `${stream.error}.${retryNote}`.replace('..', '.')
+    : (connected ? `${Number(stream.viewerCount || 0).toLocaleString('vi-VN')} khán giả đang xem.` : 'Nhập tên tài khoản đang livestream công khai.');
   document.querySelector('.connect-form').hidden = connected;
   setText('groom-display', wedding.couple.groom?.name || 'Đang chờ khán giả chọn');
   setText('bride-display', wedding.couple.bride?.name || 'Đang chờ khán giả chọn');

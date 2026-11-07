@@ -633,45 +633,92 @@ body.obs-mode .stage-wrapper {
   height: 120px;
 }
 
-.seat-badge {
-  display: inline-flex;
+/* Người xem "ngồi" trong đạo tràng: avatar thay vào chỗ đầu, tên vắt ngang lưng áo. */
+.seat-occupant {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 5px;
-  padding: 2px 8px 2px 3px;
-  border-radius: 999px;
-  background: rgba(12, 4, 3, 0.92);
-  border: 1px solid rgba(244, 193, 80, 0.68);
-  margin-top: -12px;
-  white-space: nowrap;
 }
 
-.seat-avatar {
-  width: 19px;
-  height: 19px;
+.seat-face {
+  width: 44px;
+  height: 44px;
+  margin-top: 2px;
   border-radius: 50%;
+  overflow: hidden;
   background: #6b150e;
-  border: 1px solid var(--gold-bright);
-  color: var(--gold-bright);
-  font-size: 10px;
+  border: 2px solid #f6ead2;
+  color: #fff3d6;
+  font-size: 20px;
   font-weight: 800;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.55);
+  transition: transform 0.22s ease-out;
 }
-.seat-avatar img {
+.seat-face img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.seat-username {
-  font-size: 11.5px;
-  font-weight: 700;
+.seat-name {
+  margin-top: 12px;
+  max-width: 104px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(14, 6, 4, 0.84);
   color: #fff6e5;
-  max-width: 78px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Hai hàng đầu: người tặng quà — viền vàng, thẻ tên vàng, to hơn một chút. */
+.donor-seat .seat-face {
+  width: 54px;
+  height: 54px;
+  margin-top: -4px;
+  border: 3px solid var(--gold-bright, #ffd76a);
+  box-shadow: 0 0 0 2px rgba(120, 60, 0, 0.6), 0 0 16px rgba(255, 205, 90, 0.7);
+}
+.donor-seat .seat-name {
+  margin-top: 6px;
+  background: linear-gradient(180deg, #ffe7a3, #e9b44c);
+  color: #3a1606;
+  font-size: 15px;
+  font-weight: 800;
+  border: 1px solid rgba(120, 60, 0, 0.55);
+}
+
+.hall-seat.is-bowing .seat-face {
+  transform: translateY(34px) scale(0.92);
+}
+
+.hall-seat.seat-arrive .seat-occupant {
+  animation: seatArrive 1.1s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+.donor-seat.seat-arrive .seat-face {
+  animation: donorArriveGlow 1.8s ease-out both;
+}
+
+@keyframes seatArrive {
+  0% { opacity: 0; transform: translate(-50%, -46px) scale(1.5); }
+  55% { opacity: 1; transform: translate(-50%, 4px) scale(1.06); }
+  100% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+@keyframes donorArriveGlow {
+  0%, 30% { box-shadow: 0 0 0 2px rgba(120, 60, 0, 0.6), 0 0 34px 12px rgba(255, 220, 120, 0.95); }
+  100% { box-shadow: 0 0 0 2px rgba(120, 60, 0, 0.6), 0 0 16px rgba(255, 205, 90, 0.7); }
 }
 
 /* 7. NGƯỜI XEM ĐI BỘ DỌC THẢM ĐỎ LÊN DÂNG HƯƠNG (GPU TRANSFORM3D) */
@@ -1065,11 +1112,13 @@ body.obs-mode .stage-wrapper {
   pointer-events: none;
 }
 
+/* Bóng chat trên đầu nhân vật: gọn vừa một người (ghế đạo tràng cách nhau ~90px), tối đa 3 dòng. */
 .comment-bubble {
   position: absolute;
-  width: 390px;
-  max-width: 440px;
-  padding: 11px 15px 12px;
+  width: max-content;
+  min-width: 120px;
+  max-width: 300px;
+  padding: 8px 12px 9px;
   border: 1px solid rgba(91, 69, 44, 0.55);
   border-radius: 4px;
   background: var(--paper-light);
@@ -1119,19 +1168,22 @@ body.obs-mode .stage-wrapper {
 
 .comment-bubble-name {
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   overflow: hidden;
   color: var(--cinnabar-dark);
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 800;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .comment-bubble-text {
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
   color: var(--ink);
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.25;
   overflow-wrap: anywhere;
@@ -1653,10 +1705,14 @@ body.obs-mode .stage-wrapper {
   }
 }
 
+/* Reduced motion for the operator interface only. The 9:16 stage (#stage9x16) is broadcast video
+   for viewers, and its choreography is timed by JavaScript: forcing its animations to 0.01 ms made
+   the devotee jump straight to the incense altar and then "walk" in place for 2 s while the walk
+   frames kept playing. Stage elements that should calm down have their own rules further below. */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  :not(#stage9x16, #stage9x16 *),
+  :not(#stage9x16, #stage9x16 *)::before,
+  :not(#stage9x16, #stage9x16 *)::after {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -2056,4 +2112,497 @@ body.obs-mode .stage-wrapper {
 
 @media (prefers-reduced-motion: reduce) {
   .koi-swimmer, .koi-swimmer img, .merit-lamp-row img.is-new, .ritual-hotspot.is-struck .hotspot-art { animation-duration: 0.01ms !important; }
+}
+
+/* ==========================================================================
+   12. GIAO DIỆN PHÒNG LỄ TIKTOK: tiêu đề vàng, chữ chạy, cột quà, bảng xếp hạng huy chương,
+   đạo tràng đông kín, bóng chat trắng, 3 thẻ khung vàng. Ghi đè phần trên, chỉ nằm ở khối này.
+   ========================================================================== */
+.stage-9x16 {
+  --lx-maroon: #5b120c;
+  --lx-maroon-deep: #3a0905;
+  --lx-gold: #f4c862;
+  --lx-gold-bright: #ffe39a;
+  --lx-gold-dark: #a8741f;
+  --lx-cream: #fff3d6;
+  --lx-pink: #ff7aa2;
+}
+
+/* Tiêu đề chùa ở giữa đỉnh, chữ vàng viền tối, dòng phụ niệm Phật + số người */
+.temple-title-block {
+  top: 14px;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2px;
+  text-align: center;
+}
+/* Operator page only (hidden in OBS): small enough to stay left of the title (title starts ~x 230) */
+.temple-title-block .live-pill {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  max-width: 205px;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+.temple-title-block .live-pill span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+body.obs-mode .temple-title-block .live-pill { display: none; }
+.temple-title {
+  font-family: var(--font-ritual);
+  font-size: 66px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lx-gold);
+  background: linear-gradient(180deg, #fff1b8 0%, #f4c862 45%, #c8891f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 0 #3a0905) drop-shadow(0 0 2px #3a0905) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
+}
+.temple-subtitle {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  color: var(--lx-cream);
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
+}
+.temple-subtitle .presence::before { content: '·'; margin-right: 14px; color: var(--lx-gold); }
+.temple-subtitle .presence[hidden] { display: none; }
+.temple-subtitle strong { color: var(--lx-gold-bright); }
+.temple-title-block .mini-stat-pill {
+  margin-top: 4px;
+  padding: 4px 14px;
+  border: 1px solid rgba(244, 200, 98, 0.6);
+  border-radius: 999px;
+  background: rgba(58, 9, 5, 0.72);
+  background-image: none;
+  color: var(--lx-cream);
+  font-size: 18px;
+}
+.temple-title-block .mini-stat-pill strong { color: var(--lx-gold-bright); }
+.temple-title-block .stat-divider { background: rgba(244, 200, 98, 0.45); height: 16px; }
+
+/* Dải chữ chạy hồng / vàng ngang màn hình */
+.temple-marquee {
+  position: absolute;
+  top: 168px;
+  left: 0;
+  right: 0;
+  z-index: 21;
+  height: 50px;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(58, 9, 5, 0) 0%, rgba(58, 9, 5, 0.78) 12%, rgba(58, 9, 5, 0.78) 88%, rgba(58, 9, 5, 0) 100%);
+  border-top: 1px solid rgba(244, 200, 98, 0.55);
+  border-bottom: 1px solid rgba(244, 200, 98, 0.55);
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: temple-marquee 46s linear infinite;
+}
+.marquee-track span {
+  padding: 0 34px;
+  font-size: 29px;
+  line-height: 48px;
+  font-weight: 800;
+  color: var(--lx-pink);
+  text-shadow: 0 2px 0 #3a0905, 0 0 8px rgba(255, 122, 162, 0.35);
+}
+.marquee-track span:nth-child(even) { color: var(--lx-gold-bright); }
+.marquee-track span::after { content: '✦'; margin-left: 34px; color: var(--lx-gold); }
+@keyframes temple-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Cột thông báo quà bên trái: viên thuốc đỏ sẫm viền vàng, mới nhất trên cùng */
+.gift-history {
+  top: 300px;
+  left: 14px;
+  width: 470px;
+  gap: 8px;
+}
+.gift-history-item {
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 10px;
+  min-height: 0;
+  padding: 5px 18px 5px 5px;
+  border: 2px solid var(--lx-gold);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #7a1a12 0%, var(--lx-maroon) 55%, var(--lx-maroon-deep) 100%);
+  background-image: linear-gradient(180deg, #7a1a12 0%, var(--lx-maroon) 55%, var(--lx-maroon-deep) 100%);
+  color: var(--lx-cream);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 227, 154, 0.35);
+}
+.gift-history-avatar { width: 42px; height: 42px; border: 2px solid var(--lx-gold); background: var(--lx-maroon-deep); font-size: 18px; }
+.gift-history-copy { flex-direction: row; align-items: baseline; gap: 8px; }
+.gift-history-user { flex: 0 1 auto; max-width: 190px; color: var(--lx-gold-bright); font-size: 21px; }
+.gift-history-gift { font-size: 21px; gap: 6px; }
+.gift-history-name { color: var(--lx-cream); font-weight: 700; }
+.gift-history-count { color: var(--lx-gold); font-size: 21px; }
+
+/* Thông báo chia sẻ / chào khách / điểm danh: viên thuốc trên cột quà */
+.welcome-ticker {
+  left: 14px;
+  top: 236px;
+  bottom: auto;
+  max-width: 640px; /* + padding/border: right edge ~700px, clear of the leaderboard at 726px */
+  padding: 8px 22px;
+  border: 2px solid var(--lx-gold);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #8c1f16 0%, var(--lx-maroon) 100%);
+  background-image: linear-gradient(180deg, #8c1f16 0%, var(--lx-maroon) 100%);
+  color: var(--lx-cream);
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+.welcome-ticker .ticker-seal { background: var(--lx-gold); color: var(--lx-maroon-deep); border-radius: 999px; padding: 1px 10px; }
+.welcome-ticker strong { color: var(--lx-gold-bright); }
+
+/* Bảng xếp hạng bên phải: khung nâu đỏ viền vàng, huy chương vàng / bạc / đồng, thanh tiến độ */
+.hud-right-leaderboard {
+  top: 236px;
+  right: 14px;
+  width: 340px;
+  padding: 10px 14px 12px;
+  border: 2px solid var(--lx-gold);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(91, 18, 12, 0.94) 0%, rgba(58, 9, 5, 0.94) 100%);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 227, 154, 0.3);
+}
+.hud-lb-header {
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(244, 200, 98, 0.4);
+  color: var(--lx-gold-bright);
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+.hud-lb-list { gap: 8px; }
+.leader-item { align-items: center; gap: 10px; font-size: 21px; }
+.leader-rank {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  border: 2px solid #6b3b12;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #c9925a, #7a4a22);
+  color: #fff3d6;
+  font-size: 19px;
+  font-weight: 900;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+}
+.leader-item[data-rank="1"] .leader-rank { background: radial-gradient(circle at 35% 30%, #fff1a8, #e2a92b 60%, #9a6512); border-color: #fff1b8; color: #4a2a00; }
+.leader-item[data-rank="2"] .leader-rank { background: radial-gradient(circle at 35% 30%, #ffffff, #c9ced6 60%, #7d8693); border-color: #f2f4f7; color: #2f3640; }
+.leader-item[data-rank="3"] .leader-rank { background: radial-gradient(circle at 35% 30%, #ffd2a8, #cd7f32 60%, #7d4615); border-color: #ffd9b3; color: #3b1c04; }
+.leader-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.leader-line { display: flex; align-items: baseline; gap: 8px; }
+.leader-name { color: var(--lx-cream); font-weight: 800; }
+.leader-merit { color: var(--lx-gold); font-size: 18px; margin-left: 0; }
+.leader-bar { display: block; height: 5px; border-radius: 999px; background: rgba(255, 243, 214, 0.16); overflow: hidden; }
+.leader-bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #c8891f, #ffe39a); }
+.leader-empty { color: rgba(255, 243, 214, 0.75); text-align: center; }
+
+/* Bảng tên dưới chân nhân vật: avatar tròn + tên trong một viên thuốc tối, nhìn thấy trọn nhân vật.
+   Nằm trên lớp riêng phía trên đạo tràng nên hàng trước không che tên hàng sau. */
+.hall-labels-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 13;
+  pointer-events: none;
+  contain: layout style;
+}
+.hall-label {
+  position: absolute;
+  transform-origin: top center;
+}
+.hall-label .seat-occupant {
+  position: static;
+  transform: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 9px 2px 2px;
+  border: 1px solid rgba(244, 200, 98, 0.5);
+  border-radius: 999px;
+  background: rgba(20, 6, 3, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+.hall-label .seat-face {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border-width: 2px;
+  font-size: 14px;
+  box-shadow: none;
+  transition: none;
+}
+.hall-label .seat-name {
+  max-width: 88px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--lx-cream);
+  font-size: 15px;
+  font-weight: 700;
+}
+/* Hai hàng đầu (người tặng quà): viên thuốc vàng */
+.donor-label .seat-occupant {
+  border-color: #fff1b8;
+  background: linear-gradient(180deg, #ffe7a3, #e9b44c);
+}
+.donor-label .seat-face { width: 32px; height: 32px; border-color: #8a5a12; }
+.donor-label .seat-name { color: #3a1606; font-weight: 800; }
+.hall-label.seat-arrive .seat-occupant { animation: hallLabelArrive 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.2) both; }
+@keyframes hallLabelArrive {
+  0% { opacity: 0; transform: translateY(-14px) scale(1.3); }
+  60% { opacity: 1; transform: translateY(2px) scale(1.04); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* Bóng chat: trắng, bo tròn, chỉ lời bình luận (tên đã có trên nhân vật) */
+.comment-bubble {
+  min-width: 0;
+  max-width: 300px;
+  padding: 9px 18px 10px;
+  border: 0;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+.comment-bubble-name { display: none; }
+.comment-bubble-text { color: #2b211b; font-size: 22px; font-weight: 700; text-align: center; }
+.comment-bubble::after { border-top-color: #ffffff; }
+
+/* 3 thẻ dưới đáy: khung vàng nền đỏ sẫm, dòng trên to (việc / tiến độ), dòng dưới nhỏ (kết quả) */
+.bottom-hud-bar { bottom: 12px; left: 12px; right: 12px; height: 148px; }
+.hud-active-notice { display: none; }
+.hud-gift-cards { gap: 10px; }
+.hud-gift-card {
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 8px 12px 10px;
+  border: 2px solid var(--lx-gold);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #7a1a12 0%, var(--lx-maroon) 50%, var(--lx-maroon-deep) 100%);
+  background-image: linear-gradient(180deg, #7a1a12 0%, var(--lx-maroon) 50%, var(--lx-maroon-deep) 100%);
+  color: var(--lx-cream);
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 227, 154, 0.35), inset 0 0 0 4px rgba(58, 9, 5, 0.6), inset 0 0 0 5px rgba(244, 200, 98, 0.45);
+}
+.hud-gift-card:hover { background-color: transparent; filter: brightness(1.08); }
+.hud-gift-card .gift-coin-tag { color: var(--lx-gold); font-size: 15px; letter-spacing: 0.12em; }
+.hud-gift-card .gift-card-body { align-items: center; gap: 5px; }
+.hud-gift-card .gift-title {
+  color: var(--lx-gold-bright);
+  font-size: 30px;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 0 #2a0603;
+  white-space: nowrap;
+}
+.hud-gift-card .gift-title strong { color: inherit; }
+.hud-gift-card .card-meter { height: 7px; border: 0; border-radius: 999px; background: rgba(255, 243, 214, 0.18); }
+.hud-gift-card .card-meter i { border-radius: 999px; background: linear-gradient(90deg, #c8891f, #ffe39a); }
+.hud-gift-card .card-meter.is-lamp i { background: linear-gradient(90deg, #ff6f61, #ffcf4a); }
+.hud-gift-card .card-meter-label { color: var(--lx-cream); font-size: 19px; font-weight: 600; }
+.hud-gift-card .card-meter-label .merit-lamp-row img { width: 22px; height: 22px; }
+/* 3 ô mức quà, nhỏ gọn: "1 Rose / 5 xu / 10 xu" + việc làm trên live, số lượt ở góc phải trên */
+.bottom-hud-bar { height: 104px; }
+.hud-gift-card { position: relative; padding: 6px 10px 8px; gap: 0; }
+.hud-gift-card .gift-card-body { gap: 2px; }
+.hud-gift-card .gift-title { font-size: 30px; }
+.hud-gift-card .card-meter-label { font-size: 18px; }
+.hud-gift-card .tier-count {
+  position: absolute;
+  top: 6px;
+  right: 9px;
+  padding: 1px 8px;
+  border: 1px solid rgba(244, 200, 98, 0.55);
+  border-radius: 999px;
+  background: rgba(42, 6, 3, 0.75);
+  color: var(--lx-gold);
+  font-size: 14px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.3;
+}
+.hud-gift-card .tier-count span { display: inline-block; }
+.hud-gift-card .stat-bump { animation: stat-bump 0.35s ease-out; }
+@keyframes stat-bump { 40% { transform: scale(1.35); color: #fff7d6; } }
+
+/* 4 tấm biển nghi thức (Phóng sinh, Xin xăm, Thỉnh chuông, Gõ mõ): cùng tông đỏ sẫm viền vàng với
+   bảng xếp hạng / cột quà / 3 ô dưới. Biểu tượng nằm trong huy hiệu tròn viền vàng. */
+.ritual-hotspot {
+  min-width: 236px;
+  gap: 10px;
+  padding: 6px 16px 6px 6px;
+  border: 2px solid var(--lx-gold);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #7a1a12 0%, var(--lx-maroon) 55%, var(--lx-maroon-deep) 100%);
+  background-image: linear-gradient(180deg, #7a1a12 0%, var(--lx-maroon) 55%, var(--lx-maroon-deep) 100%);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 227, 154, 0.35);
+}
+.ritual-hotspot::before { display: none; }
+.ritual-hotspot:hover { filter: brightness(1.08); }
+.ritual-hotspot .hotspot-art,
+.fish-hotspot .hotspot-art {
+  width: 62px;
+  height: 62px;
+  flex: 0 0 62px;
+  padding: 6px;
+  border: 2px solid var(--lx-gold);
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #fff6dc 0%, #f1dfb2 70%, #d8bb7a 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  filter: none;
+}
+.hotspot-label { color: var(--lx-gold-bright); font-size: 26px; text-shadow: 0 2px 0 #2a0603; }
+.hotspot-label b { color: var(--lx-cream); }
+.hotspot-cue { color: var(--lx-cream); opacity: 0.88; font-size: 16px; font-weight: 600; }
+
+/* Bảng tên người đang hành lễ giữa thảm đỏ */
+.name-tag,
+.central-name-tag {
+  gap: 10px;
+  padding: 5px 18px 5px 5px;
+  border: 2px solid var(--lx-gold);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #7a1a12 0%, var(--lx-maroon-deep) 100%);
+  background-image: linear-gradient(180deg, #7a1a12 0%, var(--lx-maroon-deep) 100%);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 227, 154, 0.35);
+}
+.central-name-tag .tag-avatar {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--lx-gold);
+  border-radius: 50%;
+  background: var(--lx-maroon-deep);
+  color: var(--lx-gold-bright);
+  font-size: 19px;
+}
+.central-name-tag .tag-name { color: var(--lx-gold-bright); font-size: 24px; text-shadow: 0 2px 0 #2a0603; }
+.central-name-tag .tag-sub { color: var(--lx-cream); font-size: 17px; font-weight: 600; }
+
+/* Lời khấn trên đầu người hành lễ: bóng trắng bo tròn như bóng bình luận, chữ nghiêng */
+.worshipper-wish-bubble {
+  max-width: 360px;
+  margin-bottom: 8px;
+  padding: 7px 18px;
+  border: 1.5px solid rgba(244, 200, 98, 0.85);
+  border-radius: 999px;
+  background: #fffaf0;
+  background-image: none;
+  color: #4a1d10;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==========================================================================
+   13. BẢNG ĐIỀU KHIỂN NHANH: cùng tông nâu đỏ – vàng kim với sân khấu.
+   ========================================================================== */
+body:not(.obs-mode) {
+  background:
+    radial-gradient(ellipse at 30% 0%, rgba(140, 31, 22, 0.35) 0%, rgba(140, 31, 22, 0) 60%),
+    linear-gradient(180deg, #1c0503 0%, #2a0805 100%);
+}
+.quick-dock {
+  --dk-maroon: #5b120c;
+  --dk-maroon-deep: #3a0905;
+  --dk-red: #a3271b;
+  --dk-gold: #f4c862;
+  --dk-gold-bright: #ffe39a;
+  --dk-gold-dark: #a8741f;
+  --dk-cream: #fff3d6;
+  --dk-cream-soft: rgba(255, 243, 214, 0.72);
+  color: var(--dk-cream);
+  background: linear-gradient(180deg, #4a0e09 0%, var(--dk-maroon-deep) 100%);
+  border: 2px solid var(--dk-gold);
+  border-top: 5px solid var(--dk-gold);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 227, 154, 0.25);
+  scrollbar-color: var(--dk-gold-dark) transparent;
+}
+.quick-dock .dock-header,
+.quick-dock .dock-section { border-bottom-color: rgba(244, 200, 98, 0.28); }
+.quick-dock .dock-title { color: var(--dk-gold-bright); }
+.quick-dock .dock-section-title { color: var(--dk-gold); }
+.quick-dock .dock-label,
+.quick-dock .volume-label-line { color: var(--dk-cream-soft); }
+.quick-dock .volume-label-line strong { color: var(--dk-gold-bright); }
+.quick-dock .volume-slider { accent-color: var(--dk-gold); }
+
+/* Nút thường: viền vàng, chữ kem */
+.quick-dock .dock-btn,
+.quick-dock .dock-link {
+  border: 1px solid rgba(244, 200, 98, 0.7);
+  border-radius: 8px;
+  color: var(--dk-cream);
+  background: rgba(255, 227, 154, 0.06);
+}
+.quick-dock .dock-btn:hover,
+.quick-dock .dock-link:hover {
+  border-color: var(--dk-gold);
+  color: var(--dk-gold-bright);
+  background: rgba(255, 227, 154, 0.16);
+}
+/* Nút chính (Bật âm thanh, Kết nối, Thắp hương...): đỏ son, viền vàng */
+.quick-dock .dock-btn.gold {
+  border-color: var(--dk-gold);
+  color: var(--dk-cream);
+  background: linear-gradient(180deg, #c0392b 0%, var(--dk-red) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 227, 154, 0.35);
+}
+.quick-dock .dock-btn.gold:hover { background: linear-gradient(180deg, #d24434 0%, #b32e20 100%); color: #fff; }
+/* Đang bật / đang chọn: nền vàng kim, chữ nâu đậm */
+.quick-dock .dock-btn.active-toggle {
+  border-color: var(--dk-gold-bright);
+  color: var(--dk-maroon-deep);
+  background: linear-gradient(180deg, var(--dk-gold-bright) 0%, var(--dk-gold) 100%);
+  box-shadow: 0 0 10px rgba(244, 200, 98, 0.35);
+}
+.quick-dock .dock-btn.active-toggle:hover { color: var(--dk-maroon-deep); background: var(--dk-gold-bright); }
+
+.quick-dock .dock-input {
+  border: 1px solid rgba(244, 200, 98, 0.55);
+  border-radius: 8px;
+  color: var(--dk-cream);
+  background: rgba(0, 0, 0, 0.3);
+}
+.quick-dock .dock-input::placeholder { color: rgba(255, 243, 214, 0.45); }
+.quick-dock .dock-input:focus { outline: 2px solid var(--dk-gold); outline-offset: 1px; }
+
+.quick-dock .event-feed-item { color: var(--dk-cream); border-bottom-color: rgba(244, 200, 98, 0.18); }
+.quick-dock .event-feed-item strong { color: var(--dk-gold-bright); }
+.quick-dock .event-feed-empty { color: var(--dk-cream-soft); }
+/* Nút nguy hiểm (reset bảng xếp hạng) */
+body .quick-dock .dock-btn.dock-btn-danger {
+  margin-top: 8px;
+  background: transparent;
+  border-color: rgba(230, 90, 70, 0.75);
+  color: #f3a08f;
+}
+body .quick-dock .dock-btn.dock-btn-danger:hover {
+  background: rgba(180, 40, 30, 0.35);
+  color: #ffd6cc;
+}
+body .quick-dock .dock-btn.dock-btn-danger.armed {
+  background: #b3261e;
+  border-color: #ff8a75;
+  color: #fff;
 }

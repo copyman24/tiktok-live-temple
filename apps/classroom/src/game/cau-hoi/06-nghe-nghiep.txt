@@ -1,0 +1,65 @@
+# Nghề nghiệp
+> Đây là một nghề.
+BÁC SĨ | Mặc áo blouse trắng, viết đơn thuốc mà dược sĩ mới đọc được. | 1
+Y TÁ | Người tiêm thuốc, nói "không đau đâu" ngay trước khi đau. | 1 | ĐIỀU DƯỠNG
+GIÁO VIÊN | Nghề của cô Ngân, lương không cao nhưng được học trò cà khịa lại mỗi ngày. | 1
+PHI CÔNG | Người lái máy bay, đi làm trên mây thật sự. | 2
+TIẾP VIÊN | Người hướng dẫn thắt dây an toàn trên máy bay, cười đẹp cả chuyến bay. | 2 | TIẾP VIÊN HÀNG KHÔNG
+NÔNG DÂN | Người làm ra hạt gạo, một nắng hai sương ngoài đồng. | 1
+NGƯ DÂN | Người ra khơi đánh cá, đi biển cả tháng mới về. | 2
+THỢ MAY | Người đo eo bạn bằng thước dây, số đo chỉ họ và bạn biết. | 2
+THỢ CẮT TÓC | Người bạn dặn "cắt ít thôi", rồi ra về mất nửa mái đầu. | 3
+ĐẦU BẾP | Người nấu ăn ở nhà hàng, đội mũ trắng cao, nếm thử mỗi món. | 1
+CÔNG AN | Đứng ở ngã tư giơ tay ra hiệu, ai vượt đèn đỏ là thấy sợ. | 1
+LÍNH CỨU HỎA | Người chạy vào đám cháy khi người khác chạy ra, gọi số một trăm mười bốn. | 3 | CỨU HỎA
+BỘ ĐỘI | Mặc quân phục xanh, canh giữ biên giới, bảo vệ Tổ quốc. | 1
+KỸ SƯ | Người thiết kế máy móc, xây cầu đường, hay đội mũ bảo hộ. | 2 | KĨ SƯ
+KIẾN TRÚC SƯ | Người vẽ bản thiết kế ngôi nhà, khách hàng sửa tới bản thứ mười. | 3
+THỢ XÂY | Người trộn hồ, xây tường gạch, phơi nắng cả ngày trên giàn giáo. | 2
+THỢ ĐIỆN | Người được gọi khi nhà mất điện, làm việc với thứ chạm vào là giật. | 2
+THỢ SỬA XE | Người ở tiệm ven đường, cứu bạn lúc xe xẹp lốp giữa trưa nắng. | 3
+TÀI XẾ | Người cầm vô lăng chở khách, thuộc đường hơn cả bản đồ. | 2 | LÁI XE
+XE ÔM | Chở khách bằng xe máy, giờ toàn đặt qua ứng dụng, áo xanh áo vàng. | 2
+BƯU TÁ | Người đưa thư ngày xưa, giờ thư toàn là hoá đơn. | 3
+NHÀ BÁO | Người chạy theo tin nóng, cầm micro hỏi "anh chị cảm thấy thế nào". | 2 | PHÓNG VIÊN
+CA SĨ | Người đi hát chuyên nghiệp, hát karaoke với bạn thì không ai bằng. | 1
+DIỄN VIÊN | Người đóng phim, khóc cười theo kịch bản, nhập vai tới mức bị ghét lây. | 1
+NGƯỜI MẪU | Người bước đi trên sàn diễn thời trang, mặt lạnh như sáng thứ hai. | 2
+HỌA SĨ | Người vẽ tranh, một vệt màu có khi bán được bằng cả năm lương. | 2
+NHẠC SĨ | Người viết ra bài hát, có bài thất tình viết xong là nổi tiếng. | 2
+NHÀ THƠ | Người làm thơ, thất tình thì cho ra nguyên tập. | 2
+NHIẾP ẢNH GIA | Người chụp ảnh chuyên nghiệp, bắt bạn tạo dáng hai chục kiểu. | 3
+LUẬT SƯ | Người bào chữa ở toà, nói câu nào cũng có điều khoản đi kèm. | 2
+THẨM PHÁN | Người ngồi giữa toà gõ búa, đọc bản án. | 3
+GIAO DỊCH VIÊN | Người ngồi quầy ngân hàng, mời bạn bốc số rồi chờ. | 3
+THU NGÂN | Người đứng quầy tính tiền siêu thị, hỏi câu quen thuộc "có thẻ thành viên không". | 2
+BÁN HÀNG | Người khen bạn mặc gì cũng đẹp, nhất là khi bạn sắp trả tiền. | 1
+DƯỢC SĨ | Người đọc được chữ bác sĩ viết trong đơn thuốc. | 2
+NHA SĨ | Người bảo bạn há miệng ra rồi hỏi chuyện, ai mà trả lời được. | 2
+BÁC SĨ THÚ Y | Người chữa bệnh cho các boss chó mèo, khách hàng không biết nói. | 3 | THÚ Y
+LẬP TRÌNH VIÊN | Người viết code, sửa được một lỗi thì sinh thêm hai lỗi khác. | 3 | DEV
+THỢ MỘC | Người làm bàn ghế tủ giường từ gỗ, nhà đầy mùn cưa. | 2
+THỢ RÈN | Người đập sắt nung đỏ thành dao, tiếng búa vang cả xóm. | 3
+THỢ GỐM | Người nặn đất sét thành bình, quay bàn xoay như trong phim tình cảm. | 3
+THỢ KIM HOÀN | Người làm nhẫn cưới và dây chuyền vàng bạc. | 3
+THỢ SĂN | Người vào rừng bắt thú, nhân vật phản diện trong truyện cổ tích. | 2
+LAO CÔNG | Người quét dọn đường phố lúc cả thành phố còn đang ngủ. | 2 | CÔNG NHÂN VỆ SINH
+CÔNG NHÂN | Người làm việc trong nhà máy, đi ca, mặc đồng phục. | 1
+BẢO MẪU | Người trông trẻ thuê, kiên nhẫn hơn cả cô giáo. | 2
+GIÚP VIỆC | Người làm việc nhà cho gia đình khác, Tết về quê là cả nhà rối loạn. | 2 | OSIN
+THUYỀN TRƯỞNG | Người chỉ huy con tàu, tàu chìm thì là người rời đi cuối cùng. | 3
+PHI HÀNH GIA | Người bay vào vũ trụ, đi làm xa nhất thế giới. | 3
+NHÀ KHOA HỌC | Người mặc áo trắng làm thí nghiệm, tóc hay bị dựng đứng trong phim hoạt hình. | 3
+BÁC SĨ PHẪU THUẬT | Người cầm dao mổ, đứng mấy tiếng liền trong phòng mổ. | 3
+THỢ ẢNH | Người chụp ảnh cưới, ảnh kỷ yếu, hô "một hai ba cười". | 2
+VẬN ĐỘNG VIÊN | Người thi đấu thể thao chuyên nghiệp, mang huy chương về cho đất nước. | 3
+HUẤN LUYỆN VIÊN | Người đứng ngoài đường biên la hét chỉ đạo đội bóng. | 3
+TRỌNG TÀI | Người thổi còi rút thẻ, cả sân vận động không ai ưa. | 2
+ẢO THUẬT GIA | Người làm con thỏ chui ra từ chiếc mũ, tiền trong ví mình thì biến mất. | 3
+CHÚ HỀ | Mũi đỏ, giày to, làm trò cho trẻ con cười. | 2 | HỀ
+THẦY BÓI | Người xem chỉ tay, nói câu nào cũng đúng một nửa. | 3
+THỢ LẶN | Người đeo bình dưỡng khí lặn xuống đáy biển. | 3
+KIỂM LÂM | Người bảo vệ rừng, giữ cây khỏi lâm tặc. | 3
+THỢ NAIL | Người sơn vẽ móng tay, nghe khách kể hết chuyện đời. | 2 | LÀM NAIL
+THỢ TRANG ĐIỂM | Người biến cô dâu thành phiên bản xinh nhất cuộc đời. | 3 | MAKEUP
+HƯỚNG DẪN VIÊN | Người cầm cờ đi trước đoàn du lịch, kể chuyện lịch sử mỗi điểm dừng. | 3

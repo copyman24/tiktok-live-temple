@@ -1,0 +1,201 @@
+# Câu trắc nghiệm cho 2 game lớn: Đường lên đỉnh Everest, Rung Chuông Đồng (bản riêng cô Ngân)
+# Mỗi dòng: câu hỏi | đáp án ĐÚNG | sai | sai | sai   (game tự xáo vị trí A B C D, nên cứ ghi đáp án đúng đầu tiên)
+# Nhóm: [de] làm nóng · [vua] phổ thông · [kho] thử thách / chạm đỉnh · [chuong] câu Chuông Đồng · [phu] câu phụ phân định
+# Chủ kênh chốt 2026-11-04: khó hơn tiết học rõ rệt, kể cả câu làm nóng. Đáp án sai phải "na ná" đáp án đúng.
+# Chi tiết lịch sử chỉ lấy kiến thức sách giáo khoa, không dùng chi tiết còn tranh cãi.
+# Kiểm tra: npx tsx src/game/bank.check.ts
+
+[de]
+Từ nào viết đúng chính tả? | xán lạn | sáng lạng | xán lạng | xáng lạn
+Từ nào viết đúng chính tả? | sơ suất | sơ xuất | xơ suất | xơ xuất
+Từ nào viết đúng chính tả? | chẳng lẽ | chẳng lẻ | chẵng lẽ | chẵng lẻ
+Từ nào viết đúng chính tả? | kiểm soát | kiểm xoát | kiễm soát | kiểm soác
+Từ nào viết đúng chính tả? | mải mê | mãi mê | mải mế | mãi mế
+Từ nào viết đúng chính tả? | sửa chữa | sửa chửa | sữa chữa | sữa chửa
+Từ nào viết đúng chính tả? | ngõ ngách | ngỏ ngách | ngõ nghách | ngỏ nghách
+Từ nào viết đúng chính tả? | vẻ vang | vẽ vang | vẻ dang | vẽ dang
+Từ nào viết đúng chính tả? | lẽ phải | lẻ phải | lẽ phãi | lẻ phãi
+Từ nào viết đúng chính tả? | dí dỏm | dí giỏm | gí dỏm | rí rỏm
+Từ nào viết đúng chính tả? | chia sẻ | chia xẻ | chia sẽ | chia xẽ
+Thành ngữ "Chuột sa chĩnh gạo" nghĩa là gì? | Gặp nơi sung sướng | Rơi vào cảnh khó | Bị lừa một vố | Làm việc vất vả
+Thành ngữ "Nước đến chân mới nhảy" chỉ người thế nào? | Để sát nút mới làm | Nhanh nhẹn tháo vát | Sợ nước | Biết lo xa
+Câu "Mất bò mới lo làm chuồng" nghĩa là gì? | Hỏng việc mới lo sửa | Chăm lo gia súc | Tiết kiệm tiền | Biết lo xa
+Điền vào chỗ trống: "Gần mực thì đen, gần đèn thì ..." | rạng | sáng | tỏ | đẹp
+Điền vào chỗ trống: "Chị ngã em ..." | nâng | đỡ | dìu | kéo
+Điền vào chỗ trống: "Cái khó ló cái ..." | khôn | hay | tài | giỏi
+Điền vào chỗ trống: "Ăn ... nói thật, mọi tật mọi lành" | ngay | thật | thẳng | đúng
+Con giáp nào có ở 12 con giáp Việt Nam nhưng ở Trung Quốc là con thỏ? | Con mèo | Con dê | Con rồng | Con chó
+Con giáp nào đứng đầu trong 12 con giáp? | Con chuột | Con trâu | Con hổ | Con rồng
+Hành tinh nào được gọi là "hành tinh đỏ"? | Sao Hỏa | Sao Kim | Sao Mộc | Sao Thủy
+9 nhân 13 bằng bao nhiêu? | 117 | 107 | 127 | 119
+Thế kỷ 21 bắt đầu từ năm nào? | 2001 | 2000 | 2010 | 1999
+Một năm có khoảng bao nhiêu tuần? | 52 | 48 | 50 | 56
+Thủ đô của Malaysia là thành phố nào? | Kuala Lumpur | Singapore | Penang | Johor Bahru
+Nước nào được gọi là "xứ sở mặt trời mọc"? | Nhật Bản | Hàn Quốc | Trung Quốc | Mông Cổ
+Lá cờ Nhật Bản có những màu nào? | Đỏ và trắng | Xanh và trắng | Đỏ và vàng | Đen và trắng
+Người trưởng thành mọc đủ răng khôn thì có bao nhiêu chiếc răng? | 32 | 28 | 30 | 36
+Loài chim nào sau đây KHÔNG biết bay? | Đà điểu | Đại bàng | Chim sẻ | Hải âu
+Tim người có mấy ngăn? | 4 ngăn | 2 ngăn | 3 ngăn | 5 ngăn
+Tắm nắng sáng sớm giúp cơ thể tạo ra vitamin nào? | Vitamin D | Vitamin C | Vitamin A | Vitamin B1
+Chữ "nhà" trong "nhà văn", "nhà thơ" chỉ điều gì? | Người làm nghề đó | Ngôi nhà | Gia đình | Triều đại
+Từ nào trái nghĩa với "khiêm tốn"? | kiêu ngạo | nhún nhường | giản dị | khép nép
+Từ nào nói về cái chết một cách trang trọng? | từ trần | toi mạng | ngủm | đi đời
+Đơn vị đo công suất là gì? | Oát | Ampe | Vôn | Jun
+Mặt Trăng che khuất Mặt Trời gọi là hiện tượng gì? | Nhật thực | Nguyệt thực | Sao băng | Cực quang
+Cây cầu sắt hơn trăm tuổi bắc qua sông Hồng tên là gì? | Cầu Long Biên | Cầu Chương Dương | Cầu Thăng Long | Cầu Nhật Tân
+Sông Hương chảy qua thành phố nào? | Huế | Đà Nẵng | Quy Nhơn | Vinh
+Ai là người vẽ bức "Mona Lisa"? | Leonardo da Vinci | Picasso | Van Gogh | Michelangelo
+Đơn vị tiền tệ của Thái Lan là gì? | Baht | Ringgit | Kip | Peso
+Nhạc cụ dân tộc nào chỉ có một dây? | Đàn bầu | Đàn tranh | Đàn nguyệt | Đàn nhị
+Trong cờ vua, quân nào đi theo hình chữ L? | Quân mã | Quân tượng | Quân xe | Quân hậu
+
+[vua]
+Từ nào viết đúng chính tả? | trau dồi | trau giồi | chau dồi | trao dồi
+Từ nào viết đúng chính tả? | dè dặt | giè dặt | rè dặt | dè giặt
+Từ nào viết đúng chính tả? | chuyên cần | truyên cần | chuyên cầng | truyên cầng
+Từ nào viết đúng chính tả? | sắc sảo | xắc xảo | sắc xảo | xắc sảo
+Từ nào viết đúng chính tả? | bàng hoàng | bàn hoàng | bàng hoàn | bàn hoàn
+Từ nào viết đúng chính tả? | dỗ dành | giỗ giành | dỗ giành | giỗ dành
+Thành ngữ "Khẩu phật tâm xà" chỉ người thế nào? | Nói hiền mà lòng ác | Nói ít làm nhiều | Hiền lành thật thà | Ăn nói vụng về
+Thành ngữ "Nước đổ đầu vịt" nghĩa là gì? | Nói mãi không nghe | Có lợi bất ngờ | Làm rất nhanh | Tốn nhiều công sức
+Thành ngữ "Mèo mù vớ cá rán" nghĩa là gì? | May mắn bất ngờ | Tham lam | Vụng về | Chăm chỉ
+Thành ngữ "Đẽo cày giữa đường" chỉ người thế nào? | Không có chính kiến | Lười biếng | Tiết kiệm | Kiên trì
+Ai là tác giả "Truyện Kiều"? | Nguyễn Du | Nguyễn Trãi | Hồ Xuân Hương | Nguyễn Khuyến
+"Bình Ngô đại cáo" do ai viết? | Nguyễn Trãi | Lý Thường Kiệt | Trần Hưng Đạo | Lê Lợi
+Tiểu thuyết "Số đỏ" là của nhà văn nào? | Vũ Trọng Phụng | Ngô Tất Tố | Nam Cao | Nguyễn Tuân
+Truyện ngắn "Lão Hạc" là của nhà văn nào? | Nam Cao | Kim Lân | Tô Hoài | Thạch Lam
+Truyện ngắn "Vợ nhặt" là của nhà văn nào? | Kim Lân | Nam Cao | Tô Hoài | Nguyễn Minh Châu
+Truyện ngắn "Hai đứa trẻ" là của nhà văn nào? | Thạch Lam | Nam Cao | Kim Lân | Nguyễn Tuân
+Truyện ngắn "Chiếc lược ngà" là của nhà văn nào? | Nguyễn Quang Sáng | Nguyễn Thi | Anh Đức | Kim Lân
+Truyện "Cánh đồng bất tận" là của nhà văn nào? | Nguyễn Ngọc Tư | Nguyễn Nhật Ánh | Ma Văn Kháng | Bảo Ninh
+Truyện "Mắt biếc" là của nhà văn nào? | Nguyễn Nhật Ánh | Nguyễn Ngọc Tư | Tô Hoài | Bảo Ninh
+Năm 938, Ngô Quyền đánh tan quân Nam Hán trên sông nào? | Sông Bạch Đằng | Sông Như Nguyệt | Sông Hồng | Sông Mã
+Hai Bà Trưng khởi nghĩa chống ách đô hộ của nhà nào? | Nhà Đông Hán | Nhà Minh | Nhà Nguyên | Nhà Tống
+Chiến thắng Điện Biên Phủ diễn ra năm nào? | 1954 | 1945 | 1975 | 1972
+Vịnh Hạ Long thuộc tỉnh nào? | Quảng Ninh | Hải Phòng | Thanh Hóa | Ninh Bình
+Đỉnh núi cao nhất Việt Nam là đỉnh nào? | Fansipan | Pu Ta Leng | Bạch Mã | Ngọc Linh
+Hang động lớn nhất thế giới ở Việt Nam tên là gì? | Sơn Đoòng | Phong Nha | Thiên Đường | Hang Én
+Tiếng Việt có mấy thanh điệu? | 6 | 5 | 4 | 7
+"Đồng" trong "đồng hồ" và "cánh đồng" là gì của nhau? | Từ đồng âm | Từ đồng nghĩa | Từ trái nghĩa | Từ láy
+"Mặt trời xuống biển như hòn lửa" dùng biện pháp tu từ nào? | So sánh | Nhân hóa | Ẩn dụ | Hoán dụ
+Chữ "xuân" trong "tuổi xuân" được dùng theo nghĩa nào? | Nghĩa chuyển | Nghĩa gốc | Từ mượn | Từ tượng thanh
+Kim loại nào ở thể lỏng ở nhiệt độ phòng? | Thủy ngân | Chì | Nhôm | Thiếc
+Nguyên tố có ký hiệu hóa học "Na" là gì? | Natri | Nitơ | Niken | Neon
+Nguyên tố có ký hiệu hóa học "K" là gì? | Kali | Canxi | Krypton | Cacbon
+Nước tinh khiết có độ pH bằng bao nhiêu? | 7 | 0 | 14 | 5
+Nhiệt độ cơ thể người khoẻ mạnh khoảng bao nhiêu? | 37 độ C | 35 độ C | 39 độ C | 40 độ C
+Cơ quan nào lớn nhất cơ thể người? | Da | Gan | Phổi | Não
+Ánh sáng trắng qua lăng kính tách thành mấy màu chính? | 7 | 5 | 3 | 9
+Loài nào sau đây là động vật có vú? | Cá voi | Cá mập | Cá ngừ | Cá chép
+Đơn vị đo điện trở là gì? | Ôm | Ampe | Vôn | Oát
+15% của 200 là bao nhiêu? | 30 | 15 | 20 | 35
+Số La Mã "XL" là số mấy? | 40 | 60 | 90 | 110
+2 mũ 10 bằng bao nhiêu? | 1024 | 1000 | 2048 | 512
+Số 0,25 bằng phân số nào? | Một phần tư | Một phần hai | Một phần năm | Hai phần năm
+Thủ đô của Philippines là thành phố nào? | Manila | Cebu | Davao | Quezon
+Thủ đô của Myanmar là thành phố nào? | Naypyidaw | Yangon | Mandalay | Bagan
+Thủ đô của Brazil là thành phố nào? | Brasília | Rio de Janeiro | São Paulo | Salvador
+Thủ đô của Thổ Nhĩ Kỳ là thành phố nào? | Ankara | Istanbul | Izmir | Antalya
+Thủ đô của New Zealand là thành phố nào? | Wellington | Auckland | Christchurch | Queenstown
+Thác Niagara nằm giữa hai nước nào? | Mỹ và Canada | Mỹ và Mexico | Brazil và Argentina | Canada và Mexico
+Con sông dài nhất châu Phi là sông nào? | Sông Nin | Sông Congo | Sông Niger | Sông Zambezi
+Ai được mệnh danh là "Vua bóng đá" người Brazil? | Pelé | Ronaldinho | Neymar | Kaká
+World Cup đầu tiên năm 1930 tổ chức ở nước nào? | Uruguay | Brazil | Ý | Anh
+Ai là người đầu tiên đặt chân lên Mặt Trăng? | Neil Armstrong | Yuri Gagarin | Buzz Aldrin | Phạm Tuân
+Ai là người đầu tiên bay vào vũ trụ? | Yuri Gagarin | Neil Armstrong | Phạm Tuân | Valentina Tereshkova
+Giỗ Tổ Hùng Vương vào ngày nào âm lịch? | Mùng 10 tháng 3 | Rằm tháng giêng | Mùng 5 tháng 5 | Mùng 3 tháng 3
+Tết Đoan Ngọ vào ngày nào âm lịch? | Mùng 5 tháng 5 | Mùng 3 tháng 3 | Rằm tháng 7 | Mùng 9 tháng 9
+Tết Hàn thực (mùng 3 tháng 3 âm lịch) người ta làm bánh gì? | Bánh trôi, bánh chay | Bánh chưng | Bánh trung thu | Bánh tét
+Lễ Vu Lan vào ngày nào âm lịch? | Rằm tháng bảy | Rằm tháng tám | Rằm tháng giêng | Mùng 5 tháng 5
+Mạng xã hội nào từng có biểu tượng chú chim xanh trước khi đổi tên thành X? | Twitter | Facebook | Zalo | Threads
+Sóng biển khổng lồ do động đất dưới đáy biển gây ra gọi là gì? | Sóng thần | Sóng bạc đầu | Sóng ngầm | Sóng lừng
+
+[kho]
+Từ nào viết đúng chính tả? | chẩn đoán | chuẩn đoán | chẩn đoáng | chuẩn đoáng
+Từ nào viết đúng chính tả? | bổ sung | bổ xung | bổ dung | bổ sụng
+Từ nào viết đúng chính tả? | sát sao | sát xao | xát sao | xát xao
+Từ nào viết đúng chính tả? | xuề xòa | suề sòa | xuề sòa | suề xòa
+Từ nào viết đúng chính tả? | giành giật | dành dật | giành dật | dành giật
+Từ nào viết đúng chính tả? | nghiêm khắc | nghiêm khắt | ngiêm khắc | nghiêm khát
+Từ nào viết đúng chính tả? | khúc khuỷu | khúc khủy | khút khuỷu | khúc khuỵu
+Từ nào viết đúng chính tả? | cổ hủ | cổ hũ | cỗ hủ | cỗ hũ
+Từ nào viết đúng chính tả? | dang dở | giang dở | dang giở | rang dở
+"Bách chiến bách thắng" nghĩa là gì? | Trăm trận trăm thắng | Thắng nhờ may mắn | Thua rồi lại thắng | Đánh đâu thua đó
+Thành ngữ "Cưỡi ngựa xem hoa" nghĩa là gì? | Xem qua loa, không kỹ | Đi chơi sang chảnh | Làm việc nhanh gọn | Thích ngắm cảnh
+Thành ngữ "Ném đá giấu tay" chỉ việc gì? | Hại người lén lút | Làm việc khéo léo | Che giấu tài năng | Nhận lỗi thay người
+Thành ngữ "Ăn ốc nói mò" nghĩa là gì? | Nói không có căn cứ | Nói chuyện ăn uống | Nói rất hay | Ăn nhiều nói ít
+Thành ngữ "Ba chìm bảy nổi" nói về điều gì? | Cuộc đời lận đận | Tài bơi lội | Sự giàu có | Tính hay thay đổi
+"Dĩ hòa vi quý" nghĩa là gì? | Lấy hòa thuận làm quý | Quý trọng tiền bạc | Hòa nhau là thua | Có tranh mới quý
+Cụm "chín bỏ làm mười" nghĩa là gì? | Dễ dãi bỏ qua | Làm tròn số | Tính toán kỹ | Cộng thêm một
+Chữ "thiên" trong "thiên nhiên" nghĩa là gì? | Trời | Nghìn | Lệch | Dời đi
+Chữ "phụ" trong "phụ huynh" nghĩa là gì? | Cha | Giúp đỡ | Thêm vào | Phụ nữ
+Tiểu thuyết "Tắt đèn" là của nhà văn nào? | Ngô Tất Tố | Nam Cao | Vũ Trọng Phụng | Nguyên Hồng
+Bài thơ "Bánh trôi nước" là của ai? | Hồ Xuân Hương | Bà Huyện Thanh Quan | Đoàn Thị Điểm | Nguyễn Du
+"Chinh phụ ngâm" bản chữ Hán do ai sáng tác? | Đặng Trần Côn | Đoàn Thị Điểm | Phan Huy Ích | Nguyễn Du
+Vị vua nào dời đô từ Hoa Lư ra Thăng Long? | Lý Công Uẩn | Lý Thánh Tông | Lý Nhân Tông | Lý Thái Tông
+Vua nào đổi quốc hiệu nước ta thành Đại Việt năm 1054? | Lý Thánh Tông | Lý Thái Tổ | Trần Thái Tông | Lê Thái Tổ
+Khoa thi Nho học đầu tiên ở nước ta mở năm nào? | 1075 | 1070 | 1010 | 1076
+Ai lãnh đạo cuộc khởi nghĩa Lam Sơn? | Lê Lợi | Lê Lai | Lê Thánh Tông | Lê Hoàn
+Quang Trung đại phá quân Thanh vào năm nào? | 1789 | 1786 | 1792 | 1771
+Trận Rạch Gầm Xoài Mút năm 1785, Nguyễn Huệ đánh tan quân nào? | Quân Xiêm | Quân Thanh | Quân Minh | Quân Nguyên
+Kinh đô của nước Đại Cồ Việt thời Đinh Bộ Lĩnh ở đâu? | Hoa Lư | Thăng Long | Cổ Loa | Phú Xuân
+Thành Cổ Loa gắn với vị vua nào? | An Dương Vương | Hùng Vương | Lý Nam Đế | Ngô Quyền
+Chất nào làm cho lá cây có màu xanh? | Diệp lục | Tinh bột | Khí cacbonic | Sắc tố đỏ
+Âm thanh KHÔNG truyền được trong môi trường nào? | Chân không | Nước | Không khí | Thép
+Tốc độ ánh sáng trong chân không khoảng bao nhiêu? | 300 nghìn km mỗi giây | 300 nghìn km mỗi giờ | 30 nghìn km mỗi giây | 3 nghìn km mỗi giây
+Ký hiệu hóa học của vàng là gì? | Au | Ag | Al | Ga
+Xương nào dài nhất trong cơ thể người? | Xương đùi | Xương sống | Xương cánh tay | Xương ống chân
+Theo sách giáo khoa, nhóm máu nào được gọi là nhóm máu chuyên cho? | Nhóm O | Nhóm A | Nhóm B | Nhóm AB
+Một inch bằng bao nhiêu xăng ti mét? | 2,54 | 3 | 2 | 1,5
+Có bao nhiêu số nguyên tố nhỏ hơn 20? | 8 | 7 | 9 | 10
+Tổng các số tự nhiên từ 1 đến 100 bằng bao nhiêu? | 5050 | 5000 | 5100 | 4950
+Một số chia hết cho 9 khi nào? | Tổng chữ số chia hết cho 9 | Tận cùng là chữ số 9 | Tận cùng là chữ số 0 | Là số lẻ
+3 con mèo bắt 3 con chuột mất 3 phút. Vậy 100 con mèo bắt 100 con chuột mất bao lâu? | 3 phút | 100 phút | 300 phút | 1 phút
+Hình vuông có chu vi 36 cm thì diện tích là bao nhiêu? | 81 cm vuông | 36 cm vuông | 144 cm vuông | 72 cm vuông
+Thủ đô của nước Úc là thành phố nào? | Canberra | Sydney | Melbourne | Perth
+Thủ đô của Canada là thành phố nào? | Ottawa | Toronto | Vancouver | Montreal
+Thủ đô của Ai Cập là thành phố nào? | Cairo | Alexandria | Luxor | Giza
+Từ năm 2023, quốc gia nào đông dân nhất thế giới? | Ấn Độ | Trung Quốc | Mỹ | Indonesia
+Dãy núi trên cạn dài nhất thế giới là dãy nào? | Andes | Himalaya | Rocky | Alps
+Eo biển nào ngăn cách châu Á với châu Mỹ? | Eo biển Bering | Eo biển Gibraltar | Eo biển Malacca | Eo biển Magellan
+Kênh đào nào nối Địa Trung Hải với Biển Đỏ? | Kênh Suez | Kênh Panama | Kênh Kiel | Kênh Corinth
+Người Việt Nam đầu tiên bay vào vũ trụ là ai? | Phạm Tuân | Bùi Thanh Liêm | Võ Nguyên Giáp | Nguyễn Văn Trỗi
+Ứng dụng nhắn tin nào do Việt Nam làm ra? | Zalo | WhatsApp | Telegram | Viber
+
+[chuong]
+Bài "Hịch tướng sĩ" do ai viết? | Trần Quốc Tuấn | Trần Quang Khải | Trần Nhân Tông | Lý Thường Kiệt
+Bộ luật Hồng Đức ra đời dưới thời vua nào? | Lê Thánh Tông | Lê Thái Tổ | Lý Thánh Tông | Trần Thái Tông
+Nhà Trần mấy lần đánh thắng quân Nguyên Mông? | 3 lần | 2 lần | 4 lần | 5 lần
+Văn Miếu ở Hà Nội được xây vào năm nào? | 1070 | 1010 | 1076 | 1054
+Ai được mệnh danh là "Bà chúa thơ Nôm"? | Hồ Xuân Hương | Đoàn Thị Điểm | Bà Huyện Thanh Quan | Xuân Quỳnh
+"Truyền kỳ mạn lục" là tác phẩm của ai? | Nguyễn Dữ | Nguyễn Du | Nguyễn Trãi | Lê Quý Đôn
+"Vân đài loại ngữ" là công trình của nhà bác học nào? | Lê Quý Đôn | Ngô Sĩ Liên | Phan Huy Chú | Nguyễn Trãi
+Thời Lê Thánh Tông, ai biên soạn "Đại Việt sử ký toàn thư"? | Ngô Sĩ Liên | Lê Văn Hưu | Lê Quý Đôn | Phan Phu Tiên
+Từ nào viết đúng chính tả? | nghênh ngang | nghênh nghang | nghêng ngang | ngênh nghang
+Hồ nước ngọt tự nhiên lớn nhất Việt Nam là hồ nào? | Hồ Ba Bể | Hồ Tây | Hồ Thác Bà | Hồ Dầu Tiếng
+Thể thơ lục bát gồm những cặp câu thế nào? | Câu 6 chữ, câu 8 chữ | Câu 7 chữ, câu 8 chữ | Câu 5 chữ, câu 7 chữ | Câu 6 chữ, câu 6 chữ
+Con vật nào có trái tim 3 ngăn? | Con ếch | Con cá chép | Con chim sẻ | Con chó
+Khí nào chiếm nhiều nhất trong không khí? | Khí nitơ | Khí oxy | Khí cacbonic | Khí hidro
+Kim loại nào dẫn điện tốt nhất? | Bạc | Đồng | Vàng | Nhôm
+Hành tinh nào có một ngày dài hơn một năm của nó? | Sao Kim | Sao Thủy | Sao Hỏa | Sao Mộc
+Nước nào có đường bờ biển dài nhất thế giới? | Canada | Nga | Úc | Indonesia
+Khoảng cách từ Trái Đất tới Mặt Trăng xấp xỉ bao nhiêu? | 384 nghìn km | 150 triệu km | 38 nghìn km | 1 triệu km
+Ba chữ số đầu sau dấu phẩy của số pi là gì? | 3,141 | 3,124 | 3,146 | 3,114
+
+[phu]
+25 nhân 25 bằng bao nhiêu? | 625 | 525 | 650 | 600
+Một tuần có bao nhiêu giờ? | 168 | 148 | 186 | 160
+Một ngày có bao nhiêu phút? | 1440 | 1240 | 1400 | 1640
+Từ nào viết đúng chính tả? | xào xạc | sào sạc | xào sạc | sào xạc
+Điền vào chỗ trống: "Hữu xạ tự nhiên ..." | hương | thơm | bay | toả
+Điền vào chỗ trống: "Chim có tổ, người có ..." | tông | nhà | quê | họ
+Điền tiếp: "Công cha như núi Thái Sơn, nghĩa mẹ như nước ..." | trong nguồn chảy ra | biển Đông dạt dào | sông dài mênh mông | đầy bể không cạn
+Theo truyền thuyết, Mị Nương là con gái vua Hùng thứ mấy? | Thứ 18 | Thứ 16 | Thứ 6 | Thứ 10
+Mỗi góc của hình lục giác đều bằng bao nhiêu độ? | 120 độ | 108 độ | 135 độ | 90 độ
+Quốc gia nào có diện tích lớn nhất thế giới? | Nga | Canada | Trung Quốc | Mỹ
+Bảng chữ cái tiếng Việt có bao nhiêu chữ cái? | 29 | 26 | 24 | 33
+Theo truyền thuyết, Thánh Gióng bay về trời ở núi nào? | Núi Sóc | Núi Tam Đảo | Núi Yên Tử | Núi Ba Vì
+Số tiếp theo của dãy 1, 1, 2, 3, 5, 8 là số mấy? | 13 | 11 | 12 | 15
+Một hải lý bằng khoảng bao nhiêu mét? | 1852 mét | 1609 mét | 1000 mét | 1500 mét
+Thủ đô của Hàn Quốc là thành phố nào? | Seoul | Busan | Bình Nhưỡng | Incheon
+Năm nhuận tiếp theo sau năm 2024 là năm nào? | 2028 | 2026 | 2025 | 2030

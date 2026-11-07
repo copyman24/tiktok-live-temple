@@ -1,0 +1,75 @@
+# Ăn uống, tình yêu
+> Đây là chuyện ăn uống, yêu đương.
+TRÂN CHÂU | Viên tròn đen dai dai nằm dưới đáy ly trà sữa. | 1
+BÁNH TRÁNG TRỘN | Món ăn vặt cổng trường có xoài, khô bò, trứng cút, rau răm. | 1
+LẨU | Món ăn tụ tập, trời mưa mà rủ là không ai từ chối. | 1
+ĐỒ NƯỚNG | Ngồi quanh bếp than, thịt kêu xèo xèo, áo về toàn mùi khói. | 1 | NƯỚNG, BBQ
+ĂN ĐÊM | Mười một giờ khuya bụng réo, mở ứng dụng gọi đồ ăn. | 1
+ĂN VẶT | Ăn linh tinh giữa các bữa chính, nhất là lúc ba giờ chiều. | 1
+TRÀ CHANH | Ly trà chua ngọt ngồi vỉa hè tán gẫu, rẻ mà vui. | 1
+CÀ PHÊ MUỐI | Món cà phê có lớp kem mằn mặn, nghe lạ mà uống là nghiện. | 2
+GÀ RÁN | Món giòn rụm đi kèm khoai tây chiên và nước ngọt. | 1
+ỐC | Món nhậu phải dùng tăm để khều, quán vỉa hè nào cũng có. | 1
+ĐẶT BÀN | Gọi điện trước giữ chỗ cho buổi hẹn hò cuối tuần. | 2
+HẸN HÒ | Lần đầu đi chơi riêng hai người, chọn đồ mất một tiếng. | 1 | DATE
+CHIA TAY | Câu "mình dừng lại đi" làm cả thế giới sụp đổ. | 1
+TỎ TÌNH | Nói thích người ta, run hơn cả đi phỏng vấn xin việc. | 1
+NGƯỜI YÊU | Người được lưu trong danh bạ kèm hình trái tim. | 1 | NY
+ĐỒ ĐÔI | Hai người mặc áo giống nhau đi chơi, ai nhìn cũng biết là một cặp. | 1 | ÁO ĐÔI
+GHEN TUÔNG | Thấy người yêu thả tim ảnh người khác là thấy khó chịu trong người. | 1 | GHEN
+GIẬN DỖI | "Em không sao" nhưng thật ra là có sao. | 1 | DỖI
+DỖ DÀNH | Việc người yêu phải làm khi nửa kia đang giận, kèm trà sữa thì càng nhanh. | 2 | DỖ
+RA MẮT | Lần đầu tới nhà bố mẹ người yêu, cầm giỏ trái cây run run. | 2
+CẦU HÔN | Quỳ một chân, mở hộp nhẫn, hồi hộp chờ câu "đồng ý". | 1
+TIỀN MỪNG | Tiền bỏ phong bì đi đám cưới, tính toán theo độ thân. | 2 | TIỀN MỪNG CƯỚI, PHONG BÌ
+TUẦN TRĂNG MẬT | Chuyến đi chơi riêng đầu tiên của vợ chồng mới cưới. | 2
+YÊU XA | Hai người hai thành phố, yêu nhau qua màn hình gọi video. | 2
+TÌNH ĐẦU | Người đầu tiên làm tim mình rung rinh, không bao giờ quên. | 1 | MỐI TÌNH ĐẦU
+MẬP MỜ | Nhắn tin mỗi ngày, đi chơi cùng nhau, mà không ai nói là gì của nhau. | 2
+SÔ CÔ LA | Kẹo màu nâu tặng nhau ngày lễ tình yêu, ngọt mà hơi đắng. | 1 | SOCOLA, CHOCOLATE
+GẤU BÔNG | Món quà mềm mềm để ôm khi người yêu không ở bên. | 1
+NHẪN | Món trang sức đeo ở ngón áp út khi đã thuộc về ai đó. | 1 | NHẪN CƯỚI
+KỶ NIỆM | Ngày đánh dấu bao lâu yêu nhau, quên là có chuyện lớn. | 2 | NGÀY KỶ NIỆM
+VỢ | Người giữ thẻ ngân hàng của chồng. | 1
+CHỒNG | Người hay nói "để anh lo" rồi quên mất. | 1
+MẸ CHỒNG | Người phụ nữ nàng dâu nào cũng run khi về ra mắt. | 2
+BỐ VỢ | Người đàn ông chàng rể phải ngồi uống cùng trong buổi ra mắt. | 2
+CƠM NHÀ | Món ngon nhất thế giới, đi làm xa mới thấy nhớ. | 1 | CƠM MẸ NẤU
+ĂN SÁNG | Bữa ăn quan trọng nhất mà người đi làm hay bỏ nhất. | 1 | BỮA SÁNG
+TĂNG CÂN | Kết quả sau một kỳ nghỉ Tết ăn uống thả ga. | 1 | LÊN CÂN
+NO | Trạng thái sau buffet, ngồi mãi không đứng dậy nổi. | 1
+ĐÓI | Cảm giác lúc ba giờ chiều, nhìn gì cũng thấy ngon. | 1
+CAY | Vị của mì cấp độ bảy, ăn xong chảy nước mắt. | 1
+KHOAI TÂY CHIÊN | Que vàng giòn chấm tương cà, ai ngồi cạnh cũng xin một miếng. | 1
+XIÊN BẨN | Que xiên chiên ở vỉa hè, tên nghe sợ mà ai cũng mê. | 2 | XIÊN NƯỚNG
+NEM CHUA RÁN | Món ăn vặt phố cổ Hà Nội, chấm tương ớt. | 2
+ỚT | Thứ người miền Trung ăn như rau, người khác nhìn thôi đã thấy cay. | 1
+TRÀ ĐÀO | Ly trà có miếng đào vàng và cọng sả, quán nào cũng có. | 1
+BÁNH FLAN | Bánh mềm rung rinh, lớp đường cháy nâu ở trên, ăn với đá bào. | 2 | CARAMEN
+NGƯỜI THỨ BA | Người xuất hiện làm tình yêu của hai người tan vỡ. | 2 | TUESDAY
+QUAY LẠI | Chia tay rồi mà vẫn về với nhau, lần thứ ba trong năm. | 2
+ĐƠN PHƯƠNG | Yêu một mình, người ta không hề hay biết. | 2 | YÊU ĐƠN PHƯƠNG
+U MÊ | Yêu tới mức ai khuyên gì cũng không nghe, mắt chỉ thấy người ấy. | 2
+SÉT ÁI TÌNH | Gặp lần đầu là yêu luôn, như bị điện giật. | 3
+NẮM TAY | Cử chỉ đầu tiên khi mới yêu, tim đập thình thịch. | 1
+CẶP ĐÔI | Hai người yêu nhau, đi đâu cũng có nhau. | 1
+MAI MỐI | Việc các cô các dì hay làm mỗi dịp Tết: giới thiệu người yêu cho mình. | 2
+KHI NÀO CƯỚI | Câu hỏi họ hàng hỏi mỗi Tết, đáng sợ hơn cả hỏi lương. | 1
+APP HẸN HÒ | Ứng dụng quẹt trái quẹt phải để tìm người yêu. | 2 | TINDER
+ĐÁM CƯỚI | Ngày vui có cô dâu chú rể, ăn cỗ và nghe hát karaoke tới chiều. | 1
+CƠM CHÓ | Thứ người độc thân bị "ăn" mỗi khi cặp đôi khoe nhau trên mạng. | 2
+TRÀ SỮA | Món cô Ngân nghiện nhất, gọi full topping cho bõ. | 1
+ĂN CHỰC | Ghé nhà bạn đúng giờ cơm, "ủa mọi người đang ăn hả". | 2
+CHIA ĐÔI | Đi ăn với người yêu, mỗi người trả một nửa, sòng phẳng. | 2 | CƯA ĐÔI
+BAO ĂN | "Hôm nay để tôi trả", câu nói làm cả nhóm yêu quý một người. | 2 | BAO
+NẤU ĂN | Kỹ năng cứu ví cuối tháng, nấu dở thì cứu luôn cái bụng đói. | 1
+ĐI CHỢ | Xách giỏ mua rau, mua thịt, mặc cả từng nghìn. | 1
+RỬA BÁT | Việc cả nhà oẳn tù tì sau bữa cơm, thua là phải làm. | 1 | RỬA CHÉN
+TỦ LẠNH | Mở ra mười lần một ngày, lần nào cũng không có gì mới. | 1
+GIAO ĐỒ ĂN | Ngồi nhà bấm điện thoại, ba mươi phút sau có cơm nóng. | 2
+HẾT MÓN | Câu quán nói khi bạn gọi đúng món mình thèm nhất. | 2
+CƠM TẤM SƯỜN | Đĩa cơm hạt vỡ, miếng thịt nướng to, chan nước mắm, ăn sáng kiểu Sài Gòn. | 2
+BÁNH MÌ CHẢO | Chảo gang nóng có trứng ốp, pa tê, xúc xích, chấm bánh mì ăn sáng. | 2
+TRÀ ĐÁ | Ly nước vỉa hè rẻ nhất, bàn chuyện thế giới cả buổi. | 1
+XIÊN QUE | Đồ chiên cắm que chấm tương ớt, mua mười cái là bay luôn tiền ăn sáng. | 1
+THẤT TÌNH | Bị người yêu bỏ, nghe nhạc buồn, ăn hết hộp kem một mình. | 1

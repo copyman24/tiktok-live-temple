@@ -1,0 +1,74 @@
+# Âm nhạc, nghệ thuật
+> Đây là thứ thuộc về âm nhạc, nghệ thuật.
+ĐÀN GHI TA | Nhạc cụ sáu dây ôm ngang đùi, con trai học bốn hợp âm là đi tán gái. | 2 | GUITAR, ĐÀN GUITAR, GHI TA
+ĐÀN PIANO | Phím đen phím trắng, quán cà phê sang chảnh nào cũng đặt một cây. | 2 | PIANO, DƯƠNG CẦM
+ĐÀN BẦU | Nhạc cụ một dây của Việt Nam, tiếng ngân nghe buồn não ruột. | 2
+ĐÀN TRANH | Đàn nhiều dây đặt nằm, gảy bằng móng, các cô gái mặc áo dài ngồi chơi. | 3
+ĐÀN NHỊ | Hai dây, kéo bằng vĩ, tiếng réo rắt trong đám chèo. | 3 | ĐÀN CÒ
+ĐÀN T'RƯNG | Nhiều ống tre gõ của Tây Nguyên, nghe như suối chảy. | 3 | TRƯNG
+SÁO TRÚC | Thổi bằng miệng, làm từ ống tre, chiều quê trên lưng trâu. | 2 | SÁO
+KÈN | Thổi vào kêu to, có loại bằng đồng trong đám rước, đám cưới. | 1
+TRỐNG | Gõ tùng tùng, nghe ở trường là biết hết giờ ra chơi. | 1
+CỒNG CHIÊNG | Nhạc cụ đồng của đồng bào Tây Nguyên, đánh quanh đống lửa. | 3
+VĨ CẦM | Nhạc cụ kẹp dưới cằm, kéo vĩ, học sai một nốt là cả nhà bịt tai. | 3 | VIOLIN
+MICRO | Cầm hát karaoke, chú hàng xóm cầm là không chịu buông. | 1 | MIC
+LOA | Phát âm thanh to, nhà bên mở hát kẹo kéo tới mười giờ đêm. | 1
+KARAOKE | Hát theo chữ chạy trên màn hình, chỗ team building tăng hai sau khi nhậu. | 1
+BOLERO | Dòng nhạc trữ tình các cô chú mê, giờ Gen Z cũng nghe. | 2
+NHẠC RAP | Đọc nhanh có vần có beat, gameshow nào về nó cũng gây bão. | 2 | RAP
+NHẠC VÀNG | Nhạc trữ tình xưa, đám cưới quê nào cũng mở. | 2
+QUAN HỌ | Dân ca Bắc Ninh, liền anh liền chị hát đối trên thuyền. | 2
+CẢI LƯƠNG | Nghệ thuật sân khấu Nam Bộ, có vọng cổ, ngân câu mùi nghe nổi da gà. | 3
+CHÈO | Sân khấu dân gian Bắc Bộ, có vai hề mũi đỏ chọc cười. | 2
+CA TRÙ | Hát có đàn đáy, phách, trống chầu, được UNESCO ghi danh. | 3
+HÁT XẨM | Hát rong ngày xưa của người khiếm thị ở chợ, bến tàu. | 3
+VỌNG CỔ | Bài bản nổi tiếng của cải lương, ngân dài tới hụt hơi. | 3
+ĐỜN CA TÀI TỬ | Nghệ thuật âm nhạc miền Tây được UNESCO công nhận, ngồi chiếu hát chơi. | 3
+RU CON | Mẹ hát à ơi cho em bé ngủ, nghe xong người lớn cũng buồn ngủ. | 2 | HÁT RU
+NỐT NHẠC | Đồ, rê, mi, pha, son, la, si, học xong vẫn hát lệch tông. | 2
+CA SĨ | Người đi hát, đi show đông fan còn hơn họp lớp. | 1
+BAN NHẠC | Nhóm chơi nhạc cùng nhau, có tay trống, tay bass, giọng ca chính. | 2
+DÀN HỢP XƯỚNG | Rất nhiều người cùng hát nhiều bè, mùa Giáng sinh hay biểu diễn. | 3
+NHẠC TRƯỞNG | Người cầm đũa chỉ huy dàn nhạc, quay lưng về phía khán giả. | 3
+SÂN KHẤU | Nơi ca sĩ đứng biểu diễn, fan cuồng hay leo lên ôm thần tượng. | 1
+BUỔI HÒA NHẠC | Đêm nhạc lớn nhiều nghệ sĩ, săn vé mở bán là sập web. | 3 | CONCERT
+TRIỆU VIEW | Lượt xem khủng của video, ca sĩ nào cũng mơ đạt mốc này trong một ngày. | 2
+BẢN HIT | Bài hát ai cũng thuộc, đi đâu cũng nghe, nghe tới phát ngán. | 2 | HIT
+LỜI BÀI HÁT | Chữ chạy trên màn hình karaoke, hát sai là cả phòng cười. | 2
+ĐIỆP KHÚC | Đoạn lặp lại nhiều lần, ai cũng chỉ thuộc đúng đoạn này. | 2
+NHẢY HIP HOP | Điệu nhảy đường phố, áo rộng mũ lưỡi trai, quay đầu trên sàn. | 3 | HIPHOP
+BA LÊ | Múa nhón mũi chân, váy xoè, vở Hồ Thiên Nga nổi tiếng nhất. | 2 | BALLET
+MÚA | Biểu diễn bằng động tác cơ thể, cũng là điều trẻ con bị bắt làm khi có khách. | 1
+VẼ TRANH | Dùng cọ và màu, giờ có người dùng app trí tuệ nhân tạo cho nhanh. | 1
+CỌ VẼ | Cây bút có lông chấm màu, chị em cũng có loại để đánh phấn. | 2
+GIÁ VẼ | Khung ba chân đặt tranh, họa sĩ đứng trước nó cả ngày. | 3
+TRANH ĐÔNG HỒ | Tranh dân gian in trên giấy dó, có đám cưới chuột, lợn nái. | 3
+GIẤY DÓ | Giấy truyền thống làm từ vỏ cây, mỏng mà dai. | 3
+SƠN MÀI | Tranh phủ nhiều lớp nhựa cây rồi mài bóng, quà tặng sếp sang trọng. | 3
+ĐIÊU KHẮC | Nghệ thuật tạc tượng từ đá, gỗ, kim loại. | 3
+TƯỢNG | Hình người làm bằng đá hay đồng, ai đứng im lâu cũng bị ví như cái này. | 1 | BỨC TƯỢNG
+GỐM SỨ | Bát Tràng nổi tiếng nghề này, đi chơi được tự nặn một cái méo xệch. | 2
+THÊU | Dùng kim chỉ tạo hình trên vải, tranh chữ thập treo phòng khách. | 2
+ĐAN LEN | Đan khăn bằng hai que tặng người yêu, chưa xong đã chia tay. | 2
+ORIGAMI | Nghệ thuật gấp giấy Nhật Bản, gấp một nghìn con hạc để ước. | 3 | GẤP GIẤY
+CHỤP ẢNH | Bấm máy ghi lại khoảnh khắc, đi ăn là phải cho điện thoại "ăn" trước. | 1
+QUAY PHIM | Ghi lại hình ảnh động, quay video ngắn đăng mạng mỗi ngày. | 1
+> Đây là thứ thuộc về phim ảnh, sách truyện.
+RẠP CHIẾU PHIM | Mua vé, bắp nước, ngồi xem màn hình lớn, buổi hẹn đầu tiên an toàn nhất. | 3 | RẠP PHIM
+PHIM HOẠT HÌNH | Phim vẽ cho trẻ em mà người lớn xem khóc nhiều hơn. | 2 | HOẠT HÌNH
+PHIM KINH DỊ | Xem mà sợ, che mắt nhìn qua kẽ tay, rủ crush đi xem cho được ôm. | 2
+PHIM HÀI | Xem cười đau bụng, dịp Tết rạp nào cũng chiếu. | 1
+DIỄN VIÊN CHÍNH | Người đóng vai quan trọng nhất phim, tên to nhất trên poster. | 3
+ĐẠO DIỄN | Người hô "diễn" và "cắt", ngồi sau màn hình chỉ đạo. | 2
+KỊCH BẢN | Văn bản ghi lời thoại cho diễn viên, đời không có nên toàn diễn sai. | 2
+TRUYỆN TRANH | Sách có hình vẽ, khung thoại, đọc từ phải sang trái kiểu Nhật. | 2 | MANGA
+TIỂU THUYẾT | Truyện dài nhiều chương, ngôn tình đọc thâu đêm. | 2
+THƠ | Có vần có điệu, viết tặng crush thì sến, gửi lên mạng thì nhiều tim. | 1
+LỤC BÁT | Thể thơ câu sáu câu tám của Việt Nam, ca dao toàn viết kiểu này. | 2
+TRUYỆN KIỀU | Tác phẩm nổi tiếng của Nguyễn Du, có ba nghìn hai trăm năm mươi bốn câu. | 3 | KIỀU
+DẾ MÈN | Nhân vật đi phiêu lưu của nhà văn Tô Hoài, hồi trẻ ngông nghênh hại bạn. | 3
+TẤM CÁM | Truyện cổ tích có con gà, chiếc hài, quả thị, cô em gái gian xảo. | 2
+SỌ DỪA | Chàng trai hình quả dừa trong cổ tích, bên trong là người tài giỏi. | 3
+THÁNH GIÓNG | Cậu bé ba tuổi vươn vai thành tráng sĩ, cưỡi ngựa sắt đánh giặc. | 3
+SƠN TINH | Thần núi đánh nhau với Thuỷ Tinh, mang sính lễ tới sớm nên cưới được Mị Nương. | 3
+CÂY KHẾ | Truyện chim ăn một quả trả cục vàng, may túi ba gang. | 2

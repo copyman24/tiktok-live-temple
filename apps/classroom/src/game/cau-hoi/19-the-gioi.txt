@@ -1,0 +1,77 @@
+# Thế giới
+> Đây là một quốc gia.
+NHẬT BẢN | Xứ sở hoa anh đào, người ta xếp hàng ngay ngắn, đồ gì cũng dễ thương. | 1 | NHẬT
+HÀN QUỐC | Quê hương Kpop và kim chi, xem phim xong là muốn đi phẫu thuật thẩm mỹ. | 1 | HÀN
+TRUNG QUỐC | Có Vạn Lý Trường Thành, đông dân bậc nhất, lễ hội mua sắm "mười một tháng mười một". | 1
+THÁI LAN | Xứ sở chùa vàng, phim ma với quảng cáo cảm động nổi tiếng. | 1
+LÀO | Nước láng giềng thủ đô Viêng Chăn, không giáp biển, bia ngon. | 1
+CAMPUCHIA | Có đền Angkor Wat, người Việt hay sang chơi bằng xe khách. | 2 | CĂM PU CHIA
+SINGAPORE | Đảo quốc sư tử, sạch tới mức cấm bán kẹo cao su. | 2 | XING GA PO
+MALAYSIA | Có tháp đôi Petronas, thủ đô Kuala Lumpur. | 2 | MA LAI XI A
+INDONESIA | Đất nước vạn đảo, có Bali cho cặp đôi đi trăng mật. | 2
+PHILIPPINES | Đất nước nghìn đảo có thủ đô Manila, dân hát karaoke cực hay. | 3 | PHI LÍP PIN
+ẤN ĐỘ | Có đền Taj Mahal, phim đang đánh nhau thì nhảy múa. | 1
+NGA | Đất nước rộng nhất thế giới, mùa đông lạnh âm mấy chục độ, búp bê lồng nhau. | 1
+MỸ | Có tượng Nữ thần Tự do, Hollywood, bánh mì kẹp thịt khổng lồ. | 1 | HOA KỲ
+ANH | Có tháp đồng hồ Big Ben, uống trà chiều, trời mưa suốt. | 1 | NƯỚC ANH
+PHÁP | Có tháp Eiffel, bánh sừng bò, nước hoa, ai nói cũng như đang hát. | 1
+ĐỨC | Thủ đô Berlin, xe hơi nổi tiếng, xúc xích với lễ hội bia. | 1
+NƯỚC Ý | Hình chiếc ủng, quê pizza với mì ống, cho dứa vào pizza là bị giận. | 1 | Ý
+TÂY BAN NHA | Có đấu bò, Real Madrid, ngủ trưa là truyền thống. | 3
+BỒ ĐÀO NHA | Quê Ronaldo, có bánh trứng tart nổi tiếng. | 3
+HÀ LAN | Xứ sở hoa tulip, cối xay gió, ai cũng đi xe đạp. | 2
+BRAZIL | Xứ sở samba và lễ hội Carnival, vũ điệu bóng đá. | 2 | BRA XIN
+ARGENTINA | Quê Messi, nhảy tango, thịt bò nướng. | 2 | ÁC HEN TI NA
+AI CẬP | Có kim tự tháp, sông Nin, xác ướp pharaoh. | 2
+ÚC | Có chuột túi, nhà hát Sydney, Tết thì đang giữa mùa hè. | 1 | NƯỚC ÚC
+CANADA | Lá phong đỏ trên quốc kỳ, xin lỗi nhiều hơn cả nói cảm ơn. | 2 | CA NA ĐA
+THỤY SĨ | Đồng hồ, sô cô la, núi Alps, ngân hàng giữ tiền của đại gia. | 3
+HY LẠP | Quê thần thoại, Olympic cổ đại, nhà trắng mái xanh bên biển. | 2
+> Đây là một thành phố trên thế giới.
+TOKYO | Thủ đô Nhật Bản, ga tàu giờ cao điểm có người đẩy khách vào toa. | 2
+SEOUL | Thủ đô Hàn Quốc, phim tình cảm nào cũng quay ở đây. | 2 | XƠ UN
+BẮC KINH | Thủ đô Trung Quốc, có Tử Cấm Thành, vịt quay nổi tiếng. | 2
+BANGKOK | Thủ đô Thái Lan, tên đầy đủ dài nhất thế giới, kẹt xe chẳng kém Sài Gòn. | 2 | BĂNG CỐC
+PARIS | Kinh đô ánh sáng, thủ đô thời trang, cặp đôi treo khoá tình yêu trên cầu. | 2 | PA RI
+LONDON | Thủ đô nước Anh, xe buýt hai tầng màu đỏ. | 2 | LUÂN ĐÔN
+NEW YORK | Thành phố không ngủ, có Quảng trường Thời đại sáng đèn cả đêm. | 3 | NIU OÓC
+VIÊNG CHĂN | Thủ đô của nước Lào, có Thạt Luổng dát vàng. | 3
+> Đây là kỳ quan, danh thắng thế giới.
+KIM TỰ THÁP | Lăng mộ hình chóp của pharaoh, xây kiểu gì tới giờ vẫn còn bàn cãi. | 2
+THÁP EIFFEL | Tháp sắt ở Paris, đêm nào cũng nhấp nháy đèn, ảnh cầu hôn kinh điển. | 3 | EIFFEL
+NỮ THẦN TỰ DO | Bức tượng cầm ngọn đuốc ở cảng New York, quà của nước Pháp. | 3
+ANGKOR WAT | Quần thể đền cổ Campuchia, có trên quốc kỳ nước này. | 3
+ĐẤU TRƯỜNG LA MÃ | Nơi võ sĩ giác đấu thời cổ ở thành Rome, giờ chỉ còn một phần. | 3
+NÚI PHÚ SĨ | Ngọn núi lửa đỉnh phủ tuyết, biểu tượng xứ hoa anh đào. | 3 | PHÚ SĨ
+EVEREST | Đỉnh núi cao nhất thế giới, leo lên còn phải xếp hàng. | 2
+SÔNG NIN | Con sông dài nhất châu Phi chảy qua Ai Cập. | 2
+AMAZON | Rừng mưa lớn nhất thế giới, cũng trùng tên trang mua sắm lớn. | 2
+BẮC CỰC | Nơi có gấu trắng, ông già Noel sống ở đây theo truyện. | 2
+NAM CỰC | Nơi có chim cánh cụt, lạnh nhất Trái Đất. | 2
+> Đây là châu lục, vùng đất trên trái đất.
+CHÂU Á | Châu lục rộng và đông dân nhất, Việt Nam thuộc đây. | 1
+CHÂU ÂU | Có Pháp, Đức, Ý, du lịch một chuyến cạn sạch tiền tiết kiệm. | 1
+CHÂU PHI | Có sa mạc Sahara, sư tử, hươu cao cổ. | 1
+CHÂU MỸ | Có Brazil, Canada, Argentina, chia làm Bắc và Nam. | 1
+CHÂU ĐẠI DƯƠNG | Có Úc, New Zealand, toàn là đảo. | 2
+SAHARA | Sa mạc nóng lớn nhất thế giới ở châu Phi, cát nhiều hơn tiền trong ví. | 2
+THÁI BÌNH DƯƠNG | Đại dương lớn nhất, tên nghe rất hiền mà bão nhiều. | 3
+ĐƯỜNG XÍCH ĐẠO | Vòng chia Trái Đất làm hai bán cầu, đi qua đây nắng nóng quanh năm. | 3 | XÍCH ĐẠO
+QUẢ ĐỊA CẦU | Mô hình Trái Đất xoay được trên bàn giáo viên địa lý. | 3
+BẢN ĐỒ | Tờ giấy vẽ đường đi, quốc gia, giờ ai cũng mở trong điện thoại. | 2
+> Đây là thứ gắn với nước ngoài.
+HỘ CHIẾU | Sổ nhỏ cần có khi ra nước ngoài, ảnh trong đó luôn xấu. | 2 | PASSPORT
+VISA | Giấy cho phép nhập cảnh, xin đi một số nước phải chứng minh tài chính. | 2 | THỊ THỰC
+ĐÔ LA | Tiền giấy màu xanh của nước Mỹ, cả thế giới dùng. | 2 | USD
+EURO | Đồng tiền chung của nhiều nước châu Âu. | 2
+YÊN | Tiền Nhật Bản, người đi xuất khẩu lao động gửi về nhà. | 2
+WON | Tiền Hàn Quốc, mua một ly cà phê mà số tiền có tới mấy chữ số không. | 2
+TIẾNG ANH | Ngôn ngữ quốc tế phổ biến nhất, phỏng vấn xin việc kiểu gì cũng hỏi. | 2
+TIẾNG NHẬT | Có chữ Hiragana, Katakana, Kanji, học mãi chưa thuộc. | 2
+LIÊN HỢP QUỐC | Tổ chức của gần như mọi quốc gia, viết tắt UN, trụ sở ở New York. | 3
+ASEAN | Hiệp hội các nước Đông Nam Á, Việt Nam là thành viên. | 2
+CƠM CÀ RI | Món nổi tiếng của Ấn Độ, ăn bằng tay, nhiều gia vị. | 3 | CÀ RI
+MÌ Ý | Spaghetti sốt cà chua, hẹn hò lần đầu khó ăn cho đẹp. | 2 | SPAGHETTI
+TACO | Bánh kẹp vỏ ngô của Mexico, cắn một miếng là rơi hết nhân. | 3
+KANGAROO | Thú có túi của Úc, đấm bốc giỏi, nhảy xa. | 2
+KOALA | Gấu ôm cây ở Úc, ngủ hai mươi tiếng một ngày, giống dân văn phòng cuối tuần. | 3 | GẤU KOALA

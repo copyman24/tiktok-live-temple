@@ -1,0 +1,108 @@
+# Công sở, tiền bạc
+> Đây là chuyện đi làm, tiền bạc.
+LƯƠNG | Thứ về tài khoản ngày mùng năm và đi mất vào ngày mùng sáu. | 1
+SẾP | Người nhắn "em ơi" lúc mười giờ tối, kèm theo một đống việc. | 1 | BOSS
+TĂNG CA | Ở lại công ty khi mọi người đã về, nghe như được thêm tiền mà thường chỉ thêm mệt. | 1 | OT, LÀM THÊM GIỜ
+HỌP | Một tiếng ngồi nói chuyện cho việc lẽ ra chỉ cần một tin nhắn. | 1 | MEETING
+NGHỈ PHÉP | Có ghi trong hợp đồng hẳn hoi, mà xin sếp duyệt thì khó như lên trời. | 2
+THỨ HAI | Ngày trong tuần ai cũng muốn xoá khỏi lịch, cô Ngân sợ nhất. | 1
+THỨ SÁU | Ngày làm việc cuối cùng trong tuần, tới chiều là không ai còn tâm trí làm gì. | 1
+CUỐI THÁNG | Khoảng thời gian ví mỏng nhất, mì gói bán chạy nhất. | 1
+THƯỞNG TẾT | Khoản tiền cả năm ngóng, nhận rồi vừa đủ mua vé xe về quê. | 2
+CHẤM CÔNG | Quẹt vân tay lúc tám giờ không phút, chậm một phút là bị trừ. | 1
+ĐI TRỄ | Kẹt xe thì là lý do, ngủ quên thì cũng nói là kẹt xe. | 1 | ĐI MUỘN
+NGHỈ VIỆC | Nộp đơn xong thấy nhẹ cả người, tháng sau mới thấy nhẹ cả ví. | 2 | NGHỈ LÀM
+THỰC TẬP | Làm việc như nhân viên chính thức, lương như tiền gửi xe. | 2 | INTERN, THỰC TẬP SINH
+PHỎNG VẤN | "Điểm yếu của bạn là gì?" "Dạ em quá cầu toàn." | 2
+HỒ SƠ | Tờ giấy viết mình giỏi gấp ba lần ngoài đời, nộp đi xin việc. | 1 | CV
+THƯ ĐIỆN TỬ | "Như tôi đã đề cập trong thư trước" là cách lịch sự để nói "bạn không đọc à". | 2 | MAIL, EMAIL
+ĐỒNG NGHIỆP | Người ngồi bàn bên, biết bạn ăn trưa món gì rõ hơn cả mẹ bạn. | 1
+VĂN PHÒNG | Nơi máy lạnh lúc nào cũng lạnh như người yêu cũ. | 1
+MÁY LẠNH | Thứ gây chiến tranh ở công ty: người kêu nóng, người kêu rét. | 1 | ĐIỀU HOÀ
+NGỦ TRƯA | Mười lăm phút gục xuống bàn sau bữa trưa, dậy có vết hằn trên má. | 1
+CƠM VĂN PHÒNG | Hộp cơm năm mươi nghìn, đặt trước mười một giờ, giao lúc mười hai giờ rưỡi. | 2 | CƠM HỘP
+TAN LÀM | Khoảnh khắc cả phòng đứng dậy cùng lúc như nghe trống hết tiết. | 1 | TAN CA, GIỜ TAN LÀM
+LÀM VIỆC TỪ XA | Đi làm không cần ra khỏi nhà, áo sơ mi phía trên, quần ngủ phía dưới. | 2 | WORK FROM HOME, WFH, LÀM Ở NHÀ
+HỢP ĐỒNG | Tờ giấy dày ba chục trang, ai cũng ký mà không ai đọc hết. | 2
+THỬ VIỆC | Hai tháng đầu đi làm, lương tám lăm phần trăm mà việc một trăm hai mươi phần trăm. | 2
+LÊN CHỨC | Đổi tên trên danh thiếp, việc gấp đôi, lương thêm chút xíu. | 2 | THĂNG CHỨC, THĂNG TIẾN
+TĂNG LƯƠNG | Chủ đề vừa nhắc tới là sếp tự nhiên bận đột xuất. | 1
+BẢO HIỂM | Bị trừ mỗi tháng trong bảng lương, tới lúc cần thì phải chuẩn bị cả xấp giấy tờ. | 2
+THUẾ | Khoản bị trừ trước khi tiền kịp về tới ví, phần của nhà nước. | 2 | THUẾ THU NHẬP
+TIỀN NHÀ | Khoản bay khỏi ví đầu tiên mỗi tháng, chủ trọ nhắc đúng giờ hơn báo thức. | 1 | TIỀN TRỌ, TIỀN THUÊ NHÀ
+TIẾT KIỆM | Kế hoạch bắt đầu từ tháng sau, mà tháng nào cũng là tháng sau. | 1
+TRẢ GÓP | Mua điện thoại hôm nay, trả tiền tới tận năm sau. | 2
+THẺ TÍN DỤNG | Tấm thẻ cho tiêu tiền mình chưa có, cuối tháng ngân hàng nhắc khéo. | 2
+CHUYỂN KHOẢN | "Mình gửi rồi nha", kèm ảnh chụp màn hình làm bằng chứng. | 1 | CK
+QUÉT MÃ | Đưa điện thoại vào ô vuông đen trắng là trả tiền xong, khỏi cần tiền lẻ. | 1 | QUÉT QR, QUÉT MÃ QR
+SỐ DƯ | Đi làm thì có, càng về cuối tháng càng giảm, đôi lúc có cũng như không, đó là gì trong tài khoản? | 1
+ỨNG LƯƠNG | Xin lấy trước tiền của tháng sau vì tháng này hết sạch rồi. | 2
+NỢ | Thứ bạn bè nhớ dai hơn cả ngày sinh nhật của bạn. | 1
+CHIA TIỀN | Ăn xong cả nhóm ngồi bấm máy tính xem mỗi người bao nhiêu. | 1 | CHIA BILL
+ĐẦU TƯ | Bỏ tiền vào với hy vọng sinh lời, thường thì sinh lỗ trước. | 2
+CHỨNG KHOÁN | Bảng điện xanh đỏ, nhà đầu tư nhìn như xem phim kinh dị. | 2 | CỔ PHIẾU
+KẾ TOÁN | Người duy nhất trong công ty biết chính xác bạn được bao nhiêu tiền. | 1
+NHÂN SỰ | Phòng gửi email "thông báo quan trọng" làm cả công ty run. | 2 | HR
+GIÁM ĐỐC | Người ký tên cuối cùng, đi công tác nhiều hơn ngồi ở công ty. | 1
+TRƯỞNG PHÒNG | Không phải sếp lớn nhất, nhưng là sếp ngồi gần bạn nhất. | 2
+LỄ TÂN | Người ngồi ngay cửa, cười đẹp nhất công ty, nhận hết hàng shipper giao. | 2
+BẢO VỆ | Người biết giờ đi giờ về của tất cả mọi người, kể cả giám đốc. | 1
+MÁY IN | Thiết bị văn phòng luôn hỏng đúng lúc cần in gấp. | 1
+MÁY CHIẾU | Bật lên lúc họp, mất mười phút mới kết nối được với laptop. | 2
+MÁY TÍNH XÁCH TAY | Cái máy xách về nhà mỗi tối với lời hứa sẽ làm thêm, rồi không mở. | 1 | LAPTOP
+BÁO CÁO | Thứ sếp đòi lúc năm giờ chiều, cần trước sáu giờ. | 1
+DỰ ÁN | Mới bắt đầu thì hừng hực, gần cuối thì cả team thức trắng. | 2
+KHÁCH HÀNG | Người bảo "sửa chút xíu thôi" rồi sửa lại từ đầu. | 1
+TẤT NIÊN | Bữa tiệc cuối năm của công ty, bốc thăm ai cũng mong trúng xe máy mà toàn trúng ấm siêu tốc. | 2 | TIỆC TẤT NIÊN, TIỆC CUỐI NĂM
+NHẬU | "Một ly thôi" là câu nói dối phổ biến nhất sau giờ làm. | 1 | LAI RAI
+NHÓM CHAT | Nơi sếp nhắn lúc nửa đêm và cả trăm người cùng thả tim cho có. | 1 | GROUP
+TẮT MIC | Việc đầu tiên cần làm khi vào họp online, nhất là khi đang ăn. | 1
+TẮT CAM | Họp online mà để màn hình đen, bảo là camera hỏng. | 2 | TẮT CAMERA
+CHẠY DEADLINE | Ngồi làm thâu đêm vì hạn nộp là chín giờ sáng mai. | 1
+LƯƠNG CỨNG | Phần lương cố định mỗi tháng, ít hơn bạn mong, nhiều hơn bạn sợ. | 2
+HOA HỒNG | Tiền thưởng theo phần trăm đơn hàng bán được, không phải loài hoa. | 2
+NGÀY CÔNG | Số ngày đi làm trong tháng, nghỉ một ngày là mất một phần lương. | 2
+NGHỈ ỐM | Lý do quen thuộc để nghỉ đúng ngày thứ hai, thứ hai tuần sau lại ốm tiếp. | 2 | XIN NGHỈ ỐM
+CÔNG TÁC | Được công ty cho đi xa, ở khách sạn, mà vẫn phải làm việc. | 2 | ĐI CÔNG TÁC
+DẬY SỚM | Kỹ năng khó nhất của người đi làm, chuông kêu năm lần vẫn chưa xong. | 1
+BÁO THỨC | Kêu lần một: tắt. Kêu lần hai: hoãn. Kêu lần ba: trễ làm rồi. | 1
+KẸT XE | Lý do đi trễ huyền thoại của người đi làm ở thành phố. | 1 | TẮC ĐƯỜNG
+THANG MÁY | Nơi gặp sếp bất ngờ và phải nói chuyện thời tiết trong ba mươi giây. | 1
+PHÒNG ĂN | Góc nhỏ có tủ lạnh, lò vi sóng, nơi buôn chuyện nhiều nhất công ty. | 3 | PHÒNG PANTRY, PANTRY
+LÒ VI SÓNG | Buổi trưa cả văn phòng xếp hàng hâm cơm trước cái máy này. | 1
+ĐỒNG PHỤC | Áo cả công ty mặc giống nhau, chụp ảnh nhìn như một đội bóng. | 1
+THẺ NHÂN VIÊN | Tấm thẻ đeo cổ, ảnh trên đó luôn xấu hơn ngoài đời. | 2
+BẢNG LƯƠNG | Tháng nào cũng mở ra, đọc xong thở dài một cái. | 2 | PHIẾU LƯƠNG
+TIỀN ĐIỆN | Hoá đơn tháng hè tăng vọt vì máy lạnh chạy cả ngày. | 1
+QUỸ ĐEN | Khoản tiền giấu riêng, vợ không biết, chồng không biết. | 2
+HEO ĐẤT | Con vật bằng đất để nhét tiền lẻ, đầy rồi thì đập. | 1 | LỢN ĐẤT
+VÍ ĐIỆN TỬ | Ví không cần túi quần, nằm trong điện thoại, quét một cái là trả tiền. | 2
+LÃI SUẤT | Con số rất nhỏ khi bạn gửi tiền, rất to khi bạn đi vay. | 3
+NGÂN HÀNG | Nơi giữ tiền, gọi điện mời mở thẻ nhiều hơn crush gọi bạn. | 1
+HẾT TIỀN | Trạng thái quen thuộc từ ngày hai mươi trở đi. | 1 | CHÁY TÚI, VIÊM MÀNG TÚI
+TỶ PHÚ | Người có rất nhiều tiền, ước mơ của mọi người lúc cầm tờ vé số. | 1 | TỈ PHÚ
+VÉ SỐ | Tờ giấy mười nghìn mang theo giấc mơ đổi đời, xổ lúc bốn giờ chiều. | 1 | XỔ SỐ
+KHỞI NGHIỆP | Bỏ việc đi làm chủ, sau đó làm việc gấp ba mà không có lương. | 2 | STARTUP
+LÀM TỰ DO | Không có sếp, không chấm công, khách hàng chính là sếp. | 3 | FREELANCE, FREELANCER
+BÁN HÀNG ONLINE | Lên live, inbox báo giá, chốt đơn tới khuya. | 2 | BÁN ONLINE
+GIAO HÀNG | Nghề của người hay gọi "xuống lấy hàng nha" đúng lúc bạn đang họp. | 1 | SHIPPER
+NGHỈ LỄ | Mấy ngày nghỉ dài, đường về quê kẹt cứng, ai cũng đếm từng ngày chờ. | 1
+GIỜ HÀNH CHÍNH | Từ tám giờ sáng tới năm giờ chiều, thứ hai tới thứ sáu. | 2
+CA ĐÊM | Đi làm khi người ta ngủ, ngủ khi người ta đi làm. | 2
+NHÂN VIÊN MỚI | Người còn đi làm sớm và còn cười với tất cả mọi người. | 2 | NGƯỜI MỚI
+NGHỈ HƯU | Mục tiêu dài hạn nhất của người đi làm: không phải đi làm nữa. | 2 | VỀ HƯU
+HOÁ ĐƠN | Tờ giấy dài ra sau bữa ăn, lúc đó ai cũng giả vờ đi vệ sinh. | 1 | BILL
+TIỀN BOA | Chút tiền thêm cho shipper ngày mưa, ai cho là người tốt. | 2 | TIP, TIỀN TIP
+TIỀN LẺ | Mấy tờ hai nghìn năm nghìn nằm im trong túi quần đi giặt. | 1
+LƯƠNG GROSS | Mức lương trước khi trừ thuế và bảo hiểm, nghe thì to lắm. | 3 | GROSS
+LƯƠNG NET | Số tiền thật sự về tài khoản sau khi trừ hết, nghe thì nhỏ lắm. | 3 | NET
+DEAL LƯƠNG | Nói mức lương mong muốn lúc phỏng vấn, nói số to xong tự run. | 2 | THOẢ THUẬN LƯƠNG
+NHẢY VIỆC | Đổi công ty liên tục, mỗi chỗ ở được vài tháng. | 2
+SẾP TỔNG | Người to nhất công ty, bước vào thang máy là cả buồng im re. | 2 | CEO
+ĐUỔI VIỆC | Bị mời lên phòng nhân sự nói chuyện riêng, ra về với thùng giấy. | 2 | SA THẢI
+ĐI LÀM | Việc ai cũng than mà sáng nào cũng dậy làm. | 1
+CHỈ TIÊU | Con số sếp giao đầu tháng, cuối tháng chưa đạt là bị gọi lên phòng. | 1
+BẢNG TÍNH | Phần mềm toàn ô vuông hàng cột, kế toán mở từ sáng tới tối. | 2
+HỌP TRỰC TUYẾN | Họp qua máy tính, tắt camera vì đang mặc áo ngủ ở nhà. | 2
+THUYẾT TRÌNH | Đứng trước cả phòng họp nói về mấy trang chiếu, tay run cầm bút chỉ. | 2
+DU LỊCH CÔNG TY | Chuyến đi biển hằng năm, ngày chơi trò tập thể, tối hát với sếp. | 2

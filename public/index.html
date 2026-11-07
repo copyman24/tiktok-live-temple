@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Noto+Serif:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css" />
   <link rel="stylesheet" href="/css/live.css" />
+  <link rel="stylesheet" href="/css/live-life.css" />
 </head>
 <body>
   <main class="app-workspace">
@@ -55,20 +56,31 @@
         <!-- HÀO QUANG ĐÀI SEN TRÊN TAY ĐỨC PHẬT A DI ĐÀ -->
         <div class="lotus-hand-halo" id="lotusHandHalo"></div>
 
-        <!-- 2. THANH TRẠNG THÁI MỎNG TRÊN ĐỈNH (KHÔNG CHE TƯỢNG PHẬT) -->
-        <header class="minimal-top-bar" role="group" aria-label="Trạng thái phiên live">
+        <!-- 2. TIÊU ĐỀ CHÙA + DÒNG CHỮ CHẠY (KIỂU PHÒNG LỄ TIKTOK) -->
+        <header class="minimal-top-bar temple-title-block" role="group" aria-label="Trạng thái phiên live">
           <div class="live-pill" id="liveStatusPill">
             <span class="live-dot" id="liveDot" aria-hidden="true"></span>
             <span id="liveStatusText" aria-live="polite">Chưa kết nối · Chùa Linh Ứng</span>
           </div>
-          <div class="top-Right-badges">
-            <div class="mini-stat-pill">
-              <span><strong id="statIncense">108</strong> nén hương</span>
-              <span class="stat-divider" aria-hidden="true"></span>
-              <span><strong id="statMerit">1,080</strong> công đức</span>
-            </div>
+          <div class="temple-title">Chùa Linh Ứng</div>
+          <div class="temple-subtitle">
+            <span>Nam Mô A Di Đà Phật</span>
+            <span class="presence" id="presenceLine" hidden><strong id="presenceCount">0</strong> thí chủ đang có mặt</span>
+          </div>
+          <div class="mini-stat-pill">
+            <span><strong id="statIncense">108</strong> nén hương</span>
+            <span class="stat-divider" aria-hidden="true"></span>
+            <span><strong id="statMerit">1,080</strong> công đức</span>
           </div>
         </header>
+
+        <!-- 2B. DÒNG CHỮ CHẠY: CÁCH THAM GIA BUỔI LỄ -->
+        <div class="temple-marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>Tặng 1 Rose lên dâng hoa</span><span>Tặng 5 xu lên thắp hương</span><span>Tặng 10 xu bùng nổ công đức</span><span>Bình luận để lời hiện trên nhân vật của bạn</span><span>Bình luận “xin xăm” gieo quẻ đầu năm</span><span>Cùng niệm “Nam mô A Di Đà Phật”</span>
+            <span>Tặng 1 Rose lên dâng hoa</span><span>Tặng 5 xu lên thắp hương</span><span>Tặng 10 xu bùng nổ công đức</span><span>Bình luận để lời hiện trên nhân vật của bạn</span><span>Bình luận “xin xăm” gieo quẻ đầu năm</span><span>Cùng niệm “Nam mô A Di Đà Phật”</span>
+          </div>
+        </div>
 
         <!-- 3. CỘT SÁNG TÂM HƯƠNG & LƯ HƯƠNG TRUNG TÂM -->
         <div class="sacred-light-beam" id="sacredLightBeam"></div>
@@ -145,28 +157,27 @@
               <span id="devoteeActionTag">Dâng hương cầu bình an</span>
             </div>
 
+            <!-- 3 thẻ khung vàng: mỗi mức quà làm gì trên live + số lượt trong buổi live (về 0 khi sang buổi mới) -->
             <div class="hud-gift-cards">
-              <button class="hud-gift-card" id="cardIncense" type="button" title="Cùng niệm Phật">
-                <span class="gift-coin-tag">Bình luận</span>
+              <button class="hud-gift-card" id="cardIncense" type="button" title="Tặng 1 Rose: lên dâng hoa">
+                <span class="tier-count" aria-label="lượt"><span id="statTierHoa">0</span> lượt</span>
                 <div class="gift-card-body">
-                  <span class="gift-title">Nam mô A Di Đà Phật</span>
-                  <span class="card-meter" aria-hidden="true"><i id="chantMeterFill"></i></span>
-                  <span class="card-meter-label"><strong id="chantCount">0</strong> / <span id="chantGoal">108</span> biến niệm · <span id="chantRounds">0</span> lần viên mãn</span>
+                  <span class="gift-title">1 Rose</span>
+                  <span class="card-meter-label">lên dâng hoa</span>
                 </div>
               </button>
-              <button class="hud-gift-card" id="cardBlessing" type="button" title="Thả tim thắp đèn công đức">
-                <span class="gift-coin-tag">Thả tim</span>
+              <button class="hud-gift-card" id="cardBlessing" type="button" title="Tặng 5 xu: lên thắp hương">
+                <span class="tier-count" aria-label="lượt"><span id="statTierHuong">0</span> lượt</span>
                 <div class="gift-card-body">
-                  <span class="gift-title">Thắp đèn công đức <span class="merit-lamp-row" id="meritLampRow" aria-hidden="true"></span></span>
-                  <span class="card-meter is-lamp" aria-hidden="true"><i id="lampMeterFill"></i></span>
-                  <span class="card-meter-label"><strong id="lampLikes">0</strong> / <span id="lampGoal">300</span> tim · <span id="lampLit">0</span> ngọn đã sáng</span>
+                  <span class="gift-title">5 xu</span>
+                  <span class="card-meter-label">lên thắp hương</span>
                 </div>
               </button>
-              <button class="hud-gift-card" id="cardLotus" type="button" title="Tặng quà dâng lễ">
-                <span class="gift-coin-tag">Tặng quà</span>
+              <button class="hud-gift-card" id="cardLotus" type="button" title="Tặng 10 xu: bùng nổ công đức">
+                <span class="tier-count" aria-label="lượt"><span id="statTierCongduc">0</span> lượt</span>
                 <div class="gift-card-body">
-                  <span class="gift-title">Dâng lễ Tam Bảo</span>
-                  <span class="card-tier-list"><span>Hoa sen</span><span>Đèn lưu ly</span><span>Kim Long 100+ xu</span></span>
+                  <span class="gift-title">10 xu</span>
+                  <span class="card-meter-label">bùng nổ công đức</span>
                 </div>
               </button>
             </div>
@@ -236,6 +247,11 @@
       </div>
 
       <div class="dock-section">
+        <h2 class="dock-section-title">Hình nền</h2>
+        <div class="dock-grid-2" id="backgroundChoices"></div>
+      </div>
+
+      <div class="dock-section">
         <h2 class="dock-section-title">Phòng TikTok Live</h2>
         <label class="dock-label" for="inputTikTokUser">Username hoặc liên kết</label>
         <div class="dock-input-row">
@@ -245,12 +261,13 @@
         <button class="dock-btn" id="btnToggleAutoSim">
           Giả lập người xem: Tắt
         </button>
+        <button class="dock-btn dock-btn-danger" id="btnResetLeaderboard">Reset bảng xếp hạng</button>
       </div>
 
       <div class="dock-section">
         <h2 class="dock-section-title">Thử nghi thức</h2>
         <label class="dock-label" for="inputDevoteeName">Tên người xem</label>
-        <input type="text" id="inputDevoteeName" class="dock-input" value="Quỳnh_Finn" placeholder="Tên người xem / Thí chủ..." />
+        <input type="text" id="inputDevoteeName" class="dock-input" value="Minh Lê" placeholder="Tên người xem / Thí chủ..." />
         <label class="dock-label" for="inputDevoteeWish">Lời nguyện</label>
         <input type="text" id="inputDevoteeWish" class="dock-input" value="Cầu cho gia đình bình an, tài lộc hanh thông, vạn sự như ý" placeholder="Lời cầu nguyện..." />
 
@@ -281,5 +298,7 @@
   <script src="/js/audio.js"></script>
   <script src="/js/particles.js"></script>
   <script src="/js/live.js"></script>
+  <script src="/js/live-life.js"></script>
+<script type="module" src="/js/voice-speaker.js"></script>
 </body>
 </html>

@@ -1,0 +1,78 @@
+# Đất nước Việt Nam
+> Đây là địa danh của Việt Nam.
+HÀ NỘI | Thủ đô, mùa thu có hoa sữa thơm nồng, kẹt xe giờ tan tầm là đặc sản. | 1
+SÀI GÒN | Tên cũ của thành phố mang tên Bác, mưa mười phút là ngập, nắng mười phút là quên. | 1
+ĐÀ NẴNG | Thành phố đáng sống, có cầu Rồng cuối tuần phun lửa cho khách check in. | 2
+HẢI PHÒNG | Thành phố hoa phượng đỏ, quê bánh đa cua, nói chuyện nghe như đang cãi nhau. | 2
+HUẾ | Cố đô mộng mơ, nói "dạ" ngọt xớt, món nào cũng cay xé lưỡi. | 1
+HỘI AN | Phố cổ đèn lồng, tối rằm tắt điện thả hoa đăng, chụp ảnh sống ảo cháy máy. | 2
+ĐÀ LẠT | Thành phố ngàn hoa, người yêu cũ hay rủ đi để "chữa lành". | 2
+NHA TRANG | Thành phố biển xứ trầm hương, khách Nga đông tới mức biển hiệu có tiếng Nga. | 2
+VŨNG TÀU | Thành phố biển gần Sài Gòn nhất, cuối tuần dân văn phòng chạy xuống ăn bánh khọt. | 2
+PHÚ QUỐC | Đảo ngọc lớn nhất Việt Nam, nước mắm ngon tới mức máy bay cấm mang lên. | 2
+CÔN ĐẢO | Quần đảo xưa có nhà tù, giờ là chỗ đi trăng mật hoang sơ. | 3
+HẠ LONG | Vịnh hàng nghìn đảo đá, di sản thế giới, đi du thuyền tốn nửa tháng lương. | 2
+SA PA | Thị trấn trong sương ở Lào Cai, mùa đông ai cũng mong có tuyết để đăng story. | 2
+MỘC CHÂU | Cao nguyên đồi chè và hoa mận trắng ở Sơn La, sữa bò ngon nổi tiếng. | 3
+HÀ GIANG | Vùng cực Bắc có cột cờ Lũng Cú, dân phượt mê đèo Mã Pì Lèng. | 2
+CÀ MAU | Mũi đất cực Nam, ra tới đây là hết đường chạy deadline. | 2
+CẦN THƠ | Thủ phủ miền Tây, sáng sớm đi chợ nổi Cái Răng ăn hủ tiếu trên ghe. | 2
+SÔNG HỒNG | Con sông nước đỏ nặng phù sa chảy qua Hà Nội, tên gọi theo màu nước. | 2
+SÔNG HƯƠNG | Dòng sông thơ mộng chảy qua cố đô, đêm nghe ca Huế trên thuyền rồng. | 2
+SÔNG CỬU LONG | Chín nhánh sông đổ ra biển, nuôi cả vựa lúa miền Tây. | 3 | SÔNG MÊ KÔNG
+HỒ GƯƠM | Hồ có tháp Rùa giữa lòng thủ đô, cuối tuần phố đi bộ đông nghẹt. | 2 | HỒ HOÀN KIẾM
+HỒ TÂY | Hồ lớn nhất Hà Nội, chiều hoàng hôn đẹp, ăn bánh tôm, đạp vịt hẹn hò. | 2
+VĂN MIẾU | Trường đại học đầu tiên của Việt Nam, mùa thi sĩ tử tới xoa đầu rùa. | 2 | QUỐC TỬ GIÁM
+LĂNG BÁC | Nơi viếng Bác ở quảng trường Ba Đình, xếp hàng từ sáng sớm. | 2
+CHỢ BẾN THÀNH | Khu chợ có tháp đồng hồ giữa trung tâm Sài Gòn, khách Tây trả giá là vui. | 3
+DINH ĐỘC LẬP | Nơi xe tăng húc đổ cổng trưa ngày ba mươi tháng tư năm 1975. | 3
+NHÀ THỜ ĐỨC BÀ | Nhà thờ gạch đỏ giữa Sài Gòn, ảnh cưới nào cũng phải có một tấm ở đây. | 3
+PHỐ CỔ | Khu ba mươi sáu phố phường Hà Nội, ngồi ghế nhựa uống trà đá đếm xe. | 2
+FANSIPAN | Nóc nhà Đông Dương, xưa leo ba ngày, giờ đi cáp treo mười lăm phút. | 2 | PHAN XI PĂNG
+CẦU LONG BIÊN | Cây cầu sắt hơn trăm tuổi bắc qua sông Hồng, góc chụp ảnh tàu chạy qua. | 3
+CẦU VÀNG | Cây cầu được đôi bàn tay khổng lồ nâng lên ở Bà Nà, lên báo nước ngoài. | 2
+BÀ NÀ | Khu du lịch trên núi ở Đà Nẵng, đi cáp treo lên làng Pháp, một ngày bốn mùa. | 2
+MŨI NÉ | Đồi cát bay ở Phan Thiết, trượt cát xong cát vào tận trong tai. | 3
+PHONG NHA | Động nổi tiếng của vương quốc hang động, đi thuyền vào trong mát rượi. | 2 | PHONG NHA KẺ BÀNG
+SƠN ĐOÒNG | Hang động lớn nhất thế giới, tour thám hiểm đắt hơn cả năm lương cô Ngân. | 3
+TÂY NGUYÊN | Vùng đất đỏ ba dan, cà phê, cồng chiêng, dân văn phòng mơ về trồng rau nuôi cá. | 2
+BUÔN MA THUỘT | Thủ phủ cà phê Việt Nam, người sợ thứ hai nên cảm ơn nơi này. | 3
+MIỀN TÂY | Vùng sông nước, xuồng ba lá, người hiền như cục đất, đờn ca tài tử. | 2
+HOÀNG SA | Quần đảo của Việt Nam thuộc thành phố Đà Nẵng. | 2
+TRƯỜNG SA | Quần đảo của Việt Nam thuộc tỉnh Khánh Hòa. | 2
+NGHỆ AN | Quê Bác Hồ, nói "mô tê răng rứa", ăn cháo lươn cay. | 2
+THANH HÓA | Xứ Thanh quê nem chua, đi đâu cũng có hội đồng hương. | 2
+QUẢNG NINH | Tỉnh có vịnh Hạ Long, than đá, chả mực giã tay ăn là ghiền. | 2
+LẠNG SƠN | Tỉnh biên giới phía Bắc, có nàng Tô Thị, vịt quay mắc mật. | 3
+CAO BẰNG | Tỉnh có thác Bản Giốc trắng xoá giáp biên giới, mùa thu lên là đẹp nhất. | 3
+NINH BÌNH | Tràng An, Tam Cốc, cố đô Hoa Lư, phim bom tấn Hollywood từng quay ở đây. | 2
+BẮC NINH | Quê quan họ, liền anh liền chị, giờ thêm nhiều nhà máy điện thoại. | 2
+HƯNG YÊN | Đất nhãn lồng, ngày xưa tiến vua, "thứ nhất kinh kỳ, thứ nhì phố ..." | 3
+PHÚ THỌ | Đất Tổ có đền Hùng, mùng mười tháng ba được nghỉ lễ là vui nhất. | 3
+QUẢNG BÌNH | Vùng đất được gọi là vương quốc hang động, gió Lào nóng như rang. | 3
+QUẢNG NAM | Vùng đất có phố cổ Hội An, mì Quảng, người dân nổi tiếng hay cãi. | 3
+BÌNH ĐỊNH | Đất võ, quê của vua Quang Trung, bánh xèo tôm nhảy. | 3
+KHÁNH HÒA | Tỉnh có Nha Trang, nổi tiếng yến sào, tắm bùn khoáng nóng. | 3
+LÂM ĐỒNG | Tỉnh có thành phố ngàn hoa Đà Lạt, rau củ ngon nhất nước. | 3
+BẾN TRE | Xứ dừa, kẹo dừa đi đâu cũng thấy làm quà. | 2
+AN GIANG | Tỉnh miền Tây có núi Cấm, rừng tràm Trà Sư, mùa nước nổi ăn cá linh. | 3
+KIÊN GIANG | Vùng đất miền Tây biển có Hà Tiên, Rạch Giá, xưa quản lý đảo Phú Quốc. | 3
+TÂY NINH | Tỉnh có núi Bà Đen, bánh tráng phơi sương, muối tôm ăn gì cũng chấm. | 3
+CỦ CHI | Địa đạo nổi tiếng gần Sài Gòn, khách Tây chui xuống mới thấy mình to. | 3
+ĐIỆN BIÊN PHỦ | Chiến thắng lừng lẫy năm châu, chấn động địa cầu năm 1954. | 3
+BA ĐÌNH | Quảng trường nơi Bác đọc Tuyên ngôn Độc lập ngày hai tháng chín. | 2
+> Đây là thứ gắn với đất nước Việt Nam.
+MÚA RỐI NƯỚC | Con rối diễn trên mặt ao, chú Tễu dẫn chuyện, người điều khiển đứng sau mành. | 3
+ÁO DÀI | Trang phục truyền thống, cô giáo mặc màu trắng, Tết thì cả hội chị em đi chụp. | 2
+NÓN LÁ | Đội đầu che nắng hình chóp, mua về làm quà xong treo tường. | 2
+QUỐC KỲ | Lá cờ đỏ sao vàng, mỗi trận bóng đá là phủ kín phố. | 2 | CỜ ĐỎ SAO VÀNG
+QUỐC CA | Bài "Tiến quân ca" hát khi chào cờ sáng thứ hai. | 2
+TIỀN ĐỒNG | Đơn vị tiền tệ của Việt Nam, lương nhận về toàn số không mà vẫn không đủ tiêu. | 2 | ĐỒNG
+> Đây là địa danh của Việt Nam.
+CHỢ NỔI | Chợ họp trên ghe thuyền ở miền Tây, bán gì thì treo cây bẹo lên cao. | 2
+RUỘNG BẬC THANG | Ruộng lúa xếp tầng trên sườn núi, mùa lúa chín vàng là dân chụp ảnh kéo lên. | 3
+CỘT CỜ LŨNG CÚ | Nơi cắm lá cờ ở điểm cực Bắc, leo hết bậc thang là thở không ra hơi. | 3
+CHÙA MỘT CỘT | Ngôi chùa nhỏ đứng trên một trụ đá giữa hồ, hình in trên đồng xu năm nghìn ngày xưa. | 3
+CHÙA HƯƠNG | Đầu xuân đi lễ, ngồi đò suối Yến, leo núi tới chùa Thiên Trù. | 3
+NÚI BÀ ĐEN | Nóc nhà Nam Bộ ở Tây Ninh, đi cáp treo lên ngắm biển mây. | 3
+ĐẢO LÝ SƠN | Vương quốc tỏi ở Quảng Ngãi, cả đảo thơm mùi tỏi. | 3 | LÝ SƠN

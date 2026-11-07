@@ -1,0 +1,74 @@
+# Trường lớp
+# Mỗi dòng: ĐÁP ÁN | gợi ý | độ khó (1 dễ, 2 vừa, 3 khó) | cách viết khác cũng tính đúng (cách nhau dấu phẩy)
+> Đây là thứ ở trường lớp.
+PHẤN | Cô cầm viết lên bảng đen, bụi bay trắng cả áo dài. | 1
+THƯỚC | Dùng kẻ đường thẳng, ngày xưa còn dùng để khẻ tay. | 1
+TẨY | Viết bút chì sai thì chùi đi, đời mà có cái này thì hay biết mấy. | 1 | GÔM
+BÚT CHÌ | Ruột màu xám, càng gọt càng ngắn, giống lương càng tiêu càng hết. | 1
+COMPA | Có một chân nhọn, xoay một vòng là ra hình tròn, cũng dùng để chọc bạn ngồi trước. | 2
+CẶP SÁCH | Đeo sau lưng tới trường, nặng tới mức học sinh lớp một gù lưng. | 1
+BẢNG CON | Tấm bảng nhỏ học sinh lớp một giơ lên cho cô xem, viết xong lấy tay lau. | 2
+VỞ | Ghi bài vào đây, có dòng kẻ ô li, trang cuối toàn hình vẽ bậy. | 1 | TẬP
+MỰC TÍM | Ngày xưa chấm ngòi bút vào lọ này để viết, dính đầy ngón tay. | 2
+GIẤY THẤM | Tờ giấy hồng kẹp trong vở, đặt dưới tay cho khỏi lem mực. | 3
+BẢNG ĐEN | Nơi cô viết bài, cũng là nơi bị gọi lên là run cầm cập. | 1
+LỚP TRƯỞNG | Bạn hô "đứng dậy" khi cô vào lớp, ghi tên bạn nói chuyện riêng. | 2
+TRỰC NHẬT | Tới phiên thì ở lại quét lớp lau bảng, trốn là bị ghi sổ. | 2
+TRỐNG TRƯỜNG | Tiếng tùng tùng vui nhất là lúc tan học, buồn nhất là lúc hết ra chơi. | 2
+SỔ ĐẦU BÀI | Cuốn sổ cô ghi nhận xét tiết học, bị ghi tên vào là sợ cả tuần. | 3
+KIỂM TRA MIỆNG | Đầu giờ cô dò sổ gọi tên, cả lớp cúi gằm mặt xuống bàn. | 3
+RA CHƠI | Mười lăm phút quý giá nhất buổi học, chạy ùa ra sân. | 1
+KHĂN QUÀNG ĐỎ | Đội viên thắt trên cổ, quên ở nhà là bị sao đỏ ghi tên. | 3
+HỌC BẠ | Cuốn sổ ghi điểm tổng kết cả năm, có lời phê của cô, đi xin việc vẫn có người hỏi. | 2
+GIẤY KHEN | Cuối năm học sinh giỏi được phát, bố mẹ đem dán lên tường cả chục năm. | 2
+HỌC SINH GIỎI | Danh hiệu cuối năm của "con nhà người ta". | 3
+HIỆU TRƯỞNG | Người to nhất trường, đi ngang hành lang là cả trường im re. | 2
+CĂNG TIN | Chỗ trong trường bán đồ ăn, ra chơi là đông như đi siêu thị ngày sale. | 2
+THƯ VIỆN | Phòng nhiều sách nhất trường, chỗ ngồi điều hoà mát để ngủ trưa. | 2
+SÂN TRƯỜNG | Nơi chào cờ đầu tuần, nắng chang chang mà phải đứng nghiêm. | 2
+CHÀO CỜ | Sáng thứ hai cả trường đứng nghiêm hát quốc ca. | 2
+KHAI GIẢNG | Ngày năm tháng chín, mở đầu năm học, nghe tiếng trống là bồi hồi. | 2
+BẾ GIẢNG | Lễ cuối năm học, xong là nghỉ hè, ai cũng mong. | 3
+NGHỈ HÈ | Ba tháng không phải đi học, đi làm rồi mới thấy quý. | 1
+BÀI TẬP | Thứ cô giao về nhà, sáng hôm sau chép vội của bạn. | 1
+ĐIỂM MƯỜI | Điểm cao nhất, khoe về nhà còn nhanh hơn chạy. | 1 | ĐIỂM 10
+ĐIỂM KÉM | Điểm thấp mang về giấu dưới gầm giường, sợ bố mẹ biết. | 2
+PHIẾU BÉ NGOAN | Tờ giấy nhỏ mầm non cuối tuần mới được phát, giờ đi làm không ai phát nữa. | 3
+HỌP PHỤ HUYNH | Buổi bố mẹ lên trường gặp cô, nỗi sợ của cả học sinh lẫn cô Ngân. | 3
+CHỦ NHIỆM | Cô giáo phụ trách cả lớp, biết hết chuyện nhà từng bạn. | 2
+SÁCH GIÁO KHOA | Cuốn sách chính để học mỗi môn, cuối năm bán ve chai. | 3
+BAO SÁCH | Lớp giấy bọc ngoài cho sách khỏi rách, đầu năm cả nhà ngồi làm. | 2
+NHÃN VỞ | Miếng giấy dán bìa ghi tên, lớp, hình hoạt hình dễ thương. | 2
+HỘP BÚT | Đồ đựng bút thước tẩy, hồi xưa loại có nam châm là đỉnh nhất lớp. | 1
+GỌT BÚT CHÌ | Đồ quay quay cho đầu bút chì nhọn lại, quay mạnh là gãy ruột. | 3 | CHUỐT BÚT CHÌ
+BÚT MÁY | Cây bút bơm mực, nét thanh nét đậm, luyện chữ đẹp. | 2
+BÚT BI | Cây bút bấm tạch tạch, trong giờ kiểm tra bấm liên tục cho đỡ run. | 1
+BÚT CHÌ MÀU | Hộp mười hai cây tô tranh, cây màu da lúc nào cũng hết đầu tiên. | 3
+GIẤY KIỂM TRA | Tờ giấy có ô ghi điểm và lời phê, phát ra là cả lớp nín thở. | 3
+LỜI PHÊ | Dòng chữ đỏ bên cạnh điểm, kiểu "chữ xấu, cần cố gắng". | 2
+MỰC ĐỎ | Màu mực cô dùng chấm bài, thấy nhiều là biết làm sai nhiều. | 2
+GHẾ ĐÁ | Chỗ ngồi dưới gốc cây sân trường, nơi bao mối tình học trò bắt đầu. | 2
+CỔNG TRƯỜNG | Tan học bố mẹ đứng chờ, có cả xe đẩy bán đồ ăn vặt. | 2
+TAN HỌC | Lúc trống đánh, cả lớp lao ra như lúc tan làm. | 1
+ĐI MUỘN | Tới lớp trễ giờ, đứng ngoài cửa, giờ đi làm thì bị trừ lương. | 2
+TRỐN HỌC | Không tới lớp mà ra quán net, về nhà nói dối là học thêm. | 2
+CHÉP PHẠT | Viết đi viết lại một câu cả trăm lần, cô Ngân phạt tới một triệu lần. | 3
+QUAY CÓP | Lén nhìn tài liệu trong giờ thi, giấu trong ống tay áo. | 2
+BÀI THI | Làm xong phải nộp, ra khỏi phòng mới nhớ ra đáp án. | 1
+GIÁM THỊ | Người canh phòng thi, đi qua chỗ nào là chỗ đó ngồi im. | 2
+PHÒNG THI | Ngồi đây làm bài theo số báo danh, im tới mức nghe tiếng bút chạy. | 2
+SỐ BÁO DANH | Dãy số mỗi thí sinh được phát khi đi thi, quên là không được vào phòng. | 3
+TỐT NGHIỆP | Học xong được trao bằng, chụp ảnh tung mũ, rồi đi tìm việc. | 2
+ĐẠI HỌC | Học xong cấp ba thì thi vào, bốn năm sinh viên ăn mì gói. | 2
+MẪU GIÁO | Lớp học trước khi vào lớp một, ngủ trưa có cô quạt. | 2 | MẦM NON
+CÔ GIÁO | Người đứng lớp, như cô Ngân đây nè. | 1
+HỌC TRÒ | Cách gọi khác của học sinh, như cả lớp mình đó. | 1
+BẠN THÂN | Người biết hết bí mật của mình, chia nhau từng gói mì. | 1
+BÀN ĐẦU | Chỗ ngồi gần bảng nhất, bị cô gọi nhiều nhất. | 1
+CUỐI LỚP | Chỗ xa bảng nhất, nói chuyện riêng, ngủ gật thoải mái. | 2
+LAU BẢNG | Việc làm sau mỗi tiết, ai trực nhật thì lên cầm khăn. | 1
+GIỜ TRUY BÀI | Mười lăm phút đầu giờ lớp trưởng kiểm tra bài cũ, cả lớp cầm vở học vội. | 3 | TRUY BÀI
+SINH HOẠT LỚP | Tiết cuối tuần cô nhận xét cả lớp, đọc tên ai vi phạm. | 3
+HỌC THÊM | Tan trường xong còn chạy sang nhà cô học tiếp tới tối. | 2
+THỜI KHÓA BIỂU | Bảng ghi hôm nào học môn gì, quên xem là mang nhầm sách. | 3
+NGÀY NHÀ GIÁO | Hai mươi tháng mười một, tặng hoa thầy cô, cô Ngân thích nhất ngày này. | 3

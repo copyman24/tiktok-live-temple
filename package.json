@@ -17,22 +17,39 @@
     "prayer:build": "tauri build",
     "wedding:dev": "bun run --cwd apps/virtual-wedding tauri:dev",
     "wedding:build": "bun run --cwd apps/virtual-wedding tauri:build",
+    "classroom:start": "bun run apps/classroom/scripts/build-web.ts && bun run apps/classroom/src/main.ts",
+    "classroom:dev": "bun --watch apps/classroom/src/main.ts",
+    "classroom:build": "bun run apps/classroom/scripts/build-web.ts",
+    "classroom:check": "bun apps/classroom/src/game/bank.check.ts && bun apps/classroom/src/game/quiz.check.ts && bun x tsc --noEmit -p apps/classroom",
+    "test": "bun test packages/live-core",
     "studio:start": "bun run apps/live-studio/src/main.js",
     "studio:dev": "bun --watch apps/live-studio/src/main.js",
     "studio:backend": "bun scripts/build-studio-backend.js",
     "studio:tauri:dev": "cd apps/live-studio && tauri dev",
     "studio:build": "cd apps/live-studio && tauri build",
     "build:all": "bun run prayer:build && bun run wedding:build && bun run studio:build",
-    "art:devotees": "bun design/art-gen/devotees.mjs"
+    "art:devotees": "bun design/art-gen/devotees.mjs",
+    "art:backgrounds": "bun design/art-gen/backgrounds.mjs"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "tiktok-live-connector": "^2.1.0",
+    "motion": "^12.23.24",
+    "msedge-tts": "2.1.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "tiktok-live-connector": "^2.5.0",
     "ws": "^8.18.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "2.12.4",
-    "playwright-core": "1.56.1"
+    "@types/bun": "^1.4.4",
+    "@types/express": "^4.17.21",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "bun-plugin-tailwind": "^0.1.2",
+    "playwright-core": "1.56.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.8.3"
   }
 }
